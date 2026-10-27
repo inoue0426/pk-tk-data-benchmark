@@ -1,0 +1,20 @@
+{
+  "cvtdb": {
+    "url": "https://cran.r-project.org/src/contrib/invivoPKfit_2.0.2.tar.gz",
+    "version": "invivoPKfit-2.0.2/CvTdb-2025-08-12",
+    "retrieved_at": "2026-10-27T22:04:06.626291+00:00",
+    "sha256": "5fcd5592e07578a0582b38be74abf6286eda7966226b01cf9adcc2c1a8a55148",
+    "bytes": 1749489,
+    "etag": "\"1ab1f1-63d453b124e10\"",
+    "last_modified": "Tue, 26 Aug 2025 14:10:13 GMT"
+  },
+  "pmc": {
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC9316000/fullTextXML",
+    "version": "PMC9316000-table1-2022",
+    "retrieved_at": "2026-10-27T22:04:31.467491+00:00",
+    "sha256": "eb69e39bc5aabc1ee2414bf4a32d7eb7981f3711b008f669a0b9d4808c1f3058",
+    "bytes": 139962,
+    "etag": null,
+    "last_modified": null
+  }
+}

@@ -1,0 +1,12 @@
+[
+  {"id":"protocols","priority":"high","status":"open","detail":"CvTdb export lacks strain and verified shared protocol; publication matches remain candidates. Dose-specific study IDs must not be conflated with independent publications."},
+  {"id":"structures","priority":"high","status":"open","detail":"No verified source-to-SMILES mapping collected; RDKit utility tested but molecular identity deduplication, descriptors and scaffolds cannot yet support ML."},
+  {"id":"auc","priority":"high","status":"open","detail":"Rat PMC AUC0-tn terminal times not confirmed per group; partial CvTdb AUC windows vary. No AUC benchmark produced."},
+  {"id":"dog_table","priority":"high","status":"open","detail":"PMC9316000 Table 2 duplicates 1.25 mg/kg headers and IV-like values; prose describes a 2.5 mg/kg group. No silent correction; all dog endpoints outside adapter scope."},
+  {"id":"sample_size","priority":"high","status":"open","detail":"Only one protocol-verified compound; no compound/scaffold-disjoint ML, calibrated intervals or independent nonlinear detection evaluation."},
+  {"id":"pkdb","priority":"medium","status":"blocked_external","detail":"Current official download docs require an active account and substantial reuse has separate conditions; no authentication bypass attempted."},
+  {"id":"other_sources","priority":"medium","status":"open","detail":"PKSmart dose series unverified; TG-GATEs catalog lacks systemic exposure table; FDA/EMA PDF extraction and additional PMC supplement collectors not implemented."},
+  {"id":"overlap","priority":"high","status":"open","detail":"DOI/name/ID overlap screening is incomplete without structural and publication alias resolution. Identifier counts are not proven unique molecules."},
+  {"id":"source_quality","priority":"high","status":"open","detail":"Digitized curves, censoring, radiolabel uncertainty, individual versus summary data and assay quality need study-level review. Large source series count includes single-point series; no automated regrouping across them."},
+  {"id":"distribution_terms","priority":"medium","status":"open","detail":"EPA original release CC0 and packaged CRAN GPL-3 are recorded separately; derived/raw datasets are not committed. Review distribution-specific obligations before publication."}
+]
