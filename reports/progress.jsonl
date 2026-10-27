@@ -1,0 +1,2 @@
+{"phase":"discovery","status":"executed","date":"2026-10-27","detail":"Verified source endpoints and terms; inspected downloaded CRAN original table and PMC XML."}
+{"phase":"implementation","status":"in_progress","date":"2026-10-27","detail":"Added cached public HTTP collector and pinned CvTdb reader; no benchmark results claimed yet."}

@@ -218,3 +218,14 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Source terms differ; generated data are reproducible, never committed by default.
+data/raw/**
+data/interim/**
+data/processed/**
+results/**
+!results/.gitkeep
+.aws/
+credentials*
+*.pem
+.DS_Store
