@@ -24,10 +24,7 @@ Linear scaling uses the geometric mean of support exposure/dose; power law fits 
     "rmse_log": 1.8401710943061522,
     "mean_absolute_relative_error": 0.8204026983638295,
     "n_independent_compounds": 1,
-    "interval_coverage": null,
-    "dose_ratio": NaN,
-    "compound_id": NaN,
-    "species": NaN
+    "interval_coverage": null
   },
   {
     "model": "linear_scaling",
@@ -38,10 +35,7 @@ Linear scaling uses the geometric mean of support exposure/dose; power law fits 
     "rmse_log": 1.4793851682351744,
     "mean_absolute_relative_error": 0.7692952648609124,
     "n_independent_compounds": 1,
-    "interval_coverage": null,
-    "dose_ratio": NaN,
-    "compound_id": NaN,
-    "species": NaN
+    "interval_coverage": null
   },
   {
     "model": "power_law",
@@ -52,10 +46,7 @@ Linear scaling uses the geometric mean of support exposure/dose; power law fits 
     "rmse_log": 0.727789527851821,
     "mean_absolute_relative_error": 1.0148879961665442,
     "n_independent_compounds": 1,
-    "interval_coverage": null,
-    "dose_ratio": NaN,
-    "compound_id": NaN,
-    "species": NaN
+    "interval_coverage": null
   }
 ]
 ```

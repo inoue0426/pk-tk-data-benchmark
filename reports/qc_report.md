@@ -30,7 +30,6 @@ No downloaded observation was silently deleted. Flags can overlap; counts must n
   "curve_group_flags": {
     "insufficient_sampling_times": 20791,
     "blocked_observation": 13035,
-    "": 151,
     "nonpositive_exposure": 36,
     "duplicate_sampling_times": 16
   },
