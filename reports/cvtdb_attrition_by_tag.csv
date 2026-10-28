@@ -1,0 +1,16 @@
+curation_set_tag,observations,singleton_observations
+3M_PFAS_TK,1358,254
+CVT_Legacy,1243,81
+CVT_Showa,2628,0
+CVT_dermal,73,0
+"CVT_dermal, ICF_to_Jira, tkkb",121,18
+"July2024_QC_Push, NTP, QC_reextraction",15076,8832
+NTP,3311,3309
+PCB,1092,910
+PFAS_PIP,502,4
+PFOS_PFOA_PIP,31,2
+doc_reextraction,860,79
+"doc_reextraction, NTP, subject_doc_group_split",6648,3397
+"doc_reextraction, subject_doc_group_split",2274,121
+inhalation,80,9
+tk_params_icf,372,4
