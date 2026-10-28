@@ -84,3 +84,56 @@ def test_expanded_grouping_no_publication_or_endpoint_leakage():
     g['source_record_id']='other:'+g.source_record_id
     assert len(build_series(pd.concat([x,g],ignore_index=True)))==len(s)+1
     assert not s[s.compound_name.eq('memantine')].primary_eligible.any()
+
+
+def test_registry_merges_source_identifiers_without_losing_conflicts():
+    from pktk.standardization.resolve import registry
+    obs=pd.DataFrame([dict(compound_id='DTX:one',species='rat',parent_analyte=True,
+        compound_name='ethanol',casrn='64-17-5',original_json='{}')])
+    endpoints=pd.DataFrame([dict(compound_id='DTX:one',compound_name='ethyl alcohol',casrn='67-56-1')])
+    r=registry(obs,endpoints)
+    assert len(r)==1
+    assert r[0]['cas_values']==['64-17-5','67-56-1']
+    assert set(r[0]['names'])=={'ethanol','ethyl alcohol'}
+
+
+@pytest.mark.skipif(not Path('data/raw/TKS_Formamide_1998_S0613_Group_TK_Parameters_2_copy.xlsx').exists(),reason='Requires CEBS cache')
+def test_cebs_endpoints_are_not_predicted_peaks_or_nominal_doses():
+    from pktk.collectors.cebs import collect as collect_cebs
+    from pktk.qc.composite import audit
+    x,_=collect_cebs(Collector('.',offline=True))
+    assert len(x)==48
+    form=x[x.compound_name=='Formamide']
+    assert len(form)==24 and form.cmax.isna().all()
+    assert form.high_confidence_auc.all()
+    b=x[(x.compound_name=='Benzophenone') & (x.species=='rat') & (x.sex=='male')]
+    assert b.dose_mg_kg.tolist()==pytest.approx([1.88,3.84,7.78])
+    assert b.auc.iloc[0]==pytest.approx(32.7/60)
+    iso=x[x.compound_name=='Isoeugenol']
+    assert not iso[iso.species=='rat'].primary_eligible.any()
+    assert iso[iso.species=='mouse'].high_confidence_cmax.all()
+    assert not iso.high_confidence_auc.any()
+    x['molecular_group_id']=x.compound_id
+    s=build_series(x)
+    assert len(s)==16 and s.primary_eligible.sum()==14
+    a=audit(Path('.'),x)
+    assert a['reviewed_candidates']==18
+    assert a['status_counts']['validated_group_endpoints']==14
+
+
+@pytest.mark.skipif(not Path('data/raw/PMC11506582.xml').exists(),reason='Requires round-two XML cache')
+def test_round_two_cells_days_and_license():
+    specs=json.loads(Path('configs/curation/pmc_round2.json').read_text())
+    x,_,f=collect(Collector('.',offline=True),specs)
+    assert not f
+    me=x[x.compound_name=='methyl eugenol']
+    assert len(me)==6 and me.protocol_id.nunique()==2
+    assert me[me.regimen=='once'].cmax.iloc[0]==pytest.approx(.031258)
+    assert me[me.regimen!='once'].cmax.iloc[0]==pytest.approx(.050602)
+    assert not me[me.regimen!='once'].high_confidence_auc.any()
+    lor=x[x.compound_name=='lorlatinib']
+    assert lor.auc_definition.eq('AUC0-24h').all()
+    assert lor.license_url.str.contains('by-nc').all()
+    # An unreviewed restricted license cannot pass the default open-license adapter.
+    bad=dict(specs[0]);bad.pop('license_url')
+    _,_,f=collect(Collector('.',offline=True),[bad]);assert f

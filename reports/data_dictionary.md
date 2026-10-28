@@ -53,3 +53,16 @@ QC flags cover invalid or unsupported values, source/original conversion disagre
 Expanded AUC uses explicit AUC0-inf where eligible; mass concentrations are ug/mL and AUC ug*h/mL. Memantine's retained Cmax remains nM and its ambiguous AUC is not imported. No mass/molar conversion is inferred. `original_json` records source cell, row label, column and conversion factor; dose and animal-count selections are in the hashed curation configuration. `protocol_evidence_json` records matching source text fragments.
 
 CvTdb `cvtdb_profile_audit.csv` and `cvtdb_composite_candidates.csv` are audit-only recovery candidates, not fabricated animal timecourses. Original subject, source series and study IDs remain in the observation table.
+
+## Second expansion additions
+
+- `source=cebs`: original XLSX group endpoints. `source_record_id` includes experiment, sheet and physical Excel row. `original_json` retains every column, including nominal dose, predicted Cmax, model choice and source exceptions.
+- `dose_basis=analytically measured actual`: benzophenone dose from the source's actual-dose comment, with nominal dose retained in `original_json`.
+- `dose_volume_ml_kg`: explicit CEBS administration volume, checked within source strata; not inferred for PMC records.
+- `n_animals_per_timepoint`: source composite-sampling count. `n_animals` is the reported total group count, never the number of longitudinal profiles.
+- `endpoint_origin=reported_composite_profile`: reported population-profile endpoint, with no invented individual AUC/Cmax.
+- `license_url` / `license_noncommercial`: source reuse terms. Lorlatinib's CC BY-NC restriction persists in derived rows.
+- `regimen` and protocol day: methyl eugenol day 1 versus repeated-dose day 28 remain separate correlated series, sharing the same study ID.
+- `reports/composite_audit.csv`: all 112 candidate group IDs, sampled-study decisions, raw observation metadata and matched endpoint IDs. `not_reviewed` is not an exclusion or validation.
+- `primary_independent_studies`: distinct source experiment IDs/PMC publications in the primary subset. `primary_independent_publications` counts PMC publications only; CEBS chemical-collection DOIs are not independent publications.
+- `resolved_unique_parent_structures` and `unresolved_parent_identifiers`: report molecular resolution separately; their sum is not proven unique molecular diversity.

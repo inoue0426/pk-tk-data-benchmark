@@ -1,0 +1,112 @@
+[
+  {
+    "url": "https://cebs.niehs.nih.gov/cebs/test_article/119-61-9",
+    "version": "CEBS-audit-2026-10-28",
+    "retrieved_at": "2026-10-28T18:18:41.949322+00:00",
+    "sha256": "0881ae19e2fa2addcd0a98027c9333ca339526799c2de20a7e6a4ce10e16eee0",
+    "bytes": 81275,
+    "http_status": 200,
+    "etag": null,
+    "last_modified": null
+  },
+  {
+    "url": "https://cebs.niehs.nih.gov/cebs/test_article/75-12-7",
+    "version": "CEBS-audit-2026-10-28",
+    "retrieved_at": "2026-10-28T18:18:43.072363+00:00",
+    "sha256": "afa0580db744d45cf713c8d42261ed4553f8c36623ac77adbde8131f861e59cd",
+    "bytes": 111762,
+    "http_status": 200,
+    "etag": null,
+    "last_modified": null
+  },
+  {
+    "url": "https://cebs.niehs.nih.gov/cebs/test_article/97-54-1",
+    "version": "CEBS-audit-2026-10-28",
+    "retrieved_at": "2026-10-28T18:18:44.292244+00:00",
+    "sha256": "d0e81f0fd4c7217cd27c15434ef2a67b79875bb51c185a49e82f2cdc7bdde0f7",
+    "bytes": 90728,
+    "http_status": 200,
+    "etag": null,
+    "last_modified": null
+  },
+  {
+    "url": "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-01707-0022-0000-1/file/TKS_Benzophenone_S0592_1996_Group_TK_Parameters_2.xlsx",
+    "version": "CEBS-audit-2026-10-28",
+    "retrieved_at": "2026-10-28T18:18:45.406430+00:00",
+    "sha256": "0248e993205d795420b49471b80c176c0e53a887a6feee23ab11a2318c9bac24",
+    "bytes": 22468,
+    "http_status": 200,
+    "etag": null,
+    "last_modified": null
+  },
+  {
+    "url": "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-01707-0022-0000-1/file/TKS_Benzophenone_S0592_1996_Individual_Animal_Data_2.xlsx",
+    "version": "CEBS-audit-2026-10-28",
+    "retrieved_at": "2026-10-28T18:18:46.601824+00:00",
+    "sha256": "b89ef343ab5f3ce0e4845a1dc71999d03e5900a68329433da3364e249cf068c8",
+    "bytes": 308493,
+    "http_status": 200,
+    "etag": null,
+    "last_modified": null
+  },
+  {
+    "url": "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-01707-0022-0000-1/file/S0592_Data_Summary_-_Mouse.pdf",
+    "version": "CEBS-audit-2026-10-28",
+    "retrieved_at": "2026-10-28T18:18:48.041828+00:00",
+    "sha256": "2e029f8e994db6285ef249bb8eda78633e2b7eb12a8386cef0955209ac19baae",
+    "bytes": 223542,
+    "http_status": 200,
+    "etag": null,
+    "last_modified": null
+  },
+  {
+    "url": "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-01707-0022-0000-1/file/S0592_Data_Summary_-_Rats.pdf",
+    "version": "CEBS-audit-2026-10-28",
+    "retrieved_at": "2026-10-28T18:18:49.292849+00:00",
+    "sha256": "514b8a4838062e42d3672de1311a183c62eccfee1ea9f19aa7062def41f46da3",
+    "bytes": 375324,
+    "http_status": 200,
+    "etag": null,
+    "last_modified": null
+  },
+  {
+    "url": "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02186-0032-0000-4/file/S0613_Data_Summary_-_Mouse.pdf",
+    "version": "CEBS-audit-2026-10-28",
+    "retrieved_at": "2026-10-28T18:18:50.532488+00:00",
+    "sha256": "55e9d8dc878f7428cdc4eae53b2cb2b927ebc5994ed1367a1a0d89a6b8d02215",
+    "bytes": 282524,
+    "http_status": 200,
+    "etag": null,
+    "last_modified": null
+  },
+  {
+    "url": "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02186-0032-0000-4/file/S0613_Data_Summary_-_Rats.pdf",
+    "version": "CEBS-audit-2026-10-28",
+    "retrieved_at": "2026-10-28T18:18:51.847847+00:00",
+    "sha256": "58a6939c94b10bdc5bc8e18e73a2cd04fc716807a3e15e6373e9993a7f4b1e66",
+    "bytes": 153397,
+    "http_status": 200,
+    "etag": null,
+    "last_modified": null
+  },
+  {
+    "url": "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02315-0026-0000-1/file/K10262_Data_Summary_Mouse.pdf",
+    "version": "CEBS-audit-2026-10-28",
+    "retrieved_at": "2026-10-28T18:18:52.964574+00:00",
+    "sha256": "eff277d7907aa15fcc415431ff22496120faaeb750d0379941c2986f84351171",
+    "bytes": 133338,
+    "http_status": 200,
+    "etag": null,
+    "last_modified": null
+  },
+  {
+    "url": "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02315-0026-0000-1/file/K10262_Data_Summary_Rats.pdf",
+    "version": "CEBS-audit-2026-10-28",
+    "retrieved_at": "2026-10-28T18:18:54.131585+00:00",
+    "sha256": "6ff82cf914f95d0b2a153463b11af1bcf629484845eae11fed198188f9b53b63",
+    "bytes": 153051,
+    "http_status": 200,
+    "etag": null,
+    "last_modified": null
+  }
+]

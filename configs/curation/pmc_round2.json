@@ -1,0 +1,227 @@
+[
+  {
+    "pmc": "PMC12570999",
+    "table_id": "t0004",
+    "compound_name": "lorlatinib",
+    "source_sha256": "9ca6bc56f9e61619beb1dcbe75274ad5e3965ad8289e05fb3f21157b6508523c",
+    "table_sha256": "ffb66349252bd11035f54623721c8669c02dfa397d88c03874eea52fba4d3de5",
+    "species": "rat",
+    "strain": "Sprague-Dawley",
+    "sex": "male",
+    "route": "oral",
+    "matrix": "plasma",
+    "regimen": "once",
+    "endpoint_origin": "reported_group_mean",
+    "auc_unit": "ug*h/mL",
+    "cmax_unit": "ug/mL",
+    "infusion_duration_min": 0,
+    "protocol_verified": true,
+    "primary_eligible": true,
+    "auc_factor": 0.001,
+    "cmax_factor": 0.001,
+    "n_animals": [
+      6,
+      6,
+      6
+    ],
+    "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
+    "doses": [
+      5,
+      10,
+      50
+    ],
+    "columns": [
+      1,
+      2,
+      3
+    ],
+    "auc_row": "AUC(0–24h) (ng·h/mL)",
+    "cmax_row": "Cmax (ng/mL)",
+    "auc_definition": "AUC0-24h",
+    "vehicle": "0.5% carboxymethylcellulose sodium",
+    "fasting": "12 h",
+    "evidence": [
+      "Rats were fasted for 12 h",
+      "All drug solutions were made up in 0.5% carboxymethylcellulose sodium",
+      "low-dose group, single dose of lorlatinib (5 mg/kg)",
+      "high-dose group, single dose of lorlatinib (50 mg/kg)"
+    ],
+    "flags": [
+      "license_noncommercial",
+      "source_total_animal_count_inconsistent",
+      "AUCinf_large_tail_not_selected"
+    ]
+  },
+  {
+    "pmc": "PMC11506582",
+    "table_id": "cimb-46-00673-t001",
+    "compound_name": "methyl eugenol",
+    "source_sha256": "e4eb11cedd85b3f269e3e9f1112ccb7a7fe6a81e3fe164b3a415ecd9f0c6f4f4",
+    "table_sha256": "407ac085f69ac38e11ab5fbe867da91e320c4e8cacc3453cbd86bc28d6f2acc3",
+    "species": "mouse",
+    "strain": "Kunming",
+    "sex": "male",
+    "route": "oral",
+    "matrix": "plasma",
+    "regimen": "once",
+    "endpoint_origin": "reported_group_mean",
+    "auc_unit": "ug*h/mL",
+    "cmax_unit": "ug/mL",
+    "infusion_duration_min": 0,
+    "protocol_verified": true,
+    "primary_eligible": true,
+    "auc_factor": 0.001,
+    "cmax_factor": 0.001,
+    "n_animals": [
+      6,
+      6,
+      6
+    ],
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "compound_id": "DTXSID5025607",
+    "casrn": "93-15-2",
+    "doses": [
+      20,
+      40,
+      60
+    ],
+    "columns": [
+      1,
+      2,
+      3
+    ],
+    "auc_row": null,
+    "cmax_row": null,
+    "endpoint_cells": {
+      "auc": [
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "cmax": [
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          3
+        ]
+      ]
+    },
+    "auc_definition": "AUC0-inf",
+    "auc_eligible": true,
+    "protocol_suffix": "day1",
+    "vehicle": "0.5% CMC-Na",
+    "fasting": "not reported",
+    "evidence": [
+      "Twenty-four male Kunming (KM) mice",
+      "ME dissolved in 0.5% CMC-Na",
+      "on Days 1 and 28"
+    ],
+    "flags": [
+      "fasting_not_reported",
+      "shared_animals_across_days"
+    ]
+  },
+  {
+    "pmc": "PMC11506582",
+    "table_id": "cimb-46-00673-t001",
+    "compound_name": "methyl eugenol",
+    "source_sha256": "e4eb11cedd85b3f269e3e9f1112ccb7a7fe6a81e3fe164b3a415ecd9f0c6f4f4",
+    "table_sha256": "407ac085f69ac38e11ab5fbe867da91e320c4e8cacc3453cbd86bc28d6f2acc3",
+    "species": "mouse",
+    "strain": "Kunming",
+    "sex": "male",
+    "route": "oral",
+    "matrix": "plasma",
+    "regimen": "daily; day 28",
+    "endpoint_origin": "reported_group_mean",
+    "auc_unit": "ug*h/mL",
+    "cmax_unit": "ug/mL",
+    "infusion_duration_min": 0,
+    "protocol_verified": true,
+    "primary_eligible": true,
+    "auc_factor": 0.001,
+    "cmax_factor": 0.001,
+    "n_animals": [
+      6,
+      6,
+      6
+    ],
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "compound_id": "DTXSID5025607",
+    "casrn": "93-15-2",
+    "doses": [
+      20,
+      40,
+      60
+    ],
+    "columns": [
+      4,
+      5,
+      6
+    ],
+    "auc_row": null,
+    "cmax_row": null,
+    "endpoint_cells": {
+      "auc": [
+        [
+          4,
+          6
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          6,
+          5
+        ]
+      ],
+      "cmax": [
+        [
+          4,
+          4
+        ],
+        [
+          5,
+          3
+        ],
+        [
+          6,
+          3
+        ]
+      ]
+    },
+    "auc_definition": "AUC0-t_unspecified",
+    "auc_eligible": false,
+    "protocol_suffix": "day28",
+    "vehicle": "0.5% CMC-Na",
+    "fasting": "not reported",
+    "evidence": [
+      "Twenty-four male Kunming (KM) mice",
+      "ME dissolved in 0.5% CMC-Na",
+      "on Days 1 and 28"
+    ],
+    "flags": [
+      "fasting_not_reported",
+      "shared_animals_across_days",
+      "auc_terminal_time_unresolved",
+      "repeat_dose_AUCinf_not_selected"
+    ]
+  }
+]

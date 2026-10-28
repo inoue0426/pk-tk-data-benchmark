@@ -24,7 +24,7 @@ def parse(path,meta,spec):
         raise ValueError('Source snapshot differs from reviewed curation')
     root=ET.parse(path).getroot()
     permissions=ET.tostring(root.find('.//permissions'),encoding='unicode')
-    if not re.search(r'creativecommons.org/licenses/by/[24].0',permissions):
+    if spec.get('license_url','https://creativecommons.org/licenses/by/4.0/').replace('https:','').replace('http:','') not in permissions and not (spec.get('license_url') is None and re.search(r'creativecommons.org/licenses/by/[24].0',permissions)):
         raise ValueError('Unreviewed article license')
     full=text(root)
     for evidence in spec['evidence']:
@@ -36,23 +36,27 @@ def parse(path,meta,spec):
     doi=next(e.text for e in root.findall('.//article-id') if e.get('pub-id-type')=='doi').lower()
     pubmed=next((e.text for e in root.findall('.//article-id') if e.get('pub-id-type')=='pmid'),'')
     pmc=spec['pmc'];records=[]
-    for dose,column,n in zip(spec['doses'],spec['columns'],spec['n_animals'],strict=True):
+    for cell_index,(dose,column,n) in enumerate(zip(spec['doses'],spec['columns'],spec['n_animals'],strict=True)):
         values={};original={}
         for endpoint in ['auc','cmax']:
             label=spec[endpoint+'_row']
             # Repeated matrix rows (memantine) use first explicitly selected plasma block only.
             cells=next((r for r in rows if r and r[0]==label),None) if label else None
-            value,sd=mean_sd(cells[column]) if cells else (None,None)
+            if 'endpoint_cells' in spec:
+                row_index,col_index=spec['endpoint_cells'][endpoint][cell_index]
+                cells=rows[row_index];column_for_endpoint=col_index;label=f'row{row_index}'
+            else:column_for_endpoint=column
+            value,sd=mean_sd(cells[column_for_endpoint]) if cells else (None,None)
             factor=spec[endpoint+'_factor']
             values[endpoint]=value*factor if value is not None else None
             values[endpoint+'_sd']=sd*factor if sd is not None else None
-            original[endpoint]={'row':label,'column':column,'cell':cells[column] if cells else None,'factor':factor}
+            original[endpoint]={'row':label,'column':column_for_endpoint,'cell':cells[column_for_endpoint] if cells else None,'factor':factor}
         rid=f'{pmc}:{spec["table_id"]}:column{column}'
-        protocol=f'{pmc}:{spec["compound_name"]}:{spec["species"]}:{spec["route"]}:single'
+        protocol=f'{pmc}:{spec["compound_name"]}:{spec["species"]}:{spec["route"]}:'+spec.get('protocol_suffix','single')
         flags=spec['flags']+['group_summary_only','missing_structure']
         eligible=spec['primary_eligible']
-        records.append(dict(source='pmc',source_record_id=rid,experiment_id=rid,compound_id='publication:'+spec['compound_name'],
-            compound_name=spec['compound_name'],casrn='',pubchem_cid='',canonical_smiles='',inchikey='',
+        records.append(dict(source='pmc',source_record_id=rid,experiment_id=rid,compound_id=spec.get('compound_id','publication:'+spec['compound_name']),
+            compound_name=spec['compound_name'],casrn=spec.get('casrn',''),pubchem_cid='',canonical_smiles='',inchikey='',
             species=spec['species'],strain=spec['strain'],sex=spec['sex'],route=spec['route'],matrix=spec['matrix'],
             dose_mg_kg=dose,dose_unit='mg/kg',dose_basis='reported; see source methods',**values,
             auc_definition=spec['auc_definition'],auc_unit=spec['auc_unit'],cmax_unit=spec['cmax_unit'],
@@ -64,8 +68,8 @@ def parse(path,meta,spec):
             original_json=json.dumps(original,ensure_ascii=False),protocol_evidence_json=json.dumps(spec['evidence'],ensure_ascii=False),
             endpoint_origin=spec['endpoint_origin'],protocol_verified=True,primary_eligible=eligible,
             high_confidence_cmax=bool(eligible and values['cmax'] is not None),
-            high_confidence_auc=bool(eligible and values['auc'] is not None),has_numeric_curve=False,
-            qc_flags=';'.join(flags),curation_spec_id=identity([pmc,spec['table_id'],protocol])))
+            high_confidence_auc=bool(eligible and values['auc'] is not None and spec.get('auc_eligible',True)),has_numeric_curve=False,
+            license_url=spec.get('license_url','see source permissions'),qc_flags=';'.join(flags),curation_spec_id=identity([pmc,spec['table_id'],protocol])))
     return pd.DataFrame(records)
 
 

@@ -1,0 +1,44 @@
+[
+  {
+    "study": "S0592",
+    "compound_id": "DTXSID0021961",
+    "cvtdb_document_id": "CvTdb:document:171",
+    "file": "TKS_Benzophenone_S0592_1996_Group_TK_Parameters_2.xlsx",
+    "url": "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-01707-0022-0000-1/file/TKS_Benzophenone_S0592_1996_Group_TK_Parameters_2.xlsx",
+    "sha256": "0248e993205d795420b49471b80c176c0e53a887a6feee23ab11a2318c9bac24",
+    "evidence": [
+      "Blood samples were collected at up to 13",
+      "0.5 percent aqueous methylcellulose"
+    ],
+    "doi": "10.22427/ntp-data-dtxsid0021961",
+    "landing_url": "https://cebs.niehs.nih.gov/cebs/test_article/119-61-9"
+  },
+  {
+    "study": "S0613",
+    "compound_id": "DTXSID8025337",
+    "cvtdb_document_id": "CvTdb:document:172",
+    "file": "TKS_Formamide_1998_S0613_Group_TK_Parameters_2_copy.xlsx",
+    "url": "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02186-0032-0000-4/file/TKS_Formamide_1998_S0613_Group_TK_Parameters_2_copy.xlsx",
+    "sha256": "4ee451b9eabcda56c290a119f50a61eaa70f21606e03d396f72b194901ff96a1",
+    "evidence": [
+      "Three rats or mice/route/dose/sex were sampled",
+      "Model independent methods (CHANKIN)"
+    ],
+    "doi": "10.22427/ntp-data-dtxsid8025337",
+    "landing_url": "https://cebs.niehs.nih.gov/cebs/test_article/75-12-7"
+  },
+  {
+    "study": "K10262",
+    "compound_id": "DTXSID7022413",
+    "cvtdb_document_id": "CvTdb:document:25297",
+    "file": "TKS_Isoeugenol_2001_K10262_Group_TK_Parameters_v2_3_copy.xlsx",
+    "url": "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02315-0026-0000-1/file/TKS_Isoeugenol_2001_K10262_Group_TK_Parameters_v2_3_copy.xlsx",
+    "sha256": "9b58c4e795757c36168e11a2003f438eb1a10ebcf1532baaa4bbb907be941a3d",
+    "evidence": [
+      "Each mouse was bled only once",
+      "Rats were bled twice"
+    ],
+    "doi": "10.3109/00498254.2013.790576",
+    "landing_url": "https://cebs.niehs.nih.gov/cebs/test_article/97-54-1"
+  }
+]

@@ -1,0 +1,12 @@
+{
+  "total_candidates": 112,
+  "reviewed_candidates": 18,
+  "status_counts": {
+    "not_reviewed": 94,
+    "validated_group_endpoints": 14,
+    "withheld_matrix_conflict": 2,
+    "withheld_dose_conflict": 2
+  },
+  "selection": "Purposive stratified sample: three source studies, rat/mouse, sex, route and matrix; not a statistical yield estimate",
+  "expansion_decision": "Initial recovery supports targeted CEBS extraction. No blanket promotion; reconcile dose and matrix errors first. Audit stays at three source studies for this run."
+}
