@@ -11,6 +11,8 @@ def test_reviewed_cebs_protocol_separation():
     x=collect(Collector(ROOT,offline=True));x['molecular_group_id']=x.compound_id
     s=build_series(x)
     assert len(s)==31 and s.primary_eligible.all()
+    assert x.casrn.str.strip().eq(x.casrn).all()
+    assert set(x.loc[x.study_id=='CEBS:S0558','casrn'])=={'84-65-1'}
     b=x[x.study_id=='CEBS:K05097']
     assert len(build_series(b))==8
     assert b.vehicle.nunique()==2

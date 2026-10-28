@@ -32,6 +32,10 @@ def collect(collector):
             r=x.iloc[expected['row']-2]
             for key,column in checks.items():
                 if r[column]!=expected[key]:raise ValueError(f'CEBS reviewed cell mismatch: {spec["study"]} {column}')
+            if str(r.NTP_CHEMTRACK_NUMBER).strip()!=spec['study']:
+                raise ValueError('Experiment identifier mismatch')
+            if r.VOLUME_PER_ADMIN_UNIT!='mL/kg' or r.DOSE_FREQUENCY!=1 or r.DOSE_FREQUENCY_UNIT not in ['per study','study']:
+                raise ValueError('Unreviewed administration volume or dosing regimen')
             if r.DOSE_UNIT!='mg/kg' or str(r.Is_Parent_Compound).strip()!='T':raise ValueError('Unsupported dose/analyte')
             if spec['model_evidence'] and spec['model_evidence'] not in r['Best Fit Model']:
                 raise ValueError('Reviewed endpoint method/window missing')
@@ -56,7 +60,7 @@ def collect(collector):
             protocol='CEBS:'+spec['study']+':'+identity([species,route,matrix,r.VEHICLE_DESC,r.VOLUME_PER_ADMIN,spec['auc_definition']])
             rid=f'CEBS:{spec["study"]}:Sheet1:row{expected["row"]}'
             records.append(dict(source='cebs',source_record_id=rid,experiment_id=rid,compound_id=spec['compound_id'],
-                compound_name=r.CHEMICAL,casrn=r.CAS_NO,pubchem_cid='',canonical_smiles='',inchikey='',species=species,
+                compound_name=str(r.CHEMICAL).strip(),casrn=str(r.CAS_NO).strip(),pubchem_cid='',canonical_smiles='',inchikey='',species=species,
                 strain=r.STRAIN,sex=r.SEX.lower(),route=route,matrix=matrix,dose_mg_kg=dose,dose_unit='mg/kg',
                 dose_basis=spec['dose_basis'],dose_volume_ml_kg=numeric(r.VOLUME_PER_ADMIN),auc=auc,cmax=cmax,
                 auc_sd=None,cmax_sd=None,auc_definition=spec['auc_definition'],auc_unit='ug*h/mL',cmax_unit='ug/mL',

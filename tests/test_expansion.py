@@ -117,9 +117,13 @@ def test_cebs_endpoints_are_not_predicted_peaks_or_nominal_doses():
     x['molecular_group_id']=x.compound_id
     s=build_series(x)
     assert len(s)==16 and s.primary_eligible.sum()==14
-    a=audit(Path('.'),x)
-    assert a['reviewed_candidates']==18
-    assert a['status_counts']['validated_group_endpoints']==14
+    from pktk.collectors.cebs_reviewed import collect as collect_reviewed
+    expanded=pd.concat([x,collect_reviewed(Collector('.',offline=True))],ignore_index=True)
+    a=audit(Path('.'),expanded,write_reports=False)
+    assert a['assessed_candidates']==112
+    assert a['reviewed_candidates']==97
+    assert a['protocol_unresolved_candidates']==15
+    assert a['status_counts']['validated_group_endpoints']==31
 
 
 @pytest.mark.skipif(not Path('data/raw/PMC11506582.xml').exists(),reason='Requires round-two XML cache')

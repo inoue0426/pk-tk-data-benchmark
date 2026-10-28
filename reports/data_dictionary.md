@@ -71,3 +71,14 @@ CvTdb `cvtdb_profile_audit.csv` and `cvtdb_composite_candidates.csv` are audit-o
 - `identity_qc_flags`: includes nonstandard source InChIKeys whose generation options were not verified. These candidates are rejected rather than normalized by editing key characters. An independently validated ChEBI mapping may still resolve the identifier; all rejected EPA evidence remains visible.
 - `identity_source_member` / `identity_source_row`: master-CSV member and physical row in the bulk DSSTox ZIP. Split copies are not separately parsed.
 - `pubchem_lookup_status=not_queried_optional_crossref`: structure resolved, optional CID lookup not performed. This is distinct from unresolved compound identity.
+
+## Expanded composite audit and CEBS rows
+
+- `curation_round=composite_expansion`: explicitly reviewed rows from eight additional CEBS workbooks. Physical row selections and expected metadata are in `cebs_expansion.json`.
+- `dose_basis=actual`: oxybenzone's analytically administered dose parsed from original exception text; nominal dose remains in `original_json`.
+- `endpoint_origin=reported_individual_parameter_mean`: naphthalene rat group means of individually estimated parameters. Mouse composite profiles retain `reported_composite_profile`; these methods are not pooled.
+- `n_animals` and `n_animals_per_timepoint` are intentionally missing for the new imports when source pool sizes, replacements and dose-specific counts need separate reconciliation. Original count fields and sampling text remain available; no fixed count is assumed.
+- `protocol_reviewed` in the audit means original source protocol material was inspected, not that all required conditions were resolved. `assessed_candidates` includes explicit unavailable-protocol decisions. `protocol_unresolved_candidates` counts candidates without an obtained/reconciled full protocol; other statuses can also withhold validation.
+- `validated_composite_candidate_groups` counts linked exploratory candidate groups. Historical alias `validated_composite_series` has the same meaning; it is **not** the total validated endpoint-series count. A candidate can split into formulation-specific series, or source endpoints can have unresolved CvTdb dose linkage.
+- `cebs_row_selection.csv`: one entry per workbook row, selected flag, selection rationale and raw hash. Alternative fits, metabolites and other regimens stay in raw caches.
+- AUC0-8h, AUC0-inf and unspecified-terminal AUC remain distinct. Predicted Cmax is never substituted for observed Cmax. Source-reported Cmax may be affected by dose-dependent sampling schedules.

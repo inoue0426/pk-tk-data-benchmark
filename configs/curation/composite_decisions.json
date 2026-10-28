@@ -1,0 +1,740 @@
+[
+  {
+    "document_id": "CvTdb:document:129",
+    "status": "reviewed_endpoint_selection",
+    "decision_reason": "Parent-only oral NCA; actual doses parsed from exception comments. Metabolites and simultaneous IV/oral fits excluded.",
+    "evidence": [
+      {
+        "file": "cebs_131-57-7.html",
+        "url": "https://cebs.niehs.nih.gov/cebs/test_article/131-57-7",
+        "sha256": "b98cf6f9d4c513eabb4002c39e0bd4e3a8987fcf7630b715518e6f38b06ffe89",
+        "version": "CEBS-discovery-2026-10-28"
+      },
+      {
+        "file": "TKS_2-Hydroxy-4-methoxybenzophenone_1996_S0593_Group_TK_Parameters_2.xlsx",
+        "url": "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-01338-0022-0000-1/file/TKS_2-Hydroxy-4-methoxybenzophenone_1996_S0593_Group_TK_Parameters_2.xlsx",
+        "sha256": "5b32bfecde848f9e824bbaa91da5d65de6ad31ae4e82a868b553c95df3ea7cf6",
+        "version": "CEBS-expansion-2026-10-28"
+      }
+    ],
+    "protocol_reviewed": true
+  },
+  {
+    "document_id": "CvTdb:document:131",
+    "status": "withheld_parent_metabolite_link",
+    "decision_reason": "C20619 refers to administered 8:2 fluorotelomer alcohol, whereas candidate analyte is fluorotelomer acid 7+3. Do not treat metabolite exposure as administration of the metabolite; K04003B linkage also requires reconciliation.",
+    "evidence": [
+      {
+        "file": "TKS_Fluorotelomer_Alcohol_K04003B_Group_TK_Parameters_version2_6.xlsx",
+        "url": "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02182-0004-0000-9/file/TKS_Fluorotelomer_Alcohol_K04003B_Group_TK_Parameters_version2_6.xlsx",
+        "sha256": "53c37b6843ad7b3923839837516c7d5a9e7b362eb5003dda53402877e923471e",
+        "version": "composite-evidence-2026-10-28"
+      }
+    ],
+    "protocol_reviewed": true
+  },
+  {
+    "document_id": "CvTdb:document:132",
+    "status": "withheld_study_link",
+    "decision_reason": "CvTdb identifies C96019, while the downloaded group parameters identify K07378. Candidate has multiple administration regimens/isomer analytes. Experiment alias and dosing history must be reconciled before endpoint matching.",
+    "evidence": [
+      {
+        "file": "TKS_Bromochloroacetic_acid_2011_K07378_Group_TK_Parameters_v2_7.xlsx",
+        "url": "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-01740-0019-0000-4/file/TKS_Bromochloroacetic_acid_2011_K07378_Group_TK_Parameters_v2_7.xlsx",
+        "sha256": "bed8c615fb1be021b727a40734d4b2d4d3c487ac44664216e100183f4d65740a",
+        "version": "CEBS-expansion-2026-10-28"
+      },
+      {
+        "file": "cebs_5589-96-8.html",
+        "url": "https://cebs.niehs.nih.gov/cebs/test_article/5589-96-8",
+        "sha256": "1fec1c0b41c8820a7bca691b294f2d858a8e00a885d3d359deb0bf6eeb645d87",
+        "version": "CEBS-discovery-2026-10-28"
+      }
+    ],
+    "protocol_reviewed": true
+  },
+  {
+    "document_id": "CvTdb:document:159",
+    "status": "protocol_reviewed_no_endpoints",
+    "decision_reason": "S0301 confirms rats sampled twice, mice once, plasma assay; mouse data include Swiss Webster and B6C3F1 strains and separate feed experiments. No reported group endpoints in retrieved S0301 workbooks; reconstruction would require strain-specific censoring-aware NCA.",
+    "evidence": [
+      {
+        "file": "cebs_604-75-1.html",
+        "url": "https://cebs.niehs.nih.gov/cebs/test_article/604-75-1",
+        "sha256": "c9c829e51a2408372c80c9afc0577bf1fdeb2fb4d5f781c143f853a71d2da036",
+        "version": "CEBS-discovery-2026-10-28"
+      },
+      {
+        "file": "IAD_TKS_Oxazepam_1994_S0578_Individual_Animal_Data.xlsx",
+        "url": "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02622-0016-0000-1/file/IAD_TKS_Oxazepam_1994_S0578_Individual_Animal_Data.xlsx",
+        "sha256": "72c20cbc8e5bb3a31bb70f23a553eeb2b2b488a83ebd97efe0977e90da549446",
+        "version": "composite-evidence-2026-10-28"
+      },
+      {
+        "file": "TKS_Oxazepam_1992_S0301_Individual_Animal_Data_2_copy.xlsx",
+        "url": "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02622-0015-0000-0/file/TKS_Oxazepam_1992_S0301_Individual_Animal_Data_2_copy.xlsx",
+        "sha256": "ae307c27d9ab4dd581440ddcbe39aee43e1dcb80eea17159aeb5d1bc46f93adc",
+        "version": "composite-evidence-2026-10-28"
+      },
+      {
+        "file": "TKS_Oxazepam_1994_S0578_Individual_Animal_Data_copy.xlsx",
+        "url": "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02622-0016-0000-1/file/TKS_Oxazepam_1994_S0578_Individual_Animal_Data_copy.xlsx",
+        "sha256": "9ba5e9864eea4872eb1183405012a97a69f1fad0307a1ffcc93c456f4ce240cd",
+        "version": "composite-evidence-2026-10-28"
+      },
+      {
+        "file": "IAD_TKS_Oxazepam_1992_S0301_Individual_Animal_Data.xlsx",
+        "url": "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02622-0015-0000-0/file/IAD_TKS_Oxazepam_1992_S0301_Individual_Animal_Data.xlsx",
+        "sha256": "b4067432861420a174579b5fdaa588940abccd527e028b2af2faa62cb8b8bb22",
+        "version": "composite-evidence-2026-10-28"
+      }
+    ],
+    "protocol_reviewed": true
+  },
+  {
+    "document_id": "CvTdb:document:160",
+    "status": "withheld_insufficient_reported_doses",
+    "decision_reason": "S0322 confirms composite sampling and NCA but the reviewed parameter workbook contains only one oral and one IV administered dose per species. It explicitly omits uninterpretable gavage treatments; do not fill missing endpoints from another dose or route.",
+    "evidence": [
+      {
+        "file": "TKS_Emodin_S0322_1995_TK_Parameters_t2_2_copy.xlsx",
+        "url": "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02109-0026-0000-2/file/TKS_Emodin_S0322_1995_TK_Parameters_t2_2_copy.xlsx",
+        "sha256": "b6a3524e0581c8e575aabf647404f3f519036fc9909b243c8d078bfb265c80cd",
+        "version": "composite-evidence-2026-10-28"
+      },
+      {
+        "file": "IAD_TKS_Emodin_S0322_1995_Individual_Animal_Data.xlsx",
+        "url": "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02109-0026-0000-2/file/IAD_TKS_Emodin_S0322_1995_Individual_Animal_Data.xlsx",
+        "sha256": "05d67b0522bf8b9e3337acefb04b237700c87a91661dabffaf7b7fb1985d0473",
+        "version": "composite-evidence-2026-10-28"
+      },
+      {
+        "file": "TKS_Emodin_Dosed_Feed_S0575_1996_Individual_Animal_Data_2_copy.xlsx",
+        "url": "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02109-0027-0000-3/file/TKS_Emodin_Dosed_Feed_S0575_1996_Individual_Animal_Data_2_copy.xlsx",
+        "sha256": "b431840f2b616f1b0961252d48221529ae7622975557b58920de416c33d06eb3",
+        "version": "composite-evidence-2026-10-28"
+      },
+      {
+        "file": "TKS_Emodin_S0322_1995_Individual_Animal_Data_2_copy.xlsx",
+        "url": "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02109-0026-0000-2/file/TKS_Emodin_S0322_1995_Individual_Animal_Data_2_copy.xlsx",
+        "sha256": "c0ba41c78fc59b61c258cf8dd18b35fb0a0f29c5c2c02ac1969ec096183cedb9",
+        "version": "composite-evidence-2026-10-28"
+      },
+      {
+        "file": "cebs_518-82-1.html",
+        "url": "https://cebs.niehs.nih.gov/cebs/test_article/518-82-1",
+        "sha256": "ccf04b8e1c191e336567e311d92755b70633641cbd219e3540c985e21190fd82",
+        "version": "CEBS-discovery-2026-10-28"
+      },
+      {
+        "file": "IAD_TKS_Emodin_Dosed_Feed_S0575_1996_Individual_Animal_Data.xlsx",
+        "url": "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02109-0027-0000-3/file/IAD_TKS_Emodin_Dosed_Feed_S0575_1996_Individual_Animal_Data.xlsx",
+        "sha256": "2b9c649f15aed299d638901faf5afe4d224dc07747db046c838378abd0e7dd6c",
+        "version": "composite-evidence-2026-10-28"
+      }
+    ],
+    "protocol_reviewed": true
+  },
+  {
+    "document_id": "CvTdb:document:161",
+    "status": "protocol_reviewed_model_dependent",
+    "decision_reason": "S0328 distinguishes oral single doses from dosed feed, and model-derived AUC from trapezoidal AUC in exception comments. Additional later oral experiments share the workbook; source-row/protocol reconciliation remains necessary. No endpoint import in this run.",
+    "evidence": [
+      {
+        "file": "cebs_87-86-5.html",
+        "url": "https://cebs.niehs.nih.gov/cebs/test_article/87-86-5",
+        "sha256": "689000335a57718c59353f3337a85e89735f2ebced3f1b47001504f30eae3895",
+        "version": "CEBS-discovery-2026-10-28"
+      },
+      {
+        "file": "TKS_Pentachlorophenol_purified_S0328_TK_Group_Parameters_t2_2copy.xlsx",
+        "url": "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02644-0019-0000-8/file/TKS_Pentachlorophenol_purified_S0328_TK_Group_Parameters_t2_2copy.xlsx",
+        "sha256": "6793fafa9e735c1d53970de501ed564419f9875e7e0c8fdcab07bf4b0b70fdb5",
+        "version": "CEBS-expansion-2026-10-28"
+      }
+    ],
+    "protocol_reviewed": true
+  },
+  {
+    "document_id": "CvTdb:document:162",
+    "status": "withheld_source_quality",
+    "decision_reason": "S0373 explicitly says limited/inconsistent data prevented meaningful pharmacokinetic conclusions. Vehicle is blank. Sparse sampling alone does not validate these dose comparisons.",
+    "evidence": [
+      {
+        "file": "cebs_110-86-1.html",
+        "url": "https://cebs.niehs.nih.gov/cebs/test_article/110-86-1",
+        "sha256": "b1ec336d8063c75722abbba343417ba28dc1883cb33fe0f3dcf7c03899b4b208",
+        "version": "CEBS-discovery-2026-10-28"
+      },
+      {
+        "file": "TKS_Pyridine_K55301B_Rat_Group_TK_Parameters_version2_3_copy.xlsx",
+        "url": "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02756-0033-0000-8/file/TKS_Pyridine_K55301B_Rat_Group_TK_Parameters_version2_3_copy.xlsx",
+        "sha256": "c46080737157eabbce17214eba5030305d3668ebe75669354220c6d64fe8bd60",
+        "version": "CEBS-expansion-2026-10-28"
+      },
+      {
+        "file": "TKS_Pyridine_K55301B_Mouse_Group_TK_Parameters_version2_3_copy.xlsx",
+        "url": "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02756-0033-0000-8/file/TKS_Pyridine_K55301B_Mouse_Group_TK_Parameters_version2_3_copy.xlsx",
+        "sha256": "2e665efea29481add20830e3cda02ada93ebd67f73fa283e0b50c219bd67e057",
+        "version": "CEBS-expansion-2026-10-28"
+      },
+      {
+        "file": "TKS_Pyridine-Rat_1993_S0373_Group_TK_Parameters_version2_copy.xlsx",
+        "url": "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02756-0032-0000-7/file/TKS_Pyridine-Rat_1993_S0373_Group_TK_Parameters_version2_copy.xlsx",
+        "sha256": "d1cc52c5902e7fe808e71533a77b6fe7fb6da700b74b7f9d595ae885b8ccd103",
+        "version": "CEBS-expansion-2026-10-28"
+      }
+    ],
+    "protocol_reviewed": true
+  },
+  {
+    "document_id": "CvTdb:document:164",
+    "status": "reviewed_endpoint_selection",
+    "decision_reason": "Oral NCA rows only; feed and simultaneous IV/oral fits excluded. Tail and outlier limitations retained.",
+    "evidence": [
+      {
+        "file": "TKS_2-4-Dichlorophenoxyacetic_acid_S0546_1995_Group_Parameters.xlsx",
+        "url": "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-01223-0023-0000-5/file/TKS_2-4-Dichlorophenoxyacetic_acid_S0546_1995_Group_Parameters.xlsx",
+        "sha256": "3582de047712bc906bdaff3113d1fcfb4b8dc7cf2c8436071b9b4b6b8d908201",
+        "version": "CEBS-expansion-2026-10-28"
+      },
+      {
+        "file": "cebs_94-75-7.html",
+        "url": "https://cebs.niehs.nih.gov/cebs/test_article/94-75-7",
+        "sha256": "7ece9d260e96fd46828d4b4b63c25e119d888e5ed4d3b8d322207f21ee6a0c94",
+        "version": "CEBS-discovery-2026-10-28"
+      }
+    ],
+    "protocol_reviewed": true
+  },
+  {
+    "document_id": "CvTdb:document:166",
+    "status": "reviewed_endpoint_selection",
+    "decision_reason": "Observed oral Cmax; terminal AUC window and source AUC units require further corroboration, so AUC is ineligible.",
+    "evidence": [
+      {
+        "file": "cebs_84-65-1.html",
+        "url": "https://cebs.niehs.nih.gov/cebs/test_article/84-65-1",
+        "sha256": "8c933abf3a6b930e2ec9b39c06b3ab49757229d65483f834cfee2623fcfe9828",
+        "version": "CEBS-discovery-2026-10-28"
+      },
+      {
+        "file": "TKS_Anthraquinone_1994_S0558_Group_TK_Parameters_version2_3.xlsx",
+        "url": "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-01658-0022-0000-6/file/TKS_Anthraquinone_1994_S0558_Group_TK_Parameters_version2_3.xlsx",
+        "sha256": "1225b1d000517a0e4c6bc119b9898eed7d0b30f02c466204d40c3ea471a9d8db",
+        "version": "CEBS-expansion-2026-10-28"
+      }
+    ],
+    "protocol_reviewed": true
+  },
+  {
+    "document_id": "CvTdb:document:168",
+    "status": "withheld_study_link",
+    "decision_reason": "CvTdb candidate identifies S0569; available group parameters identify S0266 and include combined repeated experiments B/D/F and C/E/G/H. No automatic alias or pooling across those experiments.",
+    "evidence": [
+      {
+        "file": "cebs_434-07-1.html",
+        "url": "https://cebs.niehs.nih.gov/cebs/test_article/434-07-1",
+        "sha256": "6cff171010e57592c1fda9646706387115e12f5c4548caf303684d55e5669c7f",
+        "version": "CEBS-discovery-2026-10-28"
+      },
+      {
+        "file": "TKS_Oxymetholone_S0266_1994_TK_group_parameters_t2_2.xlsx",
+        "url": "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02624-0014-0000-1/file/TKS_Oxymetholone_S0266_1994_TK_group_parameters_t2_2.xlsx",
+        "sha256": "5c94f1aee2945fc9cf5b4abcfa263d50496cc303e057b645ac82421ae73f7cb7",
+        "version": "CEBS-expansion-2026-10-28"
+      }
+    ],
+    "protocol_reviewed": true
+  },
+  {
+    "document_id": "CvTdb:document:169",
+    "status": "reviewed_endpoint_selection",
+    "decision_reason": "Whole-blood NCA; rat group means of individual-animal PK kept distinct from mouse composite profiles. Individual rows and alternative model fits excluded.",
+    "evidence": [
+      {
+        "file": "cebs_91-20-3.html",
+        "url": "https://cebs.niehs.nih.gov/cebs/test_article/91-20-3",
+        "sha256": "161eabecf0c0375c48c43703d304830ab61af907e295571a82ac184db172c42e",
+        "version": "CEBS-discovery-2026-10-28"
+      },
+      {
+        "file": "TKS_Naphthalene_IV_S0571_1996_Group_Ind_TK_Parameters_v2_3_copy.xlsx",
+        "url": "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02579-0013-0000-9/file/TKS_Naphthalene_IV_S0571_1996_Group_Ind_TK_Parameters_v2_3_copy.xlsx",
+        "sha256": "8d715f37e9563f713a23d31bb3878131d0a096a7136adb6a170597ff1effaf66",
+        "version": "CEBS-expansion-2026-10-28"
+      }
+    ],
+    "protocol_reviewed": true
+  },
+  {
+    "document_id": "CvTdb:document:170",
+    "status": "protocol_reviewed_no_import",
+    "decision_reason": "S0577 uses composite observed Cmax and trapezoidal AUC, with single IV/gavage administrations. Potentially recoverable, but not imported in this diversity-first pass; must remain distinct from K10265 and the newer PMC repeated-dose study.",
+    "evidence": [
+      {
+        "file": "cebs_93-15-2.html",
+        "url": "https://cebs.niehs.nih.gov/cebs/test_article/93-15-2",
+        "sha256": "cfcf9733d9799906c40dd2bf2288d3980c0d26b6be9353697671f0c774db8b87",
+        "version": "CEBS-discovery-2026-10-28"
+      },
+      {
+        "file": "TKS_Methyleugenol_S0577_1993_Group_TK_Parameters_2_copy.xlsx",
+        "url": "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02467-0027-0000-0/file/TKS_Methyleugenol_S0577_1993_Group_TK_Parameters_2_copy.xlsx",
+        "sha256": "593981c62f280eea8e1c66783b41b8b08265a3844fc097ebbb65c5e201e77862",
+        "version": "CEBS-expansion-2026-10-28"
+      }
+    ],
+    "protocol_reviewed": true
+  },
+  {
+    "document_id": "CvTdb:document:204",
+    "status": "full_protocol_unavailable",
+    "decision_reason": "Europe PMC metadata/abstract checked for PMID 10772639. No public full-text protocol retrieved. Abstract does not establish all sampling, formulation and comparability conditions; no endpoint import.",
+    "evidence": [
+      {
+        "file": "audit_pubmed_10772639.json",
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A10772639+AND+SRC%3AMED&format=json&resultType=core",
+        "sha256": "e8560f4ed74cd814437195b54dccecc727b3f782e0d7c748732adc34428161d5",
+        "version": "composite-evidence-2026-10-28"
+      }
+    ],
+    "protocol_reviewed": false
+  },
+  {
+    "document_id": "CvTdb:document:210",
+    "status": "full_protocol_unavailable",
+    "decision_reason": "Europe PMC metadata/abstract checked for PMID 1673423. No public full-text protocol retrieved. Abstract does not establish all sampling, formulation and comparability conditions; no endpoint import.",
+    "evidence": [
+      {
+        "file": "audit_pubmed_1673423.json",
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A1673423+AND+SRC%3AMED&format=json&resultType=core",
+        "sha256": "53c0b5fe2b0b1494d5d0113f3b296fe8ee671252a807c27f8c5194af24e168e2",
+        "version": "composite-evidence-2026-10-28"
+      }
+    ],
+    "protocol_reviewed": false
+  },
+  {
+    "document_id": "CvTdb:document:219",
+    "status": "full_protocol_unavailable",
+    "decision_reason": "Europe PMC metadata/abstract checked for PMID 3354229. No public full-text protocol retrieved. Abstract does not establish all sampling, formulation and comparability conditions; no endpoint import.",
+    "evidence": [
+      {
+        "file": "audit_pubmed_3354229.json",
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A3354229+AND+SRC%3AMED&format=json&resultType=core",
+        "sha256": "c3c0c6d5f7aa6c404162a5fa62eec795ca75a3fec0dcc79e1691d2c5f2eb38a3",
+        "version": "composite-evidence-2026-10-28"
+      }
+    ],
+    "protocol_reviewed": false
+  },
+  {
+    "document_id": "CvTdb:document:245",
+    "status": "full_protocol_unavailable",
+    "decision_reason": "Europe PMC metadata/abstract checked for PMID 8887460. No public full-text protocol retrieved. Abstract does not establish all sampling, formulation and comparability conditions; no endpoint import.",
+    "evidence": [
+      {
+        "file": "audit_pubmed_8887460.json",
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A8887460+AND+SRC%3AMED&format=json&resultType=core",
+        "sha256": "69559317156b9090c8c062d9883c75bdd4614f3ce7bd0fff97b703e5d7e003d5",
+        "version": "composite-evidence-2026-10-28"
+      }
+    ],
+    "protocol_reviewed": false
+  },
+  {
+    "document_id": "CvTdb:document:25284",
+    "status": "protocol_link_requires_review",
+    "decision_reason": "PubMed abstract and CEBS study page identify K10265, distinct from S0577. Both report methyleugenol; they must not be merged. Original K10265 protocol/endpoint extraction remains outstanding.",
+    "evidence": [
+      {
+        "file": "audit_pubmed_22876784.json",
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A22876784+AND+SRC%3AMED&format=json&resultType=core",
+        "sha256": "febd9887088e08b6cf6cea85ccdf8652391ec534502273347e82071d350a1a58",
+        "version": "composite-evidence-2026-10-28"
+      }
+    ],
+    "protocol_reviewed": false
+  },
+  {
+    "document_id": "CvTdb:document:25352",
+    "status": "withheld_matrix_metadata",
+    "decision_reason": "K55301B rat workbook confirms each rat bled twice at eight time points but TISSUE is blank. No matrix imputation from compound or mouse workbook. AUC curves are truncated.",
+    "evidence": [
+      {
+        "file": "cebs_110-86-1.html",
+        "url": "https://cebs.niehs.nih.gov/cebs/test_article/110-86-1",
+        "sha256": "b1ec336d8063c75722abbba343417ba28dc1883cb33fe0f3dcf7c03899b4b208",
+        "version": "CEBS-discovery-2026-10-28"
+      },
+      {
+        "file": "TKS_Pyridine_K55301B_Rat_Group_TK_Parameters_version2_3_copy.xlsx",
+        "url": "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02756-0033-0000-8/file/TKS_Pyridine_K55301B_Rat_Group_TK_Parameters_version2_3_copy.xlsx",
+        "sha256": "c46080737157eabbce17214eba5030305d3668ebe75669354220c6d64fe8bd60",
+        "version": "CEBS-expansion-2026-10-28"
+      },
+      {
+        "file": "TKS_Pyridine_K55301B_Mouse_Group_TK_Parameters_version2_3_copy.xlsx",
+        "url": "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02756-0033-0000-8/file/TKS_Pyridine_K55301B_Mouse_Group_TK_Parameters_version2_3_copy.xlsx",
+        "sha256": "2e665efea29481add20830e3cda02ada93ebd67f73fa283e0b50c219bd67e057",
+        "version": "CEBS-expansion-2026-10-28"
+      },
+      {
+        "file": "TKS_Pyridine-Rat_1993_S0373_Group_TK_Parameters_version2_copy.xlsx",
+        "url": "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02756-0032-0000-7/file/TKS_Pyridine-Rat_1993_S0373_Group_TK_Parameters_version2_copy.xlsx",
+        "sha256": "d1cc52c5902e7fe808e71533a77b6fe7fb6da700b74b7f9d595ae885b8ccd103",
+        "version": "CEBS-expansion-2026-10-28"
+      }
+    ],
+    "protocol_reviewed": true
+  },
+  {
+    "document_id": "CvTdb:document:25353",
+    "status": "protocol_reviewed_no_import",
+    "decision_reason": "K55301B mouse workbook reports single bolus dosing and plasma Cmax; terminal windows vary and AUC is truncated. Dose volume is blank. Protocol/sample reconstruction remains unresolved; do not merge with S0373 rat study.",
+    "evidence": [
+      {
+        "file": "cebs_110-86-1.html",
+        "url": "https://cebs.niehs.nih.gov/cebs/test_article/110-86-1",
+        "sha256": "b1ec336d8063c75722abbba343417ba28dc1883cb33fe0f3dcf7c03899b4b208",
+        "version": "CEBS-discovery-2026-10-28"
+      },
+      {
+        "file": "TKS_Pyridine_K55301B_Rat_Group_TK_Parameters_version2_3_copy.xlsx",
+        "url": "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02756-0033-0000-8/file/TKS_Pyridine_K55301B_Rat_Group_TK_Parameters_version2_3_copy.xlsx",
+        "sha256": "c46080737157eabbce17214eba5030305d3668ebe75669354220c6d64fe8bd60",
+        "version": "CEBS-expansion-2026-10-28"
+      },
+      {
+        "file": "TKS_Pyridine_K55301B_Mouse_Group_TK_Parameters_version2_3_copy.xlsx",
+        "url": "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02756-0033-0000-8/file/TKS_Pyridine_K55301B_Mouse_Group_TK_Parameters_version2_3_copy.xlsx",
+        "sha256": "2e665efea29481add20830e3cda02ada93ebd67f73fa283e0b50c219bd67e057",
+        "version": "CEBS-expansion-2026-10-28"
+      },
+      {
+        "file": "TKS_Pyridine-Rat_1993_S0373_Group_TK_Parameters_version2_copy.xlsx",
+        "url": "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02756-0032-0000-7/file/TKS_Pyridine-Rat_1993_S0373_Group_TK_Parameters_version2_copy.xlsx",
+        "sha256": "d1cc52c5902e7fe808e71533a77b6fe7fb6da700b74b7f9d595ae885b8ccd103",
+        "version": "CEBS-expansion-2026-10-28"
+      }
+    ],
+    "protocol_reviewed": true
+  },
+  {
+    "document_id": "CvTdb:document:25361",
+    "status": "withheld_endpoint_definition_conflict",
+    "decision_reason": "K02825 worksheet places rat values under AUCinf_pred while comments refer to observed four-hour AUC. Mouse AUC cells differ from explicit one/four-hour values and concentrations after 1.5 hours are unreliable. Predicted Cmax is not observed Cmax.",
+    "evidence": [
+      {
+        "file": "TKS_2-Methylimidazole_1998_Group_TK_Parameters_version3_copy.xlsx",
+        "url": "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-01360-0016-0000-9/file/TKS_2-Methylimidazole_1998_Group_TK_Parameters_version3_copy.xlsx",
+        "sha256": "1d948710f0c705968813e8e6d1cd05c2faac8fbd5b26d1a9a07d2fd1c1509bf0",
+        "version": "CEBS-expansion-2026-10-28"
+      },
+      {
+        "file": "cebs_693-98-1.html",
+        "url": "https://cebs.niehs.nih.gov/cebs/test_article/693-98-1",
+        "sha256": "af00dfc6d1603398c55f6602929518992465c57b66e9e98bdd2dcd7ecfc5d71e",
+        "version": "CEBS-discovery-2026-10-28"
+      }
+    ],
+    "protocol_reviewed": true
+  },
+  {
+    "document_id": "CvTdb:document:25365",
+    "status": "reviewed_endpoint_selection",
+    "decision_reason": "Only rat 10 and 50 mg/kg share AUC0-8h. Rat 100 mg/kg is 0-30h; mouse windows differ and predicted AUC label is ambiguous. No observed oral Cmax.",
+    "evidence": [
+      {
+        "file": "cebs_822-36-6.html",
+        "url": "https://cebs.niehs.nih.gov/cebs/test_article/822-36-6",
+        "sha256": "6620aa4f0dac41904f4c1935ba0e3e1d6fb85228bd9c09f268f6844716036da0",
+        "version": "CEBS-discovery-2026-10-28"
+      },
+      {
+        "file": "TKS_4-Methylimidazole_2006_Group_TK_Parameters_version3.xlsx",
+        "url": "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-01511-0018-0000-9/file/TKS_4-Methylimidazole_2006_Group_TK_Parameters_version3.xlsx",
+        "sha256": "12e08d3a64a9d8e3c87821bb500a2d2dcab2e4ba472d300dfc10ab827f060b2a",
+        "version": "CEBS-expansion-2026-10-28"
+      }
+    ],
+    "protocol_reviewed": true
+  },
+  {
+    "document_id": "CvTdb:document:25382",
+    "status": "reviewed_endpoint_selection",
+    "decision_reason": "Observed plasma oral Cmax only. Rat 400 mg/kg rows withheld because protocol description says 100 mg/kg. Brain, IV and model-dependent AUC not promoted.",
+    "evidence": [
+      {
+        "file": "cebs_96-47-9.html",
+        "url": "https://cebs.niehs.nih.gov/cebs/test_article/96-47-9",
+        "sha256": "efb4747eb8e5317bbc4bfcb88fb2dca5cd7c8bb4f9b431fa0b88403ac9fbd576",
+        "version": "CEBS-discovery-2026-10-28"
+      },
+      {
+        "file": "TKS_2-Methyltetrahydrofuran_K07076_Group_TK_Parameters_4.xlsx",
+        "url": "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-01363-0002-0000-7/file/TKS_2-Methyltetrahydrofuran_K07076_Group_TK_Parameters_4.xlsx",
+        "sha256": "32bc120cc9dabdd0fd70596a9dc15265e794215cec2b574234cdf51613ea4dd1",
+        "version": "CEBS-expansion-2026-10-28"
+      }
+    ],
+    "protocol_reviewed": true
+  },
+  {
+    "document_id": "CvTdb:document:25409",
+    "status": "protocol_reviewed_missing_conditions",
+    "decision_reason": "CHEM04026 workbook identifies single gavage PCB126 in female Harlan Sprague-Dawley rats; plasma pg/mL and tissue pg/g are separate columns. Intro/data do not establish formulation or full sampling protocol; no pooling or inferred endpoints.",
+    "evidence": [
+      {
+        "file": "cebs_57465-28-8.html",
+        "url": "https://cebs.niehs.nih.gov/cebs/test_article/57465-28-8",
+        "sha256": "6dc15e4da49206503d02ae26d95c1ad256f655711675f7a58521823197bf1d2d",
+        "version": "CEBS-discovery-2026-10-28"
+      },
+      {
+        "file": "TKS_Individual_Animal_Data_3-3-4-4-5-pentachlorobiphenyl_2007_copy.xlsx",
+        "url": "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02863-0008-0000-9/file/TKS_Individual_Animal_Data_3-3-4-4-5-pentachlorobiphenyl_2007_copy.xlsx",
+        "sha256": "6a0152ec4b1c4e9877405adc8949a149874f9c5e77b9104bd35dd8ddabac95e6",
+        "version": "composite-evidence-2026-10-28"
+      }
+    ],
+    "protocol_reviewed": true
+  },
+  {
+    "document_id": "CvTdb:document:25416",
+    "status": "protocol_reviewed_model_dependent",
+    "decision_reason": "S0539 confirms composite plasma sampling. Low-dose profiles were below quantification, while high-dose AUC uses a Michaelis-Menten analytical formula and C0 is extrapolated. Do not equate model C0 with observed Cmax or silently fit censored profiles.",
+    "evidence": [
+      {
+        "file": "cebs_127-00-4.html",
+        "url": "https://cebs.niehs.nih.gov/cebs/test_article/127-00-4",
+        "sha256": "50168d1ec0e276f0667c149d9a3624a7eb716f93b2669ae466d3af1bd37e932e",
+        "version": "CEBS-discovery-2026-10-28"
+      },
+      {
+        "file": "TKS_1-Chloro-2-propanol_S0539_1993_Group_TK_Parameters_2.xlsx",
+        "url": "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-01116-0023-0000-6/file/TKS_1-Chloro-2-propanol_S0539_1993_Group_TK_Parameters_2.xlsx",
+        "sha256": "ef83fcea373524df0d4e79f41815da980ed240b8a7385c557e0729ec9a16b489",
+        "version": "CEBS-expansion-2026-10-28"
+      }
+    ],
+    "protocol_reviewed": true
+  },
+  {
+    "document_id": "CvTdb:document:25424",
+    "status": "withheld_administered_analyte_link",
+    "decision_reason": "K08624 mixes administered CEM and administered TDGA, parent/metabolite measurements, dermal and IV routes, tissues, and model/NCA fits. Candidate compound match does not identify the administered test article; requires row-level reconciliation before import.",
+    "evidence": [
+      {
+        "file": "cebs_111-91-1.html",
+        "url": "https://cebs.niehs.nih.gov/cebs/test_article/111-91-1",
+        "sha256": "3c86860489e399306e6da98028c80828572447ec6ef1f7e6c20d57fc75667f6c",
+        "version": "CEBS-discovery-2026-10-28"
+      },
+      {
+        "file": "TKS_Bis_2-Choroethoxy_Methane_2009_K08624_Group_TK_Parameters_v2_3copy.xlsx",
+        "url": "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-03051-0034-0000-8/file/TKS_Bis_2-Choroethoxy_Methane_2009_K08624_Group_TK_Parameters_v2_3copy.xlsx",
+        "sha256": "bbf2d6c7049016fd07e4b21abff06ced7436382b9999f3636eff6fbf8dedbbf8",
+        "version": "CEBS-expansion-2026-10-28"
+      }
+    ],
+    "protocol_reviewed": true
+  },
+  {
+    "document_id": "CvTdb:document:25428",
+    "status": "reviewed_endpoint_selection",
+    "decision_reason": "Oral noncompartmental AUCinf and observed Cmax; corn oil and water/Cremophor are separate protocols. No averaging across formulations.",
+    "evidence": [
+      {
+        "file": "TKS_Bromodichloromethane_2006_K05097_Group_TK_Parameters_v2_3_copy.xlsx",
+        "url": "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-01743-0063-0000-6/file/TKS_Bromodichloromethane_2006_K05097_Group_TK_Parameters_v2_3_copy.xlsx",
+        "sha256": "a3ebf0428a6a3180bf19a5e56a52a05c3b40c8c106559d74bd90f1ad6209b947",
+        "version": "CEBS-expansion-2026-10-28"
+      },
+      {
+        "file": "cebs_75-27-4.html",
+        "url": "https://cebs.niehs.nih.gov/cebs/test_article/75-27-4",
+        "sha256": "aa7864849bd3173559061b9c92a576e249d1e5fbd6c9e82d486387d6a2661cfe",
+        "version": "CEBS-discovery-2026-10-28"
+      }
+    ],
+    "protocol_reviewed": true
+  },
+  {
+    "document_id": "CvTdb:document:25448",
+    "status": "reviewed_endpoint_selection",
+    "decision_reason": "Observed plasma oral Cmax only; female 80 mg/kg alternate fits have identical Cmax. Use all-time-point row9, retain alternate raw row8. AUC truncated windows unresolved.",
+    "evidence": [
+      {
+        "file": "cebs_335-67-1.html",
+        "url": "https://cebs.niehs.nih.gov/cebs/test_article/335-67-1",
+        "sha256": "c1889e96510fd778f5c99b4a3248fa7f37e578b684f89597acf188a12bee6231",
+        "version": "CEBS-discovery-2026-10-28"
+      },
+      {
+        "file": "TKS_Perfluorooctanoic_acid_2009_K10075_Group_TK_Parameters_v2_4.xlsx",
+        "url": "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02657-0014-0000-7/file/TKS_Perfluorooctanoic_acid_2009_K10075_Group_TK_Parameters_v2_4.xlsx",
+        "sha256": "b01f5c85356fe69403c4e1795aa37c98dab7f454d2fb051095da052258d7e27a",
+        "version": "CEBS-expansion-2026-10-28"
+      }
+    ],
+    "protocol_reviewed": true
+  },
+  {
+    "document_id": "CvTdb:document:25458",
+    "status": "withheld_mixture_link",
+    "decision_reason": "K06898 contains alpha-thujone and an alpha/beta mixture (70% alpha,11% beta), separate analytes and plasma/brain endpoints. Candidate grouping omits test-article composition, so no pooled alpha-thujone series is accepted.",
+    "evidence": [
+      {
+        "file": "cebs_546-80-5.html",
+        "url": "https://cebs.niehs.nih.gov/cebs/test_article/546-80-5",
+        "sha256": "7db37f212e125ba840c7b50f426d0b7cb44884bb0fd396590183bbaae409aab5",
+        "version": "CEBS-discovery-2026-10-28"
+      },
+      {
+        "file": "TKS_alpha_and_alpha-beta-Thujone_Mixture_K06898_Group_TK_Parameters_version2_4.xlsx",
+        "url": "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-03033-0031-0000-5/file/TKS_alpha_and_alpha-beta-Thujone_Mixture_K06898_Group_TK_Parameters_version2_4.xlsx",
+        "sha256": "78e6cd42e9739f5e2e12b2927ecf5ca619c5ec7cc02758cbf14e2a73876c85ed",
+        "version": "CEBS-expansion-2026-10-28"
+      }
+    ],
+    "protocol_reviewed": true
+  },
+  {
+    "document_id": "CvTdb:document:25460",
+    "status": "protocol_reviewed_missing_conditions",
+    "decision_reason": "CHEM10128 workbook identifies single IV/gavage PFHxA in Harlan Sprague-Dawley rats with plasma ng/mL; original and repeat-IV sheets are distinct. Formulation and full original sampling protocol are not established by these sheets; no blind composite reconstruction.",
+    "evidence": [
+      {
+        "file": "TKS_Individual_Animal_Data_Perfluorohexanoic_Acid_2010_copy.xlsx",
+        "url": "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02654-0004-0000-3/file/TKS_Individual_Animal_Data_Perfluorohexanoic_Acid_2010_copy.xlsx",
+        "sha256": "350ac60c92bb407ad5fa8a94a5b49ac3713a13c26e0410d6b69bc99beb55bf14",
+        "version": "composite-evidence-2026-10-28"
+      },
+      {
+        "file": "cebs_307-24-4.html",
+        "url": "https://cebs.niehs.nih.gov/cebs/test_article/307-24-4",
+        "sha256": "d28fe873bb48a8d6e447f262025c53a186ec0132d87a52ac54bb489a9c4a7c15",
+        "version": "CEBS-discovery-2026-10-28"
+      }
+    ],
+    "protocol_reviewed": true
+  },
+  {
+    "document_id": "CvTdb:document:25463",
+    "status": "protocol_reviewed_missing_conditions",
+    "decision_reason": "CHEM10127 workbook identifies potassium PFHxS, Harlan Sprague-Dawley rats, plasma ng/mL and separate original/repeat-IV sheets. Dose salt basis, formulation and protocol remain unresolved; do not collapse salt to acid or combine repeat experiments.",
+    "evidence": [
+      {
+        "file": "cebs_3871-99-6.html",
+        "url": "https://cebs.niehs.nih.gov/cebs/test_article/3871-99-6",
+        "sha256": "6c1fa2efebfad22fb6c8e2425b9485bdc289d06c6d2118f47f88f952733cf073",
+        "version": "CEBS-discovery-2026-10-28"
+      },
+      {
+        "file": "TKS_Individual_Animal_Data_Perfluorohexane-1-Sulphonic_Acid_Potassium_Salt.xlsx",
+        "url": "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-03267-0003-0000-3/file/TKS_Individual_Animal_Data_Perfluorohexane-1-Sulphonic_Acid_Potassium_Salt.xlsx",
+        "sha256": "559fc93990e342b2eb57f5ab11b04f101e9709272b684865410713c17fdb3757",
+        "version": "composite-evidence-2026-10-28"
+      }
+    ],
+    "protocol_reviewed": true
+  },
+  {
+    "document_id": "CvTdb:document:25465",
+    "status": "protocol_unavailable",
+    "decision_reason": "The retrieved official phenobarbital CAS landing page has no TK download links. Original candidate protocol was not obtained; no validated endpoint claim.",
+    "evidence": [
+      {
+        "file": "cebs_50-06-6.html",
+        "url": "https://cebs.niehs.nih.gov/cebs/test_article/50-06-6",
+        "sha256": "8fd5e4cd74a0f2eab2bf8f626e869b6151a92484abb3c033ad1985ec9bb8c345",
+        "version": "CEBS-discovery-2026-10-28"
+      }
+    ],
+    "protocol_reviewed": false
+  },
+  {
+    "document_id": "CvTdb:document:25470",
+    "status": "withheld_missing_conditions",
+    "decision_reason": "S0976 ephedrine-alone PDF reports rat plasma Cmax at 6.25/12.5/25 mg/kg, but defines Cmax as observed or predicted, omits AUC and full dosing/sampling/formulation protocol. Separate combination arms exist; no endpoint or combination pooling.",
+    "evidence": [
+      {
+        "file": "cebs_299-42-3.html",
+        "url": "https://cebs.niehs.nih.gov/cebs/test_article/299-42-3",
+        "sha256": "be8b4df65b6d18b94702968074155efea9ce79907981b45fc82a16d6afbc1786",
+        "version": "CEBS-discovery-2026-10-28"
+      },
+      {
+        "file": "S0976_Data_Summary_Ephedrine.pdf",
+        "url": "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-03261-0009-0000-3/file/S0976_Data_Summary_Ephedrine.pdf",
+        "sha256": "64a6aee00a1b28c107ab7075eee3259bfe1e42d6420d486d2df0662c3c948d80",
+        "version": "composite-evidence-2026-10-28"
+      }
+    ],
+    "protocol_reviewed": true
+  },
+  {
+    "document_id": "CvTdb:document:25474",
+    "status": "protocol_reviewed_missing_conditions",
+    "decision_reason": "CHEM07379 original workbook separates single IV/gavage from two-week drinking-water challenge/no-challenge and plasma from urine. It contains DCA and metabolite measurements. No cross-sheet pooling; full vehicle and dosing-history linkage remains unresolved.",
+    "evidence": [
+      {
+        "file": "cebs_79-43-6.html",
+        "url": "https://cebs.niehs.nih.gov/cebs/test_article/79-43-6",
+        "sha256": "28c3a96df13aa0f769147174b35199c904bafa17596ad9dc96fd9d79a1ea72fb",
+        "version": "CEBS-discovery-2026-10-28"
+      },
+      {
+        "file": "TKS_Individual_Animal_Data_Dichloroacetic_acid_2009.xlsx",
+        "url": "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02007-0031-0000-5/file/TKS_Individual_Animal_Data_Dichloroacetic_acid_2009.xlsx",
+        "sha256": "4f8a4187be63ab60dfd452fd983cf54940c6c6493834c16a3679598ad0449113",
+        "version": "composite-evidence-2026-10-28"
+      }
+    ],
+    "protocol_reviewed": true
+  },
+  {
+    "document_id": "CvTdb:document:30",
+    "status": "full_protocol_unavailable",
+    "decision_reason": "Europe PMC metadata/abstract checked for PMID 3096853. No public full-text protocol retrieved. Abstract does not establish all sampling, formulation and comparability conditions; no endpoint import.",
+    "evidence": [
+      {
+        "file": "audit_pubmed_3096853.json",
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A3096853+AND+SRC%3AMED&format=json&resultType=core",
+        "sha256": "b4e65a5d8c6525539140a5a8a334f2a7f7aa2a74abf51568b0a07a85f0f4040f",
+        "version": "composite-evidence-2026-10-28"
+      }
+    ],
+    "protocol_reviewed": false
+  },
+  {
+    "document_id": "CvTdb:document:43",
+    "status": "full_protocol_unavailable",
+    "decision_reason": "Europe PMC metadata/abstract checked for PMID 7570594. No public full-text protocol retrieved. Abstract does not establish all sampling, formulation and comparability conditions; no endpoint import.",
+    "evidence": [
+      {
+        "file": "audit_pubmed_7570594.json",
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A7570594+AND+SRC%3AMED&format=json&resultType=core",
+        "sha256": "4696db268a4001192df7e6c7b0cfe99e8d3d2302d94cc639ee38184e8a4718f3",
+        "version": "composite-evidence-2026-10-28"
+      }
+    ],
+    "protocol_reviewed": false
+  },
+  {
+    "document_id": "CvTdb:document:56",
+    "status": "full_protocol_unavailable",
+    "decision_reason": "Europe PMC metadata/abstract checked for PMID 17897969. No public full-text protocol retrieved. Abstract does not establish all sampling, formulation and comparability conditions; no endpoint import.",
+    "evidence": [
+      {
+        "file": "audit_pubmed_17897969.json",
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A17897969+AND+SRC%3AMED&format=json&resultType=core",
+        "sha256": "d73401e208d95ffa7e6844943f81406815e34a56ed041f3775e82c9ddf4f1dfd",
+        "version": "composite-evidence-2026-10-28"
+      }
+    ],
+    "protocol_reviewed": false
+  }
+]

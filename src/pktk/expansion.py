@@ -4,7 +4,7 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 from pktk.collectors.http import Collector,log
-from pktk.collectors import pmc,pmc_tables,discovery,cebs
+from pktk.collectors import pmc,pmc_tables,discovery,cebs,cebs_reviewed
 from pktk.qc.composite import audit as composite_audit
 from pktk.qc.attrition import audit
 from pktk.standardization.resolve import registry,resolve
@@ -59,6 +59,8 @@ def run(root,offline=False,resolve_identities=True):
     if new.empty:raise ValueError('No expansion data collected')
     extra,extra_manifests,extra_failures=pmc_tables.collect(collector,round2_specs)
     cebs_data,cebs_audit=cebs.collect(collector)
+    round3=cebs_reviewed.collect(collector)
+    cebs_data=pd.concat([cebs_data,round3],ignore_index=True)
     manifests.update(extra_manifests);failures.extend(extra_failures)
     x=pd.concat([original,new,cebs_data,extra],ignore_index=True)
     # Incomplete oral formulation evidence is retained, but withheld from the primary subset.
@@ -66,6 +68,9 @@ def run(root,offline=False,resolve_identities=True):
     x.loc[unknown,['primary_eligible','high_confidence_auc','high_confidence_cmax']]=False
     obs=pd.read_csv(root/'data/processed/observations.csv',keep_default_na=False,low_memory=False)
     attrition=audit(root)
+    for decision in json.loads((root/'configs/curation/composite_decisions.json').read_text()):
+        for ref in decision['evidence']:
+            collector.fetch(ref['file'],ref['url'],ref['version'],ref['sha256'])
     composite_summary=composite_audit(root,cebs_data)
     entries=enrich(collector,registry(obs,x))
     candidate_table=pd.read_csv(root/'data/processed/candidate_series.csv')
@@ -138,7 +143,7 @@ def run(root,offline=False,resolve_identities=True):
            resolved_inchikeys=resolved.loc[resolved.identity_status=='resolved_exact','inchikey'].nunique(),
            resolved_pubchem_cids=int(resolved.pubchem_cid.ne('').sum()),
            primary_compounds_with_resolved_structures=primary.loc[primary.resolved_structure,'molecular_group_id'].nunique(),
-           primary_species=sorted(primary.species.unique()),primary_routes=sorted(primary.route.unique()),
+           primary_species=sorted(primary.species.unique()),primary_routes=sorted(primary.route.unique()),primary_matrices=sorted(primary.matrix.unique()),
            collected_species=sorted(set(pre.species)|set(x.species)),collected_routes=sorted(set(pre.route)|set(x.route)),
            fraction_curated_pmc_groups_primary=len(high[high.source.eq('pmc')])/len(x[x.source.eq('pmc')]),fraction_curated_groups_primary=len(high)/len(x),fraction_parent_identifiers_verified_comparable=primary.molecular_group_id.nunique()/len(parent_ids),
            candidate_counts_not_verified=True,identity_counts_not_fully_structure_deduplicated=True,
@@ -147,14 +152,16 @@ def run(root,offline=False,resolve_identities=True):
     s['previously_unqueried_identifiers']=len(prior_pending)
     s['previously_unqueried_status_counts']=prior_pending.identity_status.value_counts().to_dict()
     s['reviewed_composite_candidates']=composite_summary['reviewed_candidates']
+    s['assessed_composite_candidates']=composite_summary['assessed_candidates']
+    s['protocol_unresolved_candidates']=composite_summary['protocol_unresolved_candidates']
     s['validated_composite_series']=composite_summary['status_counts'].get('validated_group_endpoints',0)
+    s['validated_composite_candidate_groups']=s['validated_composite_series']
     s['primary_series_by_source']={source:len(build_series(high[high.source.eq(source)])) for source in sorted(high.source.unique())}
     s['resolved_unique_parent_structures']=resolved.loc[resolved.identity_status.eq('resolved_exact'),'inchikey'].nunique()
     s['unresolved_parent_identifiers']=int(resolved.identity_status.ne('resolved_exact').sum())
     s['primary_noncommercial_series']=int(high.loc[high.qc_flags.str.contains('license_noncommercial'),'protocol_id'].nunique())
     snapshots=[]
-    for stage,subset in [('identity_resolution',x[~x.source.eq('cebs') & ~x.publication_doi.isin(extra.publication_doi)]),
-                         ('composite_audit',x[~x.publication_doi.isin(extra.publication_doi)]),('additional_publications',x)]:
+    for stage,subset in [('previous_validated_cohort',x[~x.source_record_id.isin(round3.source_record_id)]),('reviewed_cebs_expansion',x)]:
         st=build_series(subset);p=st[st.primary_eligible]
         scope_ids=set(pre.loc[pre.parent_analyte,'compound_id'])|set(subset.compound_id)
         scoped=resolved[resolved.compound_id.isin(scope_ids)]

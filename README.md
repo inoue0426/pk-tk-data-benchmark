@@ -2,6 +2,8 @@
 
 A reproducible collection, identity-resolution and QC pipeline for dose–exposure research. The current expansion prioritizes independent publications and experimentally comparable dose series; it is **not yet a sufficiently diverse molecular ML benchmark**.
 
+Current verified subset: **57 series, 20 compounds, 18 source studies; 16 series have both eligible AUC and Cmax**. All 112 composite candidates have a disposition, but 15 lack an obtained/reconciled full protocol.
+
 See the [verified final report](reports/final_report.md), [machine-readable counts](reports/summary.json), [CvTdb attrition investigation](reports/cvtdb_attrition.md), [source inventory](reports/data_inventory.md), [QC report](reports/qc_report.md), and [benchmark feasibility](reports/benchmark_feasibility.md).
 
 ## Reproduce the complete workflow
@@ -37,7 +39,7 @@ An expansion replay requires the cached original pipeline outputs as inputs. `--
 ## Data and eligibility
 
 - **CvTdb:** all 35,669 original observations from `invivoPKfit 2.0.2` are retained with original fields, source IDs, units and QC flags. The audit explains why only ten strict publication-matched candidate series emerged: most source series are single-timepoint animal records, and missing/censored concentrations block many others. Potential composite profiles are retained separately and never promoted without protocol evidence.
-- **CEBS/NTP:** reviewed benzophenone, formamide and isoeugenol group spreadsheets validate existing composite-sampling candidates. See `configs/curation/cebs.json` and `reports/composite_audit.csv`; predicted peaks and inconsistent doses remain ineligible.
+- **CEBS/NTP:** reviewed group spreadsheets from 11 source experiments validate existing composite-sampling candidates and recover additional source-reported strata. See `configs/curation/cebs.json`, `configs/curation/cebs_expansion.json` and `reports/composite_audit.csv`; predicted peaks and inconsistent doses remain ineligible.
 - **New publications:** lorlatinib and methyl eugenol tables use pinned cell mappings in `configs/curation/pmc_round2.json`. Repeated study days remain separate correlated strata. Lorlatinib data carry noncommercial restrictions.
 - **PMC studies:** the original HY-071085 rat tables plus reviewed tofacitinib, DA-6886, lumefantrine, DA-9805 pure-component and memantine tables. Exact article/table hashes, selected columns and evidence fragments are recorded in `configs/curation/pmc_expansion.json`. Exposures are parsed from original cells. Formulation changes, ambiguous units and incomplete protocol details are flagged.
 - **Supplementary data:** the DA-6886 supplementary ZIP/PDF is downloaded and inspected. It contains calibration, stability and assay controls; these are not counted as additional animal PK experiments.
@@ -70,3 +72,18 @@ The initial `reported_endpoints.csv`, `high_confidence_cmax.csv`, and `reported_
 ## Licenses and attribution
 
 Code uses the existing MIT license. Source terms remain separate: EPA CvTdb original release CC0; packaged CRAN distributions GPL-3; selected PMC articles CC BY 2.0/4.0, plus lorlatinib CC BY-NC 4.0; ChEBI CC BY 4.0. UniChem references retain underlying source rights. Cite original studies and database publications. See [the inventory](reports/data_inventory.md) for source URLs, citations and restrictions. Do not apply the repository code license to downloaded datasets.
+
+## Reproduce the expanded audit
+
+The main pipeline downloads all pinned endpoint workbooks and audit evidence required by the curated configurations. To rerun discovery independently (discovery does not validate records):
+
+```bash
+PYTHONPATH=src python scripts/discover_composite_sources.py
+PYTHONPATH=src python scripts/download_composite_workbooks.py
+PYTHONPATH=src python scripts/collect_audit_evidence.py
+PYTHONPATH=src python -m pktk.expansion
+PYTHONPATH=src python -m pktk.pipeline --offline
+python -m pytest -q
+```
+
+`configs/curation/composite_decisions.json` records reviewed limitations and unresolved protocols. `reports/cebs_row_selection.csv` accounts for every row in the eight newly imported workbooks. Unselected rows remain in cached source files; they are not silently discarded. Raw and processed data remain untracked. New endpoint selection requires original-protocol review and a pinned curation change; these scripts never promote discovered files automatically.
