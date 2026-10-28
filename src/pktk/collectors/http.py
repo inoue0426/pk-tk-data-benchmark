@@ -1,4 +1,5 @@
 """Small public-file collector: robots, retries, atomic cache, digest and audit log."""
+import fcntl
 import hashlib
 import json
 import time
@@ -53,7 +54,17 @@ class Collector:
         rp = self.robots[origin]
         if not rp.can_fetch(AGENT, url):
             raise PermissionError(f'robots.txt disallows {url}')
-        time.sleep(max(0.3, rp.crawl_delay(AGENT) or 0))
+        # Coordinate independent collector processes sharing this cache, including APIs
+        # on the same origin. Keep rate-state outside source download manifests.
+        delay=max(0.3, rp.crawl_delay(AGENT) or 0)
+        lock=self.raw/('rate_'+hashlib.sha256(origin.encode()).hexdigest()[:16]+'.lock')
+        with lock.open('a+') as f:
+            fcntl.flock(f,fcntl.LOCK_EX)
+            f.seek(0)
+            last=float(f.read() or '0')
+            time.sleep(max(0,delay-(time.time()-last)))
+            f.seek(0);f.truncate();f.write(str(time.time()));f.flush()
+            fcntl.flock(f,fcntl.LOCK_UN)
 
     def fetch(self, name, url, version, expected_sha256=None, json_body=None, allowed_statuses=()):
         target = self.raw/name

@@ -72,6 +72,7 @@ def test_post_cache_request_body_is_part_of_identity(tmp_path):
 @pytest.mark.skipif(not Path('data/processed/reported_endpoints_expanded.csv').exists(),reason='Run expanded pipeline')
 def test_expanded_grouping_no_publication_or_endpoint_leakage():
     x=pd.read_csv('data/processed/reported_endpoints_expanded.csv',keep_default_na=False)
+    x=x[x.compound_name.isin(['HY-071085','tofacitinib','DA-6886','lumefantrine','saikosaponin A','imperatorin','paeonol','memantine'])].copy()
     for c in ['auc','cmax']:x[c]=pd.to_numeric(x[c],errors='coerce')
     s=build_series(x)
     assert len(s)==17

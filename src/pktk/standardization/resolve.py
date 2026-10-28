@@ -61,7 +61,15 @@ def registry(observations,endpoints):
         rows.append(dict(compound_id=cid,names=sorted(n for n in names if n),cas_values=sorted(set(g.casrn)-{''}),source='cvtdb'))
     for cid,g in endpoints.groupby('compound_id'):
         rows.append(dict(compound_id=cid,names=sorted(set(g.compound_name)),cas_values=sorted(set(g.get('casrn',pd.Series(dtype=str)))-{''}),source='pmc'))
-    return rows
+    # Multiple sources may already share a curated identifier (e.g. CEBS/DTXSID).
+    # Merge evidence, never manufacture another registry row for the same identifier.
+    merged={}
+    for r in rows:
+        if r['compound_id'] not in merged:merged[r['compound_id']]=r.copy()
+        else:
+            old=merged[r['compound_id']]
+            for k in ['names','cas_values']:old[k]=sorted(set(old[k])|set(r[k]))
+    return list(merged.values())
 
 
 def resolve(collector,entries,priority_ids=(),limit=None):
@@ -80,11 +88,13 @@ def resolve(collector,entries,priority_ids=(),limit=None):
             record['identity_status']='invalid_cas_checksum';output.append(record);continue
         query=cas or (entry['names'][0] if entry['names'] else '')
         if not query:record['identity_status']='missing_identifiers';output.append(record);continue
+        record['identity_query']=query
         candidates=[];complete=True
         try:
             url=BASE+'es_search/?'+urlencode(dict(term=query,page=1,size=20))
             name='chebi_search_'+hashlib.sha256(query.encode()).hexdigest()[:20]+'.json'
             p,m=collector.fetch(name,url,'identity-2026-10-28',allowed_statuses=(404,));manifests.append(m)
+            record['search_source_url']=m['url'];record['search_raw_sha256']=m['sha256'];record['search_retrieved_at']=m['retrieved_at']
             if m.get('http_status')==404:
                 record['identity_status']='not_found'
                 output.append(record)
@@ -119,16 +129,20 @@ def resolve(collector,entries,priority_ids=(),limit=None):
                     links=json.loads(p.read_text())
                     cids=sorted(set(cids)|{str(r['compoundId']) for compound in links.get('compounds',[]) if Chem.InchiToInchiKey(compound['inchi']['inchi'])==record['inchikey'] for r in compound['sources'] if r['id']==22})
                 except Exception as e:
+                    if collector.offline and isinstance(e,FileNotFoundError):raise
                     record['pubchem_lookup_status']='unavailable: '+str(e)[:160]
                 record['pubchem_cids_json']=json.dumps(cids)
                 record['pubchem_cid']=cids[0] if len(cids)==1 else ''
                 record['pubchem_lookup_status']=record.get('pubchem_lookup_status','unique_crossref' if len(cids)==1 else 'ambiguous_or_absent_crossref')
         except Exception as e:
+            if collector.offline and isinstance(e,FileNotFoundError):raise
             record['identity_status']='lookup_failed';record['error']=str(e)
         candidates_out.extend(candidates);output.append(record)
         print(f'identity {i+1}/{len(entries)} {entry["compound_id"]}: {record["identity_status"]}',flush=True)
     registry=pd.DataFrame(output)
     registry.to_csv(collector.root/'data/processed/compound_identity_registry.csv',index=False)
     (collector.root/'data/processed/compound_identity_candidates.json').write_text(json.dumps(candidates_out,indent=2,allow_nan=False)+'\n')
-    (collector.root/'reports/identity_source_manifest.json').write_text(json.dumps(list({m['url']:m for m in manifests}.values()),indent=2)+'\n')
+    # POST lookups share a URL; request bodies are part of provenance identity.
+    manifest_keys={json.dumps([m['url'],m.get('request_body')],sort_keys=True):m for m in manifests}
+    (collector.root/'reports/identity_source_manifest.json').write_text(json.dumps(list(manifest_keys.values()),indent=2)+'\n')
     return registry
