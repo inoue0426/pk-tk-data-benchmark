@@ -1,0 +1,82 @@
+[
+  {
+    "study": "K04003B",
+    "compound_id": "DTXSID7029904",
+    "cvtdb_document_id": "CEBS:document:K04003B",
+    "doi": "10.22427/ntp-data-dtxsid7029904",
+    "landing_url": "https://cebs.niehs.nih.gov/cebs/test_article/678-39-7",
+    "file": "TKS_Fluorotelomer_Alcohol_K04003B_Group_TK_Parameters_version2_6.xlsx",
+    "url": "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02182-0004-0000-9/file/TKS_Fluorotelomer_Alcohol_K04003B_Group_TK_Parameters_version2_6.xlsx",
+    "sha256": "53c37b6843ad7b3923839837516c7d5a9e7b362eb5003dda53402877e923471e",
+    "version": "composite-evidence-2026-10-28",
+    "auc_column": "AUC_0-T",
+    "auc_definition": "AUC0-t_unspecified",
+    "eligible_auc": false,
+    "model_evidence": "Observed values do not have a reported SEM.",
+    "dose_basis": "nominal",
+    "curation_round": "targeted_research_expansion",
+    "review_note": "Administered parent 8:2 fluorotelomer alcohol only, single gavage, matched 5 mL/kg Cremophor/ethanol/water formulation within sex. Observed plasma Cmax imported from rows4-9; metabolites PFOA and 7:3 acid, tissues and IV are excluded. AUC terminal window unresolved and model-derived AUCinf not promoted. This does not validate the CvTdb acid-metabolite candidate or establish C20619/K04003B equivalence.",
+    "rows": [
+      {
+        "row": 4,
+        "group_name": "3_Gavage_12_Rat_male",
+        "species": "Rat",
+        "sex": "Male",
+        "route": "Gavage",
+        "dose": 12.0,
+        "matrix": "Plasma",
+        "analyte": "Fluorotelomer alcohol 8+2"
+      },
+      {
+        "row": 5,
+        "group_name": "4_Gavage_24_Rat_male",
+        "species": "Rat",
+        "sex": "Male",
+        "route": "Gavage",
+        "dose": 24.0,
+        "matrix": "Plasma",
+        "analyte": "Fluorotelomer alcohol 8+2"
+      },
+      {
+        "row": 6,
+        "group_name": "5_Gavage_48_Rat_male",
+        "species": "Rat",
+        "sex": "Male",
+        "route": "Gavage",
+        "dose": 48.0,
+        "matrix": "Plasma",
+        "analyte": "Fluorotelomer alcohol 8+2"
+      },
+      {
+        "row": 7,
+        "group_name": "6_Gavage_40_Rat_female",
+        "species": "Rat",
+        "sex": "Female",
+        "route": "Gavage",
+        "dose": 40.0,
+        "matrix": "Plasma",
+        "analyte": "Fluorotelomer alcohol 8+2"
+      },
+      {
+        "row": 8,
+        "group_name": "7_Gavage_80_Rat_female",
+        "species": "Rat",
+        "sex": "Female",
+        "route": "Gavage",
+        "dose": 80.0,
+        "matrix": "Plasma",
+        "analyte": "Fluorotelomer alcohol 8+2"
+      },
+      {
+        "row": 9,
+        "group_name": "8_Gavage_160_Rat_female",
+        "species": "Rat",
+        "sex": "Female",
+        "route": "Gavage",
+        "dose": 160.0,
+        "matrix": "Plasma",
+        "analyte": "Fluorotelomer alcohol 8+2"
+      }
+    ]
+  }
+]

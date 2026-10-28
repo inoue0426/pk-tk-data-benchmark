@@ -82,3 +82,13 @@ CvTdb `cvtdb_profile_audit.csv` and `cvtdb_composite_candidates.csv` are audit-o
 - `validated_composite_candidate_groups` counts linked exploratory candidate groups. Historical alias `validated_composite_series` has the same meaning; it is **not** the total validated endpoint-series count. A candidate can split into formulation-specific series, or source endpoints can have unresolved CvTdb dose linkage.
 - `cebs_row_selection.csv`: one entry per workbook row, selected flag, selection rationale and raw hash. Alternative fits, metabolites and other regimens stay in raw caches.
 - AUC0-8h, AUC0-inf and unspecified-terminal AUC remain distinct. Predicted Cmax is never substituted for observed Cmax. Source-reported Cmax may be affected by dose-dependent sampling schedules.
+
+## Empirical research outputs
+
+`results/research/endpoint_observations.csv` contains endpoint-specific eligible rows (AUC and Cmax separately). `endpoint_series_id` combines source series and endpoint; `component_id` is the transitive closure of shared molecular identity, original identity and study. It defines reference exclusion and resampling, not individual animals.
+
+`episodes.csv` records policy, direction, support count, source IDs, target dose, observed exposure, dose ratio and support span. `one_extreme` uses one extreme support; `leave_one_dose_out` uses all other doses. Interior targets are labeled interpolation. `episode_membership.csv` is the complete support/target audit. IDs include direction so opposite-direction tasks at the same target cannot collide.
+
+`reference_training.csv` lists disjoint reference components, records and endpoint series for every episode. `predictions.csv` includes all attempted models, predictions, fitted parameters, failure reasons, log errors, absolute relative error and fold error. `not_identifiable` is not a substituted prediction. `metrics.csv` uses equal series then equal dependency-component weighting; repeated pairs are not independent replication. `paired_comparisons.csv` compares common episodes only and records exploratory component-bootstrap and leave-one-component-out sensitivity summaries. `nonlinearity.csv` uses all doses descriptively; its labels must never be used as independent evaluation truth.
+
+`curation_round=targeted_research_expansion` marks the parent-only K04003B addition. Its separate document ID deliberately avoids asserting the unresolved CvTdb C20619 alias. Source AUC cells remain preserved but are not benchmarked.

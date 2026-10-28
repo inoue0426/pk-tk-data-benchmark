@@ -27,7 +27,7 @@
     "id": "sample_size",
     "priority": "high",
     "status": "open",
-    "detail": "20 primary compounds across 18 source studies remain insufficient for meaningful compound-disjoint molecular ML. Related strata/publications require grouping."
+    "detail": "21 primary compounds across 19 source studies remain insufficient for meaningful compound-disjoint molecular ML. Related strata/publications require grouping."
   },
   {
     "id": "pkdb",
@@ -39,7 +39,7 @@
     "id": "other_sources",
     "priority": "medium",
     "status": "partially_resolved",
-    "detail": "This run adds 31 CEBS series from 8 new primary compounds and 8 studies. Public DTT discovery catalog inspected. FDA/EMA extraction and unresolved literature protocols remain outstanding."
+    "detail": "This run adds 2 CEBS series from 1 new primary compounds and 1 studies. Public DTT discovery catalog inspected. FDA/EMA extraction and unresolved literature protocols remain outstanding."
   },
   {
     "id": "overlap",

@@ -1,0 +1,15 @@
+{
+  "source": "CEBS/NTP K04003B",
+  "official_url": "https://cebs.niehs.nih.gov/cebs/test_article/678-39-7",
+  "citation": "NTP. Fluorotelomer alcohol 8+2 (678-39-7). Chemical Effects in Biological Systems. DOI 10.22427/NTP-DATA-DTXSID7029904.",
+  "decision": "Import six parent-specific observed Cmax groups from original reviewed source rows, yielding two oral rat series; preserve but exclude undefined-terminal and model-dependent AUC.",
+  "new_validated_compounds": 1,
+  "new_validated_studies": 1,
+  "new_validated_series": 2,
+  "new_auc_eligible_series": 0,
+  "new_cmax_eligible_series": 2,
+  "terms": "Public NTP/CEBS government data with attribution; raw and derived data not published or committed.",
+  "unresolved_overlap": "Do not assert K04003B equals CvTdb C20619; no previously validated source study is duplicated.",
+  "known_low_yield_sources_retried": false,
+  "remaining": "Broader new-compound discovery, original C20619 alias reconciliation and additional matched-window AUC remain outstanding. Priority in this run is complete empirical analysis, not indefinite source expansion."
+}

@@ -4,23 +4,23 @@
     "collected_parent_identifiers": 254,
     "resolved_unique_structures": 227,
     "unresolved_parent_identifiers": 26,
-    "validated_compounds": 12,
-    "independent_studies": 10,
-    "validated_series": 26,
-    "auc_series": 21,
-    "cmax_series": 9,
-    "both_eligible_series": 4
-  },
-  {
-    "stage": "reviewed_cebs_expansion",
-    "collected_parent_identifiers": 254,
-    "resolved_unique_structures": 227,
-    "unresolved_parent_identifiers": 26,
     "validated_compounds": 20,
     "independent_studies": 18,
     "validated_series": 57,
     "auc_series": 42,
     "cmax_series": 31,
+    "both_eligible_series": 16
+  },
+  {
+    "stage": "targeted_research_expansion",
+    "collected_parent_identifiers": 254,
+    "resolved_unique_structures": 227,
+    "unresolved_parent_identifiers": 26,
+    "validated_compounds": 21,
+    "independent_studies": 19,
+    "validated_series": 59,
+    "auc_series": 42,
+    "cmax_series": 33,
     "both_eligible_series": 16
   }
 ]

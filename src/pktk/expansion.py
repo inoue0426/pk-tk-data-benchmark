@@ -161,7 +161,7 @@ def run(root,offline=False,resolve_identities=True):
     s['unresolved_parent_identifiers']=int(resolved.identity_status.ne('resolved_exact').sum())
     s['primary_noncommercial_series']=int(high.loc[high.qc_flags.str.contains('license_noncommercial'),'protocol_id'].nunique())
     snapshots=[]
-    for stage,subset in [('previous_validated_cohort',x[~x.source_record_id.isin(round3.source_record_id)]),('reviewed_cebs_expansion',x)]:
+    for stage,subset in [('previous_validated_cohort',x[x.curation_round.ne('targeted_research_expansion')]),('targeted_research_expansion',x)]:
         st=build_series(subset);p=st[st.primary_eligible]
         scope_ids=set(pre.loc[pre.parent_analyte,'compound_id'])|set(subset.compound_id)
         scoped=resolved[resolved.compound_id.isin(scope_ids)]

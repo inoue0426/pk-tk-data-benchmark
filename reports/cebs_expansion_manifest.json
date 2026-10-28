@@ -110,5 +110,19 @@
     "http_status": 200,
     "etag": null,
     "last_modified": null
+  },
+  {
+    "file": "TKS_Fluorotelomer_Alcohol_K04003B_Group_TK_Parameters_version2_6.xlsx",
+    "study_id": "K04003B",
+    "selected_rows": 6,
+    "total_rows": 42,
+    "url": "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02182-0004-0000-9/file/TKS_Fluorotelomer_Alcohol_K04003B_Group_TK_Parameters_version2_6.xlsx",
+    "version": "composite-evidence-2026-10-28",
+    "retrieved_at": "2026-10-28T21:15:38.723036+00:00",
+    "sha256": "53c37b6843ad7b3923839837516c7d5a9e7b362eb5003dda53402877e923471e",
+    "bytes": 27016,
+    "http_status": 200,
+    "etag": null,
+    "last_modified": null
   }
 ]

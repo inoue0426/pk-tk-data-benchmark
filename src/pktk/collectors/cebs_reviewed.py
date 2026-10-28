@@ -18,6 +18,7 @@ def numeric(value):
 
 def collect(collector):
     specs=json.loads((collector.root/'configs/curation/cebs_expansion.json').read_text())
+    specs+=json.loads((collector.root/'configs/curation/cebs_targeted.json').read_text())
     records=[];ledger=[];manifests=[]
     checks={'group_name':'GROUP_NAME','species':'SPECIES_COMMON_NAME','sex':'SEX','route':'ROUTE',
             'dose':'DOSE','matrix':'TISSUE','analyte':'ANALYTE'}
@@ -72,7 +73,7 @@ def collect(collector):
                 endpoint_origin=origin,protocol_verified=True,primary_eligible=True,
                 high_confidence_auc=spec['eligible_auc'] and auc is not None,high_confidence_cmax=cmax is not None,
                 has_numeric_curve=False,qc_flags=';'.join(flags),curation_spec_id=identity([spec['study'],protocol]),
-                curation_round='composite_expansion'))
+                curation_round=spec.get('curation_round','composite_expansion')))
         manifests.append(dict(file=spec['file'],study_id=spec['study'],selected_rows=len(selected),total_rows=len(x),**meta))
     pd.DataFrame(ledger).to_csv(collector.root/'reports/cebs_row_selection.csv',index=False)
     (collector.root/'reports/cebs_expansion_manifest.json').write_text(json.dumps(manifests,indent=2)+'\n')
