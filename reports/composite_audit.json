@@ -1,12 +1,31 @@
 {
   "total_candidates": 112,
-  "reviewed_candidates": 18,
+  "assessed_candidates": 112,
+  "reviewed_candidates": 97,
+  "protocol_unresolved_candidates": 15,
   "status_counts": {
-    "not_reviewed": 94,
-    "validated_group_endpoints": 14,
+    "validated_group_endpoints": 31,
+    "withheld_dose_reconciliation": 8,
+    "full_protocol_unavailable": 7,
+    "protocol_reviewed_missing_conditions": 7,
+    "withheld_study_link": 7,
+    "protocol_reviewed_model_dependent": 6,
+    "protocol_reviewed_no_import": 6,
+    "withheld_no_reviewed_endpoint": 6,
+    "protocol_reviewed_no_endpoints": 4,
+    "withheld_mixture_link": 4,
+    "withheld_endpoint_definition_conflict": 4,
+    "protocol_link_requires_review": 4,
+    "protocol_unavailable": 4,
     "withheld_matrix_conflict": 2,
-    "withheld_dose_conflict": 2
+    "withheld_administered_analyte_link": 2,
+    "withheld_insufficient_reported_doses": 2,
+    "withheld_dose_conflict": 2,
+    "withheld_parent_metabolite_link": 2,
+    "withheld_matrix_metadata": 2,
+    "withheld_missing_conditions": 1,
+    "withheld_source_quality": 1
   },
-  "selection": "Purposive stratified sample: three source studies, rat/mouse, sex, route and matrix; not a statistical yield estimate",
-  "expansion_decision": "Initial recovery supports targeted CEBS extraction. No blanket promotion; reconcile dose and matrix errors first. Audit stays at three source studies for this run."
+  "selection": "All 112 candidates have evidence-based disposition or explicit unresolved protocol status; validation requires reviewed endpoint rows.",
+  "expansion_decision": "No individual-animal trajectories invented. Candidate groups and validated endpoint series have different granularity: formulations and strains may split a candidate."
 }

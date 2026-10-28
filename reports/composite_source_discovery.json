@@ -1,0 +1,951 @@
+[
+  {
+    "document_id": "CvTdb:document:129",
+    "n_candidates": 4,
+    "compound_id": "DTXSID3022405",
+    "compound_name": "2-Hydroxy-4-methoxybenzophenone",
+    "casrn": "131-57-7",
+    "doi": "",
+    "pmid": "",
+    "source_experiment": "S0593",
+    "files": [
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-01338-0022-0000-1/file/IAD_TKS_2-Hydroxy-4-methoxybenzophenone_1996_Individual_Animal_Data.xlsx",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-01338-0022-0000-1/file/S0593_Data_Summary_-_Mouse.pdf",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-01338-0022-0000-1/file/S0593_Data_Summary_-_Rats.pdf",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-01338-0022-0000-1/file/TKS_2-Hydroxy-4-methoxybenzophenone_1996_S0593_Group_TK_Parameters_2.xlsx",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-01338-0022-0000-1/file/TKS_2-Hydroxy-4-methoxybenzophenone_1996_S0593_Individual_Animal_Data_2.xlsx"
+    ],
+    "landing_manifest": {
+      "url": "https://cebs.niehs.nih.gov/cebs/test_article/131-57-7",
+      "version": "CEBS-discovery-2026-10-28",
+      "retrieved_at": "2026-10-28T21:08:54.923187+00:00",
+      "sha256": "b98cf6f9d4c513eabb4002c39e0bd4e3a8987fcf7630b715518e6f38b06ffe89",
+      "bytes": 130095,
+      "http_status": 200,
+      "etag": null,
+      "last_modified": null
+    },
+    "status": "landing_retrieved"
+  },
+  {
+    "document_id": "CvTdb:document:131",
+    "n_candidates": 2,
+    "compound_id": "CvTdb:chemical:1023",
+    "compound_name": "Fluorotelomer acid 7+3",
+    "casrn": "",
+    "doi": "",
+    "pmid": "",
+    "source_experiment": "C20619",
+    "files": [],
+    "status": "literature_protocol_required"
+  },
+  {
+    "document_id": "CvTdb:document:132",
+    "n_candidates": 6,
+    "compound_id": "DTXSID4024642",
+    "compound_name": "Bromochloroacetic acid",
+    "casrn": "5589-96-8",
+    "doi": "10.22427/NTP-DATA-DTXSID4024642",
+    "pmid": "",
+    "source_experiment": "C96019",
+    "files": [
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-01740-0019-0000-4/file/K07378_Data_Summary-Mouse.pdf",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-01740-0019-0000-4/file/K07378_Data_Summary-Rats.pdf",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-01740-0019-0000-4/file/TKS_Bromochloroacetic_acid_2011_K07378_Group_TK_Parameters_v2_7.xlsx",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-01740-0019-0000-4/file/TKS_Individual_Animal_Data_Bromochloroacetic_acid_2011_copy.xlsx"
+    ],
+    "landing_manifest": {
+      "url": "https://cebs.niehs.nih.gov/cebs/test_article/5589-96-8",
+      "version": "CEBS-discovery-2026-10-28",
+      "retrieved_at": "2026-10-28T21:08:55.719406+00:00",
+      "sha256": "1fec1c0b41c8820a7bca691b294f2d858a8e00a885d3d359deb0bf6eeb645d87",
+      "bytes": 88581,
+      "http_status": 200,
+      "etag": null,
+      "last_modified": null
+    },
+    "status": "landing_retrieved"
+  },
+  {
+    "document_id": "CvTdb:document:159",
+    "n_candidates": 4,
+    "compound_id": "DTXSID1021087",
+    "compound_name": "Oxazepam",
+    "casrn": "604-75-1",
+    "doi": "10.22427/NTP-DATA-DTXSID1021087",
+    "pmid": "",
+    "source_experiment": "S0301",
+    "files": [
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02622-0015-0000-0/file/IAD_TKS_Oxazepam_1992_S0301_Individual_Animal_Data.xlsx",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02622-0015-0000-0/file/TKS_Oxazepam_1992_S0301_Individual_Animal_Data_2_copy.xlsx",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02622-0016-0000-1/file/IAD_TKS_Oxazepam_1994_S0578_Individual_Animal_Data.xlsx",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02622-0016-0000-1/file/TKS_Oxazepam_1994_S0578_Individual_Animal_Data_copy.xlsx"
+    ],
+    "landing_manifest": {
+      "url": "https://cebs.niehs.nih.gov/cebs/test_article/604-75-1",
+      "version": "CEBS-discovery-2026-10-28",
+      "retrieved_at": "2026-10-28T21:08:56.668994+00:00",
+      "sha256": "c9c829e51a2408372c80c9afc0577bf1fdeb2fb4d5f781c143f853a71d2da036",
+      "bytes": 63355,
+      "http_status": 200,
+      "etag": null,
+      "last_modified": null
+    },
+    "status": "landing_retrieved"
+  },
+  {
+    "document_id": "CvTdb:document:160",
+    "n_candidates": 2,
+    "compound_id": "DTXSID5025231",
+    "compound_name": "Emodin",
+    "casrn": "518-82-1",
+    "doi": "10.22427/NTP-DATA-DTXSID5025231",
+    "pmid": "",
+    "source_experiment": "S0322",
+    "files": [
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02109-0026-0000-2/file/IAD_TKS_Emodin_S0322_1995_Individual_Animal_Data.xlsx",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02109-0026-0000-2/file/S0322_Data_Summary_-_Mouse.pdf",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02109-0026-0000-2/file/S0322_Data_Summary_-_Rats.pdf",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02109-0026-0000-2/file/TKS_Emodin_S0322_1995_Individual_Animal_Data_2_copy.xlsx",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02109-0026-0000-2/file/TKS_Emodin_S0322_1995_TK_Parameters_t2_2_copy.xlsx",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02109-0027-0000-3/file/IAD_TKS_Emodin_Dosed_Feed_S0575_1996_Individual_Animal_Data.xlsx",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02109-0027-0000-3/file/TKS_Emodin_Dosed_Feed_S0575_1996_Individual_Animal_Data_2_copy.xlsx"
+    ],
+    "landing_manifest": {
+      "url": "https://cebs.niehs.nih.gov/cebs/test_article/518-82-1",
+      "version": "CEBS-discovery-2026-10-28",
+      "retrieved_at": "2026-10-28T21:08:57.717365+00:00",
+      "sha256": "ccf04b8e1c191e336567e311d92755b70633641cbd219e3540c985e21190fd82",
+      "bytes": 92365,
+      "http_status": 200,
+      "etag": null,
+      "last_modified": null
+    },
+    "status": "landing_retrieved"
+  },
+  {
+    "document_id": "CvTdb:document:161",
+    "n_candidates": 2,
+    "compound_id": "DTXSID7021106",
+    "compound_name": "Pentachlorophenol",
+    "casrn": "87-86-5",
+    "doi": "10.22427/NTP-DATA-DTXSID7021106",
+    "pmid": "",
+    "source_experiment": "S0328",
+    "files": [
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02644-0019-0000-8/file/IAD_TKS_Pentachlorophenol_purified_S0328_Individual_Animal_Data.xlsx",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02644-0019-0000-8/file/S0328_Data_Summary.pdf",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02644-0019-0000-8/file/TKS_Pentachlorophenol_purified_S0328_Individual_Animal_Data_2_copy.xlsx",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02644-0019-0000-8/file/TKS_Pentachlorophenol_purified_S0328_TK_Group_Parameters_t2_2copy.xlsx",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02644-0020-0000-0/file/IAD_TKS_Pentachlorophenol_purified_S0579_Individual_Animal_Data.xlsx",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02644-0020-0000-0/file/TKS_Pentachlorophenol_purified_S0579_Individual_Animal_Data_2_copy.xlsx"
+    ],
+    "landing_manifest": {
+      "url": "https://cebs.niehs.nih.gov/cebs/test_article/87-86-5",
+      "version": "CEBS-discovery-2026-10-28",
+      "retrieved_at": "2026-10-28T21:08:58.541017+00:00",
+      "sha256": "689000335a57718c59353f3337a85e89735f2ebced3f1b47001504f30eae3895",
+      "bytes": 80596,
+      "http_status": 200,
+      "etag": null,
+      "last_modified": null
+    },
+    "status": "landing_retrieved"
+  },
+  {
+    "document_id": "CvTdb:document:162",
+    "n_candidates": 1,
+    "compound_id": "DTXSID9021924",
+    "compound_name": "Pyridine",
+    "casrn": "110-86-1",
+    "doi": "10.22427/NTP-DATA-DTXSID9021924",
+    "pmid": "",
+    "source_experiment": "S0373",
+    "files": [
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02756-0032-0000-7/file/IAD_TKS_Pyridine-Rat_1993_S0373_Individual_Animal_Data_version2.xlsx",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02756-0032-0000-7/file/S0373_Data_Summary_Rats.pdf",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02756-0032-0000-7/file/TKS_Pyridine-Rat_1993_S0373_Group_TK_Parameters_version2_copy.xlsx",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02756-0032-0000-7/file/TKS_Pyridine-Rat_1993_S0373_Individual_Animal_Data_version2_2_copy.xlsx",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02756-0033-0000-8/file/IAD_TKS_Pyridine_C55301B_19920600_Individual_Animal_Data_version2Corr_v2.xlsx",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02756-0033-0000-8/file/K55301B_Data_Summary_Mouse.pdf",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02756-0033-0000-8/file/K55301B_Data_Summary_Rats.pdf",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02756-0033-0000-8/file/TKS_Pyridine_K55301B_Mouse_Group_TK_Parameters_version2_3_copy.xlsx",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02756-0033-0000-8/file/TKS_Pyridine_K55301B_Mouse_Individual_Animal_Data_version2_3_copy.xlsx",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02756-0033-0000-8/file/TKS_Pyridine_K55301B_Rat_Group_TK_Parameters_version2_3_copy.xlsx",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02756-0033-0000-8/file/TKS_Pyridine_K55301B_Rat_Individual_Animal_Data_version2_3_copy.xlsx"
+    ],
+    "landing_manifest": {
+      "url": "https://cebs.niehs.nih.gov/cebs/test_article/110-86-1",
+      "version": "CEBS-discovery-2026-10-28",
+      "retrieved_at": "2026-10-28T21:08:59.339639+00:00",
+      "sha256": "b1ec336d8063c75722abbba343417ba28dc1883cb33fe0f3dcf7c03899b4b208",
+      "bytes": 120051,
+      "http_status": 200,
+      "etag": null,
+      "last_modified": null
+    },
+    "status": "landing_retrieved"
+  },
+  {
+    "document_id": "CvTdb:document:164",
+    "n_candidates": 3,
+    "compound_id": "DTXSID0020442",
+    "compound_name": "2,4-Dichlorophenoxyacetic acid",
+    "casrn": "94-75-7",
+    "doi": "10.22427/NTP-DATA-DTXSID0020442",
+    "pmid": "",
+    "source_experiment": "S0546",
+    "files": [
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-01223-0022-0000-4/file/IAD_TKS_2-4-Dichlorophenoxyacetic_acid_S0581_1995_Individual_Animal_Data.xlsx",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-01223-0022-0000-4/file/TKS_2-4-Dichlorophenoxyacetic_acid_S0581_1995_Individual_Animal_Data.xlsx",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-01223-0023-0000-5/file/IAD_TKS_2-4-Dichlorophenoxyacetic_acid_S0546_1995_Individual_Animal_Data.xlsx",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-01223-0023-0000-5/file/S0546_Data_Summary_-_Hamster.pdf",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-01223-0023-0000-5/file/S0546_Data_Summary_-_Mouse.pdf",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-01223-0023-0000-5/file/S0546_Data_Summary_-_Rats.pdf",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-01223-0023-0000-5/file/TKS_2-4-Dichlorophenoxyacetic_acid_S0546_1995_Group_Parameters.xlsx",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-01223-0023-0000-5/file/TKS_2-4-Dichlorophenoxyacetic_acid_S0546_1995_Individual_Animal_Data.xlsx"
+    ],
+    "landing_manifest": {
+      "url": "https://cebs.niehs.nih.gov/cebs/test_article/94-75-7",
+      "version": "CEBS-discovery-2026-10-28",
+      "retrieved_at": "2026-10-28T21:09:00.123409+00:00",
+      "sha256": "7ece9d260e96fd46828d4b4b63c25e119d888e5ed4d3b8d322207f21ee6a0c94",
+      "bytes": 103213,
+      "http_status": 200,
+      "etag": null,
+      "last_modified": null
+    },
+    "status": "landing_retrieved"
+  },
+  {
+    "document_id": "CvTdb:document:166",
+    "n_candidates": 3,
+    "compound_id": "DTXSID3020095",
+    "compound_name": "Anthraquinone",
+    "casrn": "84-65-1",
+    "doi": "10.22427/NTP-DATA-DTXSID3020095",
+    "pmid": "",
+    "source_experiment": "S0558",
+    "files": [
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-01658-0022-0000-6/file/IAD_TKS_Anthraquinone_1994_S0558_Individual_Animal_Data.xlsx",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-01658-0022-0000-6/file/S0558_Data_Summary_-_Mouse.pdf",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-01658-0022-0000-6/file/S0558_Data_Summary_-_Rats.pdf",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-01658-0022-0000-6/file/TKS_Anthraquinone_1994_S0558_Group_TK_Parameters_version2_3.xlsx",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-01658-0022-0000-6/file/TKS_Anthraquinone_1994_S0558_Individual_Animal_Data_4.xlsx"
+    ],
+    "landing_manifest": {
+      "url": "https://cebs.niehs.nih.gov/cebs/test_article/84-65-1",
+      "version": "CEBS-discovery-2026-10-28",
+      "retrieved_at": "2026-10-28T21:09:00.930049+00:00",
+      "sha256": "8c933abf3a6b930e2ec9b39c06b3ab49757229d65483f834cfee2623fcfe9828",
+      "bytes": 95467,
+      "http_status": 200,
+      "etag": null,
+      "last_modified": null
+    },
+    "status": "landing_retrieved"
+  },
+  {
+    "document_id": "CvTdb:document:168",
+    "n_candidates": 1,
+    "compound_id": "DTXSID5023794",
+    "compound_name": "Oxymetholone",
+    "casrn": "434-07-1",
+    "doi": "",
+    "pmid": "",
+    "source_experiment": "S0569",
+    "files": [
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02624-0012-0000-9/file/IAD_TKS_Oxymetholone_S0569_1994_Individual_Animal_Data.xlsx",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02624-0014-0000-1/file/S0266_Data_Summary_-_Mouse.pdf",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02624-0014-0000-1/file/S0266_Data_Summary_-_Rats.pdf",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02624-0014-0000-1/file/TKS_Oxymetholone_S0266_1994_Individual_Animal_Data_2.xlsx",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02624-0014-0000-1/file/TKS_Oxymetholone_S0266_1994_TK_group_parameters_t2_2.xlsx"
+    ],
+    "landing_manifest": {
+      "url": "https://cebs.niehs.nih.gov/cebs/test_article/434-07-1",
+      "version": "CEBS-discovery-2026-10-28",
+      "retrieved_at": "2026-10-28T21:09:01.824878+00:00",
+      "sha256": "6cff171010e57592c1fda9646706387115e12f5c4548caf303684d55e5669c7f",
+      "bytes": 67461,
+      "http_status": 200,
+      "etag": null,
+      "last_modified": null
+    },
+    "status": "landing_retrieved"
+  },
+  {
+    "document_id": "CvTdb:document:169",
+    "n_candidates": 3,
+    "compound_id": "DTXSID8020913",
+    "compound_name": "Naphthalene",
+    "casrn": "91-20-3",
+    "doi": "",
+    "pmid": "",
+    "source_experiment": "S0571",
+    "files": [
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02579-0012-0000-8/file/IAD_TKS_Naphthalene_Inhalation_S0606_1996_Individual_Animal_Data.xlsx",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02579-0012-0000-8/file/TKS_Naphthalene_Inhalation_S0606_1996_Individual_Animal_Data_2.xlsx",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02579-0013-0000-9/file/IAD_TKS_Naphthalene_IV_S0571_1996_Individual_Animal_Data.xlsx",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02579-0013-0000-9/file/S0571_Data_Summary_-_Mouse.pdf",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02579-0013-0000-9/file/S0571_Data_Summary_-_Rats.pdf",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02579-0013-0000-9/file/TKS_Naphthalene_IV_S0571_1996_Group_Ind_TK_Parameters_v2_3_copy.xlsx",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02579-0013-0000-9/file/TKS_Naphthalene_IV_S0571_1996_Individual_Animal_Data_2_copy.xlsx"
+    ],
+    "landing_manifest": {
+      "url": "https://cebs.niehs.nih.gov/cebs/test_article/91-20-3",
+      "version": "CEBS-discovery-2026-10-28",
+      "retrieved_at": "2026-10-28T21:09:02.725628+00:00",
+      "sha256": "161eabecf0c0375c48c43703d304830ab61af907e295571a82ac184db172c42e",
+      "bytes": 90579,
+      "http_status": 200,
+      "etag": null,
+      "last_modified": null
+    },
+    "status": "landing_retrieved"
+  },
+  {
+    "document_id": "CvTdb:document:170",
+    "n_candidates": 4,
+    "compound_id": "DTXSID5025607",
+    "compound_name": "1,2-Dimethoxy-4-(2-propen-1-yl)benzene",
+    "casrn": "93-15-2",
+    "doi": "",
+    "pmid": "",
+    "source_experiment": "S0577",
+    "files": [
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02467-0026-0000-9/file/K10265_Data_Summary_Mice.pdf",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02467-0026-0000-9/file/K10265_Data_Summary_Rats.pdf",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02467-0027-0000-0/file/IAD_TKS_Methyleugenol_S0577_1993_Individual_Animal_Data.xlsx",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02467-0027-0000-0/file/S0577_Data_Summary_-_Mouse.pdf",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02467-0027-0000-0/file/S0577_Data_Summary_-_Rats.pdf",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02467-0027-0000-0/file/TKS_Methyleugenol_S0577_1993_Group_TK_Parameters_2_copy.xlsx",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02467-0027-0000-0/file/TKS_Methyleugenol_S0577_1993_Individual_Animal_Data_2_copy.xlsx",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02467-0030-0000-4/file/C1026501_I01_Animal_Removal_Summary.pdf",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02467-0030-0000-4/file/C1026501_I04_Mean_Body_Weight_Summary.pdf",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02467-0030-0000-4/file/C1026501_I05_Clinical_Observations_Summary.pdf",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02467-0030-0000-4/file/C1026501_PA06_Organ_Weights_Summary.pdf"
+    ],
+    "landing_manifest": {
+      "url": "https://cebs.niehs.nih.gov/cebs/test_article/93-15-2",
+      "version": "CEBS-discovery-2026-10-28",
+      "retrieved_at": "2026-10-28T21:09:03.558142+00:00",
+      "sha256": "cfcf9733d9799906c40dd2bf2288d3980c0d26b6be9353697671f0c774db8b87",
+      "bytes": 92909,
+      "http_status": 200,
+      "etag": null,
+      "last_modified": null
+    },
+    "status": "landing_retrieved"
+  },
+  {
+    "document_id": "CvTdb:document:171",
+    "n_candidates": 6,
+    "compound_id": "DTXSID0021961",
+    "compound_name": "Benzophenone",
+    "casrn": "119-61-9",
+    "doi": "",
+    "pmid": "",
+    "source_experiment": "S0592",
+    "files": [
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-01707-0022-0000-1/file/IAD_TKS_Benzophenone_S0592_1996_Individual_Animal_Data.xlsx",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-01707-0022-0000-1/file/S0592_Data_Summary_-_Mouse.pdf",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-01707-0022-0000-1/file/S0592_Data_Summary_-_Rats.pdf",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-01707-0022-0000-1/file/TKS_Benzophenone_S0592_1996_Group_TK_Parameters_2.xlsx",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-01707-0022-0000-1/file/TKS_Benzophenone_S0592_1996_Individual_Animal_Data_2.xlsx"
+    ],
+    "landing_manifest": {
+      "url": "https://cebs.niehs.nih.gov/cebs/test_article/119-61-9",
+      "version": "CEBS-audit-2026-10-28",
+      "retrieved_at": "2026-10-28T18:18:41.949322+00:00",
+      "sha256": "0881ae19e2fa2addcd0a98027c9333ca339526799c2de20a7e6a4ce10e16eee0",
+      "bytes": 81275,
+      "http_status": 200,
+      "etag": null,
+      "last_modified": null
+    },
+    "status": "landing_retrieved"
+  },
+  {
+    "document_id": "CvTdb:document:172",
+    "n_candidates": 8,
+    "compound_id": "DTXSID8025337",
+    "compound_name": "Formamide",
+    "casrn": "75-12-7",
+    "doi": "10.22427/NTP-DATA-DTXSID8025337",
+    "pmid": "",
+    "source_experiment": "S0613",
+    "files": [
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02186-0032-0000-4/file/IAD_TKS_Formamide_1998_S0613_Individual_Animal_Data.xlsx",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02186-0032-0000-4/file/S0613_Data_Summary_-_Mouse.pdf",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02186-0032-0000-4/file/S0613_Data_Summary_-_Rats.pdf",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02186-0032-0000-4/file/TKS_Formamide_1998_S0613_Group_TK_Parameters_2_copy.xlsx",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02186-0032-0000-4/file/TKS_Formamide_1998_S0613_Individual_Animal_Data_2_copy.xlsx"
+    ],
+    "landing_manifest": {
+      "url": "https://cebs.niehs.nih.gov/cebs/test_article/75-12-7",
+      "version": "CEBS-audit-2026-10-28",
+      "retrieved_at": "2026-10-28T18:18:43.072363+00:00",
+      "sha256": "afa0580db744d45cf713c8d42261ed4553f8c36623ac77adbde8131f861e59cd",
+      "bytes": 111762,
+      "http_status": 200,
+      "etag": null,
+      "last_modified": null
+    },
+    "status": "landing_retrieved"
+  },
+  {
+    "document_id": "CvTdb:document:204",
+    "n_candidates": 1,
+    "compound_id": "DTXSID0020365",
+    "compound_name": "Cyclosporin A",
+    "casrn": "59865-13-3",
+    "doi": "",
+    "pmid": "10772639",
+    "source_experiment": "Cyclosporin",
+    "files": [],
+    "status": "literature_protocol_required"
+  },
+  {
+    "document_id": "CvTdb:document:210",
+    "n_candidates": 1,
+    "compound_id": "DTXSID5020732",
+    "compound_name": "Ibuprofen",
+    "casrn": "15687-27-1",
+    "doi": "",
+    "pmid": "1673423",
+    "source_experiment": "Ibuprofen",
+    "files": [],
+    "status": "literature_protocol_required"
+  },
+  {
+    "document_id": "CvTdb:document:219",
+    "n_candidates": 1,
+    "compound_id": "DTXSID2046624",
+    "compound_name": "Nilvadipine",
+    "casrn": "75530-68-6",
+    "doi": "10.3109/00498258809055133",
+    "pmid": "3354229",
+    "source_experiment": "Nilvadipine",
+    "files": [],
+    "status": "literature_protocol_required"
+  },
+  {
+    "document_id": "CvTdb:document:245",
+    "n_candidates": 1,
+    "compound_id": "DTXSID5020029",
+    "compound_name": "Acrylonitrile",
+    "casrn": "107-13-1",
+    "doi": "10.1006/taap.1996.0239",
+    "pmid": "8887460",
+    "source_experiment": "",
+    "files": [],
+    "status": "literature_protocol_required"
+  },
+  {
+    "document_id": "CvTdb:document:25284",
+    "n_candidates": 4,
+    "compound_id": "DTXSID5025607",
+    "compound_name": "1,2-Dimethoxy-4-(2-propen-1-yl)benzene",
+    "casrn": "93-15-2",
+    "doi": "10.3109/00498254.2012.711496",
+    "pmid": "22876784",
+    "source_experiment": "",
+    "files": [],
+    "status": "literature_protocol_required"
+  },
+  {
+    "document_id": "CvTdb:document:25297",
+    "n_candidates": 4,
+    "compound_id": "DTXSID7022413",
+    "compound_name": "Isoeugenol",
+    "casrn": "97-54-1",
+    "doi": "10.3109/00498254.2013.790576",
+    "pmid": "23627552",
+    "source_experiment": "",
+    "files": [],
+    "status": "literature_protocol_required"
+  },
+  {
+    "document_id": "CvTdb:document:25352",
+    "n_candidates": 2,
+    "compound_id": "DTXSID9021924",
+    "compound_name": "Pyridine",
+    "casrn": "110-86-1",
+    "doi": "10.22427/NTP-DATA-DTXSID9021924",
+    "pmid": "",
+    "source_experiment": "K55301B_Rat",
+    "files": [
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02756-0032-0000-7/file/IAD_TKS_Pyridine-Rat_1993_S0373_Individual_Animal_Data_version2.xlsx",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02756-0032-0000-7/file/S0373_Data_Summary_Rats.pdf",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02756-0032-0000-7/file/TKS_Pyridine-Rat_1993_S0373_Group_TK_Parameters_version2_copy.xlsx",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02756-0032-0000-7/file/TKS_Pyridine-Rat_1993_S0373_Individual_Animal_Data_version2_2_copy.xlsx",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02756-0033-0000-8/file/IAD_TKS_Pyridine_C55301B_19920600_Individual_Animal_Data_version2Corr_v2.xlsx",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02756-0033-0000-8/file/K55301B_Data_Summary_Mouse.pdf",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02756-0033-0000-8/file/K55301B_Data_Summary_Rats.pdf",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02756-0033-0000-8/file/TKS_Pyridine_K55301B_Mouse_Group_TK_Parameters_version2_3_copy.xlsx",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02756-0033-0000-8/file/TKS_Pyridine_K55301B_Mouse_Individual_Animal_Data_version2_3_copy.xlsx",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02756-0033-0000-8/file/TKS_Pyridine_K55301B_Rat_Group_TK_Parameters_version2_3_copy.xlsx",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02756-0033-0000-8/file/TKS_Pyridine_K55301B_Rat_Individual_Animal_Data_version2_3_copy.xlsx"
+    ],
+    "landing_manifest": {
+      "url": "https://cebs.niehs.nih.gov/cebs/test_article/110-86-1",
+      "version": "CEBS-discovery-2026-10-28",
+      "retrieved_at": "2026-10-28T21:08:59.339639+00:00",
+      "sha256": "b1ec336d8063c75722abbba343417ba28dc1883cb33fe0f3dcf7c03899b4b208",
+      "bytes": 120051,
+      "http_status": 200,
+      "etag": null,
+      "last_modified": null
+    },
+    "status": "landing_retrieved"
+  },
+  {
+    "document_id": "CvTdb:document:25353",
+    "n_candidates": 2,
+    "compound_id": "DTXSID9021924",
+    "compound_name": "Pyridine",
+    "casrn": "110-86-1",
+    "doi": "10.22427/NTP-DATA-DTXSID9021924",
+    "pmid": "",
+    "source_experiment": "K55301B_Mouse",
+    "files": [
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02756-0032-0000-7/file/IAD_TKS_Pyridine-Rat_1993_S0373_Individual_Animal_Data_version2.xlsx",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02756-0032-0000-7/file/S0373_Data_Summary_Rats.pdf",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02756-0032-0000-7/file/TKS_Pyridine-Rat_1993_S0373_Group_TK_Parameters_version2_copy.xlsx",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02756-0032-0000-7/file/TKS_Pyridine-Rat_1993_S0373_Individual_Animal_Data_version2_2_copy.xlsx",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02756-0033-0000-8/file/IAD_TKS_Pyridine_C55301B_19920600_Individual_Animal_Data_version2Corr_v2.xlsx",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02756-0033-0000-8/file/K55301B_Data_Summary_Mouse.pdf",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02756-0033-0000-8/file/K55301B_Data_Summary_Rats.pdf",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02756-0033-0000-8/file/TKS_Pyridine_K55301B_Mouse_Group_TK_Parameters_version2_3_copy.xlsx",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02756-0033-0000-8/file/TKS_Pyridine_K55301B_Mouse_Individual_Animal_Data_version2_3_copy.xlsx",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02756-0033-0000-8/file/TKS_Pyridine_K55301B_Rat_Group_TK_Parameters_version2_3_copy.xlsx",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02756-0033-0000-8/file/TKS_Pyridine_K55301B_Rat_Individual_Animal_Data_version2_3_copy.xlsx"
+    ],
+    "landing_manifest": {
+      "url": "https://cebs.niehs.nih.gov/cebs/test_article/110-86-1",
+      "version": "CEBS-discovery-2026-10-28",
+      "retrieved_at": "2026-10-28T21:08:59.339639+00:00",
+      "sha256": "b1ec336d8063c75722abbba343417ba28dc1883cb33fe0f3dcf7c03899b4b208",
+      "bytes": 120051,
+      "http_status": 200,
+      "etag": null,
+      "last_modified": null
+    },
+    "status": "landing_retrieved"
+  },
+  {
+    "document_id": "CvTdb:document:25361",
+    "n_candidates": 4,
+    "compound_id": "DTXSID4022107",
+    "compound_name": "2-Methylimidazole",
+    "casrn": "693-98-1",
+    "doi": "10.22427/NTP-DATA-DTXSID4022107",
+    "pmid": "",
+    "source_experiment": "K02825",
+    "files": [
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-01360-0015-0000-8/file/C92012B_Data_Summary_Mice.pdf",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-01360-0015-0000-8/file/C92012B_Data_Summary_Rats.pdf",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-01360-0016-0000-9/file/K02825_Data_Summary_-_Mouse.pdf",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-01360-0016-0000-9/file/K02825_Data_Summary_-_Rats.pdf",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-01360-0016-0000-9/file/TKS_2-Methylimidazole_1998_Group_TK_Parameters_version3_copy.xlsx",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-01360-0016-0000-9/file/TKS_Individual_Animal_Data_2-methylimidazole_1998_copy.xlsx"
+    ],
+    "landing_manifest": {
+      "url": "https://cebs.niehs.nih.gov/cebs/test_article/693-98-1",
+      "version": "CEBS-discovery-2026-10-28",
+      "retrieved_at": "2026-10-28T21:09:04.420980+00:00",
+      "sha256": "af00dfc6d1603398c55f6602929518992465c57b66e9e98bdd2dcd7ecfc5d71e",
+      "bytes": 88707,
+      "http_status": 200,
+      "etag": null,
+      "last_modified": null
+    },
+    "status": "landing_retrieved"
+  },
+  {
+    "document_id": "CvTdb:document:25365",
+    "n_candidates": 4,
+    "compound_id": "DTXSID9025617",
+    "compound_name": "4-Methylimidazole",
+    "casrn": "822-36-6",
+    "doi": "10.22427/NTP-DATA-DTXSID9025617",
+    "pmid": "",
+    "source_experiment": "K02922",
+    "files": [
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-01511-0018-0000-9/file/TKS_4-Methylimidazole_2006_Group_TK_Parameters_version3.xlsx",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-01511-0018-0000-9/file/TKS_Individual_Animal_Data_4-methylimidazole_2006.xlsx"
+    ],
+    "landing_manifest": {
+      "url": "https://cebs.niehs.nih.gov/cebs/test_article/822-36-6",
+      "version": "CEBS-discovery-2026-10-28",
+      "retrieved_at": "2026-10-28T21:09:05.211570+00:00",
+      "sha256": "6620aa4f0dac41904f4c1935ba0e3e1d6fb85228bd9c09f268f6844716036da0",
+      "bytes": 119947,
+      "http_status": 200,
+      "etag": null,
+      "last_modified": null
+    },
+    "status": "landing_retrieved"
+  },
+  {
+    "document_id": "CvTdb:document:25382",
+    "n_candidates": 8,
+    "compound_id": "DTXSID9030258",
+    "compound_name": "2-Methyltetrahydrofuran",
+    "casrn": "96-47-9",
+    "doi": "10.22427/NTP-DATA-DTXSID9030258",
+    "pmid": "",
+    "source_experiment": "K07076",
+    "files": [
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-01363-0002-0000-7/file/IAD_TKS_2-Methyltetrahydrofuran_Individual_Animal_Data_version2.xlsx",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-01363-0002-0000-7/file/K07076_Data_Summary_-_Mouse.pdf",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-01363-0002-0000-7/file/K07076_Data_Summary_-_Rats.pdf",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-01363-0002-0000-7/file/TKS_2-Methyltetrahydrofuran_K07076_Group_TK_Parameters_4.xlsx",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-01363-0002-0000-7/file/TKS_2-Methyltetrahydrofuran_K07076_Individual_Animal_Data_3.xlsx"
+    ],
+    "landing_manifest": {
+      "url": "https://cebs.niehs.nih.gov/cebs/test_article/96-47-9",
+      "version": "CEBS-discovery-2026-10-28",
+      "retrieved_at": "2026-10-28T21:09:06.012404+00:00",
+      "sha256": "efb4747eb8e5317bbc4bfcb88fb2dca5cd7c8bb4f9b431fa0b88403ac9fbd576",
+      "bytes": 25700,
+      "http_status": 200,
+      "etag": null,
+      "last_modified": null
+    },
+    "status": "landing_retrieved"
+  },
+  {
+    "document_id": "CvTdb:document:25409",
+    "n_candidates": 1,
+    "compound_id": "DTXSID3032179",
+    "compound_name": "3,3',4,4',5-Pentachlorobiphenyl",
+    "casrn": "57465-28-8",
+    "doi": "10.22427/NTP-DATA-DTXSID3032179",
+    "pmid": "",
+    "source_experiment": "",
+    "files": [
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02863-0008-0000-9/file/TKS_Individual_Animal_Data_3-3-4-4-5-pentachlorobiphenyl_2007_copy.xlsx"
+    ],
+    "landing_manifest": {
+      "url": "https://cebs.niehs.nih.gov/cebs/test_article/57465-28-8",
+      "version": "CEBS-discovery-2026-10-28",
+      "retrieved_at": "2026-10-28T21:09:06.886332+00:00",
+      "sha256": "6dc15e4da49206503d02ae26d95c1ad256f655711675f7a58521823197bf1d2d",
+      "bytes": 43631,
+      "http_status": 200,
+      "etag": null,
+      "last_modified": null
+    },
+    "status": "landing_retrieved"
+  },
+  {
+    "document_id": "CvTdb:document:25416",
+    "n_candidates": 4,
+    "compound_id": "DTXSID5020285",
+    "compound_name": "1-Chloro-2-propanol",
+    "casrn": "127-00-4",
+    "doi": "10.22427/NTP-DATA-DTXSID5020285",
+    "pmid": "",
+    "source_experiment": "",
+    "files": [
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-01116-0023-0000-6/file/IAD_TKS_1-Chloro-2-propanol_S0539_1993_Individual_Animal_Data.xlsx",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-01116-0023-0000-6/file/S0539_Data_Summary_-_Mouse.pdf",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-01116-0023-0000-6/file/S0539_Data_Summary_-_Rats.pdf",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-01116-0023-0000-6/file/TKS_1-Chloro-2-propanol_S0539_1993_Group_TK_Parameters_2.xlsx",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-01116-0023-0000-6/file/TKS_1-Chloro-2-propanol_S0539_1993_Individual_Animal_Data_2.xlsx"
+    ],
+    "landing_manifest": {
+      "url": "https://cebs.niehs.nih.gov/cebs/test_article/127-00-4",
+      "version": "CEBS-discovery-2026-10-28",
+      "retrieved_at": "2026-10-28T21:09:07.700146+00:00",
+      "sha256": "50168d1ec0e276f0667c149d9a3624a7eb716f93b2669ae466d3af1bd37e932e",
+      "bytes": 87881,
+      "http_status": 200,
+      "etag": null,
+      "last_modified": null
+    },
+    "status": "landing_retrieved"
+  },
+  {
+    "document_id": "CvTdb:document:25424",
+    "n_candidates": 2,
+    "compound_id": "DTXSID4023917",
+    "compound_name": "Bis(2-chloroethoxy)methane",
+    "casrn": "111-91-1",
+    "doi": "10.22427/NTP-DATA-DTXSID4023917",
+    "pmid": "",
+    "source_experiment": "",
+    "files": [
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-03051-0032-0000-6/file/C99028_Data_Summary_CEM_Mice.pdf",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-03051-0032-0000-6/file/C99028_Data_Summary_CEM_Rats.pdf",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-03051-0032-0000-6/file/C99028_Data_Summary_TDGA_Mice.pdf",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-03051-0032-0000-6/file/C99028_Data_Summary_TDGA_Rats.pdf",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-03051-0034-0000-8/file/IAD_TKS_Bis_2-Chloroethoxy_Methane_2009_Individual_Animal_Data_version2_Corr.xlsx",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-03051-0034-0000-8/file/K08624_Data_Summary_-_Mice_-_Bis_2-Chloroethoxy_Methane.pdf",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-03051-0034-0000-8/file/K08624_Data_Summary_-_Mice_Thiodiglycolic_Acid.pdf",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-03051-0034-0000-8/file/K08624_Data_Summary_-_Rats_Bis_2-Chloroethoxy_Methane.pdf",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-03051-0034-0000-8/file/K08624_Data_Summary_-_Rats_Thiodiglycolic_Acid.pdf",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-03051-0034-0000-8/file/TKS_Bis_2-Chloroethoxy_Methane_2009_K08624_Individual_Animal_Data_v2_3_copy.xlsx",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-03051-0034-0000-8/file/TKS_Bis_2-Choroethoxy_Methane_2009_K08624_Group_TK_Parameters_v2_3copy.xlsx"
+    ],
+    "landing_manifest": {
+      "url": "https://cebs.niehs.nih.gov/cebs/test_article/111-91-1",
+      "version": "CEBS-discovery-2026-10-28",
+      "retrieved_at": "2026-10-28T21:09:08.524714+00:00",
+      "sha256": "3c86860489e399306e6da98028c80828572447ec6ef1f7e6c20d57fc75667f6c",
+      "bytes": 132146,
+      "http_status": 200,
+      "etag": null,
+      "last_modified": null
+    },
+    "status": "landing_retrieved"
+  },
+  {
+    "document_id": "CvTdb:document:25428",
+    "n_candidates": 4,
+    "compound_id": "DTXSID1020198",
+    "compound_name": "Bromodichloromethane",
+    "casrn": "75-27-4",
+    "doi": "10.22427/NTP-DATA-DTXSID1020198",
+    "pmid": "",
+    "source_experiment": "",
+    "files": [
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-01743-0061-0000-4/file/C96018_Data_Summary_Mice.pdf",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-01743-0061-0000-4/file/C96018_Data_Summary_Rats.pdf",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-01743-0063-0000-6/file/K05097_Data_Summary_Mouse.pdf",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-01743-0063-0000-6/file/K05097_Data_Summary_Rats.pdf",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-01743-0063-0000-6/file/TKS_Bromodichloromethane_2006_K05097_Group_TK_Parameters_v2_3_copy.xlsx",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-01743-0063-0000-6/file/TKS_Individual_Animal_Data_Bromodichloromethane_2006_copy.xlsx"
+    ],
+    "landing_manifest": {
+      "url": "https://cebs.niehs.nih.gov/cebs/test_article/75-27-4",
+      "version": "CEBS-discovery-2026-10-28",
+      "retrieved_at": "2026-10-28T21:09:09.356402+00:00",
+      "sha256": "aa7864849bd3173559061b9c92a576e249d1e5fbd6c9e82d486387d6a2661cfe",
+      "bytes": 195293,
+      "http_status": 200,
+      "etag": null,
+      "last_modified": null
+    },
+    "status": "landing_retrieved"
+  },
+  {
+    "document_id": "CvTdb:document:25448",
+    "n_candidates": 2,
+    "compound_id": "DTXSID8031865",
+    "compound_name": "Perfluorooctanoic acid",
+    "casrn": "335-67-1",
+    "doi": "10.22427/NTP-DATA-DTXSID8031865",
+    "pmid": "",
+    "source_experiment": "",
+    "files": [
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02657-0007-0000-9/file/C20614_Data_Summary.pdf",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02657-0009-0000-1/file/C91070C01_I01_Animal_Removal_Summary.pdf",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02657-0009-0000-1/file/C91070C01_I04_Mean_Body_Weight_Summary.pdf",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02657-0009-0000-1/file/C91070C01_I05_Clinical_Observations_Summary.pdf",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02657-0009-0000-1/file/C91070C01_PA06_Organ_Weights_Summary.pdf",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02657-0014-0000-7/file/K10075_Data_Summary.pdf",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02657-0014-0000-7/file/TKS_Individual_Animal_Data_Perfluorooctanoic_Acid_2009.xlsx",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02657-0014-0000-7/file/TKS_Perfluorooctanoic_acid_2009_K10075_Group_TK_Parameters_v2_4.xlsx"
+    ],
+    "landing_manifest": {
+      "url": "https://cebs.niehs.nih.gov/cebs/test_article/335-67-1",
+      "version": "CEBS-discovery-2026-10-28",
+      "retrieved_at": "2026-10-28T21:09:10.143441+00:00",
+      "sha256": "c1889e96510fd778f5c99b4a3248fa7f37e578b684f89597acf188a12bee6231",
+      "bytes": 181050,
+      "http_status": 200,
+      "etag": null,
+      "last_modified": null
+    },
+    "status": "landing_retrieved"
+  },
+  {
+    "document_id": "CvTdb:document:25458",
+    "n_candidates": 4,
+    "compound_id": "DTXSID3026148",
+    "compound_name": "alpha-Thujone",
+    "casrn": "546-80-5",
+    "doi": "10.22427/NTP-DATA-DTXSID3026148",
+    "pmid": "",
+    "source_experiment": "",
+    "files": [
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-03033-0031-0000-5/file/IAD_TKS_alpha_and_alpha-beta-Thujone_mixture_Individual_Animal_Data_Version2.xlsx",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-03033-0031-0000-5/file/K06898_Data_Summary_-_Rat-mixture.pdf",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-03033-0031-0000-5/file/K06898_Data_Summary_-_mouse-mixture.pdf",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-03033-0031-0000-5/file/K06898_Data_Summary_-_mouse.pdf",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-03033-0031-0000-5/file/K06898_Data_Summary_-_rat.pdf",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-03033-0031-0000-5/file/TKS_alpha_and_alpha-beta-Thujone_Mixture_K06898_Group_TK_Parameters_version2_4.xlsx",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-03033-0031-0000-5/file/TKS_alpha_and_alpha-beta-Thujone_Mixture_K06898_Individual_Animal_Data_Version2_3.xlsx"
+    ],
+    "landing_manifest": {
+      "url": "https://cebs.niehs.nih.gov/cebs/test_article/546-80-5",
+      "version": "CEBS-discovery-2026-10-28",
+      "retrieved_at": "2026-10-28T21:09:10.941052+00:00",
+      "sha256": "7db37f212e125ba840c7b50f426d0b7cb44884bb0fd396590183bbaae409aab5",
+      "bytes": 61670,
+      "http_status": 200,
+      "etag": null,
+      "last_modified": null
+    },
+    "status": "landing_retrieved"
+  },
+  {
+    "document_id": "CvTdb:document:25460",
+    "n_candidates": 2,
+    "compound_id": "DTXSID3031862",
+    "compound_name": "Perfluorohexanoic acid",
+    "casrn": "307-24-4",
+    "doi": "10.22427/NTP-DATA-DTXSID3031862",
+    "pmid": "",
+    "source_experiment": "",
+    "files": [
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02654-0004-0000-3/file/TKS_Individual_Animal_Data_Perfluorohexanoic_Acid_2010_copy.xlsx"
+    ],
+    "landing_manifest": {
+      "url": "https://cebs.niehs.nih.gov/cebs/test_article/307-24-4",
+      "version": "CEBS-discovery-2026-10-28",
+      "retrieved_at": "2026-10-28T21:09:11.698760+00:00",
+      "sha256": "d28fe873bb48a8d6e447f262025c53a186ec0132d87a52ac54bb489a9c4a7c15",
+      "bytes": 48512,
+      "http_status": 200,
+      "etag": null,
+      "last_modified": null
+    },
+    "status": "landing_retrieved"
+  },
+  {
+    "document_id": "CvTdb:document:25463",
+    "n_candidates": 2,
+    "compound_id": "DTXSID3037709",
+    "compound_name": "Potassium perfluorohexanesulfonate",
+    "casrn": "3871-99-6",
+    "doi": "10.22427/NTP-DATA-DTXSID3037709",
+    "pmid": "",
+    "source_experiment": "",
+    "files": [
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-03267-0003-0000-3/file/TKS_Individual_Animal_Data_Perfluorohexane-1-Sulphonic_Acid_Potassium_Salt.xlsx"
+    ],
+    "landing_manifest": {
+      "url": "https://cebs.niehs.nih.gov/cebs/test_article/3871-99-6",
+      "version": "CEBS-discovery-2026-10-28",
+      "retrieved_at": "2026-10-28T21:09:12.524930+00:00",
+      "sha256": "6c1fa2efebfad22fb6c8e2425b9485bdc289d06c6d2118f47f88f952733cf073",
+      "bytes": 52408,
+      "http_status": 200,
+      "etag": null,
+      "last_modified": null
+    },
+    "status": "landing_retrieved"
+  },
+  {
+    "document_id": "CvTdb:document:25465",
+    "n_candidates": 4,
+    "compound_id": "DTXSID5021122",
+    "compound_name": "Phenobarbital",
+    "casrn": "50-06-6",
+    "doi": "10.22427/NTP-DATA-DTXSID7023510",
+    "pmid": "",
+    "source_experiment": "",
+    "files": [],
+    "landing_manifest": {
+      "url": "https://cebs.niehs.nih.gov/cebs/test_article/50-06-6",
+      "version": "CEBS-discovery-2026-10-28",
+      "retrieved_at": "2026-10-28T21:09:13.443666+00:00",
+      "sha256": "8fd5e4cd74a0f2eab2bf8f626e869b6151a92484abb3c033ad1985ec9bb8c345",
+      "bytes": 74781,
+      "http_status": 200,
+      "etag": null,
+      "last_modified": null
+    },
+    "status": "landing_retrieved"
+  },
+  {
+    "document_id": "CvTdb:document:25470",
+    "n_candidates": 1,
+    "compound_id": "DTXSID0022985",
+    "compound_name": "L-Ephedrine",
+    "casrn": "299-42-3",
+    "doi": "10.22427/NTP-DATA-DTXSID0022985",
+    "pmid": "",
+    "source_experiment": "",
+    "files": [
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-03261-0009-0000-3/file/S0976_Data_Summary_Ephedrine.pdf",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-03261-0009-0000-3/file/S0976_Data_Summary_Ephedrine_plus_Caffeine.pdf",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-03261-0009-0000-3/file/S0976_Data_Summary_Ma_Huang.pdf",
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-03261-0009-0000-3/file/S0976_Data_Summary_Ma_Huang_plus_Caffeine.pdf"
+    ],
+    "landing_manifest": {
+      "url": "https://cebs.niehs.nih.gov/cebs/test_article/299-42-3",
+      "version": "CEBS-discovery-2026-10-28",
+      "retrieved_at": "2026-10-28T21:09:14.336026+00:00",
+      "sha256": "be8b4df65b6d18b94702968074155efea9ce79907981b45fc82a16d6afbc1786",
+      "bytes": 25751,
+      "http_status": 200,
+      "etag": null,
+      "last_modified": null
+    },
+    "status": "landing_retrieved"
+  },
+  {
+    "document_id": "CvTdb:document:25474",
+    "n_candidates": 2,
+    "compound_id": "DTXSID2020428",
+    "compound_name": "Dichloroacetic acid",
+    "casrn": "79-43-6",
+    "doi": "10.22427/NTP-DATA-DTXSID2020428",
+    "pmid": "",
+    "source_experiment": "",
+    "files": [
+      "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02007-0031-0000-5/file/TKS_Individual_Animal_Data_Dichloroacetic_acid_2009.xlsx"
+    ],
+    "landing_manifest": {
+      "url": "https://cebs.niehs.nih.gov/cebs/test_article/79-43-6",
+      "version": "CEBS-discovery-2026-10-28",
+      "retrieved_at": "2026-10-28T21:09:15.166884+00:00",
+      "sha256": "28c3a96df13aa0f769147174b35199c904bafa17596ad9dc96fd9d79a1ea72fb",
+      "bytes": 120242,
+      "http_status": 200,
+      "etag": null,
+      "last_modified": null
+    },
+    "status": "landing_retrieved"
+  },
+  {
+    "document_id": "CvTdb:document:30",
+    "n_candidates": 1,
+    "compound_id": "DTXSID0020868",
+    "compound_name": "dichloromethane",
+    "casrn": "75-09-2",
+    "doi": "10.1016/0278-6915(86)90325-x",
+    "pmid": "3096853",
+    "source_experiment": "",
+    "files": [],
+    "status": "literature_protocol_required"
+  },
+  {
+    "document_id": "CvTdb:document:43",
+    "n_candidates": 1,
+    "compound_id": "DTXSID5020029",
+    "compound_name": "acrylonitrile",
+    "casrn": "107-13-1",
+    "doi": "10.1006/taap.1995.1183",
+    "pmid": "7570594",
+    "source_experiment": "",
+    "files": [],
+    "status": "literature_protocol_required"
+  },
+  {
+    "document_id": "CvTdb:document:56",
+    "n_candidates": 1,
+    "compound_id": "DTXSID4020533",
+    "compound_name": "1,4-Dioxane",
+    "casrn": "123-91-1",
+    "doi": "10.1093/toxsci/kfm251",
+    "pmid": "17897969",
+    "source_experiment": "",
+    "files": [],
+    "status": "literature_protocol_required"
+  }
+]

@@ -40,22 +40,22 @@ No source records are silently deleted. Eligibility applies to curated endpoints
   "pmc_scope_exclusions": "Other Table 1 columns (IV/repeated dosing), all dog Table 2 columns, tissues and supplements are out of selected adapter scope, preserved in raw XML. Dog table conflict documented.",
   "potential_overlap_groups": 0,
   "expansion": {
-    "curated_endpoint_groups": 104,
-    "primary_endpoint_groups": 78,
-    "primary_comparable_series": 26,
+    "curated_endpoint_groups": 195,
+    "primary_endpoint_groups": 169,
+    "primary_comparable_series": 57,
     "flagged_protocol_series": 10,
     "extractions_failed": 0,
-    "source_overlap_groups": 3,
+    "source_overlap_groups": 11,
     "identity_status_counts": {
       "resolved_exact": 228,
       "unresolved_or_identifier_conflict": 21,
       "ambiguous_multiple_structures": 3,
       "not_found": 2
     },
-    "reviewed_composite_candidates": 18,
-    "validated_composite_series": 14
+    "reviewed_composite_candidates": 97,
+    "validated_composite_series": 31
   }
 }
 ```
 
-Exact source/table checksums and protocol phrases protect reviewed mappings. All 112 exploratory groups have an audit status; 18 were reviewed. Group endpoints are not individual measurements. Dose/matrix conflicts are withheld. Formamide Cmax_pred is not Cmax_obs. Benzophenone uses actual dose comments, not nominal dose. Isoeugenol rat dose conflicts prevent primary eligibility. AUC units and definitions are endpoint-specific; 0-t without a verified terminal time is not compared. Source exceptions, license terms, original cells and predicted values are retained.
+Exact source/table checksums and protocol phrases protect reviewed mappings. All 112 exploratory groups have an audit disposition; see composite_audit.json for original-protocol review and unresolved counts. Group endpoints are not individual measurements. Dose/matrix conflicts are withheld. Formamide Cmax_pred is not Cmax_obs. Benzophenone uses actual dose comments, not nominal dose. Isoeugenol rat dose conflicts prevent primary eligibility. AUC units and definitions are endpoint-specific; 0-t without a verified terminal time is not compared. Source exceptions, license terms, original cells and predicted values are retained.

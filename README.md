@@ -87,3 +87,9 @@ python -m pytest -q
 ```
 
 `configs/curation/composite_decisions.json` records reviewed limitations and unresolved protocols. `reports/cebs_row_selection.csv` accounts for every row in the eight newly imported workbooks. Unselected rows remain in cached source files; they are not silently discarded. Raw and processed data remain untracked. New endpoint selection requires original-protocol review and a pinned curation change; these scripts never promote discovered files automatically.
+
+To verify the cached replay against the preceding run and regenerate the test/hash report:
+
+```bash
+PYTHONPATH=src python scripts/verify_reproducibility.py
+```

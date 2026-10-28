@@ -3,7 +3,7 @@
     "id": "protocols",
     "priority": "high",
     "status": "partially_resolved",
-    "detail": "18 of 112 candidates audited against three CEBS source protocols: 14 validated using group endpoints, two matrix conflicts, two dose conflicts; 94 unreviewed."
+    "detail": "All 112 assessed; 97 reviewed against original protocol material; 15 full protocols unresolved. Additional reviewed sources have condition/linkage conflicts. No blind pooling."
   },
   {
     "id": "structures",
@@ -15,7 +15,7 @@
     "id": "auc",
     "priority": "high",
     "status": "partially_resolved",
-    "detail": "21 primary series have comparable AUC definitions. Unspecified terminal windows and unknown tail fractions remain limitations. Predicted Cmax is excluded from observed-Cmax endpoints."
+    "detail": "42 primary series have comparable AUC definitions. Unspecified terminal windows and unknown tail fractions remain limitations. Predicted Cmax is excluded from observed-Cmax endpoints."
   },
   {
     "id": "dog_table",
@@ -27,7 +27,7 @@
     "id": "sample_size",
     "priority": "high",
     "status": "open",
-    "detail": "12 primary compounds across 10 source studies remain insufficient for meaningful compound-disjoint molecular ML. Related strata/publications require grouping."
+    "detail": "20 primary compounds across 18 source studies remain insufficient for meaningful compound-disjoint molecular ML. Related strata/publications require grouping."
   },
   {
     "id": "pkdb",
@@ -39,13 +39,13 @@
     "id": "other_sources",
     "priority": "medium",
     "status": "partially_resolved",
-    "detail": "CEBS adds 14 validated series and two new PMC publications add three series. Simmitecan XML failed after retries; rotundic acid XML collected but CC BY-NC-ND terms require separate review. FDA/EMA wider extraction remains future work."
+    "detail": "This run adds 31 CEBS series from 8 new primary compounds and 8 studies. Public DTT discovery catalog inspected. FDA/EMA extraction and unresolved literature protocols remain outstanding."
   },
   {
     "id": "overlap",
     "priority": "high",
     "status": "partially_resolved",
-    "detail": "3 selected source overlap groups identified by document/DOI and identity. CEBS endpoints validate existing CvTdb studies and are not independent replicates. Remaining incomplete identifiers/protocol links prevent global deduplication proof."
+    "detail": "11 selected source overlap groups identified by document/DOI and identity. CEBS endpoints validate existing CvTdb studies and are not independent replicates. Remaining incomplete identifiers/protocol links prevent global deduplication proof."
   },
   {
     "id": "source_quality",

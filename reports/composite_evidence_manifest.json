@@ -1,0 +1,310 @@
+[
+  {
+    "document_id": "CvTdb:document:131",
+    "file": "cebs_678-39-7.html",
+    "manifest": {
+      "url": "https://cebs.niehs.nih.gov/cebs/test_article/678-39-7",
+      "version": "composite-evidence-2026-10-28",
+      "retrieved_at": "2026-10-28T21:13:42.798993+00:00",
+      "sha256": "d9cada7c9deb29f787c07c1e809599a93fc5e835cf465b9d764e3bf68ea2cc2f",
+      "bytes": 28319,
+      "http_status": 200,
+      "etag": null,
+      "last_modified": null
+    }
+  },
+  {
+    "document_id": "CvTdb:document:159",
+    "file": "IAD_TKS_Oxazepam_1992_S0301_Individual_Animal_Data.xlsx",
+    "manifest": {
+      "url": "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02622-0015-0000-0/file/IAD_TKS_Oxazepam_1992_S0301_Individual_Animal_Data.xlsx",
+      "version": "composite-evidence-2026-10-28",
+      "retrieved_at": "2026-10-28T21:13:43.573007+00:00",
+      "sha256": "b4067432861420a174579b5fdaa588940abccd527e028b2af2faa62cb8b8bb22",
+      "bytes": 60931,
+      "http_status": 200,
+      "etag": null,
+      "last_modified": null
+    }
+  },
+  {
+    "document_id": "CvTdb:document:159",
+    "file": "TKS_Oxazepam_1992_S0301_Individual_Animal_Data_2_copy.xlsx",
+    "manifest": {
+      "url": "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02622-0015-0000-0/file/TKS_Oxazepam_1992_S0301_Individual_Animal_Data_2_copy.xlsx",
+      "version": "composite-evidence-2026-10-28",
+      "retrieved_at": "2026-10-28T21:13:44.416672+00:00",
+      "sha256": "ae307c27d9ab4dd581440ddcbe39aee43e1dcb80eea17159aeb5d1bc46f93adc",
+      "bytes": 147597,
+      "http_status": 200,
+      "etag": null,
+      "last_modified": null
+    }
+  },
+  {
+    "document_id": "CvTdb:document:159",
+    "file": "IAD_TKS_Oxazepam_1994_S0578_Individual_Animal_Data.xlsx",
+    "manifest": {
+      "url": "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02622-0016-0000-1/file/IAD_TKS_Oxazepam_1994_S0578_Individual_Animal_Data.xlsx",
+      "version": "composite-evidence-2026-10-28",
+      "retrieved_at": "2026-10-28T21:13:45.189313+00:00",
+      "sha256": "72c20cbc8e5bb3a31bb70f23a553eeb2b2b488a83ebd97efe0977e90da549446",
+      "bytes": 18386,
+      "http_status": 200,
+      "etag": null,
+      "last_modified": null
+    }
+  },
+  {
+    "document_id": "CvTdb:document:159",
+    "file": "TKS_Oxazepam_1994_S0578_Individual_Animal_Data_copy.xlsx",
+    "manifest": {
+      "url": "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02622-0016-0000-1/file/TKS_Oxazepam_1994_S0578_Individual_Animal_Data_copy.xlsx",
+      "version": "composite-evidence-2026-10-28",
+      "retrieved_at": "2026-10-28T21:13:46.002913+00:00",
+      "sha256": "9ba5e9864eea4872eb1183405012a97a69f1fad0307a1ffcc93c456f4ce240cd",
+      "bytes": 92507,
+      "http_status": 200,
+      "etag": null,
+      "last_modified": null
+    }
+  },
+  {
+    "document_id": "CvTdb:document:160",
+    "file": "IAD_TKS_Emodin_S0322_1995_Individual_Animal_Data.xlsx",
+    "manifest": {
+      "url": "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02109-0026-0000-2/file/IAD_TKS_Emodin_S0322_1995_Individual_Animal_Data.xlsx",
+      "version": "composite-evidence-2026-10-28",
+      "retrieved_at": "2026-10-28T21:13:47.146440+00:00",
+      "sha256": "05d67b0522bf8b9e3337acefb04b237700c87a91661dabffaf7b7fb1985d0473",
+      "bytes": 42344,
+      "http_status": 200,
+      "etag": null,
+      "last_modified": null
+    }
+  },
+  {
+    "document_id": "CvTdb:document:160",
+    "file": "TKS_Emodin_S0322_1995_Individual_Animal_Data_2_copy.xlsx",
+    "manifest": {
+      "url": "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02109-0026-0000-2/file/TKS_Emodin_S0322_1995_Individual_Animal_Data_2_copy.xlsx",
+      "version": "composite-evidence-2026-10-28",
+      "retrieved_at": "2026-10-28T21:13:48.021787+00:00",
+      "sha256": "c0ba41c78fc59b61c258cf8dd18b35fb0a0f29c5c2c02ac1969ec096183cedb9",
+      "bytes": 94130,
+      "http_status": 200,
+      "etag": null,
+      "last_modified": null
+    }
+  },
+  {
+    "document_id": "CvTdb:document:160",
+    "file": "TKS_Emodin_S0322_1995_TK_Parameters_t2_2_copy.xlsx",
+    "manifest": {
+      "url": "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02109-0026-0000-2/file/TKS_Emodin_S0322_1995_TK_Parameters_t2_2_copy.xlsx",
+      "version": "composite-evidence-2026-10-28",
+      "retrieved_at": "2026-10-28T21:13:48.780549+00:00",
+      "sha256": "b6a3524e0581c8e575aabf647404f3f519036fc9909b243c8d078bfb265c80cd",
+      "bytes": 14201,
+      "http_status": 200,
+      "etag": null,
+      "last_modified": null
+    }
+  },
+  {
+    "document_id": "CvTdb:document:160",
+    "file": "IAD_TKS_Emodin_Dosed_Feed_S0575_1996_Individual_Animal_Data.xlsx",
+    "manifest": {
+      "url": "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02109-0027-0000-3/file/IAD_TKS_Emodin_Dosed_Feed_S0575_1996_Individual_Animal_Data.xlsx",
+      "version": "composite-evidence-2026-10-28",
+      "retrieved_at": "2026-10-28T21:13:49.613492+00:00",
+      "sha256": "2b9c649f15aed299d638901faf5afe4d224dc07747db046c838378abd0e7dd6c",
+      "bytes": 31958,
+      "http_status": 200,
+      "etag": null,
+      "last_modified": null
+    }
+  },
+  {
+    "document_id": "CvTdb:document:160",
+    "file": "TKS_Emodin_Dosed_Feed_S0575_1996_Individual_Animal_Data_2_copy.xlsx",
+    "manifest": {
+      "url": "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02109-0027-0000-3/file/TKS_Emodin_Dosed_Feed_S0575_1996_Individual_Animal_Data_2_copy.xlsx",
+      "version": "composite-evidence-2026-10-28",
+      "retrieved_at": "2026-10-28T21:13:50.392626+00:00",
+      "sha256": "b431840f2b616f1b0961252d48221529ae7622975557b58920de416c33d06eb3",
+      "bytes": 61615,
+      "http_status": 200,
+      "etag": null,
+      "last_modified": null
+    }
+  },
+  {
+    "document_id": "CvTdb:document:204",
+    "file": "audit_pubmed_10772639.json",
+    "manifest": {
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A10772639+AND+SRC%3AMED&format=json&resultType=core",
+      "version": "composite-evidence-2026-10-28",
+      "retrieved_at": "2026-10-28T21:13:50.969041+00:00",
+      "sha256": "e8560f4ed74cd814437195b54dccecc727b3f782e0d7c748732adc34428161d5",
+      "bytes": 5541,
+      "http_status": 200,
+      "etag": null,
+      "last_modified": null
+    }
+  },
+  {
+    "document_id": "CvTdb:document:210",
+    "file": "audit_pubmed_1673423.json",
+    "manifest": {
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A1673423+AND+SRC%3AMED&format=json&resultType=core",
+      "version": "composite-evidence-2026-10-28",
+      "retrieved_at": "2026-10-28T21:14:00.959175+00:00",
+      "sha256": "53c0b5fe2b0b1494d5d0113f3b296fe8ee671252a807c27f8c5194af24e168e2",
+      "bytes": 5689,
+      "http_status": 200,
+      "etag": null,
+      "last_modified": null
+    }
+  },
+  {
+    "document_id": "CvTdb:document:219",
+    "file": "audit_pubmed_3354229.json",
+    "manifest": {
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A3354229+AND+SRC%3AMED&format=json&resultType=core",
+      "version": "composite-evidence-2026-10-28",
+      "retrieved_at": "2026-10-28T21:14:11.237878+00:00",
+      "sha256": "c3c0c6d5f7aa6c404162a5fa62eec795ca75a3fec0dcc79e1691d2c5f2eb38a3",
+      "bytes": 4971,
+      "http_status": 200,
+      "etag": null,
+      "last_modified": null
+    }
+  },
+  {
+    "document_id": "CvTdb:document:245",
+    "file": "audit_pubmed_8887460.json",
+    "manifest": {
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A8887460+AND+SRC%3AMED&format=json&resultType=core",
+      "version": "composite-evidence-2026-10-28",
+      "retrieved_at": "2026-10-28T21:14:20.967885+00:00",
+      "sha256": "69559317156b9090c8c062d9883c75bdd4614f3ce7bd0fff97b703e5d7e003d5",
+      "bytes": 6562,
+      "http_status": 200,
+      "etag": null,
+      "last_modified": null
+    }
+  },
+  {
+    "document_id": "CvTdb:document:25284",
+    "file": "audit_pubmed_22876784.json",
+    "manifest": {
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A22876784+AND+SRC%3AMED&format=json&resultType=core",
+      "version": "composite-evidence-2026-10-28",
+      "retrieved_at": "2026-10-28T21:14:30.964957+00:00",
+      "sha256": "febd9887088e08b6cf6cea85ccdf8652391ec534502273347e82071d350a1a58",
+      "bytes": 5259,
+      "http_status": 200,
+      "etag": null,
+      "last_modified": null
+    }
+  },
+  {
+    "document_id": "CvTdb:document:25409",
+    "file": "TKS_Individual_Animal_Data_3-3-4-4-5-pentachlorobiphenyl_2007_copy.xlsx",
+    "manifest": {
+      "url": "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02863-0008-0000-9/file/TKS_Individual_Animal_Data_3-3-4-4-5-pentachlorobiphenyl_2007_copy.xlsx",
+      "version": "composite-evidence-2026-10-28",
+      "retrieved_at": "2026-10-28T21:14:32.164477+00:00",
+      "sha256": "6a0152ec4b1c4e9877405adc8949a149874f9c5e77b9104bd35dd8ddabac95e6",
+      "bytes": 35721,
+      "http_status": 200,
+      "etag": null,
+      "last_modified": null
+    }
+  },
+  {
+    "document_id": "CvTdb:document:25460",
+    "file": "TKS_Individual_Animal_Data_Perfluorohexanoic_Acid_2010_copy.xlsx",
+    "manifest": {
+      "url": "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02654-0004-0000-3/file/TKS_Individual_Animal_Data_Perfluorohexanoic_Acid_2010_copy.xlsx",
+      "version": "composite-evidence-2026-10-28",
+      "retrieved_at": "2026-10-28T21:14:32.973153+00:00",
+      "sha256": "350ac60c92bb407ad5fa8a94a5b49ac3713a13c26e0410d6b69bc99beb55bf14",
+      "bytes": 48611,
+      "http_status": 200,
+      "etag": null,
+      "last_modified": null
+    }
+  },
+  {
+    "document_id": "CvTdb:document:25463",
+    "file": "TKS_Individual_Animal_Data_Perfluorohexane-1-Sulphonic_Acid_Potassium_Salt.xlsx",
+    "manifest": {
+      "url": "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-03267-0003-0000-3/file/TKS_Individual_Animal_Data_Perfluorohexane-1-Sulphonic_Acid_Potassium_Salt.xlsx",
+      "version": "composite-evidence-2026-10-28",
+      "retrieved_at": "2026-10-28T21:14:33.774930+00:00",
+      "sha256": "559fc93990e342b2eb57f5ab11b04f101e9709272b684865410713c17fdb3757",
+      "bytes": 47362,
+      "http_status": 200,
+      "etag": null,
+      "last_modified": null
+    }
+  },
+  {
+    "document_id": "CvTdb:document:25474",
+    "file": "TKS_Individual_Animal_Data_Dichloroacetic_acid_2009.xlsx",
+    "manifest": {
+      "url": "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02007-0031-0000-5/file/TKS_Individual_Animal_Data_Dichloroacetic_acid_2009.xlsx",
+      "version": "composite-evidence-2026-10-28",
+      "retrieved_at": "2026-10-28T21:14:34.620019+00:00",
+      "sha256": "4f8a4187be63ab60dfd452fd983cf54940c6c6493834c16a3679598ad0449113",
+      "bytes": 73642,
+      "http_status": 200,
+      "etag": null,
+      "last_modified": null
+    }
+  },
+  {
+    "document_id": "CvTdb:document:30",
+    "file": "audit_pubmed_3096853.json",
+    "manifest": {
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A3096853+AND+SRC%3AMED&format=json&resultType=core",
+      "version": "composite-evidence-2026-10-28",
+      "retrieved_at": "2026-10-28T21:14:40.980303+00:00",
+      "sha256": "b4e65a5d8c6525539140a5a8a334f2a7f7aa2a74abf51568b0a07a85f0f4040f",
+      "bytes": 5417,
+      "http_status": 200,
+      "etag": null,
+      "last_modified": null
+    }
+  },
+  {
+    "document_id": "CvTdb:document:43",
+    "file": "audit_pubmed_7570594.json",
+    "manifest": {
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A7570594+AND+SRC%3AMED&format=json&resultType=core",
+      "version": "composite-evidence-2026-10-28",
+      "retrieved_at": "2026-10-28T21:14:50.983947+00:00",
+      "sha256": "4696db268a4001192df7e6c7b0cfe99e8d3d2302d94cc639ee38184e8a4718f3",
+      "bytes": 5867,
+      "http_status": 200,
+      "etag": null,
+      "last_modified": null
+    }
+  },
+  {
+    "document_id": "CvTdb:document:56",
+    "file": "audit_pubmed_17897969.json",
+    "manifest": {
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A17897969+AND+SRC%3AMED&format=json&resultType=core",
+      "version": "composite-evidence-2026-10-28",
+      "retrieved_at": "2026-10-28T21:15:01.365619+00:00",
+      "sha256": "d73401e208d95ffa7e6844943f81406815e34a56ed041f3775e82c9ddf4f1dfd",
+      "bytes": 6442,
+      "http_status": 200,
+      "etag": null,
+      "last_modified": null
+    }
+  }
+]

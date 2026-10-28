@@ -1,0 +1,41 @@
+[
+  {
+    "file": "S0976_Data_Summary_Ephedrine.pdf",
+    "manifest": {
+      "url": "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-03261-0009-0000-3/file/S0976_Data_Summary_Ephedrine.pdf",
+      "version": "composite-evidence-2026-10-28",
+      "retrieved_at": "2026-10-28T21:15:37.620394+00:00",
+      "sha256": "64a6aee00a1b28c107ab7075eee3259bfe1e42d6420d486d2df0662c3c948d80",
+      "bytes": 63786,
+      "http_status": 200,
+      "etag": null,
+      "last_modified": null
+    }
+  },
+  {
+    "file": "TKS_Fluorotelomer_Alcohol_K04003B_Group_TK_Parameters_version2_6.xlsx",
+    "manifest": {
+      "url": "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02182-0004-0000-9/file/TKS_Fluorotelomer_Alcohol_K04003B_Group_TK_Parameters_version2_6.xlsx",
+      "version": "composite-evidence-2026-10-28",
+      "retrieved_at": "2026-10-28T21:15:38.723036+00:00",
+      "sha256": "53c37b6843ad7b3923839837516c7d5a9e7b362eb5003dda53402877e923471e",
+      "bytes": 27016,
+      "http_status": 200,
+      "etag": null,
+      "last_modified": null
+    }
+  },
+  {
+    "file": "cebs_dtt_tk.html",
+    "manifest": {
+      "url": "https://cebs-ext.niehs.nih.gov/datasets/search/tk?casrn=50-06-6",
+      "version": "composite-evidence-2026-10-28",
+      "retrieved_at": "2026-10-28T21:15:39.454368+00:00",
+      "sha256": "0b7027b0bc7e28a91c115db6e47457ef998a92afc92a538320858a6a989f03f0",
+      "bytes": 87008,
+      "http_status": 200,
+      "etag": null,
+      "last_modified": null
+    }
+  }
+]

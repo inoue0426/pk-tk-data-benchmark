@@ -35,19 +35,19 @@
   "pmc_scope_exclusions": "Other Table 1 columns (IV/repeated dosing), all dog Table 2 columns, tissues and supplements are out of selected adapter scope, preserved in raw XML. Dog table conflict documented.",
   "potential_overlap_groups": 0,
   "expansion": {
-    "curated_endpoint_groups": 104,
-    "primary_endpoint_groups": 78,
-    "primary_comparable_series": 26,
+    "curated_endpoint_groups": 195,
+    "primary_endpoint_groups": 169,
+    "primary_comparable_series": 57,
     "flagged_protocol_series": 10,
     "extractions_failed": 0,
-    "source_overlap_groups": 3,
+    "source_overlap_groups": 11,
     "identity_status_counts": {
       "resolved_exact": 228,
       "unresolved_or_identifier_conflict": 21,
       "ambiguous_multiple_structures": 3,
       "not_found": 2
     },
-    "reviewed_composite_candidates": 18,
-    "validated_composite_series": 14
+    "reviewed_composite_candidates": 97,
+    "validated_composite_series": 31
   }
 }

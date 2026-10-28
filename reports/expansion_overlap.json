@@ -1,8 +1,64 @@
 [
   {
+    "doi": "10.22427/NTP-DATA-DTXSID0020442",
+    "molecular_group_id": "InChIKey:OVSKIKFHRZPJSS-UHFFFAOYSA-N",
+    "cvtdb_rows": 422,
+    "pmc_groups": 9,
+    "decision": "same_publication_not_independent"
+  },
+  {
+    "doi": "10.22427/NTP-DATA-DTXSID1020198",
+    "molecular_group_id": "InChIKey:FMWLUWPQPKEARP-UHFFFAOYSA-N",
+    "cvtdb_rows": 1185,
+    "pmc_groups": 24,
+    "decision": "same_publication_not_independent"
+  },
+  {
+    "doi": "10.22427/NTP-DATA-DTXSID3020095",
+    "molecular_group_id": "InChIKey:RZVHIXYEVGDQDX-UHFFFAOYSA-N",
+    "cvtdb_rows": 395,
+    "pmc_groups": 12,
+    "decision": "same_publication_not_independent"
+  },
+  {
+    "doi": "10.22427/NTP-DATA-DTXSID8031865",
+    "molecular_group_id": "InChIKey:SNGREZUHAYWORS-UHFFFAOYSA-N",
+    "cvtdb_rows": 284,
+    "pmc_groups": 6,
+    "decision": "same_publication_not_independent"
+  },
+  {
+    "doi": "10.22427/NTP-DATA-DTXSID9025617",
+    "molecular_group_id": "InChIKey:XLSZMDLNRCVEIJ-UHFFFAOYSA-N",
+    "cvtdb_rows": 450,
+    "pmc_groups": 4,
+    "decision": "same_publication_not_independent"
+  },
+  {
+    "doi": "10.22427/NTP-DATA-DTXSID9030258",
+    "molecular_group_id": "DTXSID9030258",
+    "cvtdb_rows": 752,
+    "pmc_groups": 12,
+    "decision": "same_publication_not_independent"
+  },
+  {
     "doi": "10.22427/ntp-data-dtxsid0021961",
     "molecular_group_id": "InChIKey:RWCCWEUUXYIKHB-UHFFFAOYSA-N",
     "cvtdb_rows": 870,
+    "pmc_groups": 12,
+    "decision": "same_publication_not_independent"
+  },
+  {
+    "doi": "10.22427/ntp-data-dtxsid3022405",
+    "molecular_group_id": "InChIKey:DXGLGDHPHMLXJC-UHFFFAOYSA-N",
+    "cvtdb_rows": 625,
+    "pmc_groups": 12,
+    "decision": "same_publication_not_independent"
+  },
+  {
+    "doi": "10.22427/ntp-data-dtxsid8020913",
+    "molecular_group_id": "InChIKey:UFWIBTONFRDIAS-UHFFFAOYSA-N",
+    "cvtdb_rows": 360,
     "pmc_groups": 12,
     "decision": "same_publication_not_independent"
   },

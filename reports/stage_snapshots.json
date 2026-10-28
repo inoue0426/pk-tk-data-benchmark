@@ -1,30 +1,6 @@
 [
   {
-    "stage": "identity_resolution",
-    "collected_parent_identifiers": 253,
-    "resolved_unique_structures": 226,
-    "unresolved_parent_identifiers": 26,
-    "validated_compounds": 7,
-    "independent_studies": 5,
-    "validated_series": 9,
-    "auc_series": 7,
-    "cmax_series": 4,
-    "both_eligible_series": 2
-  },
-  {
-    "stage": "composite_audit",
-    "collected_parent_identifiers": 253,
-    "resolved_unique_structures": 226,
-    "unresolved_parent_identifiers": 26,
-    "validated_compounds": 10,
-    "independent_studies": 8,
-    "validated_series": 23,
-    "auc_series": 19,
-    "cmax_series": 6,
-    "both_eligible_series": 2
-  },
-  {
-    "stage": "additional_publications",
+    "stage": "previous_validated_cohort",
     "collected_parent_identifiers": 254,
     "resolved_unique_structures": 227,
     "unresolved_parent_identifiers": 26,
@@ -34,5 +10,17 @@
     "auc_series": 21,
     "cmax_series": 9,
     "both_eligible_series": 4
+  },
+  {
+    "stage": "reviewed_cebs_expansion",
+    "collected_parent_identifiers": 254,
+    "resolved_unique_structures": 227,
+    "unresolved_parent_identifiers": 26,
+    "validated_compounds": 20,
+    "independent_studies": 18,
+    "validated_series": 57,
+    "auc_series": 42,
+    "cmax_series": 31,
+    "both_eligible_series": 16
   }
 ]
