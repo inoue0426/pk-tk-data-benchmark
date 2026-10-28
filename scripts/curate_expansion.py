@@ -58,5 +58,7 @@ for pmc,table,species,strain,low in [('PMC3269340','d20e593','rat','Sprague-Dawl
       evidence=['Since all time points were terminal','solution in physiological saline','2 mL/kg for both rats and mice'],
       flags=['dose_volume_changes','composite_PK','auc_unit_ambiguous','per_timepoint_n_unavailable'])
   specs[-1].update(species=species,strain=strain,cmax_unit='nM',primary_eligible=False,endpoint_origin='reported_composite_profile')
+for spec in specs:
+ if 'oral_vehicle_not_explicit' in spec['flags']:spec['primary_eligible']=False
 Path('configs/curation/pmc_expansion.json').write_text(json.dumps(specs,indent=2,ensure_ascii=False)+'\n')
 print(len(specs),'reviewed protocols')

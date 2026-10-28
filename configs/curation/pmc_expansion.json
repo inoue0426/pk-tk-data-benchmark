@@ -82,7 +82,7 @@
     "auc_unit": "ug*h/mL",
     "cmax_unit": "ug/mL",
     "protocol_verified": true,
-    "primary_eligible": true,
+    "primary_eligible": false,
     "route": "oral",
     "n_animals": [
       7,

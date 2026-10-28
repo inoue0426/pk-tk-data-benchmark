@@ -1,0 +1,47 @@
+{
+  "PMC6681021": {
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC6681021/fullTextXML",
+    "version": "PMC6681021-expansion-2026-10-28",
+    "retrieved_at": "2026-10-28T15:55:21.136390+00:00",
+    "sha256": "76ac43ef1e5d8bdaed1e11e27f4f710dd89637d6c59b3bf68e61a14b117af56a",
+    "bytes": 125336,
+    "etag": null,
+    "last_modified": null
+  },
+  "PMC9024849": {
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC9024849/fullTextXML",
+    "version": "PMC9024849-expansion-2026-10-28",
+    "retrieved_at": "2026-10-28T15:55:45.248951+00:00",
+    "sha256": "6fa93997043c633e95e4c97b89375e9cdfb40d99edf935e5e03bb1d0264e43a9",
+    "bytes": 76068,
+    "etag": null,
+    "last_modified": null
+  },
+  "PMC3305926": {
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC3305926/fullTextXML",
+    "version": "PMC3305926-expansion-2026-10-28",
+    "retrieved_at": "2026-10-28T15:55:55.913230+00:00",
+    "sha256": "73d82d27962f2cf9734a235f07e2dc822a5a4f6476905f8424f9f28e113540ab",
+    "bytes": 83943,
+    "etag": null,
+    "last_modified": null
+  },
+  "PMC6160927": {
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC6160927/fullTextXML",
+    "version": "PMC6160927-expansion-2026-10-28",
+    "retrieved_at": "2026-10-28T15:56:17.084139+00:00",
+    "sha256": "208ef753b02d71ff0b9c5f50c466557de9e7f8a9b28be8e63eae819d4e2c2904",
+    "bytes": 146887,
+    "etag": null,
+    "last_modified": null
+  },
+  "PMC3269340": {
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC3269340/fullTextXML",
+    "version": "PMC3269340-expansion-2026-10-28",
+    "retrieved_at": "2026-10-28T15:56:06.711466+00:00",
+    "sha256": "18462e7b043f8e554271b51f7104dbe9553acdef051106e1db5c6a84325e108a",
+    "bytes": 115003,
+    "etag": null,
+    "last_modified": null
+  }
+}

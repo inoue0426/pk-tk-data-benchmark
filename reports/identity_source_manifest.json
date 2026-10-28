@@ -1,0 +1,270 @@
+[
+  {
+    "url": "https://www.ebi.ac.uk/chebi/backend/api/public/es_search/?term=DA-6886&page=1&size=20",
+    "version": "identity-2026-10-28",
+    "retrieved_at": "2026-10-28T16:11:25.650250+00:00",
+    "sha256": "a74d4816141f6551420ed96fb125f136e4ed4db2c1dd8aa94185c216c03230ad",
+    "bytes": 614,
+    "etag": null,
+    "last_modified": null
+  },
+  {
+    "url": "https://www.ebi.ac.uk/chebi/backend/api/public/compound/756007/",
+    "version": "identity-2026-10-28",
+    "retrieved_at": "2026-10-28T16:11:35.822422+00:00",
+    "sha256": "a0ce55c4a57b6169f1ecb31c1ee232931dab687a6d45a03893b873f5b1e56181",
+    "bytes": 1654,
+    "etag": null,
+    "last_modified": null
+  },
+  {
+    "url": "https://www.ebi.ac.uk/unichem/api/v1/compounds",
+    "version": "identity-2026-10-28",
+    "retrieved_at": "2026-10-28T16:20:26.212473+00:00",
+    "sha256": "a811ed4d4ee99d875fb694788b9712b060aa4a9dffdc4c3ae1007987b554fbd3",
+    "bytes": 2689,
+    "etag": null,
+    "last_modified": null,
+    "method": "POST",
+    "request_body": {
+      "compound": "SNGREZUHAYWORS-UHFFFAOYSA-N",
+      "type": "inchikey"
+    }
+  },
+  {
+    "url": "https://www.ebi.ac.uk/chebi/backend/api/public/es_search/?term=HY-071085&page=1&size=20",
+    "version": "identity-2026-10-28",
+    "retrieved_at": "2026-10-28T16:21:59.085945+00:00",
+    "sha256": "83909b573ae9efd01f61319cecd6a18c74eafbc81e735d20dc1cb3a0e099a194",
+    "bytes": 63,
+    "http_status": 404,
+    "etag": null,
+    "last_modified": null
+  },
+  {
+    "url": "https://www.ebi.ac.uk/chebi/backend/api/public/es_search/?term=imperatorin&page=1&size=20",
+    "version": "identity-2026-10-28",
+    "retrieved_at": "2026-10-28T16:12:07.878134+00:00",
+    "sha256": "7925b22725fee62e40f3715fe3dc14ba1e5a53b15252e9b5e2a04982cd23a519",
+    "bytes": 783,
+    "etag": null,
+    "last_modified": null
+  },
+  {
+    "url": "https://www.ebi.ac.uk/chebi/backend/api/public/compound/5885/",
+    "version": "identity-2026-10-28",
+    "retrieved_at": "2026-10-28T16:12:18.062445+00:00",
+    "sha256": "4d175cbbe2b2dfadf7a9a3ab31bf7e3ad671c00dffffbd6e8e0bba9a3c65b52e",
+    "bytes": 12201,
+    "etag": null,
+    "last_modified": null
+  },
+  {
+    "url": "https://www.ebi.ac.uk/chebi/backend/api/public/es_search/?term=lumefantrine&page=1&size=20",
+    "version": "identity-2026-10-28",
+    "retrieved_at": "2026-10-28T16:12:38.407263+00:00",
+    "sha256": "8db3fd030fe5865cd9f1d8aa003898b670fe30f653b19b674b71d178e5c17885",
+    "bytes": 2167,
+    "etag": null,
+    "last_modified": null
+  },
+  {
+    "url": "https://www.ebi.ac.uk/chebi/backend/api/public/compound/156095/",
+    "version": "identity-2026-10-28",
+    "retrieved_at": "2026-10-28T16:12:48.679605+00:00",
+    "sha256": "795c8b8b2bd86f128f16a05bafffd239aed5fc76cb71df8d95b8ee0f950f28ad",
+    "bytes": 10815,
+    "etag": null,
+    "last_modified": null
+  },
+  {
+    "url": "https://www.ebi.ac.uk/chebi/backend/api/public/es_search/?term=memantine&page=1&size=20",
+    "version": "identity-2026-10-28",
+    "retrieved_at": "2026-10-28T16:13:09.115437+00:00",
+    "sha256": "6124d54cd8714bc04ccc168d041de5f36dd2b55e5d07c78239ba3cf89f8658df",
+    "bytes": 2195,
+    "etag": null,
+    "last_modified": null
+  },
+  {
+    "url": "https://www.ebi.ac.uk/chebi/backend/api/public/compound/64312/",
+    "version": "identity-2026-10-28",
+    "retrieved_at": "2026-10-28T16:13:19.311491+00:00",
+    "sha256": "4d757ce670150e8315b9e9487dfc7dde5e1aba30867bb9ae25bcc3a4da8d75e9",
+    "bytes": 21149,
+    "etag": null,
+    "last_modified": null
+  },
+  {
+    "url": "https://www.ebi.ac.uk/chebi/backend/api/public/es_search/?term=paeonol&page=1&size=20",
+    "version": "identity-2026-10-28",
+    "retrieved_at": "2026-10-28T16:13:39.669971+00:00",
+    "sha256": "487e0f66bd2de05e907f6d9e816046e0d7024684479c840b9dc93eb27ecd9f23",
+    "bytes": 496,
+    "etag": null,
+    "last_modified": null
+  },
+  {
+    "url": "https://www.ebi.ac.uk/chebi/backend/api/public/compound/69581/",
+    "version": "identity-2026-10-28",
+    "retrieved_at": "2026-10-28T16:13:49.888366+00:00",
+    "sha256": "350848e04f4a7d52ea0caf5b6bfdb5f6786b10f741930db493877ea9387c3e4d",
+    "bytes": 3839,
+    "etag": null,
+    "last_modified": null
+  },
+  {
+    "url": "https://www.ebi.ac.uk/chebi/backend/api/public/es_search/?term=saikosaponin+A&page=1&size=20",
+    "version": "identity-2026-10-28",
+    "retrieved_at": "2026-10-28T16:14:10.333591+00:00",
+    "sha256": "bf7b76838b4622788524935a9ce9f3301751f1068a8ddcdebc18ad174d44d660",
+    "bytes": 4456,
+    "etag": null,
+    "last_modified": null
+  },
+  {
+    "url": "https://www.ebi.ac.uk/chebi/backend/api/public/compound/8996/",
+    "version": "identity-2026-10-28",
+    "retrieved_at": "2026-10-28T16:14:20.510480+00:00",
+    "sha256": "e0d31e4c456d16897ffcd2df3fc68282f804837255356db5723dae29a1bd4a3c",
+    "bytes": 2194,
+    "etag": null,
+    "last_modified": null
+  },
+  {
+    "url": "https://www.ebi.ac.uk/chebi/backend/api/public/es_search/?term=tofacitinib&page=1&size=20",
+    "version": "identity-2026-10-28",
+    "retrieved_at": "2026-10-28T16:14:40.872686+00:00",
+    "sha256": "fbb0c432a71c7c07d8e785e9028cabf1a093dcc2a71a4ab31e5b54e4fc440580",
+    "bytes": 2359,
+    "etag": null,
+    "last_modified": null
+  },
+  {
+    "url": "https://www.ebi.ac.uk/chebi/backend/api/public/compound/71200/",
+    "version": "identity-2026-10-28",
+    "retrieved_at": "2026-10-28T16:07:11.897061+00:00",
+    "sha256": "6b2ad94ad82c71cd8f0a63472fff24bf89a3afe9b87c21d7db4d7cc217dc088c",
+    "bytes": 21936,
+    "etag": null,
+    "last_modified": null
+  },
+  {
+    "url": "https://www.ebi.ac.uk/chebi/backend/api/public/es_search/?term=75-09-2&page=1&size=20",
+    "version": "identity-2026-10-28",
+    "retrieved_at": "2026-10-28T16:16:12.763581+00:00",
+    "sha256": "60405dd908a78837f6ba0623e05341ce3a5891589dc4b5c60df977e2244e7e48",
+    "bytes": 813,
+    "etag": null,
+    "last_modified": null
+  },
+  {
+    "url": "https://www.ebi.ac.uk/chebi/backend/api/public/compound/15767/",
+    "version": "identity-2026-10-28",
+    "retrieved_at": "2026-10-28T16:16:22.929362+00:00",
+    "sha256": "b9e2537aa82f35dcb9f2943cc5dd31a92c77c82019b271881a57c28102d7ba22",
+    "bytes": 7513,
+    "etag": null,
+    "last_modified": null
+  },
+  {
+    "url": "https://www.ebi.ac.uk/chebi/backend/api/public/es_search/?term=75530-68-6&page=1&size=20",
+    "version": "identity-2026-10-28",
+    "retrieved_at": "2026-10-28T16:17:52.200964+00:00",
+    "sha256": "9fcc8f1e33f9914f71643828b3c3b9c518cc8adf3e18652eefd6159b9d078974",
+    "bytes": 615,
+    "etag": null,
+    "last_modified": null
+  },
+  {
+    "url": "https://www.ebi.ac.uk/chebi/backend/api/public/compound/31911/",
+    "version": "identity-2026-10-28",
+    "retrieved_at": "2026-10-28T16:18:02.386985+00:00",
+    "sha256": "3aa3310b0ce4c309adb9810b4e722f4eb5285c3ef5db10f66f80c6040217e723",
+    "bytes": 6850,
+    "etag": null,
+    "last_modified": null
+  },
+  {
+    "url": "https://www.ebi.ac.uk/chebi/backend/api/public/es_search/?term=3871-99-6&page=1&size=20",
+    "version": "identity-2026-10-28",
+    "retrieved_at": "2026-10-28T16:22:09.325508+00:00",
+    "sha256": "613c4d18f13801951dd5dc5f674aa793acb7bcaad99338b78af6fd67924406fc",
+    "bytes": 63,
+    "http_status": 404,
+    "etag": null,
+    "last_modified": null
+  },
+  {
+    "url": "https://www.ebi.ac.uk/chebi/backend/api/public/es_search/?term=123-91-1&page=1&size=20",
+    "version": "identity-2026-10-28",
+    "retrieved_at": "2026-10-28T16:18:33.964425+00:00",
+    "sha256": "631f851cf305747abd8a6d25aee60827357c3a1e0410231b255d4bffc64583a9",
+    "bytes": 531,
+    "etag": null,
+    "last_modified": null
+  },
+  {
+    "url": "https://www.ebi.ac.uk/chebi/backend/api/public/compound/47032/",
+    "version": "identity-2026-10-28",
+    "retrieved_at": "2026-10-28T16:18:44.235707+00:00",
+    "sha256": "ef52db6761ea32a1033f7c3cf8eaa4a540166997f7f9c3985f4e6ade3a9c45ff",
+    "bytes": 6165,
+    "etag": null,
+    "last_modified": null
+  },
+  {
+    "url": "https://www.ebi.ac.uk/chebi/backend/api/public/es_search/?term=107-13-1&page=1&size=20",
+    "version": "identity-2026-10-28",
+    "retrieved_at": "2026-10-28T16:19:04.593894+00:00",
+    "sha256": "95c64e03d42c130eaea3d188c9069eef137ab6d8746f17b4a9b90052b67b6bec",
+    "bytes": 575,
+    "etag": null,
+    "last_modified": null
+  },
+  {
+    "url": "https://www.ebi.ac.uk/chebi/backend/api/public/compound/28217/",
+    "version": "identity-2026-10-28",
+    "retrieved_at": "2026-10-28T16:19:14.782529+00:00",
+    "sha256": "16c089570c7f6b406fa201d51547eb30d0132611fffb98e34a2a432caf869009",
+    "bytes": 8060,
+    "etag": null,
+    "last_modified": null
+  },
+  {
+    "url": "https://www.ebi.ac.uk/chebi/backend/api/public/es_search/?term=15687-27-1&page=1&size=20",
+    "version": "identity-2026-10-28",
+    "retrieved_at": "2026-10-28T16:19:35.306234+00:00",
+    "sha256": "dceaa5bd6b82214a45b10270ebb544c031f9007a32e7917f0ca4b3b4b0172694",
+    "bytes": 681,
+    "etag": null,
+    "last_modified": null
+  },
+  {
+    "url": "https://www.ebi.ac.uk/chebi/backend/api/public/compound/5855/",
+    "version": "identity-2026-10-28",
+    "retrieved_at": "2026-10-28T16:19:45.544084+00:00",
+    "sha256": "898689ba38030135c863caf2775d0b8a85850f5c31d8b9c72ee880a5d1630732",
+    "bytes": 50420,
+    "etag": null,
+    "last_modified": null
+  },
+  {
+    "url": "https://www.ebi.ac.uk/chebi/backend/api/public/es_search/?term=335-67-1&page=1&size=20",
+    "version": "identity-2026-10-28",
+    "retrieved_at": "2026-10-28T16:20:05.905693+00:00",
+    "sha256": "69f49a8b2cb276abc6175ef0a07db5f6b6697e86872afb1e91c42f9f5b07e41c",
+    "bytes": 670,
+    "etag": null,
+    "last_modified": null
+  },
+  {
+    "url": "https://www.ebi.ac.uk/chebi/backend/api/public/compound/35549/",
+    "version": "identity-2026-10-28",
+    "retrieved_at": "2026-10-28T16:20:16.066084+00:00",
+    "sha256": "bcf66114751e97f7835607d604669c260c1a8590d8cc5d4f843416bd10a39800",
+    "bytes": 6678,
+    "etag": null,
+    "last_modified": null
+  }
+]

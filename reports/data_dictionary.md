@@ -41,3 +41,15 @@ CSV files use UTF-8 with headers. Empty normalized values mean unavailable/unres
 | n_support, dose_ratio (predictions) | Number of lower support doses and target/max-support ratio. |
 
 QC flags cover invalid or unsupported values, source/original conversion disagreements, ambiguous routes, missing metadata, duplicate record IDs, inconsistent metadata inside a source series, repeated/unknown regimen, human observations, nonparent analytes, radiolabeling and inadequate sampling. Missing structure blocks molecular evaluation; missing strain/protocol blocks CvTdb high-confidence claims. A missing flag is not a claim that assay accuracy, formulation, disease state or full protocol has been independently verified.
+
+## Expanded outputs
+
+`reported_endpoints_expanded.csv` contains all selected PMC groups, including explicitly flagged groups; `high_confidence_endpoints.csv` contains groups belonging to primary comparable series. Eligibility is endpoint-specific (`high_confidence_auc`, `high_confidence_cmax`). `crossdose_series_expanded.csv` separates `protocol_verified` (explicit within-publication protocol) from `primary_eligible` (acceptable exposure comparability). A publication can contribute correlated route/sex/compound strata; series counts do not equal independent publications.
+
+`molecular_group_id` is `InChIKey:<full key>` for an accepted mapping, otherwise the unchanged source compound ID. It never removes the study/protocol from grouping. `resolved_cas_json` contains ChEBI's CAS references; source CAS values remain separate. `pubchem_cids_json` retains every exact-structure UniChem mapping; `pubchem_cid` is populated only for a singleton. `identity_status` distinguishes `resolved_exact`, `not_found`, `not_queried`, invalid CAS, identifier conflict, ambiguous structures, incomplete search and lookup failure. `compound_identity_candidates.json` retains rejected and ambiguous structure alternatives and provenance.
+
+`structure_input_kind=source_inchi_fallback_invalid_smiles` means the source SMILES failed RDKit but the same record's standard InChI produced a molecule matching its full expected InChIKey. The invalid original SMILES is retained in the candidate record. No guessed structure, salt stripping or stereoisomer collapse is used.
+
+Expanded AUC uses explicit AUC0-inf where eligible; mass concentrations are ug/mL and AUC ug*h/mL. Memantine's retained Cmax remains nM and its ambiguous AUC is not imported. No mass/molar conversion is inferred. `original_json` records source cell, row label, column and conversion factor; dose and animal-count selections are in the hashed curation configuration. `protocol_evidence_json` records matching source text fragments.
+
+CvTdb `cvtdb_profile_audit.csv` and `cvtdb_composite_candidates.csv` are audit-only recovery candidates, not fabricated animal timecourses. Original subject, source series and study IDs remain in the observation table.

@@ -1,6 +1,6 @@
-# Executed QC report
+# Current QC report
 
-No downloaded observation was silently deleted. Flags can overlap; counts must not be added as mutually exclusive exclusions. All CvTdb records lack strain/structure and verified shared protocol.
+All original observations and all selected curated endpoints are retained. Exclusions apply to primary eligibility, not source deletion.
 
 ```json
 {
@@ -38,12 +38,23 @@ No downloaded observation was silently deleted. Flags can overlap; counts must n
   "pmc_cmax_eligible_groups": 6,
   "pmc_auc_benchmark_eligible_groups": 0,
   "pmc_scope_exclusions": "Other Table 1 columns (IV/repeated dosing), all dog Table 2 columns, tissues and supplements are out of selected adapter scope, preserved in raw XML. Dog table conflict documented.",
-  "potential_overlap_groups": 0
+  "potential_overlap_groups": 0,
+  "expansion": {
+    "curated_endpoint_groups": 47,
+    "primary_endpoint_groups": 27,
+    "primary_comparable_series": 9,
+    "flagged_protocol_series": 8,
+    "extractions_failed": 0,
+    "source_overlap_groups": 0,
+    "identity_status_counts": {
+      "not_queried": 238,
+      "resolved_exact": 13,
+      "not_found": 2
+    }
+  }
 }
 ```
 
-Partial AUC uses linear trapezoids only from the first to last observed time; no t=0 or terminal tail is imputed. Duplicate timepoints block curve integration instead of being averaged. Sampled maxima are not necessarily true Cmax. Unsupported units remain missing and flagged. Original strings, identifiers and units are retained in original_json and the raw archive.
+Article/table hashes, exact cell addresses, dose columns, evidence phrases and units are checked against reviewed configurations. Censored CvTdb values remain censored; audit-only recovery does not imply validated AUC. Primary grouping requires publication, protocol, compound, species, strain, sex, route, matrix, regimen and formulation conditions. Source DOI overlaps are flagged; no records from independent publications are pooled. Chemical resolution accepts only unique full-InChIKey agreement; conflicts retain candidate lists. Exact CAS checksum is validated.
 
-The PMC rat table is checked against dose/sex/design headers. Its AUC0-tn endpoints remain available but cannot enter an AUC benchmark until terminal-time comparability is established. Missing structure does not invalidate an empirical within-compound Cmax episode but prevents molecular/scaffold evaluation.
-
-Potential overlaps use DOI plus name/identifier; absent matches do not prove independence. Cross-source structural identity resolution remains unfinished.
+Flags remain for unavailable fasting, AUC tail fractions, aggregate-only uncertainty and missing structures. Reported AUC0-inf is distinct from observed-window AUC. Rat HY-071085 AUC0-tn is ineligible. Oral formulation changes and ambiguous Cmax units in PMC6160927, incomplete tofacitinib oral formulation evidence, and memantine composite/dose-volume conditions are outside the primary subset.

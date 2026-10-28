@@ -55,14 +55,16 @@ class Collector:
             raise PermissionError(f'robots.txt disallows {url}')
         time.sleep(max(0.3, rp.crawl_delay(AGENT) or 0))
 
-    def fetch(self, name, url, version, expected_sha256=None):
+    def fetch(self, name, url, version, expected_sha256=None, json_body=None, allowed_statuses=()):
         target = self.raw/name
         manifest = target.with_suffix(target.suffix+'.json')
         try:
             if target.exists() and manifest.exists():
                 meta = json.loads(manifest.read_text())
                 digest = sha256(target)
-                if meta['url'] != url or meta['version'] != version or digest != meta['sha256']:
+                if meta.get('http_status',200)>=400 and meta['http_status'] not in allowed_statuses:
+                    raise ValueError('Cached HTTP error not allowed for this request')
+                if meta['url'] != url or meta['version'] != version or digest != meta['sha256'] or meta.get('request_body') != json_body:
                     raise ValueError(f'Cache provenance or integrity mismatch: {name}')
                 if expected_sha256 and digest != expected_sha256:
                     raise ValueError(f'Pinned checksum mismatch: {name}')
@@ -72,8 +74,12 @@ class Collector:
                 raise FileNotFoundError(f'No verified cache for {name}; run online first')
             self.allowed(url)
             # No authentication or cross-host redirects are followed implicitly.
-            r = self.session.get(url, timeout=120, allow_redirects=False)
-            r.raise_for_status()
+            if json_body is None:
+                r = self.session.get(url, timeout=120, allow_redirects=False)
+            else:
+                r = self.session.post(url, json=json_body, timeout=120, allow_redirects=False)
+            if r.status_code not in allowed_statuses:
+                r.raise_for_status()
             if r.is_redirect:
                 raise PermissionError('Redirect requires endpoint review: '+r.headers.get('Location',''))
             digest = hashlib.sha256(r.content).hexdigest()
@@ -83,7 +89,9 @@ class Collector:
             temp.write_bytes(r.content)
             temp.replace(target)
             meta = dict(url=url, version=version, retrieved_at=now(), sha256=digest,
-                        bytes=len(r.content), etag=r.headers.get('ETag'), last_modified=r.headers.get('Last-Modified'))
+                        bytes=len(r.content), http_status=r.status_code, etag=r.headers.get('ETag'), last_modified=r.headers.get('Last-Modified'))
+            if json_body is not None:
+                meta.update(method='POST',request_body=json_body)
             manifest.write_text(json.dumps(meta, indent=2)+'\n')
             log(self.raw/'collection.jsonl', action='download', file=name, **meta)
             return target, meta

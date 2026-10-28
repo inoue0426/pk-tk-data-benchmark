@@ -1,13 +1,15 @@
 {
-  "online_pipeline": "passed",
-  "offline_pipeline": "passed",
-  "byte_identical_existing_csv_artifacts": 10,
+  "validation_date": "2026-10-28",
+  "online_expansion_pipeline": "passed",
+  "offline_full_pipeline": "passed",
+  "byte_identical_csv_and_json_artifacts": 15,
   "differences": [],
-  "tests_passed": 11,
+  "tests_passed": 18,
   "tests_failed": 0,
   "tests_skipped": 0,
   "python": "3.14.7",
   "platform": "macOS-26.7.1-arm64-arm-64bit-Mach-O",
   "git_diff_check": "passed",
-  "compileall": "passed"
+  "compileall": "passed",
+  "model_scope": "Existing HY-071085 pilot only; no new complex model training"
 }

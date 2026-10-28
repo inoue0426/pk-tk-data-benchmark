@@ -1,0 +1,67 @@
+[
+  {
+    "source": "PK-DB",
+    "url": "https://pk-db.com/api/v1/statistics/",
+    "status": "public_statistics",
+    "counts": {
+      "version": "0.9.8",
+      "study_count": 819,
+      "reference_count": 829,
+      "group_count": 2454,
+      "individual_count": 17285,
+      "intervention_count": 2392,
+      "output_count": 138411,
+      "output_calculated_count": 25967,
+      "timecourse_count": 6103,
+      "scatter_count": 164
+    },
+    "manifest": {
+      "url": "https://pk-db.com/api/v1/statistics/",
+      "version": "discovery-2026-10-28",
+      "retrieved_at": "2026-10-28T16:01:50.366755+00:00",
+      "sha256": "f84432ad22afac3c9eab398224bc42344384fa05b4d4970507b50740d925483e",
+      "bytes": 227,
+      "etag": null,
+      "last_modified": null
+    }
+  },
+  {
+    "source": "PK-DB",
+    "url": "https://pk-db.com/api/v1/studies/?page=1&page_size=1",
+    "status": "public_metadata_only",
+    "studies": [
+      {
+        "sid": "PKDB00954",
+        "name": "Rosenkranz1996a",
+        "access": "public",
+        "licence": "closed"
+      }
+    ],
+    "decision": "Do not import closed-licence study measurements; reviewed record is human, not preclinical.",
+    "manifest": {
+      "url": "https://pk-db.com/api/v1/studies/?page=1&page_size=1",
+      "version": "discovery-2026-10-28",
+      "retrieved_at": "2026-10-28T16:05:42.311010+00:00",
+      "sha256": "802d9cea87a9bbede778f7d895923e7f77a813aa5c0e8ef970729a27ac7d643d",
+      "bytes": 12846,
+      "etag": null,
+      "last_modified": null
+    }
+  },
+  {
+    "source": "PMC9024849_supplement",
+    "status": "downloaded_and_inspected",
+    "manifest": {
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC9024849/supplementaryFiles",
+      "version": "discovery-2026-10-28",
+      "retrieved_at": "2026-10-28T16:01:50.516854+00:00",
+      "sha256": "f1058a031ba84f1963ad4bf69f9f4179a71961b120edb4b369dfe8b98963a6c3",
+      "bytes": 297103,
+      "etag": null,
+      "last_modified": null
+    },
+    "pages": 3,
+    "new_systemic_pk_groups": 0,
+    "contents": "Tissue calibration standards, MRM chromatograms, plasma stability controls; not additional in vivo dose series."
+  }
+]

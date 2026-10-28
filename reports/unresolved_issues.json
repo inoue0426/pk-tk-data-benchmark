@@ -1,12 +1,68 @@
 [
-  {"id":"protocols","priority":"high","status":"open","detail":"CvTdb export lacks strain and verified shared protocol; publication matches remain candidates. Dose-specific study IDs must not be conflated with independent publications."},
-  {"id":"structures","priority":"high","status":"open","detail":"No verified source-to-SMILES mapping collected; RDKit utility tested but molecular identity deduplication, descriptors and scaffolds cannot yet support ML."},
-  {"id":"auc","priority":"high","status":"open","detail":"Rat PMC AUC0-tn terminal times not confirmed per group; partial CvTdb AUC windows vary. No AUC benchmark produced."},
-  {"id":"dog_table","priority":"high","status":"open","detail":"PMC9316000 Table 2 duplicates 1.25 mg/kg headers and IV-like values; prose describes a 2.5 mg/kg group. No silent correction; all dog endpoints outside adapter scope."},
-  {"id":"sample_size","priority":"high","status":"open","detail":"Only one protocol-verified compound; no compound/scaffold-disjoint ML, calibrated intervals or independent nonlinear detection evaluation."},
-  {"id":"pkdb","priority":"medium","status":"blocked_external","detail":"Current official download docs require an active account and substantial reuse has separate conditions; no authentication bypass attempted."},
-  {"id":"other_sources","priority":"medium","status":"open","detail":"PKSmart dose series unverified; TG-GATEs catalog lacks systemic exposure table; FDA/EMA PDF extraction and additional PMC supplement collectors not implemented."},
-  {"id":"overlap","priority":"high","status":"open","detail":"DOI/name/ID overlap screening is incomplete without structural and publication alias resolution. Identifier counts are not proven unique molecules."},
-  {"id":"source_quality","priority":"high","status":"open","detail":"Digitized curves, censoring, radiolabel uncertainty, individual versus summary data and assay quality need study-level review. Large source series count includes single-point series; no automated regrouping across them."},
-  {"id":"distribution_terms","priority":"medium","status":"open","detail":"EPA original release CC0 and packaged CRAN GPL-3 are recorded separately; derived/raw datasets are not committed. Review distribution-specific obligations before publication."}
+  {
+    "id": "protocols",
+    "priority": "high",
+    "status": "open",
+    "detail": "CvTdb audit found 17,020 single-point series IDs and 112 potential composite-sampling cross-dose groups. None promoted without original NTP/publication protocol evidence. Primary expansion has 9 comparable series across 5 publications."
+  },
+  {
+    "id": "structures",
+    "priority": "high",
+    "status": "partially_resolved",
+    "detail": "ChEBI/UniChem resolved 13 of 15 prioritized source identifiers to full InChIKey and PubChem CID; 2 not found, 238 not queried. Six of seven primary compounds have structures. Increase the configurable identity pass after reviewing remaining CAS/name conflicts."
+  },
+  {
+    "id": "auc",
+    "priority": "high",
+    "status": "partially_resolved",
+    "detail": "Seven primary series now have explicit comparable AUC0-inf. HY-071085 AUC0-tn terminal time remains unresolved. AUC tail fractions/individual uncertainty are not uniformly available."
+  },
+  {
+    "id": "dog_table",
+    "priority": "high",
+    "status": "open",
+    "detail": "PMC9316000 Table 2 duplicates 1.25 mg/kg headers and IV-like values; prose describes a 2.5 mg/kg group. No silent correction; all dog endpoints outside adapter scope."
+  },
+  {
+    "id": "sample_size",
+    "priority": "high",
+    "status": "open",
+    "detail": "Seven primary compounds across five publications remain too few for meaningful molecular or scaffold-disjoint ML. Within-publication compound/route/sex strata are not independent studies."
+  },
+  {
+    "id": "pkdb",
+    "priority": "medium",
+    "status": "blocked_external",
+    "detail": "Legacy anonymous statistics and one-record metadata listing succeeded; inspected human study PKDB00954 is closed-licence. New beta endpoints failed TLS. No preclinical exposure data imported or access restrictions bypassed."
+  },
+  {
+    "id": "other_sources",
+    "priority": "medium",
+    "status": "partially_resolved",
+    "detail": "Five additional PMC publications parsed (41 new selected groups); DA-6886 supplementary PDF inspected and contains no new systemic PK data. Additional XML requests PMC89792/PMC4249412 failed after retries. FDA/EMA and wider structured sources remain future work."
+  },
+  {
+    "id": "overlap",
+    "priority": "high",
+    "status": "open",
+    "detail": "Expanded DOI/full-InChIKey overlap screen found zero matches for selected sources, but most CvTdb structures remain unresolved and missing/alias DOIs prevent proof of complete deduplication."
+  },
+  {
+    "id": "source_quality",
+    "priority": "high",
+    "status": "open",
+    "detail": "Do not pool singleton animal records into longitudinal curves. Oral DA-9805 pure-component vehicles change with dose and some Cmax units are suspect. Memantine dose volume/composite sampling and AUC labels, and tofacitinib oral vehicle details, keep 8 series outside the primary subset."
+  },
+  {
+    "id": "distribution_terms",
+    "priority": "medium",
+    "status": "open",
+    "detail": "EPA original release CC0 and packaged CRAN GPL-3 are recorded separately; derived/raw datasets are not committed. Review distribution-specific obligations before publication."
+  },
+  {
+    "id": "identity_access",
+    "priority": "medium",
+    "status": "documented",
+    "detail": "PubChem REST and ChEBI FTP paths blocked by robots. ChEBI public API and current UniChem API work with crawl delays respected. ChEBI tofacitinib SMILES fails RDKit; its source standard InChI regenerates the expected full key and is retained as an explicit fallback."
+  }
 ]

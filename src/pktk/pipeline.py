@@ -132,8 +132,14 @@ def main():
     p=argparse.ArgumentParser()
     p.add_argument('--root',type=Path,default=Path('.'))
     p.add_argument('--offline',action='store_true')
+    p.add_argument('--initial-only',action='store_true',help='Reproduce only the original pilot')
+    p.add_argument('--reuse-identities',action='store_true',help='Reuse the local expanded identity registry')
     args=p.parse_args()
-    try: run(args.root,args.offline)
+    try:
+        run(args.root,args.offline)
+        if not args.initial_only:
+            from pktk.expansion import run as expand
+            expand(args.root,args.offline,not args.reuse_identities)
     except Exception as e:
         log(args.root/'reports/progress.jsonl',phase='pipeline',status='failed',error=str(e))
         raise
