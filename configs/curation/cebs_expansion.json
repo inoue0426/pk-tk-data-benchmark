@@ -1,0 +1,1064 @@
+[
+  {
+    "study": "S0593",
+    "compound_id": "DTXSID3022405",
+    "cvtdb_document_id": "CvTdb:document:129",
+    "doi": "10.22427/ntp-data-dtxsid3022405",
+    "landing_url": "https://cebs.niehs.nih.gov/cebs/test_article/131-57-7",
+    "file": "TKS_2-Hydroxy-4-methoxybenzophenone_1996_S0593_Group_TK_Parameters_2.xlsx",
+    "url": "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-01338-0022-0000-1/file/TKS_2-Hydroxy-4-methoxybenzophenone_1996_S0593_Group_TK_Parameters_2.xlsx",
+    "sha256": "5b32bfecde848f9e824bbaa91da5d65de6ad31ae4e82a868b553c95df3ea7cf6",
+    "version": "CEBS-expansion-2026-10-28",
+    "auc_column": "AUCinf_pred",
+    "auc_definition": "AUC0-inf",
+    "eligible_auc": true,
+    "model_evidence": "Noncompartmental modeling",
+    "dose_basis": "actual",
+    "rows": [
+      {
+        "row": 4,
+        "group_name": "3_W_Gav_100_Rat_male",
+        "species": "Rat",
+        "sex": "Male",
+        "route": "Gavage",
+        "dose": 100.0,
+        "matrix": "Plasma",
+        "analyte": "2-Hydroxy-4-methoxybenzophenone"
+      },
+      {
+        "row": 5,
+        "group_name": "4_X_Gav_100_Rat_female",
+        "species": "Rat",
+        "sex": "Female",
+        "route": "Gavage",
+        "dose": 100.0,
+        "matrix": "Plasma",
+        "analyte": "2-Hydroxy-4-methoxybenzophenone"
+      },
+      {
+        "row": 6,
+        "group_name": "5_Y_Gav_250_Rat_male",
+        "species": "Rat",
+        "sex": "Male",
+        "route": "Gavage",
+        "dose": 250.0,
+        "matrix": "Plasma",
+        "analyte": "2-Hydroxy-4-methoxybenzophenone"
+      },
+      {
+        "row": 7,
+        "group_name": "6_Z_Gav_250_Rat_female",
+        "species": "Rat",
+        "sex": "Female",
+        "route": "Gavage",
+        "dose": 250.0,
+        "matrix": "Plasma",
+        "analyte": "2-Hydroxy-4-methoxybenzophenone"
+      },
+      {
+        "row": 8,
+        "group_name": "7_AA_Gav_500_Rat_male",
+        "species": "Rat",
+        "sex": "Male",
+        "route": "Gavage",
+        "dose": 500.0,
+        "matrix": "Plasma",
+        "analyte": "2-Hydroxy-4-methoxybenzophenone"
+      },
+      {
+        "row": 9,
+        "group_name": "8_AB_Gav_500_Rat_female",
+        "species": "Rat",
+        "sex": "Female",
+        "route": "Gavage",
+        "dose": 500.0,
+        "matrix": "Plasma",
+        "analyte": "2-Hydroxy-4-methoxybenzophenone"
+      },
+      {
+        "row": 12,
+        "group_name": "15_AE_Gav_100_Mouse_male",
+        "species": "Mouse",
+        "sex": "Male",
+        "route": "Gavage",
+        "dose": 100.0,
+        "matrix": "Plasma",
+        "analyte": "2-Hydroxy-4-methoxybenzophenone"
+      },
+      {
+        "row": 13,
+        "group_name": "16_AF_Gav_100_Mouse_female",
+        "species": "Mouse",
+        "sex": "Female",
+        "route": "Gavage",
+        "dose": 100.0,
+        "matrix": "Plasma",
+        "analyte": "2-Hydroxy-4-methoxybenzophenone"
+      },
+      {
+        "row": 14,
+        "group_name": "17_AG_Gav_250_Mouse_male",
+        "species": "Mouse",
+        "sex": "Male",
+        "route": "Gavage",
+        "dose": 250.0,
+        "matrix": "Plasma",
+        "analyte": "2-Hydroxy-4-methoxybenzophenone"
+      },
+      {
+        "row": 15,
+        "group_name": "18_AH_Gav_250_Mouse_female",
+        "species": "Mouse",
+        "sex": "Female",
+        "route": "Gavage",
+        "dose": 250.0,
+        "matrix": "Plasma",
+        "analyte": "2-Hydroxy-4-methoxybenzophenone"
+      },
+      {
+        "row": 16,
+        "group_name": "19_AI_Gav_500_Mouse_male",
+        "species": "Mouse",
+        "sex": "Male",
+        "route": "Gavage",
+        "dose": 500.0,
+        "matrix": "Plasma",
+        "analyte": "2-Hydroxy-4-methoxybenzophenone"
+      },
+      {
+        "row": 17,
+        "group_name": "20_AJ_Gav_500_Mouse_female",
+        "species": "Mouse",
+        "sex": "Female",
+        "route": "Gavage",
+        "dose": 500.0,
+        "matrix": "Plasma",
+        "analyte": "2-Hydroxy-4-methoxybenzophenone"
+      }
+    ],
+    "review_note": "Parent-only oral NCA; actual doses parsed from exception comments. Metabolites and simultaneous IV/oral fits excluded."
+  },
+  {
+    "study": "S0546",
+    "compound_id": "DTXSID0020442",
+    "cvtdb_document_id": "CvTdb:document:164",
+    "doi": "10.22427/NTP-DATA-DTXSID0020442",
+    "landing_url": "https://cebs.niehs.nih.gov/cebs/test_article/94-75-7",
+    "file": "TKS_2-4-Dichlorophenoxyacetic_acid_S0546_1995_Group_Parameters.xlsx",
+    "url": "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-01223-0023-0000-5/file/TKS_2-4-Dichlorophenoxyacetic_acid_S0546_1995_Group_Parameters.xlsx",
+    "sha256": "3582de047712bc906bdaff3113d1fcfb4b8dc7cf2c8436071b9b4b6b8d908201",
+    "version": "CEBS-expansion-2026-10-28",
+    "auc_column": "AUCinf_pred",
+    "auc_definition": "AUC0-inf",
+    "eligible_auc": true,
+    "model_evidence": "noncompartmental model (not best fit)",
+    "dose_basis": "nominal",
+    "rows": [
+      {
+        "row": 3,
+        "group_name": "2_Q_Gav_1_Mouse_male",
+        "species": "Mouse",
+        "sex": "Male",
+        "route": "Gavage",
+        "dose": 1.0,
+        "matrix": "Plasma",
+        "analyte": "2,4-Dichlorophenoxyacetic acid"
+      },
+      {
+        "row": 4,
+        "group_name": "3_R_Gav_2_Mouse_male",
+        "species": "Mouse",
+        "sex": "Male",
+        "route": "Gavage",
+        "dose": 2.0,
+        "matrix": "Plasma",
+        "analyte": "2,4-Dichlorophenoxyacetic acid"
+      },
+      {
+        "row": 5,
+        "group_name": "4_S_Gav_5.2_Mouse_male",
+        "species": "Mouse",
+        "sex": "Male",
+        "route": "Gavage",
+        "dose": 5.2,
+        "matrix": "Plasma",
+        "analyte": "2,4-Dichlorophenoxyacetic acid"
+      },
+      {
+        "row": 7,
+        "group_name": "6_Y_Gav_1.5_SD-Rat_male",
+        "species": "Rat",
+        "sex": "Male",
+        "route": "Gavage",
+        "dose": 1.5,
+        "matrix": "Plasma",
+        "analyte": "2,4-Dichlorophenoxyacetic acid"
+      },
+      {
+        "row": 8,
+        "group_name": "7_Z_Gav_3.56_SD-Rat_male",
+        "species": "Rat",
+        "sex": "Male",
+        "route": "Gavage",
+        "dose": 3.56,
+        "matrix": "Plasma",
+        "analyte": "2,4-Dichlorophenoxyacetic acid"
+      },
+      {
+        "row": 9,
+        "group_name": "8_AA_Gav_7_SD-Rat_male",
+        "species": "Rat",
+        "sex": "Male",
+        "route": "Gavage",
+        "dose": 7.0,
+        "matrix": "Plasma",
+        "analyte": "2,4-Dichlorophenoxyacetic acid"
+      },
+      {
+        "row": 11,
+        "group_name": "10_U_Gav_2_Hamster_male",
+        "species": "Hamster",
+        "sex": "Male",
+        "route": "Gavage",
+        "dose": 2.0,
+        "matrix": "Plasma",
+        "analyte": "2,4-Dichlorophenoxyacetic acid"
+      },
+      {
+        "row": 12,
+        "group_name": "11_V_Gav_8_Hamster_male",
+        "species": "Hamster",
+        "sex": "Male",
+        "route": "Gavage",
+        "dose": 8.0,
+        "matrix": "Plasma",
+        "analyte": "2,4-Dichlorophenoxyacetic acid"
+      },
+      {
+        "row": 13,
+        "group_name": "12_W_Gav_40_Hamster_male",
+        "species": "Hamster",
+        "sex": "Male",
+        "route": "Gavage",
+        "dose": 40.0,
+        "matrix": "Plasma",
+        "analyte": "2,4-Dichlorophenoxyacetic acid"
+      }
+    ],
+    "review_note": "Oral NCA rows only; feed and simultaneous IV/oral fits excluded. Tail and outlier limitations retained."
+  },
+  {
+    "study": "S0558",
+    "compound_id": "DTXSID3020095",
+    "cvtdb_document_id": "CvTdb:document:166",
+    "doi": "10.22427/NTP-DATA-DTXSID3020095",
+    "landing_url": "https://cebs.niehs.nih.gov/cebs/test_article/84-65-1",
+    "file": "TKS_Anthraquinone_1994_S0558_Group_TK_Parameters_version2_3.xlsx",
+    "url": "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-01658-0022-0000-6/file/TKS_Anthraquinone_1994_S0558_Group_TK_Parameters_version2_3.xlsx",
+    "sha256": "1225b1d000517a0e4c6bc119b9898eed7d0b30f02c466204d40c3ea471a9d8db",
+    "version": "CEBS-expansion-2026-10-28",
+    "auc_column": "AUC_0-T",
+    "auc_definition": "AUC0-t_unspecified",
+    "eligible_auc": false,
+    "model_evidence": "",
+    "dose_basis": "nominal",
+    "rows": [
+      {
+        "row": 4,
+        "group_name": "3_Gav_40_Rat_male",
+        "species": "Rat",
+        "sex": "Male",
+        "route": "Oral gavage",
+        "dose": 40.0,
+        "matrix": "Plasma",
+        "analyte": "Anthraquinone"
+      },
+      {
+        "row": 5,
+        "group_name": "4_Gav_40_Rat_female",
+        "species": "Rat",
+        "sex": "Female",
+        "route": "Oral gavage",
+        "dose": 40.0,
+        "matrix": "Plasma",
+        "analyte": "Anthraquinone"
+      },
+      {
+        "row": 6,
+        "group_name": "5_Gav_100_Rat_male",
+        "species": "Rat",
+        "sex": "Male",
+        "route": "Oral gavage",
+        "dose": 100.0,
+        "matrix": "Plasma",
+        "analyte": "Anthraquinone"
+      },
+      {
+        "row": 7,
+        "group_name": "6_Gav_100_Rat_female",
+        "species": "Rat",
+        "sex": "Female",
+        "route": "Oral gavage",
+        "dose": 100.0,
+        "matrix": "Plasma",
+        "analyte": "Anthraquinone"
+      },
+      {
+        "row": 8,
+        "group_name": "7_Gav_400_Rat_male",
+        "species": "Rat",
+        "sex": "Male",
+        "route": "Oral gavage",
+        "dose": 400.0,
+        "matrix": "Plasma",
+        "analyte": "Anthraquinone"
+      },
+      {
+        "row": 9,
+        "group_name": "8_Gav_400_Rat_female",
+        "species": "Rat",
+        "sex": "Female",
+        "route": "Oral gavage",
+        "dose": 400.0,
+        "matrix": "Plasma",
+        "analyte": "Anthraquinone"
+      },
+      {
+        "row": 12,
+        "group_name": "11_Gav_80_Mouse_male",
+        "species": "Mouse",
+        "sex": "Male",
+        "route": "Oral gavage",
+        "dose": 80.0,
+        "matrix": "Plasma",
+        "analyte": "Anthraquinone"
+      },
+      {
+        "row": 13,
+        "group_name": "12_Gav_80_Mouse_female",
+        "species": "Mouse",
+        "sex": "Female",
+        "route": "Oral gavage",
+        "dose": 80.0,
+        "matrix": "Plasma",
+        "analyte": "Anthraquinone"
+      },
+      {
+        "row": 14,
+        "group_name": "13_Gav_200_Mouse_male",
+        "species": "Mouse",
+        "sex": "Male",
+        "route": "Oral gavage",
+        "dose": 200.0,
+        "matrix": "Plasma",
+        "analyte": "Anthraquinone"
+      },
+      {
+        "row": 15,
+        "group_name": "14_Gav_200_Mouse_female",
+        "species": "Mouse",
+        "sex": "Female",
+        "route": "Oral gavage",
+        "dose": 200.0,
+        "matrix": "Plasma",
+        "analyte": "Anthraquinone"
+      },
+      {
+        "row": 16,
+        "group_name": "15_Gav_800_Mouse_male",
+        "species": "Mouse",
+        "sex": "Male",
+        "route": "Oral gavage",
+        "dose": 800.0,
+        "matrix": "Plasma",
+        "analyte": "Anthraquinone"
+      },
+      {
+        "row": 17,
+        "group_name": "16_Gav_800_Mouse_female",
+        "species": "Mouse",
+        "sex": "Female",
+        "route": "Oral gavage",
+        "dose": 800.0,
+        "matrix": "Plasma",
+        "analyte": "Anthraquinone"
+      }
+    ],
+    "review_note": "Observed oral Cmax; terminal AUC window and source AUC units require further corroboration, so AUC is ineligible."
+  },
+  {
+    "study": "S0571",
+    "compound_id": "DTXSID8020913",
+    "cvtdb_document_id": "CvTdb:document:169",
+    "doi": "10.22427/ntp-data-dtxsid8020913",
+    "landing_url": "https://cebs.niehs.nih.gov/cebs/test_article/91-20-3",
+    "file": "TKS_Naphthalene_IV_S0571_1996_Group_Ind_TK_Parameters_v2_3_copy.xlsx",
+    "url": "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02579-0013-0000-9/file/TKS_Naphthalene_IV_S0571_1996_Group_Ind_TK_Parameters_v2_3_copy.xlsx",
+    "sha256": "8d715f37e9563f713a23d31bb3878131d0a096a7136adb6a170597ff1effaf66",
+    "version": "CEBS-expansion-2026-10-28",
+    "auc_column": "AUCinf_pred",
+    "auc_definition": "AUC0-inf",
+    "eligible_auc": true,
+    "model_evidence": "Noncompartmental analysis",
+    "dose_basis": "nominal",
+    "rows": [
+      {
+        "row": 2,
+        "group_name": "1_IV_1_Rat_male",
+        "species": "Rat",
+        "sex": "Male",
+        "route": "Intravenous",
+        "dose": 1.0,
+        "matrix": "Whole Blood",
+        "analyte": "Naphthalene"
+      },
+      {
+        "row": 3,
+        "group_name": "2_IV_1_Rat_female",
+        "species": "Rat",
+        "sex": "Female",
+        "route": "Intravenous",
+        "dose": 1.0,
+        "matrix": "Whole Blood",
+        "analyte": "Naphthalene"
+      },
+      {
+        "row": 4,
+        "group_name": "3_IV_3_Rat_male",
+        "species": "Rat",
+        "sex": "Male",
+        "route": "Intravenous",
+        "dose": 3.0,
+        "matrix": "Whole Blood",
+        "analyte": "Naphthalene"
+      },
+      {
+        "row": 5,
+        "group_name": "4_IV_3_Rat_female",
+        "species": "Rat",
+        "sex": "Female",
+        "route": "Intravenous",
+        "dose": 3.0,
+        "matrix": "Whole Blood",
+        "analyte": "Naphthalene"
+      },
+      {
+        "row": 6,
+        "group_name": "5_IV_10_Rat_male",
+        "species": "Rat",
+        "sex": "Male",
+        "route": "Intravenous",
+        "dose": 10.0,
+        "matrix": "Whole Blood",
+        "analyte": "Naphthalene"
+      },
+      {
+        "row": 7,
+        "group_name": "6_IV_10_Rat_female",
+        "species": "Rat",
+        "sex": "Female",
+        "route": "Intravenous",
+        "dose": 10.0,
+        "matrix": "Whole Blood",
+        "analyte": "Naphthalene"
+      },
+      {
+        "row": 50,
+        "group_name": "7_IV_3_Mouse_male",
+        "species": "Mouse",
+        "sex": "Male",
+        "route": "Intravenous",
+        "dose": 3.0,
+        "matrix": "Whole Blood",
+        "analyte": "Naphthalene"
+      },
+      {
+        "row": 51,
+        "group_name": "8_IV_3_Mouse_female",
+        "species": "Mouse",
+        "sex": "Female",
+        "route": "Intravenous",
+        "dose": 3.0,
+        "matrix": "Whole Blood",
+        "analyte": "Naphthalene"
+      },
+      {
+        "row": 52,
+        "group_name": "9_IV_10_Mouse_male",
+        "species": "Mouse",
+        "sex": "Male",
+        "route": "Intravenous",
+        "dose": 10.0,
+        "matrix": "Whole Blood",
+        "analyte": "Naphthalene"
+      },
+      {
+        "row": 53,
+        "group_name": "10_IV_10_Mouse_female",
+        "species": "Mouse",
+        "sex": "Female",
+        "route": "Intravenous",
+        "dose": 10.0,
+        "matrix": "Whole Blood",
+        "analyte": "Naphthalene"
+      },
+      {
+        "row": 54,
+        "group_name": "11_IV_30_Mouse_male",
+        "species": "Mouse",
+        "sex": "Male",
+        "route": "Intravenous",
+        "dose": 30.0,
+        "matrix": "Whole Blood",
+        "analyte": "Naphthalene"
+      },
+      {
+        "row": 55,
+        "group_name": "12_IV_30_Mouse_female",
+        "species": "Mouse",
+        "sex": "Female",
+        "route": "Intravenous",
+        "dose": 30.0,
+        "matrix": "Whole Blood",
+        "analyte": "Naphthalene"
+      }
+    ],
+    "review_note": "Whole-blood NCA; rat group means of individual-animal PK kept distinct from mouse composite profiles. Individual rows and alternative model fits excluded."
+  },
+  {
+    "study": "K02922",
+    "compound_id": "DTXSID9025617",
+    "cvtdb_document_id": "CvTdb:document:25365",
+    "doi": "10.22427/NTP-DATA-DTXSID9025617",
+    "landing_url": "https://cebs.niehs.nih.gov/cebs/test_article/822-36-6",
+    "file": "TKS_4-Methylimidazole_2006_Group_TK_Parameters_version3.xlsx",
+    "url": "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-01511-0018-0000-9/file/TKS_4-Methylimidazole_2006_Group_TK_Parameters_version3.xlsx",
+    "sha256": "12e08d3a64a9d8e3c87821bb500a2d2dcab2e4ba472d300dfc10ab827f060b2a",
+    "version": "CEBS-expansion-2026-10-28",
+    "auc_column": "AUC_0-T",
+    "auc_definition": "AUC0-8h",
+    "eligible_auc": true,
+    "model_evidence": "For AUC_0-T, T=8 hours.",
+    "dose_basis": "nominal",
+    "rows": [
+      {
+        "row": 4,
+        "group_name": "3_Gav_10_Rat_male",
+        "species": "Rat",
+        "sex": "Male",
+        "route": "Gavage",
+        "dose": 10.0,
+        "matrix": "Plasma",
+        "analyte": "4-Methylimidazole"
+      },
+      {
+        "row": 5,
+        "group_name": "4_Gav_50_Rat_male",
+        "species": "Rat",
+        "sex": "Male",
+        "route": "Gavage",
+        "dose": 50.0,
+        "matrix": "Plasma",
+        "analyte": "4-Methylimidazole"
+      },
+      {
+        "row": 7,
+        "group_name": "6_Gav_10_Rat_female",
+        "species": "Rat",
+        "sex": "Female",
+        "route": "Gavage",
+        "dose": 10.0,
+        "matrix": "Plasma",
+        "analyte": "4-Methylimidazole"
+      },
+      {
+        "row": 8,
+        "group_name": "7_Gav_50_Rat_female",
+        "species": "Rat",
+        "sex": "Female",
+        "route": "Gavage",
+        "dose": 50.0,
+        "matrix": "Plasma",
+        "analyte": "4-Methylimidazole"
+      }
+    ],
+    "review_note": "Only rat 10 and 50 mg/kg share AUC0-8h. Rat 100 mg/kg is 0-30h; mouse windows differ and predicted AUC label is ambiguous. No observed oral Cmax."
+  },
+  {
+    "study": "K07076",
+    "compound_id": "DTXSID9030258",
+    "cvtdb_document_id": "CvTdb:document:25382",
+    "doi": "10.22427/NTP-DATA-DTXSID9030258",
+    "landing_url": "https://cebs.niehs.nih.gov/cebs/test_article/96-47-9",
+    "file": "TKS_2-Methyltetrahydrofuran_K07076_Group_TK_Parameters_4.xlsx",
+    "url": "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-01363-0002-0000-7/file/TKS_2-Methyltetrahydrofuran_K07076_Group_TK_Parameters_4.xlsx",
+    "sha256": "32bc120cc9dabdd0fd70596a9dc15265e794215cec2b574234cdf51613ea4dd1",
+    "version": "CEBS-expansion-2026-10-28",
+    "auc_column": "AUC_0-T",
+    "auc_definition": "AUC0-t_unspecified",
+    "eligible_auc": false,
+    "model_evidence": "",
+    "dose_basis": "nominal",
+    "rows": [
+      {
+        "row": 8,
+        "group_name": "7_Gav_10_Rat_male",
+        "species": "Rat",
+        "sex": "Male",
+        "route": "Gavage",
+        "dose": 10.0,
+        "matrix": "Plasma",
+        "analyte": "2-Methyltetrahydrofuran"
+      },
+      {
+        "row": 9,
+        "group_name": "8_Gav_10_Rat_female",
+        "species": "Rat",
+        "sex": "Female",
+        "route": "Gavage",
+        "dose": 10.0,
+        "matrix": "Plasma",
+        "analyte": "2-Methyltetrahydrofuran"
+      },
+      {
+        "row": 10,
+        "group_name": "9_Gav_30_Rat_male",
+        "species": "Rat",
+        "sex": "Male",
+        "route": "Gavage",
+        "dose": 30.0,
+        "matrix": "Plasma",
+        "analyte": "2-Methyltetrahydrofuran"
+      },
+      {
+        "row": 11,
+        "group_name": "10_Gav_30_Rat_female",
+        "species": "Rat",
+        "sex": "Female",
+        "route": "Gavage",
+        "dose": 30.0,
+        "matrix": "Plasma",
+        "analyte": "2-Methyltetrahydrofuran"
+      },
+      {
+        "row": 12,
+        "group_name": "11_Gav_100_Rat_male",
+        "species": "Rat",
+        "sex": "Male",
+        "route": "Gavage",
+        "dose": 100.0,
+        "matrix": "Plasma",
+        "analyte": "2-Methyltetrahydrofuran"
+      },
+      {
+        "row": 13,
+        "group_name": "12_Gav_100_Rat_female",
+        "species": "Rat",
+        "sex": "Female",
+        "route": "Gavage",
+        "dose": 100.0,
+        "matrix": "Plasma",
+        "analyte": "2-Methyltetrahydrofuran"
+      },
+      {
+        "row": 24,
+        "group_name": "21_Gav_20_Mouse_male",
+        "species": "Mouse",
+        "sex": "Male",
+        "route": "Gavage",
+        "dose": 20.0,
+        "matrix": "Plasma",
+        "analyte": "2-Methyltetrahydrofuran"
+      },
+      {
+        "row": 25,
+        "group_name": "22_Gav_20_Mouse_female",
+        "species": "Mouse",
+        "sex": "Female",
+        "route": "Gavage",
+        "dose": 20.0,
+        "matrix": "Plasma",
+        "analyte": "2-Methyltetrahydrofuran"
+      },
+      {
+        "row": 26,
+        "group_name": "23_Gav_100_Mouse_male",
+        "species": "Mouse",
+        "sex": "Male",
+        "route": "Gavage",
+        "dose": 100.0,
+        "matrix": "Plasma",
+        "analyte": "2-Methyltetrahydrofuran"
+      },
+      {
+        "row": 27,
+        "group_name": "24_Gav_100_Mouse_female",
+        "species": "Mouse",
+        "sex": "Female",
+        "route": "Gavage",
+        "dose": 100.0,
+        "matrix": "Plasma",
+        "analyte": "2-Methyltetrahydrofuran"
+      },
+      {
+        "row": 28,
+        "group_name": "25_Gav_400_Mouse_male",
+        "species": "Mouse",
+        "sex": "Male",
+        "route": "Gavage",
+        "dose": 400.0,
+        "matrix": "Plasma",
+        "analyte": "2-Methyltetrahydrofuran"
+      },
+      {
+        "row": 29,
+        "group_name": "26_Gav_400_Mouse_female",
+        "species": "Mouse",
+        "sex": "Female",
+        "route": "Gavage",
+        "dose": 400.0,
+        "matrix": "Plasma",
+        "analyte": "2-Methyltetrahydrofuran"
+      }
+    ],
+    "review_note": "Observed plasma oral Cmax only. Rat 400 mg/kg rows withheld because protocol description says 100 mg/kg. Brain, IV and model-dependent AUC not promoted."
+  },
+  {
+    "study": "K05097",
+    "compound_id": "DTXSID1020198",
+    "cvtdb_document_id": "CvTdb:document:25428",
+    "doi": "10.22427/NTP-DATA-DTXSID1020198",
+    "landing_url": "https://cebs.niehs.nih.gov/cebs/test_article/75-27-4",
+    "file": "TKS_Bromodichloromethane_2006_K05097_Group_TK_Parameters_v2_3_copy.xlsx",
+    "url": "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-01743-0063-0000-6/file/TKS_Bromodichloromethane_2006_K05097_Group_TK_Parameters_v2_3_copy.xlsx",
+    "sha256": "a3ebf0428a6a3180bf19a5e56a52a05c3b40c8c106559d74bd90f1ad6209b947",
+    "version": "CEBS-expansion-2026-10-28",
+    "auc_column": "AUCinf_pred",
+    "auc_definition": "AUC0-inf",
+    "eligible_auc": true,
+    "model_evidence": "Non-compartmental analysis",
+    "dose_basis": "nominal",
+    "rows": [
+      {
+        "row": 6,
+        "group_name": "3_Gav_Crem_25_Rat_male",
+        "species": "Rat",
+        "sex": "Male",
+        "route": "Gavage",
+        "dose": 25.0,
+        "matrix": "Plasma",
+        "analyte": "Bromodichloromethane"
+      },
+      {
+        "row": 7,
+        "group_name": "4_Gav_Crem_50_Rat_male",
+        "species": "Rat",
+        "sex": "Male",
+        "route": "Gavage",
+        "dose": 50.0,
+        "matrix": "Plasma",
+        "analyte": "Bromodichloromethane"
+      },
+      {
+        "row": 8,
+        "group_name": "5_Gav_Crem_100_Rat_male",
+        "species": "Rat",
+        "sex": "Male",
+        "route": "Gavage",
+        "dose": 100.0,
+        "matrix": "Plasma",
+        "analyte": "Bromodichloromethane"
+      },
+      {
+        "row": 9,
+        "group_name": "6_Gav_Crem_25_Rat_female",
+        "species": "Rat",
+        "sex": "Female",
+        "route": "Gavage",
+        "dose": 25.0,
+        "matrix": "Plasma",
+        "analyte": "Bromodichloromethane"
+      },
+      {
+        "row": 10,
+        "group_name": "7_Gav_Crem_50_Rat_female",
+        "species": "Rat",
+        "sex": "Female",
+        "route": "Gavage",
+        "dose": 50.0,
+        "matrix": "Plasma",
+        "analyte": "Bromodichloromethane"
+      },
+      {
+        "row": 11,
+        "group_name": "8_Gav_Crem_100_Rat_female",
+        "species": "Rat",
+        "sex": "Female",
+        "route": "Gavage",
+        "dose": 100.0,
+        "matrix": "Plasma",
+        "analyte": "Bromodichloromethane"
+      },
+      {
+        "row": 12,
+        "group_name": "9_Gav_Corn_25_Rat_male",
+        "species": "Rat",
+        "sex": "Male",
+        "route": "Gavage",
+        "dose": 25.0,
+        "matrix": "Plasma",
+        "analyte": "Bromodichloromethane"
+      },
+      {
+        "row": 13,
+        "group_name": "10_Gav_Corn_50_Rat_male",
+        "species": "Rat",
+        "sex": "Male",
+        "route": "Gavage",
+        "dose": 50.0,
+        "matrix": "Plasma",
+        "analyte": "Bromodichloromethane"
+      },
+      {
+        "row": 14,
+        "group_name": "11_Gav_Corn_100_Rat_male",
+        "species": "Rat",
+        "sex": "Male",
+        "route": "Gavage",
+        "dose": 100.0,
+        "matrix": "Plasma",
+        "analyte": "Bromodichloromethane"
+      },
+      {
+        "row": 15,
+        "group_name": "12_Gav_Corn_25_Rat_female",
+        "species": "Rat",
+        "sex": "Female",
+        "route": "Gavage",
+        "dose": 25.0,
+        "matrix": "Plasma",
+        "analyte": "Bromodichloromethane"
+      },
+      {
+        "row": 16,
+        "group_name": "13_Gav_Corn_50_Rat_female",
+        "species": "Rat",
+        "sex": "Female",
+        "route": "Gavage",
+        "dose": 50.0,
+        "matrix": "Plasma",
+        "analyte": "Bromodichloromethane"
+      },
+      {
+        "row": 17,
+        "group_name": "14_Gav_Corn_100_Rat_female",
+        "species": "Rat",
+        "sex": "Female",
+        "route": "Gavage",
+        "dose": 100.0,
+        "matrix": "Plasma",
+        "analyte": "Bromodichloromethane"
+      },
+      {
+        "row": 22,
+        "group_name": "17_Gav_Crem_25_Mouse_male",
+        "species": "Mouse",
+        "sex": "Male",
+        "route": "Gavage",
+        "dose": 25.0,
+        "matrix": "Plasma",
+        "analyte": "Bromodichloromethane"
+      },
+      {
+        "row": 23,
+        "group_name": "18_Gav_Crem_50_Mouse_male",
+        "species": "Mouse",
+        "sex": "Male",
+        "route": "Gavage",
+        "dose": 50.0,
+        "matrix": "Plasma",
+        "analyte": "Bromodichloromethane"
+      },
+      {
+        "row": 24,
+        "group_name": "19_Gav_Crem_100_Mouse_male",
+        "species": "Mouse",
+        "sex": "Male",
+        "route": "Gavage",
+        "dose": 100.0,
+        "matrix": "Plasma",
+        "analyte": "Bromodichloromethane"
+      },
+      {
+        "row": 25,
+        "group_name": "20_Gav_Crem_25_Mouse_female",
+        "species": "Mouse",
+        "sex": "Female",
+        "route": "Gavage",
+        "dose": 25.0,
+        "matrix": "Plasma",
+        "analyte": "Bromodichloromethane"
+      },
+      {
+        "row": 26,
+        "group_name": "21_Gav_Crem_50_Mouse_female",
+        "species": "Mouse",
+        "sex": "Female",
+        "route": "Gavage",
+        "dose": 50.0,
+        "matrix": "Plasma",
+        "analyte": "Bromodichloromethane"
+      },
+      {
+        "row": 27,
+        "group_name": "22_Gav_Crem_100_Mouse_female",
+        "species": "Mouse",
+        "sex": "Female",
+        "route": "Gavage",
+        "dose": 100.0,
+        "matrix": "Plasma",
+        "analyte": "Bromodichloromethane"
+      },
+      {
+        "row": 28,
+        "group_name": "23_Gav_Corn_25_Mouse_male",
+        "species": "Mouse",
+        "sex": "Male",
+        "route": "Gavage",
+        "dose": 25.0,
+        "matrix": "Plasma",
+        "analyte": "Bromodichloromethane"
+      },
+      {
+        "row": 29,
+        "group_name": "24_Gav_Corn_50_Mouse_male",
+        "species": "Mouse",
+        "sex": "Male",
+        "route": "Gavage",
+        "dose": 50.0,
+        "matrix": "Plasma",
+        "analyte": "Bromodichloromethane"
+      },
+      {
+        "row": 30,
+        "group_name": "25_Gav_Corn_100_Mouse_male",
+        "species": "Mouse",
+        "sex": "Male",
+        "route": "Gavage",
+        "dose": 100.0,
+        "matrix": "Plasma",
+        "analyte": "Bromodichloromethane"
+      },
+      {
+        "row": 31,
+        "group_name": "26_Gav_Corn_25_Mouse_female",
+        "species": "Mouse",
+        "sex": "Female",
+        "route": "Gavage",
+        "dose": 25.0,
+        "matrix": "Plasma",
+        "analyte": "Bromodichloromethane"
+      },
+      {
+        "row": 32,
+        "group_name": "27_Gav_Corn_50_Mouse_female",
+        "species": "Mouse",
+        "sex": "Female",
+        "route": "Gavage",
+        "dose": 50.0,
+        "matrix": "Plasma",
+        "analyte": "Bromodichloromethane"
+      },
+      {
+        "row": 33,
+        "group_name": "28_Gav_Corn_100_Mouse_female",
+        "species": "Mouse",
+        "sex": "Female",
+        "route": "Gavage",
+        "dose": 100.0,
+        "matrix": "Plasma",
+        "analyte": "Bromodichloromethane"
+      }
+    ],
+    "review_note": "Oral noncompartmental AUCinf and observed Cmax; corn oil and water/Cremophor are separate protocols. No averaging across formulations."
+  },
+  {
+    "study": "K10075",
+    "compound_id": "DTXSID8031865",
+    "cvtdb_document_id": "CvTdb:document:25448",
+    "doi": "10.22427/NTP-DATA-DTXSID8031865",
+    "landing_url": "https://cebs.niehs.nih.gov/cebs/test_article/335-67-1",
+    "file": "TKS_Perfluorooctanoic_acid_2009_K10075_Group_TK_Parameters_v2_4.xlsx",
+    "url": "https://cebs.niehs.nih.gov/cebs/get_file/accno/002-02657-0014-0000-7/file/TKS_Perfluorooctanoic_acid_2009_K10075_Group_TK_Parameters_v2_4.xlsx",
+    "sha256": "b01f5c85356fe69403c4e1795aa37c98dab7f454d2fb051095da052258d7e27a",
+    "version": "CEBS-expansion-2026-10-28",
+    "auc_column": "AUC_0-T",
+    "auc_definition": "AUC0-t_unspecified",
+    "eligible_auc": false,
+    "model_evidence": "",
+    "dose_basis": "nominal",
+    "rows": [
+      {
+        "row": 4,
+        "group_name": "3_Gav_6_Rat_male",
+        "species": "Rat",
+        "sex": "Male",
+        "route": "Gavage",
+        "dose": 6.0,
+        "matrix": "Plasma",
+        "analyte": "Perfluorooctanoic Acid"
+      },
+      {
+        "row": 5,
+        "group_name": "4_Gav_12_Rat_male",
+        "species": "Rat",
+        "sex": "Male",
+        "route": "Gavage",
+        "dose": 12.0,
+        "matrix": "Plasma",
+        "analyte": "Perfluorooctanoic Acid"
+      },
+      {
+        "row": 6,
+        "group_name": "5_Gav_48_Rat_male",
+        "species": "Rat",
+        "sex": "Male",
+        "route": "Gavage",
+        "dose": 48.0,
+        "matrix": "Plasma",
+        "analyte": "Perfluorooctanoic Acid"
+      },
+      {
+        "row": 7,
+        "group_name": "6_Gav_40_Rat_female",
+        "species": "Rat",
+        "sex": "Female",
+        "route": "Gavage",
+        "dose": 40.0,
+        "matrix": "Plasma",
+        "analyte": "Perfluorooctanoic Acid"
+      },
+      {
+        "row": 9,
+        "group_name": "7_Gav_80_Rat_female",
+        "species": "Rat",
+        "sex": "Female",
+        "route": "Gavage",
+        "dose": 80.0,
+        "matrix": "Plasma",
+        "analyte": "Perfluorooctanoic Acid"
+      },
+      {
+        "row": 10,
+        "group_name": "8_Gav_320_Rat_female",
+        "species": "Rat",
+        "sex": "Female",
+        "route": "Gavage",
+        "dose": 320.0,
+        "matrix": "Plasma",
+        "analyte": "Perfluorooctanoic Acid"
+      }
+    ],
+    "review_note": "Observed plasma oral Cmax only; female 80 mg/kg alternate fits have identical Cmax. Use all-time-point row9, retain alternate raw row8. AUC truncated windows unresolved."
+  }
+]
