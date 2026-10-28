@@ -1,0 +1,731 @@
+[
+  {
+    "pmc": "PMC6681021",
+    "table_id": "pharmaceutics-11-00318-t001",
+    "compound_name": "tofacitinib",
+    "source_sha256": "76ac43ef1e5d8bdaed1e11e27f4f710dd89637d6c59b3bf68e61a14b117af56a",
+    "table_sha256": "2220e7a7888b0b087c962ad5cddabdf9d31b7b394492a07240caa34386904b12",
+    "doses": [
+      5,
+      10,
+      20,
+      50
+    ],
+    "columns": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "auc_row": "AUC (μg∙min/mL) a",
+    "cmax_row": null,
+    "auc_factor": 0.016666666666666666,
+    "cmax_factor": 1,
+    "species": "rat",
+    "strain": "Sprague-Dawley",
+    "sex": "male",
+    "matrix": "plasma",
+    "regimen": "once",
+    "endpoint_origin": "reported_group_mean",
+    "auc_definition": "AUC0-inf",
+    "auc_unit": "ug*h/mL",
+    "cmax_unit": "ug/mL",
+    "protocol_verified": true,
+    "primary_eligible": true,
+    "route": "intravenous",
+    "n_animals": [
+      9,
+      8,
+      7,
+      7
+    ],
+    "vehicle": "0.9% NaCl with 0.5% beta-cyclodextrin",
+    "fasting": "food available after recovery",
+    "infusion_duration_min": 1,
+    "evidence": [
+      "Male Sprague-Dawley rats",
+      "time zero to infinity",
+      "0.5% β-cyclodextrin",
+      "injected via the jugular vein for 1 min"
+    ],
+    "flags": []
+  },
+  {
+    "pmc": "PMC6681021",
+    "table_id": "pharmaceutics-11-00318-t002",
+    "compound_name": "tofacitinib",
+    "source_sha256": "76ac43ef1e5d8bdaed1e11e27f4f710dd89637d6c59b3bf68e61a14b117af56a",
+    "table_sha256": "75eb0b57e1d44c211ffffbce447044713ea87be3b3edf30b3fae1c73ff6d0510",
+    "doses": [
+      10,
+      20,
+      50,
+      100
+    ],
+    "columns": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "auc_row": "AUC (μg∙min/mL) a",
+    "cmax_row": "Cmax (μg/mL)",
+    "auc_factor": 0.016666666666666666,
+    "cmax_factor": 1,
+    "species": "rat",
+    "strain": "Sprague-Dawley",
+    "sex": "male",
+    "matrix": "plasma",
+    "regimen": "once",
+    "endpoint_origin": "reported_group_mean",
+    "auc_definition": "AUC0-inf",
+    "auc_unit": "ug*h/mL",
+    "cmax_unit": "ug/mL",
+    "protocol_verified": true,
+    "primary_eligible": true,
+    "route": "oral",
+    "n_animals": [
+      7,
+      8,
+      9,
+      7
+    ],
+    "vehicle": "not explicitly specified in oral subsection",
+    "fasting": "overnight",
+    "infusion_duration_min": 0,
+    "evidence": [
+      "For oral administration, approximately 1.0 mL tofacitinib",
+      "rats were fasted overnight",
+      "time zero to infinity"
+    ],
+    "flags": [
+      "oral_vehicle_not_explicit"
+    ]
+  },
+  {
+    "pmc": "PMC9024849",
+    "table_id": "pharmaceutics-14-00702-t002",
+    "compound_name": "DA-6886",
+    "source_sha256": "6fa93997043c633e95e4c97b89375e9cdfb40d99edf935e5e03bb1d0264e43a9",
+    "table_sha256": "e55bb7fd63bd94c6984935407d648baf2a044735ad1fb7c0b219699c9a3b37a0",
+    "doses": [
+      2,
+      10,
+      20
+    ],
+    "columns": [
+      1,
+      2,
+      3
+    ],
+    "auc_row": "AUC0–∞ (ng∙h/mL) 1, 2",
+    "cmax_row": null,
+    "auc_factor": 0.001,
+    "cmax_factor": 0.001,
+    "species": "rat",
+    "strain": "Sprague-Dawley",
+    "sex": "male",
+    "matrix": "plasma",
+    "regimen": "once",
+    "endpoint_origin": "reported_group_mean",
+    "auc_definition": "AUC0-inf",
+    "auc_unit": "ug*h/mL",
+    "cmax_unit": "ug/mL",
+    "protocol_verified": true,
+    "primary_eligible": true,
+    "route": "intravenous",
+    "n_animals": [
+      4,
+      4,
+      4
+    ],
+    "vehicle": "water for injection",
+    "fasting": "18 h",
+    "infusion_duration_min": 1,
+    "evidence": [
+      "Male Sprague-Dawley rats",
+      "animals were fasted for 18 h",
+      "mg as free form per kilogram",
+      "dissolved in water for injection"
+    ],
+    "flags": []
+  },
+  {
+    "pmc": "PMC9024849",
+    "table_id": "pharmaceutics-14-00702-t003",
+    "compound_name": "DA-6886",
+    "source_sha256": "6fa93997043c633e95e4c97b89375e9cdfb40d99edf935e5e03bb1d0264e43a9",
+    "table_sha256": "e45acc4f88d3c683fd5832e538d4c6a77d80069c854bedee7100f9057e4f07bf",
+    "doses": [
+      2,
+      10,
+      20
+    ],
+    "columns": [
+      1,
+      2,
+      3
+    ],
+    "auc_row": "AUC0–∞ (ng∙h/mL) 1, 2",
+    "cmax_row": "Cmax (ng/mL) 1, 2",
+    "auc_factor": 0.001,
+    "cmax_factor": 0.001,
+    "species": "rat",
+    "strain": "Sprague-Dawley",
+    "sex": "male",
+    "matrix": "plasma",
+    "regimen": "once",
+    "endpoint_origin": "reported_group_mean",
+    "auc_definition": "AUC0-inf",
+    "auc_unit": "ug*h/mL",
+    "cmax_unit": "ug/mL",
+    "protocol_verified": true,
+    "primary_eligible": true,
+    "route": "oral",
+    "n_animals": [
+      4,
+      4,
+      4
+    ],
+    "vehicle": "water for injection",
+    "fasting": "18 h",
+    "infusion_duration_min": 0,
+    "evidence": [
+      "Male Sprague-Dawley rats",
+      "animals were fasted for 18 h",
+      "mg as free form per kilogram",
+      "dissolved in water for injection"
+    ],
+    "flags": []
+  },
+  {
+    "pmc": "PMC3305926",
+    "table_id": "T2",
+    "compound_name": "lumefantrine",
+    "source_sha256": "73d82d27962f2cf9734a235f07e2dc822a5a4f6476905f8424f9f28e113540ab",
+    "table_sha256": "1704c5160336ce5fa4df7ad57566c37d310534945ae1eca4d1f3ae08527ceea8",
+    "doses": [
+      10,
+      20,
+      40
+    ],
+    "columns": [
+      2,
+      3,
+      4
+    ],
+    "auc_row": "AUC0-∞ (hr*ng/mL)",
+    "cmax_row": "Cmax (ng/mL)",
+    "auc_factor": 0.001,
+    "cmax_factor": 0.001,
+    "species": "rat",
+    "strain": "Sprague-Dawley",
+    "sex": "male",
+    "matrix": "plasma",
+    "regimen": "once",
+    "endpoint_origin": "reported_group_mean",
+    "auc_definition": "AUC0-inf",
+    "auc_unit": "ug*h/mL",
+    "cmax_unit": "ug/mL",
+    "protocol_verified": true,
+    "primary_eligible": true,
+    "route": "oral",
+    "n_animals": [
+      5,
+      5,
+      5
+    ],
+    "vehicle": "0.25% CMC suspension",
+    "fasting": "12-14 h",
+    "infusion_duration_min": 0,
+    "evidence": [
+      "Male SD rats weighing 200-220 g were fasted overnight",
+      "groups of five rats at each dose level",
+      "0.25% CMC suspension"
+    ],
+    "flags": []
+  },
+  {
+    "pmc": "PMC6160927",
+    "table_id": "pharmaceutics-10-00133-t001",
+    "compound_name": "saikosaponin A",
+    "source_sha256": "208ef753b02d71ff0b9c5f50c466557de9e7f8a9b28be8e63eae819d4e2c2904",
+    "table_sha256": "c6ffb0afd4ca53623f1ac074dc862c21c15c59e5e074394fe4aa93eb40e45369",
+    "doses": [
+      2.3,
+      4.6
+    ],
+    "columns": [
+      1,
+      2
+    ],
+    "auc_row": "AUC0–inf (μg∙min/mL) a",
+    "cmax_row": null,
+    "auc_factor": 0.016666666666666666,
+    "cmax_factor": 1,
+    "species": "rat",
+    "strain": "Sprague-Dawley",
+    "sex": "male",
+    "matrix": "plasma",
+    "regimen": "once",
+    "endpoint_origin": "reported_group_mean",
+    "auc_definition": "AUC0-inf",
+    "auc_unit": "ug*h/mL",
+    "cmax_unit": "ug/mL",
+    "protocol_verified": true,
+    "primary_eligible": true,
+    "route": "intravenous",
+    "n_animals": [
+      5,
+      4
+    ],
+    "vehicle": "DMSO:Tween80:water 2:1:7",
+    "fasting": "not reported",
+    "infusion_duration_min": 1,
+    "evidence": [
+      "Male Sprague-Dawley rats",
+      "each pure active component",
+      "infused for 1 min via the jugular vein"
+    ],
+    "flags": [
+      "fasting_not_reported"
+    ]
+  },
+  {
+    "pmc": "PMC6160927",
+    "table_id": "pharmaceutics-10-00133-t001",
+    "compound_name": "paeonol",
+    "source_sha256": "208ef753b02d71ff0b9c5f50c466557de9e7f8a9b28be8e63eae819d4e2c2904",
+    "table_sha256": "c6ffb0afd4ca53623f1ac074dc862c21c15c59e5e074394fe4aa93eb40e45369",
+    "doses": [
+      14.8,
+      29.6,
+      59.2
+    ],
+    "columns": [
+      3,
+      4,
+      5
+    ],
+    "auc_row": "AUC0–inf (μg∙min/mL) a",
+    "cmax_row": null,
+    "auc_factor": 0.016666666666666666,
+    "cmax_factor": 1,
+    "species": "rat",
+    "strain": "Sprague-Dawley",
+    "sex": "male",
+    "matrix": "plasma",
+    "regimen": "once",
+    "endpoint_origin": "reported_group_mean",
+    "auc_definition": "AUC0-inf",
+    "auc_unit": "ug*h/mL",
+    "cmax_unit": "ug/mL",
+    "protocol_verified": true,
+    "primary_eligible": true,
+    "route": "intravenous",
+    "n_animals": [
+      5,
+      5,
+      6
+    ],
+    "vehicle": "DMSO:Tween80:20% Solutol in water 2:2:6",
+    "fasting": "not reported",
+    "infusion_duration_min": 1,
+    "evidence": [
+      "Male Sprague-Dawley rats",
+      "each pure active component",
+      "infused for 1 min via the jugular vein"
+    ],
+    "flags": [
+      "fasting_not_reported"
+    ]
+  },
+  {
+    "pmc": "PMC6160927",
+    "table_id": "pharmaceutics-10-00133-t001",
+    "compound_name": "imperatorin",
+    "source_sha256": "208ef753b02d71ff0b9c5f50c466557de9e7f8a9b28be8e63eae819d4e2c2904",
+    "table_sha256": "c6ffb0afd4ca53623f1ac074dc862c21c15c59e5e074394fe4aa93eb40e45369",
+    "doses": [
+      2.9,
+      5.8,
+      11.5
+    ],
+    "columns": [
+      6,
+      7,
+      8
+    ],
+    "auc_row": "AUC0–inf (μg∙min/mL) a",
+    "cmax_row": null,
+    "auc_factor": 0.016666666666666666,
+    "cmax_factor": 1,
+    "species": "rat",
+    "strain": "Sprague-Dawley",
+    "sex": "male",
+    "matrix": "plasma",
+    "regimen": "once",
+    "endpoint_origin": "reported_group_mean",
+    "auc_definition": "AUC0-inf",
+    "auc_unit": "ug*h/mL",
+    "cmax_unit": "ug/mL",
+    "protocol_verified": true,
+    "primary_eligible": true,
+    "route": "intravenous",
+    "n_animals": [
+      5,
+      6,
+      5
+    ],
+    "vehicle": "DMSO:Tween80:water 2:2:6",
+    "fasting": "not reported",
+    "infusion_duration_min": 1,
+    "evidence": [
+      "Male Sprague-Dawley rats",
+      "each pure active component",
+      "infused for 1 min via the jugular vein"
+    ],
+    "flags": [
+      "fasting_not_reported"
+    ]
+  },
+  {
+    "pmc": "PMC6160927",
+    "table_id": "pharmaceutics-10-00133-t002",
+    "compound_name": "saikosaponin A",
+    "source_sha256": "208ef753b02d71ff0b9c5f50c466557de9e7f8a9b28be8e63eae819d4e2c2904",
+    "table_sha256": "4dd28ce84f34ae4f3758b1d2a72bbda84c39235912ea19cf573ead503164abb5",
+    "doses": [
+      2.3,
+      4.6
+    ],
+    "columns": [
+      2,
+      4
+    ],
+    "auc_row": "AUC0–8h (μg∙min/mL) a",
+    "cmax_row": "Cmax (μg/mL) a",
+    "auc_factor": 0.016666666666666666,
+    "cmax_factor": 1,
+    "species": "rat",
+    "strain": "Sprague-Dawley",
+    "sex": "male",
+    "matrix": "plasma",
+    "regimen": "once",
+    "endpoint_origin": "reported_group_mean",
+    "auc_definition": "AUC0-8h",
+    "auc_unit": "ug*h/mL",
+    "cmax_unit": "ug/mL",
+    "protocol_verified": true,
+    "primary_eligible": false,
+    "route": "oral",
+    "n_animals": [
+      4,
+      5
+    ],
+    "vehicle": "ethanol proportion changes with dose",
+    "fasting": "not reported",
+    "infusion_duration_min": 0,
+    "evidence": [
+      "ethanol with dose elevation",
+      "Equivalent doses of each pure"
+    ],
+    "flags": [
+      "vehicle_composition_changes_with_dose",
+      "suspect_cmax_unit"
+    ]
+  },
+  {
+    "pmc": "PMC6160927",
+    "table_id": "pharmaceutics-10-00133-t003",
+    "compound_name": "paeonol",
+    "source_sha256": "208ef753b02d71ff0b9c5f50c466557de9e7f8a9b28be8e63eae819d4e2c2904",
+    "table_sha256": "0c52b34872037fd16d45f357ce1daa625a628ee367ce1dc0a6cd9afda5f1328f",
+    "doses": [
+      14.8,
+      29.6,
+      59.2
+    ],
+    "columns": [
+      1,
+      3,
+      5
+    ],
+    "auc_row": "AUC0–inf (μg∙min/mL) a",
+    "cmax_row": "Cmax (μg/mL) a",
+    "auc_factor": 0.016666666666666666,
+    "cmax_factor": 1,
+    "species": "rat",
+    "strain": "Sprague-Dawley",
+    "sex": "male",
+    "matrix": "plasma",
+    "regimen": "once",
+    "endpoint_origin": "reported_group_mean",
+    "auc_definition": "AUC0-inf",
+    "auc_unit": "ug*h/mL",
+    "cmax_unit": "ug/mL",
+    "protocol_verified": true,
+    "primary_eligible": false,
+    "route": "oral",
+    "n_animals": [
+      4,
+      5,
+      4
+    ],
+    "vehicle": "ethanol proportion changes with dose",
+    "fasting": "not reported",
+    "infusion_duration_min": 0,
+    "evidence": [
+      "ethanol with dose elevation",
+      "Equivalent doses of each pure"
+    ],
+    "flags": [
+      "vehicle_composition_changes_with_dose"
+    ]
+  },
+  {
+    "pmc": "PMC6160927",
+    "table_id": "pharmaceutics-10-00133-t004",
+    "compound_name": "imperatorin",
+    "source_sha256": "208ef753b02d71ff0b9c5f50c466557de9e7f8a9b28be8e63eae819d4e2c2904",
+    "table_sha256": "f1296c5b430c1024647e8eeab1dd745a4edda24251367f0c61a99da70d5b3b1e",
+    "doses": [
+      1.4,
+      2.9,
+      5.8
+    ],
+    "columns": [
+      1,
+      3,
+      5
+    ],
+    "auc_row": "AUC0–inf (μg∙min/mL) a",
+    "cmax_row": "Cmax (μg/mL) a",
+    "auc_factor": 0.016666666666666666,
+    "cmax_factor": 1,
+    "species": "rat",
+    "strain": "Sprague-Dawley",
+    "sex": "male",
+    "matrix": "plasma",
+    "regimen": "once",
+    "endpoint_origin": "reported_group_mean",
+    "auc_definition": "AUC0-inf",
+    "auc_unit": "ug*h/mL",
+    "cmax_unit": "ug/mL",
+    "protocol_verified": true,
+    "primary_eligible": false,
+    "route": "oral",
+    "n_animals": [
+      6,
+      6,
+      5
+    ],
+    "vehicle": "ethanol proportion changes with dose",
+    "fasting": "not reported",
+    "infusion_duration_min": 0,
+    "evidence": [
+      "ethanol with dose elevation",
+      "Equivalent doses of each pure"
+    ],
+    "flags": [
+      "vehicle_composition_changes_with_dose",
+      "suspect_cmax_unit"
+    ]
+  },
+  {
+    "pmc": "PMC3269340",
+    "table_id": "d20e593",
+    "compound_name": "memantine",
+    "source_sha256": "18462e7b043f8e554271b51f7104dbe9553acdef051106e1db5c6a84325e108a",
+    "table_sha256": "98ddf9410818a7e58034835e721e58f04e594981ddb8832007942148fd89f125",
+    "doses": [
+      1.22,
+      10
+    ],
+    "columns": [
+      3,
+      4
+    ],
+    "auc_row": null,
+    "cmax_row": "Observed Cmax",
+    "auc_factor": 1,
+    "cmax_factor": 1,
+    "species": "rat",
+    "strain": "Sprague-Dawley",
+    "sex": "male",
+    "matrix": "plasma",
+    "regimen": "once",
+    "endpoint_origin": "reported_composite_profile",
+    "auc_definition": "AUC0-inf",
+    "auc_unit": "ug*h/mL",
+    "cmax_unit": "nM",
+    "protocol_verified": true,
+    "primary_eligible": false,
+    "route": "oral",
+    "n_animals": [
+      null,
+      null
+    ],
+    "vehicle": "physiological saline; dose volume changes",
+    "fasting": "fasted; duration not reported",
+    "infusion_duration_min": 0,
+    "evidence": [
+      "Since all time points were terminal",
+      "solution in physiological saline",
+      "2 mL/kg for both rats and mice"
+    ],
+    "flags": [
+      "dose_volume_changes",
+      "composite_PK",
+      "auc_unit_ambiguous",
+      "per_timepoint_n_unavailable"
+    ]
+  },
+  {
+    "pmc": "PMC3269340",
+    "table_id": "d20e593",
+    "compound_name": "memantine",
+    "source_sha256": "18462e7b043f8e554271b51f7104dbe9553acdef051106e1db5c6a84325e108a",
+    "table_sha256": "98ddf9410818a7e58034835e721e58f04e594981ddb8832007942148fd89f125",
+    "doses": [
+      1,
+      10
+    ],
+    "columns": [
+      5,
+      6
+    ],
+    "auc_row": null,
+    "cmax_row": "Observed Cmax",
+    "auc_factor": 1,
+    "cmax_factor": 1,
+    "species": "rat",
+    "strain": "Sprague-Dawley",
+    "sex": "male",
+    "matrix": "plasma",
+    "regimen": "once",
+    "endpoint_origin": "reported_composite_profile",
+    "auc_definition": "AUC0-inf",
+    "auc_unit": "ug*h/mL",
+    "cmax_unit": "nM",
+    "protocol_verified": true,
+    "primary_eligible": false,
+    "route": "subcutaneous",
+    "n_animals": [
+      null,
+      null
+    ],
+    "vehicle": "physiological saline; dose volume changes",
+    "fasting": "fasted; duration not reported",
+    "infusion_duration_min": 0,
+    "evidence": [
+      "Since all time points were terminal",
+      "solution in physiological saline",
+      "2 mL/kg for both rats and mice"
+    ],
+    "flags": [
+      "dose_volume_changes",
+      "composite_PK",
+      "auc_unit_ambiguous",
+      "per_timepoint_n_unavailable"
+    ]
+  },
+  {
+    "pmc": "PMC3269340",
+    "table_id": "d20e1470",
+    "compound_name": "memantine",
+    "source_sha256": "18462e7b043f8e554271b51f7104dbe9553acdef051106e1db5c6a84325e108a",
+    "table_sha256": "629e2004e1123fff6761e6a48894e61ca099f3633f4dd15c32f45ba3e49ba702",
+    "doses": [
+      1,
+      10
+    ],
+    "columns": [
+      3,
+      4
+    ],
+    "auc_row": null,
+    "cmax_row": "Observed Cmax",
+    "auc_factor": 1,
+    "cmax_factor": 1,
+    "species": "mouse",
+    "strain": "C57Bl/6",
+    "sex": "male",
+    "matrix": "plasma",
+    "regimen": "once",
+    "endpoint_origin": "reported_composite_profile",
+    "auc_definition": "AUC0-inf",
+    "auc_unit": "ug*h/mL",
+    "cmax_unit": "nM",
+    "protocol_verified": true,
+    "primary_eligible": false,
+    "route": "oral",
+    "n_animals": [
+      null,
+      null
+    ],
+    "vehicle": "physiological saline; dose volume changes",
+    "fasting": "fasted; duration not reported",
+    "infusion_duration_min": 0,
+    "evidence": [
+      "Since all time points were terminal",
+      "solution in physiological saline",
+      "2 mL/kg for both rats and mice"
+    ],
+    "flags": [
+      "dose_volume_changes",
+      "composite_PK",
+      "auc_unit_ambiguous",
+      "per_timepoint_n_unavailable"
+    ]
+  },
+  {
+    "pmc": "PMC3269340",
+    "table_id": "d20e1470",
+    "compound_name": "memantine",
+    "source_sha256": "18462e7b043f8e554271b51f7104dbe9553acdef051106e1db5c6a84325e108a",
+    "table_sha256": "629e2004e1123fff6761e6a48894e61ca099f3633f4dd15c32f45ba3e49ba702",
+    "doses": [
+      1,
+      10
+    ],
+    "columns": [
+      5,
+      6
+    ],
+    "auc_row": null,
+    "cmax_row": "Observed Cmax",
+    "auc_factor": 1,
+    "cmax_factor": 1,
+    "species": "mouse",
+    "strain": "C57Bl/6",
+    "sex": "male",
+    "matrix": "plasma",
+    "regimen": "once",
+    "endpoint_origin": "reported_composite_profile",
+    "auc_definition": "AUC0-inf",
+    "auc_unit": "ug*h/mL",
+    "cmax_unit": "nM",
+    "protocol_verified": true,
+    "primary_eligible": false,
+    "route": "subcutaneous",
+    "n_animals": [
+      null,
+      null
+    ],
+    "vehicle": "physiological saline; dose volume changes",
+    "fasting": "fasted; duration not reported",
+    "infusion_duration_min": 0,
+    "evidence": [
+      "Since all time points were terminal",
+      "solution in physiological saline",
+      "2 mL/kg for both rats and mice"
+    ],
+    "flags": [
+      "dose_volume_changes",
+      "composite_PK",
+      "auc_unit_ambiguous",
+      "per_timepoint_n_unavailable"
+    ]
+  }
+]
