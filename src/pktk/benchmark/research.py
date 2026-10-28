@@ -37,7 +37,7 @@ def predict_episodes(table,episodes,config):
             r=ep.to_dict();r.update(model=model,n_reference_components=nref,predicted=None,status='not_identifiable',reason='',parameters_json='{}')
             try:
                 value,params=predict(model,support.dose,support.exposure,ep.target_dose,pooled,
-                    config['shrinkage_local_weight'],config['nonlinear_max_jacobian_condition'])
+                    config['shrinkage_local_weight'],config['nonlinear_max_jacobian_condition'],config['nonlinear_minimum_support'])
                 r.update(predicted=value,status='ok',parameters_json=json.dumps(params,sort_keys=True))
             except NotIdentifiable as e:r['reason']=str(e)
             outputs.append(r)
@@ -92,7 +92,25 @@ def paired_comparisons(predictions,config):
             out.append(r)
     return pd.DataFrame(out)
 
-def describe_nonlinearity(table):
+def support_budget_comparisons(predictions,config):
+    """Match the same extreme target when comparing one versus multiple supports."""
+    good=predictions[predictions.status=='ok'];out=[]
+    base=good[(good.policy=='one_extreme') & (good.model=='linear')]
+    keys=['endpoint_series_id','target_record_id','task']
+    for vals,g in good[(good.policy=='leave_one_dose_out') & good.task.ne('interpolation')].groupby(['endpoint','task','model','n_support'],sort=True):
+        b=base[(base.endpoint==vals[0]) & (base.task==vals[1])]
+        pair=g.merge(b[keys+['absolute_log_error']],on=keys,suffixes=('_multi','_one'),validate='one_to_one')
+        if pair.empty:continue
+        pair['difference']=pair.absolute_log_error_multi-pair.absolute_log_error_one
+        by=pair.groupby(['component_id','endpoint_series_id']).difference.mean().groupby('component_id').mean()
+        r=dict(zip(['endpoint','task','model','n_support'],vals));r.update(n_common_targets=len(pair),n_components=len(by),delta_mae_ln=float(by.mean()))
+        out.append(r)
+    return pd.DataFrame(out)
+
+
+def describe_nonlinearity(table,bounds=(.8,1.25)):
+    lower,upper=bounds
+    if not 0 < lower < upper:raise ValueError("Invalid descriptive normalized-ratio bounds")
     rows=[]
     for sid,g in table.groupby('endpoint_series_id',sort=True):
         g=g.sort_values('dose');norm=g.exposure/g.dose
@@ -102,7 +120,7 @@ def describe_nonlinearity(table):
             power_exponent=exponent(g.dose,g.exposure),normalized_high_low_ratio=ratio,
             normalized_max_min_ratio=float(norm.max()/norm.min()),
             adjacent_slopes_json=json.dumps((np.diff(np.log(g.exposure))/np.diff(np.log(g.dose))).tolist()),
-            descriptive_trend='superproportional' if ratio>1.25 else 'subproportional' if ratio<.8 else 'near_proportional',
+            descriptive_trend='superproportional' if ratio>upper else 'subproportional' if ratio<lower else 'near_proportional',
             inferential_status='descriptive_only_no_individual_covariance',target_use='all_doses_descriptive_not_predictor')
         rows.append(r)
     return pd.DataFrame(rows)
@@ -131,12 +149,12 @@ def run(root=Path('.')):
     series=pd.read_csv(root/'data/processed/crossdose_series_expanded.csv',keep_default_na=False)
     table=endpoint_table(ep,series);episodes,membership=generate(table)
     predictions,training=predict_episodes(table,episodes,cfg)
-    summary=metrics(predictions);paired=paired_comparisons(predictions,cfg);nonlinear=describe_nonlinearity(table)
+    summary=metrics(predictions);paired=paired_comparisons(predictions,cfg);nonlinear=describe_nonlinearity(table,cfg['descriptive_normalized_ratio_bounds'])
     sensitivity=[]
     for label,mask in [('all',predictions.status.eq('ok')),('resolved_structures',predictions.inchikey.ne('')),
                        ('exclude_noncommercial',~predictions.qc_flags.str.contains('license_noncommercial'))]:
         v=metrics(predictions[mask]);v=v[v.aggregation.eq('overall')].copy();v['sensitivity']=label;sensitivity.append(v)
-    tables={'sensitivity_metrics':pd.concat(sensitivity,ignore_index=True),'endpoint_observations':table,'episodes':episodes,'episode_membership':membership,'predictions':predictions,
+    tables={'support_budget_comparisons':support_budget_comparisons(predictions,cfg),'sensitivity_metrics':pd.concat(sensitivity,ignore_index=True),'endpoint_observations':table,'episodes':episodes,'episode_membership':membership,'predictions':predictions,
         'reference_training':training,'metrics':summary,'paired_comparisons':paired,'nonlinearity':nonlinear}
     for name,data in tables.items():data.to_csv(out/(name+'.csv'),index=False,float_format='%.12g')
     f=feasibility(table,episodes,predictions);dump(out/'feasibility.json',f)

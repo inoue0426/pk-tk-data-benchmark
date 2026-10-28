@@ -4,7 +4,7 @@ import numpy as np
 import pandas as pd
 from pktk.standardization.core import identity
 
-STRATA=['endpoint','species','route','matrix','exposure_definition','exposure_unit']
+STRATA=['endpoint','species','route','matrix','exposure_definition','exposure_unit','regimen']
 
 def components(x):
     parent={}
@@ -30,7 +30,10 @@ def endpoint_table(endpoints,series):
             if not s['eligible_'+endpoint]:continue
             use=g[g['high_confidence_'+endpoint]].copy()
             use['exposure']=pd.to_numeric(use[endpoint],errors='coerce')
-            use=use[use.exposure.gt(0)]
+            if not (np.isfinite(use.exposure).all() and use.exposure.gt(0).all()):
+                raise ValueError('Nonpositive or nonfinite eligible exposure; resolve source QC before benchmarking')
+            if not (np.isfinite(use.dose_mg_kg).all() and use.dose_mg_kg.gt(0).all()):
+                raise ValueError('Nonpositive or nonfinite eligible dose; resolve source QC before benchmarking')
             definition_col='auc_definition' if endpoint=='auc' else None
             definitions=use[definition_col] if definition_col else pd.Series('observed_Cmax',index=use.index)
             # Eligibility is endpoint-specific; never compare unlike windows/units.
@@ -68,7 +71,7 @@ def generate(table):
             ratio=obs.dose/train.dose.max() if task=='low_to_high' else train.dose.min()/obs.dose if task=='high_to_low' else 1.
             d.update(episode_id=ep,policy=policy,task=task,n_support=len(train),target_dose=float(obs.dose),
                      observed=float(obs.exposure),target_record_id=obs.source_record_id,
-                     dose_ratio=float(ratio),support_span=float(train.dose.max()/train.dose.min()),
+                     dose_ratio=float(ratio),log_dose_leverage=float(1/len(train)+(np.log(obs.dose)-np.log(train.dose).mean())**2/np.sum((np.log(train.dose)-np.log(train.dose).mean())**2)) if len(train)>=2 else None,support_span=float(train.dose.max()/train.dose.min()),
                      support_ids_json=json.dumps(train.source_record_id.tolist()))
             episodes.append(d)
             for _,r in g.iloc[support+[target]].iterrows():

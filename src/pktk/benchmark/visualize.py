@@ -5,8 +5,24 @@ os.environ.setdefault('XDG_CACHE_HOME','/tmp/pktk-fontconfig')
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
+from matplotlib.ticker import FixedLocator, FuncFormatter, NullFormatter
 import numpy as np
 import pandas as pd
+
+def dose_ticks(ax, doses):
+    """Label measured doses compactly without overlapping log-minor labels."""
+    ticks = np.unique(np.asarray(doses, dtype=float))
+    if len(ticks) > 1:
+        span = np.log(ticks[-1] / ticks[0])
+        chosen = [ticks[0]]
+        for value in ticks[1:-1]:
+            if np.log(value/chosen[-1]) >= .22*span and np.log(ticks[-1]/value) >= .22*span:
+                chosen.append(value)
+        ticks = np.asarray(chosen + [ticks[-1]])
+    ax.xaxis.set_major_locator(FixedLocator(ticks))
+    ax.xaxis.set_major_formatter(FuncFormatter(lambda x, _: f'{x:.3g}'))
+    ax.xaxis.set_minor_formatter(NullFormatter())
+    ax.tick_params(axis='x', labelsize=7)
 
 COLORS={'auc':'#0072B2','cmax':'#D55E00','linear':'#0072B2','power':'#D55E00','pooled_power':'#009E73','shrinkage_power':'#CC79A7'}
 
@@ -39,11 +55,17 @@ def figures(root,table,episodes,predictions,metrics,nonlinear):
                 d=data[data.compound_name==name]
                 for sid,g in d.groupby('endpoint_series_id'):
                     g=g.sort_values('dose');y=g.exposure/g.dose if normalized else g.exposure
-                    ax.plot(g.dose,y,'o-',ms=3,lw=.9,alpha=.8)
+                    legend_label=f"{g.species.iloc[0][:3]}/{g.sex.iloc[0][0].upper()}/{'IV' if g.route.iloc[0]=='intravenous' else 'PO'}"
+                    if d.vehicle.nunique()>1:legend_label+=' / '+('Cremophor/water' if 'Cremophor' in str(g.vehicle.iloc[0]) else str(g.vehicle.iloc[0])[:20])
+                    if d.regimen.nunique()>1:legend_label+=' / '+str(g.regimen.iloc[0])
+                    ax.plot(g.dose,y,'o-',ms=3,lw=.9,alpha=.8,label=legend_label)
                 ax.set_xscale('log');ax.set_yscale('log');ax.set_title(name.strip(),fontsize=8);ax.grid(alpha=.15)
+                dose_ticks(ax,d.dose)
                 ax.set_xlabel('Dose (mg/kg)');ax.set_ylabel(('Exposure / dose' if normalized else endpoint.upper())+' (log scale)')
+                ax.legend(fontsize=5,frameon=False,loc='best')
             for ax in axes.ravel()[len(names_ep):]:ax.set_visible(False)
             units='AUC: µg·h/mL' if endpoint=='auc' else 'Cmax: µg/mL'
+            if normalized:units += ' per (mg/kg)'
             fig.suptitle(f'{endpoint.upper()}: '+('dose-normalized ' if normalized else '')+f'source group endpoints; {units}\nLines connect separate comparable strata; differing AUC definitions/matrices are not pooled',fontsize=10)
             fig.tight_layout(rect=(0,0,1,.95));save(fig,f'{number}_{label}_{endpoint}')
     good=predictions[(predictions.status=='ok') & (predictions.policy=='leave_one_dose_out') & (predictions.n_support==2)]
@@ -82,6 +104,8 @@ def figures(root,table,episodes,predictions,metrics,nonlinear):
     for ax,r in zip(axes.ravel(),chosen):
         g=table[table.endpoint_series_id==r.endpoint_series_id].sort_values('dose');norm=g.exposure/g.dose
         ax.plot(g.dose,norm,'o-',c=COLORS[r.endpoint]);ax.axhline(norm.iloc[0],c='gray',ls='--',label='Low-dose proportional reference')
-        ax.set_xscale('log');ax.set_yscale('log');ax.set_xlabel('Dose (mg/kg)');ax.set_ylabel(r.endpoint.upper()+' / dose')
-        ax.set_title(f'{r.compound_name.strip()} · {r.species}/{r.sex}\n{r.route} · β={r.power_exponent:.2f}, high/low normalized={r.normalized_high_low_ratio:.2f}',fontsize=9);ax.legend(fontsize=6)
+        ax.set_xscale('log');ax.set_yscale('log');dose_ticks(ax,g.dose)
+        unit='µg·h/mL' if r.endpoint=='auc' else 'µg/mL'
+        ax.set_xlabel('Dose (mg/kg)');ax.set_ylabel(r.endpoint.upper()+' / dose\n'+unit+' per (mg/kg)')
+        ax.set_title(f'{r.compound_name.strip()} · {r.species}/{r.sex}\n{r.route} · {r.study_id} · β={r.power_exponent:.2f}, high/low normalized={r.normalized_high_low_ratio:.2f}',fontsize=9);ax.legend(fontsize=6)
     fig.suptitle('Post-hoc examples: near-proportional versus strong observed deviation',fontsize=11);fig.tight_layout(rect=(0,0,1,.95));save(fig,'08_proportionality_examples')

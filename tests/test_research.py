@@ -37,7 +37,7 @@ def real_table():
 
 def test_real_episode_membership_and_target_invariance():
     t=real_table();eps,members=generate(t)
-    assert len(t.endpoint_series_id.unique())==73
+    assert len(t.endpoint_series_id.unique())==75
     assert not members.duplicated(['episode_id','source_record_id']).any()
     assert members[members.role=='target'].groupby('episode_id').size().eq(1).all()
     cfg=json.loads((ROOT/'configs/analysis/benchmark.json').read_text())
@@ -73,3 +73,12 @@ def test_no_incompatible_auc_pooling():
     support=t[(t.endpoint_series_id==row.endpoint_series_id)&t.source_record_id.isin(json.loads(row.support_ids_json))]
     ref=t[t.component_id!=row.component_id].head(1).copy();ref['exposure_definition']='AUC0-999h'
     with pytest.raises(ValueError,match='Incompatible'):audit_episode(row,support,ref)
+
+
+def test_invalid_eligible_endpoint_is_not_silently_removed():
+    e=pd.read_csv(ROOT/'data/processed/high_confidence_endpoints.csv',keep_default_na=False)
+    s=pd.read_csv(ROOT/'data/processed/crossdose_series_expanded.csv',keep_default_na=False)
+    selected=endpoint_table(e,s).query("endpoint == 'auc'").iloc[0].source_record_id
+    e.loc[e.source_record_id.eq(selected),'auc']='0'
+    with pytest.raises(ValueError,match='Nonpositive or nonfinite eligible exposure'):
+        endpoint_table(e,s)

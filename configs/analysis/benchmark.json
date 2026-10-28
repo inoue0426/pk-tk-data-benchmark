@@ -8,5 +8,5 @@
   "nonlinear_minimum_support": 3,
   "nonlinear_max_jacobian_condition": 1000,
   "descriptive_normalized_ratio_bounds": [0.8, 1.25],
-  "notes": "Fixed choices before evaluating outputs. No target-based model selection or hyperparameter tuning. Pooled exponents use only other compound-study components within endpoint, species, route, matrix and AUC-definition strata."
+  "notes": "Fixed final rules following an audited pilot; not preregistered. No target-based model selection or hyperparameter tuning. Pooled exponents use only other compound-study components within endpoint, species, route, matrix and AUC-definition and dosing-regimen strata."
 }

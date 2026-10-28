@@ -1,10 +1,19 @@
-# Current benchmark feasibility
+# Executed empirical benchmark feasibility
 
-| Scope after stage | Validated compounds | Independent studies | Series | AUC | Cmax | Both eligible |
-|---|---:|---:|---:|---:|---:|---:|
-| previous_validated_cohort | 12 | 10 | 26 | 21 | 9 | 4 |
-| reviewed_cebs_expansion | 20 | 18 | 57 | 42 | 31 | 16 |
+| endpoint | policy | task | n_support | episodes | series | compounds | studies | independence_components |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| auc | leave_one_dose_out | high_to_low | 2 | 38 | 38 | 12 | 11 | 11 |
+| auc | leave_one_dose_out | high_to_low | 3 | 1 | 1 | 1 | 1 | 1 |
+| auc | leave_one_dose_out | interpolation | 2 | 38 | 38 | 12 | 11 | 11 |
+| auc | leave_one_dose_out | interpolation | 3 | 2 | 1 | 1 | 1 | 1 |
+| auc | leave_one_dose_out | low_to_high | 2 | 38 | 38 | 12 | 11 | 11 |
+| auc | leave_one_dose_out | low_to_high | 3 | 1 | 1 | 1 | 1 | 1 |
+| auc | one_extreme | high_to_low | 1 | 82 | 42 | 15 | 13 | 13 |
+| auc | one_extreme | low_to_high | 1 | 82 | 42 | 15 | 13 | 13 |
+| cmax | leave_one_dose_out | high_to_low | 2 | 33 | 33 | 12 | 12 | 12 |
+| cmax | leave_one_dose_out | interpolation | 2 | 33 | 33 | 12 | 12 | 12 |
+| cmax | leave_one_dose_out | low_to_high | 2 | 33 | 33 | 12 | 12 | 12 |
+| cmax | one_extreme | high_to_low | 1 | 66 | 33 | 12 | 12 | 12 |
+| cmax | one_extreme | low_to_high | 1 | 66 | 33 | 12 | 12 | 12 |
 
-Only 20 compounds and 18 independent source studies are available. No complex ML training or compound/scaffold split is justified. Task A is structurally feasible for the eligible endpoint-specific groups, but expanded episodes have not been evaluated. Existing splits and baselines are HY-071085 pilot-only. Task D lacks independently validated nonlinear labels; group means and source variability cannot establish mechanism.
-
-Future evaluation must group full molecular identity and related source publications together, keep repeat-dose days and sex/route strata correlated, separate observed Cmax from predicted Cmax, and respect noncommercial source terms.
+19 linked compound-study units overall. Local scaling/power and disjoint-reference empirical models were executed. No complex molecular ML, scaffold-disjoint model score, calibrated exposure interval or nonlinear classifier is claimed. See [scientific analysis](scientific_analysis.md), [one-page summary](one_page_summary.md), and results/research/feasibility.json.

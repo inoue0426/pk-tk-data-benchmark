@@ -18,7 +18,7 @@ def exponent(doses,exposures):
     if len(set(doses))<2:raise NotIdentifiable('At least two support doses required')
     return float(np.polyfit(np.log(doses),np.log(exposures),1)[0])
 
-def predict(model,doses,exposures,target,pooled=None,weight=.5,max_condition=1000):
+def predict(model,doses,exposures,target,pooled=None,weight=.5,max_condition=1000,minimum_support=3):
     d,y=validate(doses,exposures,target);x=np.log(d);z=np.log(y)
     params={}
     if model=='linear':b=1.
@@ -30,7 +30,8 @@ def predict(model,doses,exposures,target,pooled=None,weight=.5,max_condition=100
         if pooled is None:raise NotIdentifiable('Insufficient disjoint reference components')
         b=weight*exponent(d,y)+(1-weight)*pooled
     elif model in ['saturating','superlinear']:
-        if len(d)<3:raise NotIdentifiable('Curvature requires at least three support doses')
+        if minimum_support<3:raise ValueError('Curvature support threshold must be at least three')
+        if len(d)<minimum_support:raise NotIdentifiable('Curvature requires at least three support doses')
         sign=-1 if model=='saturating' else 1
         # Positive two-parameter rational/superlinear curves, fitted on log exposure.
         def residual(p):return p[0]+x+sign*np.logaddexp(0,x-p[1])-z

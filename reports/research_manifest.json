@@ -1,0 +1,37 @@
+{
+  "config": {
+    "version": "crossdose-empirical-v1",
+    "seed": 20261028,
+    "bootstrap_replicates": 2000,
+    "minimum_bootstrap_components": 5,
+    "minimum_pooled_components": 3,
+    "shrinkage_local_weight": 0.5,
+    "nonlinear_minimum_support": 3,
+    "nonlinear_max_jacobian_condition": 1000,
+    "descriptive_normalized_ratio_bounds": [
+      0.8,
+      1.25
+    ],
+    "notes": "Fixed final rules following an audited pilot; not preregistered. No target-based model selection or hyperparameter tuning. Pooled exponents use only other compound-study components within endpoint, species, route, matrix and AUC-definition and dosing-regimen strata."
+  },
+  "inputs": {
+    "data/processed/high_confidence_endpoints.csv": "6b1fc074e508fdcc8406043ed9d05e07b08b4284d0033ac7a3a5e3baf9c5ce75",
+    "data/processed/crossdose_series_expanded.csv": "1227318091cd2d436590147093c68c1d300518065e271fd04d24e9b30d60044c"
+  },
+  "outputs": {
+    "endpoint_observations.csv": "a0fc3ed4f7d06f3040d397ee1be289703366e3a3e117d5ffb4f38882c51748bf",
+    "episode_membership.csv": "d4160828efc6bbae0136bca7f338a0a3330eb7627f7f5385849fde01974d2ecb",
+    "episodes.csv": "e93b8fa9af887486872492a524ff3aa9d3a291cceae2bd6bda6649b188f1a6ea",
+    "metrics.csv": "1e805e0bcc697f67b5bb495eda1f3f219c8a78df020ba3a4c5e2e60b5d12abc4",
+    "nonlinearity.csv": "5cb204ab37d9525db1b593d60a1a74160c64dc37cbc7a5bc6d7da1fe6a4a8c8c",
+    "paired_comparisons.csv": "23ab48fc212721e27bba386555a90d8ca8857391c5f632ef8657cc902361ef27",
+    "predictions.csv": "3963f4af4c445c4a0ad4aa579a657a7bc7d926abb8582c7b01c2fed2a034f2df",
+    "reference_training.csv": "5c6aafbe263188c2855f30f4b41db00b6fe09dee567df9b1955f62d9a4c17787",
+    "sensitivity_metrics.csv": "24bccc2be648d7e2e9d239cb646d324e2e1cadbe5fa901a928296cadafb87e7c",
+    "support_budget_comparisons.csv": "31a65020aeb532755ff85040ad2ab4dec2fc1ea9a18659a2dd23d503a95a2a4b"
+  },
+  "episodes": 513,
+  "successful_predictions": 1369,
+  "attempts": 3078,
+  "leakage_checks_passed": 513
+}
