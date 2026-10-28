@@ -138,3 +138,24 @@ def test_round_two_cells_days_and_license():
     # An unreviewed restricted license cannot pass the default open-license adapter.
     bad=dict(specs[0]);bad.pop('license_url')
     _,_,f=collect(Collector('.',offline=True),[bad]);assert f
+
+
+def test_dsstox_exact_identifiers_and_full_structure_agreement():
+    from pktk.standardization.dsstox import candidate
+    entry=dict(compound_id='DTXSID:test',cas_values=['64-17-5'])
+    row=dict(DTXSID='DTXSID:test',CASRN='64-17-5',PREFERRED_NAME='ethanol',DTXCID='DTXCID:test',
+        SMILES='CCO',INCHIKEY='LFQSCWFLJHTTHZ-UHFFFAOYSA-N',QSAR_READY_SMILES='C')
+    meta=dict(url='https://example.org/public',sha256='test',retrieved_at='test')
+    c=candidate(row,entry,meta,2)
+    assert c['eligible'] and c['canonical_smiles']=='CCO'
+    assert not candidate({**row,'CASRN':'67-56-1'},entry,meta,2)['eligible']
+    assert not candidate({**row,'DTXSID':'another'},entry,meta,2)['eligible']
+    assert not candidate({**row,'INCHIKEY':'wrong'},entry,meta,2)['eligible']
+    assert choose([c,{**c,'inchikey':'different'}])[1]=='ambiguous_multiple_structures'
+
+
+def test_missing_offline_identity_cache_is_not_success(tmp_path):
+    from pktk.standardization.resolve import resolve
+    c=Collector(tmp_path,offline=True)
+    with pytest.raises(FileNotFoundError):
+        resolve(c,[dict(compound_id='publication:ethanol',names=['ethanol'],cas_values=['64-17-5'],source='pmc')])

@@ -1,0 +1,18 @@
+{
+  "source_manifest": {
+    "url": "https://clowder.edap-cluster.com/api/files/69529775e4b0731a616efc4b",
+    "version": "DSSTox-Dec2025",
+    "retrieved_at": "2026-10-28T18:38:40.125857+00:00",
+    "sha256": "66fc9d4d3bda053ab60ee01e2ff0ed4ba030339588c40711b6939faede6cf4c3",
+    "bytes": 289824966,
+    "http_status": 200,
+    "etag": null,
+    "last_modified": null
+  },
+  "total_release_rows": 1246399,
+  "matched_source_identifiers": 240,
+  "eligible_structure_candidates": 194,
+  "acceptance": "Exact DTXSID and primary CAS; source SMILES must regenerate full source InChIKey; conflicts retained; no QSAR-ready/MS-ready substitution",
+  "license": "CC0",
+  "citation": "EPA DSSTox, December 2025 CSV release; doi:10.23645/epacomptox.5588566.v8"
+}

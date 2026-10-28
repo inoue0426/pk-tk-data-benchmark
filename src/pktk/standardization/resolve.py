@@ -72,7 +72,8 @@ def registry(observations,endpoints):
     return list(merged.values())
 
 
-def resolve(collector,entries,priority_ids=(),limit=None):
+def resolve(collector,entries,priority_ids=(),limit=None,bulk_candidates=None):
+    bulk_candidates=bulk_candidates or {}
     entries=sorted(entries,key=lambda r:(r['source']!='pmc',r['compound_id'] not in priority_ids,r['compound_id']))
     output=[];candidates_out=[];manifests=[]
     for i,entry in enumerate(entries):
@@ -89,18 +90,23 @@ def resolve(collector,entries,priority_ids=(),limit=None):
         query=cas or (entry['names'][0] if entry['names'] else '')
         if not query:record['identity_status']='missing_identifiers';output.append(record);continue
         record['identity_query']=query
-        candidates=[];complete=True
+        candidates=list(bulk_candidates.get(entry["compound_id"],[]));complete=True
         try:
             url=BASE+'es_search/?'+urlencode(dict(term=query,page=1,size=20))
             name='chebi_search_'+hashlib.sha256(query.encode()).hexdigest()[:20]+'.json'
-            p,m=collector.fetch(name,url,'identity-2026-10-28',allowed_statuses=(404,));manifests.append(m)
-            record['search_source_url']=m['url'];record['search_raw_sha256']=m['sha256'];record['search_retrieved_at']=m['retrieved_at']
-            if m.get('http_status')==404:
-                record['identity_status']='not_found'
-                output.append(record)
-                continue
-            result=json.loads(p.read_text());complete=result['number_pages']<=1
-            hits=result['results']
+            # Consult cached ChEBI evidence even when EPA resolves the identifier,
+            # so source conflicts cannot be hidden by changing provider priority.
+            use_chebi=not any(c['eligible'] for c in candidates) or (collector.raw/name).exists()
+            hits=[];result={'number_pages':1,'total':0}
+            if use_chebi:
+                p,m=collector.fetch(name,url,'identity-2026-10-28',allowed_statuses=(404,));manifests.append(m)
+                record['search_source_url']=m['url'];record['search_raw_sha256']=m['sha256'];record['search_retrieved_at']=m['retrieved_at']
+                if m.get('http_status')==404:
+                    record['search_status']='not_found'
+                else:
+                    result=json.loads(p.read_text());complete=result['number_pages']<=1;hits=result['results']
+            else:
+                record['search_status']='EPA_exact_identifiers; additional_ChEBI_query_not_needed'
             # Avoid broad fuzzy lookups: names require exact preferred name before detail retrieval.
             # CAS search hits are verified against the full record, never accepted on search score.
             if not cas:
@@ -112,25 +118,36 @@ def resolve(collector,entries,priority_ids=(),limit=None):
                 chebi=hit['_id']
                 p,m=collector.fetch('chebi_'+chebi+'.json',BASE+f'compound/{chebi}/','identity-2026-10-28');manifests.append(m)
                 candidate=detail_candidate(json.loads(p.read_text()),cas,entry['names'])
-                candidate.update(compound_id=entry['compound_id'],query=query,source_url=m['url'],raw_sha256=m['sha256'],retrieved_at=m['retrieved_at'])
+                candidate.update(provider='ChEBI',compound_id=entry['compound_id'],query=query,source_url=m['url'],raw_sha256=m['sha256'],retrieved_at=m['retrieved_at'])
                 candidates.append(candidate)
             selected,status=choose(candidates,complete)
+            if not candidates and record.get('search_status')=='not_found':status='not_found'
+            record['identity_qc_flags']=';'.join(sorted({flag for c in candidates for flag in c.get('identity_qc_flags',[])}))
             record['identity_status']=status
             if selected:
                 for k in ['canonical_smiles','inchikey','chebi_id','scaffold','structure_flag','molecular_weight','structure_input_kind']:
                     record[k]=selected[k]
+                record['identity_provider']=selected.get('provider','ChEBI')
+                record['identity_source_member']=selected.get('source_member','')
+                record['identity_source_row']=selected.get('source_row','')
                 record['resolved_cas_json']=json.dumps(selected['cas_values'])
                 record['identity_source_url']=selected['source_url'];record['identity_raw_sha256']=selected['raw_sha256']
                 cids=selected['pubchem_cids']
                 # UniChem exact structure lookup is a cross-reference, not a parent/salt transformation.
-                try:
-                    url='https://www.ebi.ac.uk/unichem/api/v1/compounds'
-                    p,m=collector.fetch('unichem_'+record['inchikey']+'.json',url,'identity-2026-10-28',json_body={'compound':record['inchikey'],'type':'inchikey'});manifests.append(m)
-                    links=json.loads(p.read_text())
-                    cids=sorted(set(cids)|{str(r['compoundId']) for compound in links.get('compounds',[]) if Chem.InchiToInchiKey(compound['inchi']['inchi'])==record['inchikey'] for r in compound['sources'] if r['id']==22})
-                except Exception as e:
-                    if collector.offline and isinstance(e,FileNotFoundError):raise
-                    record['pubchem_lookup_status']='unavailable: '+str(e)[:160]
+                # Resolve optional CIDs for primary/candidate compounds and reuse every
+                # existing cross-reference cache. Chemical identity does not require a CID.
+                lookup_cid=entry['source']=='pmc' or entry['compound_id'] in priority_ids or (collector.raw/('unichem_'+record['inchikey']+'.json')).exists()
+                if lookup_cid:
+                    try:
+                        url='https://www.ebi.ac.uk/unichem/api/v1/compounds'
+                        p,m=collector.fetch('unichem_'+record['inchikey']+'.json',url,'identity-2026-10-28',json_body={'compound':record['inchikey'],'type':'inchikey'});manifests.append(m)
+                        links=json.loads(p.read_text())
+                        cids=sorted(set(cids)|{str(r['compoundId']) for compound in links.get('compounds',[]) if Chem.InchiToInchiKey(compound['inchi']['inchi'])==record['inchikey'] for r in compound['sources'] if r['id']==22})
+                    except Exception as e:
+                        if collector.offline and isinstance(e,FileNotFoundError):raise
+                        record['pubchem_lookup_status']='unavailable: '+str(e)[:160]
+                elif not cids:
+                    record['pubchem_lookup_status']='not_queried_optional_crossref'
                 record['pubchem_cids_json']=json.dumps(cids)
                 record['pubchem_cid']=cids[0] if len(cids)==1 else ''
                 record['pubchem_lookup_status']=record.get('pubchem_lookup_status','unique_crossref' if len(cids)==1 else 'ambiguous_or_absent_crossref')

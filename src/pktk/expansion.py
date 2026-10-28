@@ -9,6 +9,7 @@ from pktk.qc.composite import audit as composite_audit
 from pktk.qc.attrition import audit
 from pktk.standardization.resolve import registry,resolve
 from pktk.standardization.aliases import enrich
+from pktk.standardization.dsstox import collect as dsstox_identities
 from pktk.standardization.core import identity
 
 
@@ -68,9 +69,14 @@ def run(root,offline=False,resolve_identities=True):
     composite_summary=composite_audit(root,cebs_data)
     entries=enrich(collector,registry(obs,x))
     candidate_table=pd.read_csv(root/'data/processed/candidate_series.csv')
-    priority=set(candidate_table.loc[candidate_table.n_doses>=2,'compound_id'])
+    historical_priority=set(candidate_table.loc[candidate_table.n_doses>=2,'compound_id'])
+    historical_entries=registry(obs,pd.concat([original,new],ignore_index=True))
+    historical_entries=sorted(historical_entries,key=lambda r:(r['source']!='pmc',r['compound_id'] not in historical_priority,r['compound_id']))
+    previously_unqueried_ids={r['compound_id'] for r in historical_entries[15:]}
+    priority=historical_priority | set(x.loc[x.primary_eligible,'compound_id'])
+    bulk_candidates=dsstox_identities(collector,entries)
     if resolve_identities:
-        resolved=resolve(collector,entries,priority_ids=priority,limit=config.get('identity_priority_limit',15))
+        resolved=resolve(collector,entries,priority_ids=priority,limit=config.get('identity_priority_limit',None),bulk_candidates=bulk_candidates)
     else:
         resolved=pd.read_csv(root/'data/processed/compound_identity_registry.csv',keep_default_na=False)
         if set(resolved.compound_id)!=set(r['compound_id'] for r in entries):raise ValueError('Identity registry scope mismatch')
@@ -137,6 +143,9 @@ def run(root,offline=False,resolve_identities=True):
            fraction_curated_pmc_groups_primary=len(high[high.source.eq('pmc')])/len(x[x.source.eq('pmc')]),fraction_curated_groups_primary=len(high)/len(x),fraction_parent_identifiers_verified_comparable=primary.molecular_group_id.nunique()/len(parent_ids),
            candidate_counts_not_verified=True,identity_counts_not_fully_structure_deduplicated=True,
            extractions_failed=len(failures),source_overlap_groups=len(overlap),complex_models_trained=0)
+    prior_pending=resolved[resolved.compound_id.isin(previously_unqueried_ids)]
+    s['previously_unqueried_identifiers']=len(prior_pending)
+    s['previously_unqueried_status_counts']=prior_pending.identity_status.value_counts().to_dict()
     s['reviewed_composite_candidates']=composite_summary['reviewed_candidates']
     s['validated_composite_series']=composite_summary['status_counts'].get('validated_group_endpoints',0)
     s['primary_series_by_source']={source:len(build_series(high[high.source.eq(source)])) for source in sorted(high.source.unique())}

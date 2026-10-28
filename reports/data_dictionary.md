@@ -66,3 +66,8 @@ CvTdb `cvtdb_profile_audit.csv` and `cvtdb_composite_candidates.csv` are audit-o
 - `reports/composite_audit.csv`: all 112 candidate group IDs, sampled-study decisions, raw observation metadata and matched endpoint IDs. `not_reviewed` is not an exclusion or validation.
 - `primary_independent_studies`: distinct source experiment IDs/PMC publications in the primary subset. `primary_independent_publications` counts PMC publications only; CEBS chemical-collection DOIs are not independent publications.
 - `resolved_unique_parent_structures` and `unresolved_parent_identifiers`: report molecular resolution separately; their sum is not proven unique molecular diversity.
+
+- `identity_provider`: EPA_DSSTox or ChEBI for the accepted structure; candidates retain both sources. EPA acceptance requires original DTXSID/CAS and source full-key agreement, never QSAR/MS-ready substitution.
+- `identity_qc_flags`: includes nonstandard source InChIKeys whose generation options were not verified. These candidates are rejected rather than normalized by editing key characters. An independently validated ChEBI mapping may still resolve the identifier; all rejected EPA evidence remains visible.
+- `identity_source_member` / `identity_source_row`: master-CSV member and physical row in the bulk DSSTox ZIP. Split copies are not separately parsed.
+- `pubchem_lookup_status=not_queried_optional_crossref`: structure resolved, optional CID lookup not performed. This is distinct from unresolved compound identity.
