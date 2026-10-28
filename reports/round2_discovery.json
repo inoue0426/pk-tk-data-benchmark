@@ -1,0 +1,57 @@
+[
+  {
+    "pmc": "PMC12570999",
+    "status": "curated",
+    "reason": "Rat oral lorlatinib three doses, CC BY-NC retained",
+    "source_manifest": {
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12570999/fullTextXML",
+      "version": "PMC12570999-expansion-2026-10-28",
+      "retrieved_at": "2026-10-28T18:20:55.308719+00:00",
+      "sha256": "9ca6bc56f9e61619beb1dcbe75274ad5e3965ad8289e05fb3f21157b6508523c",
+      "bytes": 150928,
+      "http_status": 200,
+      "etag": null,
+      "last_modified": null
+    },
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12570999/fullTextXML"
+  },
+  {
+    "pmc": "PMC11506582",
+    "status": "curated",
+    "reason": "Mouse oral methyl eugenol three doses; study days kept separate",
+    "source_manifest": {
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11506582/fullTextXML",
+      "version": "PMC11506582-expansion-2026-10-28",
+      "retrieved_at": "2026-10-28T18:21:15.144626+00:00",
+      "sha256": "e4eb11cedd85b3f269e3e9f1112ccb7a7fe6a81e3fe164b3a415ecd9f0c6f4f4",
+      "bytes": 112665,
+      "http_status": 200,
+      "etag": null,
+      "last_modified": null
+    },
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11506582/fullTextXML"
+  },
+  {
+    "pmc": "PMC9091740",
+    "status": "downloaded_not_imported",
+    "reason": "CC BY-NC-ND distribution/adaptation review pending",
+    "source_manifest": {
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC9091740/fullTextXML",
+      "version": "PMC9091740-expansion-2026-10-28",
+      "retrieved_at": "2026-10-28T18:27:45.499980+00:00",
+      "sha256": "556fa29e1e7e23da56c2dc83150ab76c74f59a01630fc3c77af43aef891593f6",
+      "bytes": 118627,
+      "http_status": 200,
+      "etag": null,
+      "last_modified": null
+    },
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC9091740/fullTextXML"
+  },
+  {
+    "pmc": "PMC4006472",
+    "status": "download_failed",
+    "reason": "FullTextXML repeated HTTP 500 after retries",
+    "source_manifest": null,
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4006472/fullTextXML"
+  }
+]

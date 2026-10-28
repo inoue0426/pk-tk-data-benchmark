@@ -129,6 +129,7 @@ def test_round_two_cells_days_and_license():
     assert not f
     me=x[x.compound_name=='methyl eugenol']
     assert len(me)==6 and me.protocol_id.nunique()==2
+    assert me.source_record_id.str.contains(':row').all()
     assert me[me.regimen=='once'].cmax.iloc[0]==pytest.approx(.031258)
     assert me[me.regimen!='once'].cmax.iloc[0]==pytest.approx(.050602)
     assert not me[me.regimen!='once'].high_confidence_auc.any()

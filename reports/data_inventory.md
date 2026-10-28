@@ -1,6 +1,6 @@
 # Verified source inventory
 
-Reviewed 2026-10-27. Published totals below are source-reported, not collected counts. Actual downloaded counts are generated in collection_summary.md. Unknown means unverified, not zero. Access does not establish redistribution rights; raw and processed data remain ignored by Git.
+Updated 2026-10-28; original inventory and first-expansion notes are historical below. Published totals below are source-reported, not collected counts. Actual downloaded counts are generated in collection_summary.md. Unknown means unverified, not zero. Access does not establish redistribution rights; raw and processed data remain ignored by Git.
 
 | Source / official evidence and citation | Access and license | Coverage and exposure fields | Cross-dose assessment / decision |
 |---|---|---|---|
@@ -33,7 +33,7 @@ Additional sources attempted: PMC89792 and PMC4249412 XML requests failed after 
 
 - [ChEBI public API](https://www.ebi.ac.uk/chebi/tools), [documented schema](https://www.ebi.ac.uk/chebi/backend/api/docs/), [license and citation](https://www.ebi.ac.uk/chebi/about/): CC BY 4.0; Malik et al., *ChEBI: re-engineered for a sustainable future* (2025). Exact CAS/name evidence and full structure records are cached. Invalid source SMILES may be reconstructed from the same source's standard InChI only when RDKit reproduces the full expected InChIKey; that fallback is recorded explicitly.
 - [UniChem API](https://chembl.gitbook.io/unichem/api/compound-search): current public POST compound-search endpoint maps exact InChIKeys to PubChem Compound IDs. Returned InChI must reproduce the query key. Multiple CID references remain a list; no single CID is forced. Legacy REST mapping returned 404, so the documented current API was used.
-- Public ChEBI API crawl delay is respected. The default identity pass prioritizes all eight newly/originally curated PMC compounds and seven strict CvTdb candidate compounds (15 source identifiers); all remaining registry entries explicitly say `not_queried`. Increase `identity_priority_limit` in the configuration to expand this pass. There is no assertion that all collected identities are resolved.
+- Public ChEBI API crawl delay is respected. The first expansion queried 15 prioritized identifiers and left 238 `not_queried`. This historical limit is superseded by the full-registry EPA/ChEBI pass described below; full coverage does not mean every identity can be resolved unambiguously.
 - PubChem direct REST requests and the ChEBI FTP listing were blocked by robots policies. No request to those blocked data paths was sent after the policy check.
 - PK-DB legacy anonymous [statistics](https://pk-db.com/api/v1/statistics/) succeeded (global counts, not preclinical counts). [One-record metadata page](https://pk-db.com/api/v1/studies/?page=1&page_size=1) succeeded after reducing page size; it reports human study PKDB00954 with `licence=closed`. No measurements were imported. The newer beta endpoints failed TLS. Current [terms](https://matthiaskoenig.github.io/pkdb/terms-of-use/) and download authentication requirements remain applicable. Cite Grzegorzewski et al. (2021), doi:10.1093/nar/gkaa990 for PK-DB metadata use.
 
@@ -51,7 +51,7 @@ Additional sources attempted: PMC89792 and PMC4249412 XML requests failed after 
 
 The CEBS contribution validates existing source experiments, not independent replication. The 18-candidate purposive audit is stratified by species/sex/route/matrix and includes 14 validated endpoint groups of doses, two matrix conflicts and two dose conflicts. The remaining 94 candidates remain unreviewed. The observed 14/18 yield must not be extrapolated statistically to the entire candidate universe.
 
-Full identity coverage is enabled (`identity_priority_limit: null`). ChEBI exact CAS/name evidence, complete stereochemical InChIKey validation and UniChem PubChem cross-references remain the identity standard. `httk 2.7.4`'s physical-property table was inspected as a possible bulk identity source, but it lacks SMILES/InChIKey fields and did not resolve structures. Shared per-origin cache locks enforce crawl delays across concurrent collectors.
+Full identity coverage is enabled (`identity_priority_limit: null`). EPA DSSTox exact DTXSID/CAS matches and ChEBI exact CAS/name evidence require full source-key validation; UniChem supplies optional PubChem cross-references. `httk 2.7.4`'s physical-property table was inspected as a possible bulk identity source, but it lacks SMILES/InChIKey fields. It contributes aliases only when CAS and DTXSID both match. Shared per-origin cache locks enforce crawl delays across concurrent collectors.
 
 ### EPA DSSTox bulk identity resolution
 

@@ -1,7 +1,11 @@
-# Expanded benchmark feasibility
+# Current benchmark feasibility
 
-9 primary series span 7 compounds and 5 publications. 7 series support comparable AUC definitions and 4 support Cmax.
+| Scope after stage | Validated compounds | Independent studies | Series | AUC | Cmax | Both eligible |
+|---|---:|---:|---:|---:|---:|---:|
+| identity_resolution | 7 | 5 | 9 | 7 | 4 | 2 |
+| composite_audit | 10 | 8 | 23 | 19 | 6 | 2 |
+| additional_publications | 12 | 10 | 26 | 21 | 9 | 4 |
 
-No new models were fitted. Original results in results/predictions.csv and metrics.csv apply only to HY-071085; they do not characterize this expanded dataset.
+Only 12 compounds and 10 independent source studies are available. No complex ML training or compound/scaffold split is justified. Task A is structurally feasible for the eligible endpoint-specific groups, but expanded episodes have not been evaluated. Existing splits and baselines are HY-071085 pilot-only. Task D lacks independently validated nonlinear labels; group means and source variability cannot establish mechanism.
 
-Task A: eligible endpoint-specific low-to-high dose episodes can be defined; keep complete study/route/sex/matrix groups and never mix AUC windows. Task B: too few independent compounds/publications for reliable evaluation. Task C: incomplete structures and too few scaffold families. Task D: no independent nonlinear labels/negative controls. No compound/scaffold split or complex ML model is claimed. Count shared-publication compounds and sex/route strata as correlated when evaluating future models.
+Future evaluation must group full molecular identity and related source publications together, keep repeat-dose days and sex/route strata correlated, separate observed Cmax from predicted Cmax, and respect noncommercial source terms.

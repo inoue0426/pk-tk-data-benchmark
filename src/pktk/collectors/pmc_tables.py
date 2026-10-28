@@ -51,7 +51,8 @@ def parse(path,meta,spec):
             values[endpoint]=value*factor if value is not None else None
             values[endpoint+'_sd']=sd*factor if sd is not None else None
             original[endpoint]={'row':label,'column':column_for_endpoint,'cell':cells[column_for_endpoint] if cells else None,'factor':factor}
-        rid=f'{pmc}:{spec["table_id"]}:column{column}'
+        axis='row' if 'endpoint_cells' in spec else 'column'
+        rid=f'{pmc}:{spec["table_id"]}:{axis}{column}'
         protocol=f'{pmc}:{spec["compound_name"]}:{spec["species"]}:{spec["route"]}:'+spec.get('protocol_suffix','single')
         flags=spec['flags']+['group_summary_only','missing_structure']
         eligible=spec['primary_eligible']

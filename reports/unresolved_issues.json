@@ -2,20 +2,20 @@
   {
     "id": "protocols",
     "priority": "high",
-    "status": "open",
-    "detail": "CvTdb audit found 17,020 single-point series IDs and 112 potential composite-sampling cross-dose groups. None promoted without original NTP/publication protocol evidence. Primary expansion has 9 comparable series across 5 publications."
+    "status": "partially_resolved",
+    "detail": "18 of 112 candidates audited against three CEBS source protocols: 14 validated using group endpoints, two matrix conflicts, two dose conflicts; 94 unreviewed."
   },
   {
     "id": "structures",
     "priority": "high",
     "status": "partially_resolved",
-    "detail": "ChEBI/UniChem resolved 13 of 15 prioritized source identifiers to full InChIKey and PubChem CID; 2 not found, 238 not queried. Six of seven primary compounds have structures. Increase the configurable identity pass after reviewing remaining CAS/name conflicts."
+    "detail": "Full registry assessed: 227 resolved unique full-key structures, 26 unresolved identifiers. Exact EPA DTXSID/CAS and source-key validation; cached ChEBI evidence compared. Nonstandard source InChI options are not guessed."
   },
   {
     "id": "auc",
     "priority": "high",
     "status": "partially_resolved",
-    "detail": "Seven primary series now have explicit comparable AUC0-inf. HY-071085 AUC0-tn terminal time remains unresolved. AUC tail fractions/individual uncertainty are not uniformly available."
+    "detail": "21 primary series have comparable AUC definitions. Unspecified terminal windows and unknown tail fractions remain limitations. Predicted Cmax is excluded from observed-Cmax endpoints."
   },
   {
     "id": "dog_table",
@@ -27,7 +27,7 @@
     "id": "sample_size",
     "priority": "high",
     "status": "open",
-    "detail": "Seven primary compounds across five publications remain too few for meaningful molecular or scaffold-disjoint ML. Within-publication compound/route/sex strata are not independent studies."
+    "detail": "12 primary compounds across 10 source studies remain insufficient for meaningful compound-disjoint molecular ML. Related strata/publications require grouping."
   },
   {
     "id": "pkdb",
@@ -39,30 +39,30 @@
     "id": "other_sources",
     "priority": "medium",
     "status": "partially_resolved",
-    "detail": "Five additional PMC publications parsed (41 new selected groups); DA-6886 supplementary PDF inspected and contains no new systemic PK data. Additional XML requests PMC89792/PMC4249412 failed after retries. FDA/EMA and wider structured sources remain future work."
+    "detail": "CEBS adds 14 validated series and two new PMC publications add three series. Simmitecan XML failed after retries; rotundic acid XML collected but CC BY-NC-ND terms require separate review. FDA/EMA wider extraction remains future work."
   },
   {
     "id": "overlap",
     "priority": "high",
-    "status": "open",
-    "detail": "Expanded DOI/full-InChIKey overlap screen found zero matches for selected sources, but most CvTdb structures remain unresolved and missing/alias DOIs prevent proof of complete deduplication."
+    "status": "partially_resolved",
+    "detail": "3 selected source overlap groups identified by document/DOI and identity. CEBS endpoints validate existing CvTdb studies and are not independent replicates. Remaining incomplete identifiers/protocol links prevent global deduplication proof."
   },
   {
     "id": "source_quality",
     "priority": "high",
     "status": "open",
-    "detail": "Do not pool singleton animal records into longitudinal curves. Oral DA-9805 pure-component vehicles change with dose and some Cmax units are suspect. Memantine dose volume/composite sampling and AUC labels, and tofacitinib oral vehicle details, keep 8 series outside the primary subset."
+    "detail": "Isoeugenol rat middle dose is 35 mg/kg in one field and 70 in group labels/CvTdb. Benzophenone plasma/blood conflicts remain withheld. Historical vehicle/unit ambiguities remain. Composite endpoints preserve source methods and uncertainty."
   },
   {
     "id": "distribution_terms",
     "priority": "medium",
-    "status": "open",
-    "detail": "EPA original release CC0 and packaged CRAN GPL-3 are recorded separately; derived/raw datasets are not committed. Review distribution-specific obligations before publication."
+    "status": "documented",
+    "detail": "EPA DSSTox CC0; CRAN package GPL-3; source PMC CC BY or CC BY-NC. Lorlatinib derivatives remain noncommercial, raw/generated data are not committed. Rotundic acid not imported pending CC BY-NC-ND review."
   },
   {
     "id": "identity_access",
     "priority": "medium",
     "status": "documented",
-    "detail": "PubChem REST and ChEBI FTP paths blocked by robots. ChEBI public API and current UniChem API work with crawl delays respected. ChEBI tofacitinib SMILES fails RDKit; its source standard InChI regenerates the expected full key and is retained as an explicit fallback."
+    "detail": "Direct PubChem REST and ChEBI FTP paths remain disallowed by robots. Public EPA DSSTox bulk CSV, ChEBI and UniChem APIs are used. CIDs are optional and not queried for every resolved identifier."
   }
 ]

@@ -1,6 +1,6 @@
 # Current QC report
 
-All original observations and all selected curated endpoints are retained. Exclusions apply to primary eligibility, not source deletion.
+No source records are silently deleted. Eligibility applies to curated endpoints, not removal from source caches.
 
 ```json
 {
@@ -40,21 +40,22 @@ All original observations and all selected curated endpoints are retained. Exclu
   "pmc_scope_exclusions": "Other Table 1 columns (IV/repeated dosing), all dog Table 2 columns, tissues and supplements are out of selected adapter scope, preserved in raw XML. Dog table conflict documented.",
   "potential_overlap_groups": 0,
   "expansion": {
-    "curated_endpoint_groups": 47,
-    "primary_endpoint_groups": 27,
-    "primary_comparable_series": 9,
-    "flagged_protocol_series": 8,
+    "curated_endpoint_groups": 104,
+    "primary_endpoint_groups": 78,
+    "primary_comparable_series": 26,
+    "flagged_protocol_series": 10,
     "extractions_failed": 0,
-    "source_overlap_groups": 0,
+    "source_overlap_groups": 3,
     "identity_status_counts": {
-      "not_queried": 238,
-      "resolved_exact": 13,
+      "resolved_exact": 228,
+      "unresolved_or_identifier_conflict": 21,
+      "ambiguous_multiple_structures": 3,
       "not_found": 2
-    }
+    },
+    "reviewed_composite_candidates": 18,
+    "validated_composite_series": 14
   }
 }
 ```
 
-Article/table hashes, exact cell addresses, dose columns, evidence phrases and units are checked against reviewed configurations. Censored CvTdb values remain censored; audit-only recovery does not imply validated AUC. Primary grouping requires publication, protocol, compound, species, strain, sex, route, matrix, regimen and formulation conditions. Source DOI overlaps are flagged; no records from independent publications are pooled. Chemical resolution accepts only unique full-InChIKey agreement; conflicts retain candidate lists. Exact CAS checksum is validated.
-
-Flags remain for unavailable fasting, AUC tail fractions, aggregate-only uncertainty and missing structures. Reported AUC0-inf is distinct from observed-window AUC. Rat HY-071085 AUC0-tn is ineligible. Oral formulation changes and ambiguous Cmax units in PMC6160927, incomplete tofacitinib oral formulation evidence, and memantine composite/dose-volume conditions are outside the primary subset.
+Exact source/table checksums and protocol phrases protect reviewed mappings. All 112 exploratory groups have an audit status; 18 were reviewed. Group endpoints are not individual measurements. Dose/matrix conflicts are withheld. Formamide Cmax_pred is not Cmax_obs. Benzophenone uses actual dose comments, not nominal dose. Isoeugenol rat dose conflicts prevent primary eligibility. AUC units and definitions are endpoint-specific; 0-t without a verified terminal time is not compared. Source exceptions, license terms, original cells and predicted values are retained.

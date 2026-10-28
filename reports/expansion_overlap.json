@@ -1,1 +1,23 @@
-[]
+[
+  {
+    "doi": "10.22427/ntp-data-dtxsid0021961",
+    "molecular_group_id": "InChIKey:RWCCWEUUXYIKHB-UHFFFAOYSA-N",
+    "cvtdb_rows": 870,
+    "pmc_groups": 12,
+    "decision": "same_publication_not_independent"
+  },
+  {
+    "doi": "10.22427/ntp-data-dtxsid8025337",
+    "molecular_group_id": "InChIKey:ZHNUHDYFZUAESO-UHFFFAOYSA-N",
+    "cvtdb_rows": 1044,
+    "pmc_groups": 24,
+    "decision": "same_publication_not_independent"
+  },
+  {
+    "doi": "10.3109/00498254.2013.790576",
+    "molecular_group_id": "InChIKey:BJIOGJUNALELMI-UHFFFAOYSA-N",
+    "cvtdb_rows": 671,
+    "pmc_groups": 12,
+    "decision": "same_publication_not_independent"
+  }
+]
