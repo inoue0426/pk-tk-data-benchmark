@@ -107,3 +107,7 @@ CvTdb `cvtdb_profile_audit.csv` and `cvtdb_composite_candidates.csv` are audit-o
 - `raw_file`, `raw_sha256`, `source_url`, `retrieved_at`, `dataset_version`, `license`, `original_json`, `assay_parameters_json`: trace endpoints to cached source rows, original descriptions and assay metadata.
 
 `dose_candidates_unverified.csv` contains discovery leads only. `dependency_components.csv` links connectivity groups and known publications for future leakage-aware evaluation. `prediction_cohort_feasibility.csv` separates endpoint, definition, species, route, matrix, units and normalization; it does not contain model results.
+
+## Final presentation verification
+
+`reports/final_verification.json` independently reconciles Dataset A full-InChIKey coverage, Dataset B protocol-series counts, and primary natural-log prediction errors with underlying CSV rows. `independent_components` counts transitive compound–study dependency groups, not episodes. `baseline_results.n_components` is endpoint/task specific. `mean_absolute_relative_error` is a fraction; presentation tables multiply it by 100. The two-page brief contains source-derived summary figures; it is not an additional endpoint dataset.

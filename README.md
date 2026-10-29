@@ -1,12 +1,30 @@
 # Public preclinical PK/TK cross-dose benchmark
 
-A reproducible collection, identity-resolution and QC pipeline for dose–exposure research. The current expansion prioritizes independent publications and experimentally comparable dose series; it is **not yet a sufficiently diverse molecular ML benchmark**.
+An independent public-data investigation of when initial preclinical PK measurements can predict exposure at unobserved doses. Collection, identity resolution, protocol review and empirical baseline evaluation are complete for this snapshot. Molecular or advanced ML models have not been trained or evaluated.
 
 Dataset B — current verified cross-dose subset: **59 series, 21 compounds, 19 source studies; 42 AUC-eligible, 33 Cmax-eligible, and 16 eligible for both**. All 112 composite candidates have a disposition, but 15 lack an obtained/reconciled full protocol.
 
 Dataset A — molecular PK expansion: **2,713 unique structured compounds**, with 995 having AUC and 994 having Cmax records. This source-curated numerical dataset exceeds 500 structures but does **not** expand strict cross-dose eligibility. See [Dataset A report](reports/molecular_pk_expansion.md), [separate A/B counts](reports/molecular_summary.json), and [source decisions](reports/molecular_source_discovery.json).
 
 See the [verified final report](reports/final_report.md), [machine-readable counts](reports/summary.json), [CvTdb attrition investigation](reports/cvtdb_attrition.md), [source inventory](reports/data_inventory.md), [QC report](reports/qc_report.md), and [benchmark feasibility](reports/benchmark_feasibility.md).
+
+## Final research and interview materials
+
+Start with the [two-page research brief](reports/pk_tk_research_brief.pdf), [executive summary](reports/executive_summary.md), [final scientific report](reports/final_scientific_report.md), and [interview preparation](reports/merck_interview_brief.md). [Figure captions and audit](reports/figure_audit.md) explain which plots to present and their limits.
+
+The primary two-support low-to-high comparison has only **11 independent AUC units and 12 Cmax units**. Linear / power-law log MAE is **0.525 / 0.583 for AUC**, and **0.601 / 0.529 for Cmax**. Paired component-bootstrap intervals include zero; power law has no established consistent advantage. The 513 episodes are correlated evaluations, not independent experiments. Dataset A coverage is not validated cross-dose coverage.
+
+With the existing local source caches and generated tables, finalize without network access or new model development:
+
+```bash
+source .venv/bin/activate
+python scripts/verify_final_results.py
+python scripts/render_research_brief.py
+PYTHONPATH=src python scripts/verify_reproducibility.py
+PYTHONPATH=src python scripts/verify_molecular_reproducibility.py
+```
+
+The first command independently recalculates counts and losses from CSV rows. The second creates the two-page PDF and page previews without fitting models. The full cached replay regenerates the **existing empirical** analyses and checks hashes; the molecular replay then verifies Dataset A while preserving Dataset B. See [final verification](reports/final_verification.json) and [reproducibility validation](reports/validation.md). A fresh clone needs the source download workflow below first; raw caches and numerical datasets are deliberately not committed. The PDF contains summary statistics and a source-attributed figure, not a numerical dataset; source-specific reuse terms still apply.
 
 ## Reproduce the complete workflow
 

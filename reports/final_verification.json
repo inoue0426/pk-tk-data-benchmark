@@ -1,0 +1,115 @@
+{
+  "dataset_a": {
+    "unique_structured_compounds": 2713,
+    "eligible_endpoint_records": 6459,
+    "excluded_endpoint_records": 5133,
+    "collected_endpoint_records": 11592,
+    "compounds_with_auc": 995,
+    "compounds_with_cmax": 994,
+    "compounds_with_both_auc_cmax": 355,
+    "compounds_with_clearance": 1182,
+    "compounds_with_volume": 427,
+    "compounds_with_half_life": 1250,
+    "known_source_publications": 627,
+    "dose_normalized_records": 24
+  },
+  "dataset_b": {
+    "validated_series": 59,
+    "compounds": 21,
+    "independent_studies": 19,
+    "auc_series": 42,
+    "cmax_series": 33,
+    "both_endpoint_series": 16,
+    "compounds_two_comparable_doses": 21,
+    "compounds_three_comparable_doses": 19
+  },
+  "episodes": 513,
+  "independent_components": 19,
+  "successful_predictions": 1369,
+  "baseline_results": [
+    {
+      "endpoint": "auc",
+      "model": "linear",
+      "n_components": 11,
+      "n_series": 38,
+      "n_compounds": 12,
+      "mae_ln": 0.5254219511571233,
+      "rmse_ln": 0.6995542378544658,
+      "mean_absolute_relative_error": 0.38134172689726353
+    },
+    {
+      "endpoint": "auc",
+      "model": "power",
+      "n_components": 11,
+      "n_series": 38,
+      "n_compounds": 12,
+      "mae_ln": 0.5832637502559193,
+      "rmse_ln": 0.8077707368726381,
+      "mean_absolute_relative_error": 0.6187606222971377
+    },
+    {
+      "endpoint": "cmax",
+      "model": "linear",
+      "n_components": 12,
+      "n_series": 33,
+      "n_compounds": 12,
+      "mae_ln": 0.6012644694335271,
+      "rmse_ln": 0.7931198841666102,
+      "mean_absolute_relative_error": 0.5094266641830072
+    },
+    {
+      "endpoint": "cmax",
+      "model": "power",
+      "n_components": 12,
+      "n_series": 33,
+      "n_compounds": 12,
+      "mae_ln": 0.5288364618192126,
+      "rmse_ln": 0.7162286712683078,
+      "mean_absolute_relative_error": 0.6010003013318587
+    }
+  ],
+  "paired_comparisons": [
+    {
+      "endpoint": "auc",
+      "policy": "leave_one_dose_out",
+      "task": "low_to_high",
+      "n_support": 2,
+      "model": "power",
+      "n_common_predictions": 38,
+      "n_components": 11,
+      "delta_mae_ln": 0.0578417990982,
+      "ci_low": -0.175558313446,
+      "ci_high": 0.307872590726,
+      "interval_status": "exploratory_component_bootstrap",
+      "leave_one_component_out_min": -0.0211645981713,
+      "leave_one_component_out_max": 0.126405907939
+    },
+    {
+      "endpoint": "cmax",
+      "policy": "leave_one_dose_out",
+      "task": "low_to_high",
+      "n_support": 2,
+      "model": "power",
+      "n_common_predictions": 33,
+      "n_components": 12,
+      "delta_mae_ln": -0.0724280076147,
+      "ci_low": -0.390814632594,
+      "ci_high": 0.231397543604,
+      "interval_status": "exploratory_component_bootstrap",
+      "leave_one_component_out_min": -0.16677253313,
+      "leave_one_component_out_max": 0.0407174796577
+    }
+  ],
+  "input_sha256": {
+    "data/processed/molecular/eligible_endpoints.csv": "c76af11eb758804d12b458f899685dffde52bd70de7b30c4b39b8a2ab9e1f020",
+    "data/processed/molecular/endpoint_records.csv": "da6465daf0b5e1f20d2dafb7dff4fa6bbd3c371191e209d856da68f07612d7b2",
+    "data/processed/molecular/compounds.csv": "50a59933937c6ab0eaba19a8680bb9e4f8fa61d3652921d208dab93ce1800297",
+    "data/processed/crossdose_series_expanded.csv": "1227318091cd2d436590147093c68c1d300518065e271fd04d24e9b30d60044c",
+    "results/research/endpoint_observations.csv": "a0fc3ed4f7d06f3040d397ee1be289703366e3a3e117d5ffb4f38882c51748bf",
+    "results/research/episodes.csv": "e93b8fa9af887486872492a524ff3aa9d3a291cceae2bd6bda6649b188f1a6ea",
+    "results/research/predictions.csv": "3963f4af4c445c4a0ad4aa579a657a7bc7d926abb8582c7b01c2fed2a034f2df",
+    "results/research/metrics.csv": "1e805e0bcc697f67b5bb495eda1f3f219c8a78df020ba3a4c5e2e60b5d12abc4",
+    "results/research/paired_comparisons.csv": "23ab48fc212721e27bba386555a90d8ca8857391c5f632ef8657cc902361ef27"
+  },
+  "verification": "Counts recalculated from endpoint rows; losses recalculated from predictions with equal series/component weighting."
+}

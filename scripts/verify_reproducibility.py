@@ -1,5 +1,6 @@
 """Replay the complete cached pipeline and verify artifacts against the preceding run."""
 import hashlib,json,os,platform,re,subprocess,sys
+from datetime import datetime, timezone
 from pathlib import Path
 root=Path(__file__).resolve().parents[1]
 env=dict(os.environ,PYTHONPATH=str(root/'src'))
@@ -20,7 +21,7 @@ print(tests.stdout);print(tests.stderr)
 subprocess.run([sys.executable,'-m','compileall','-q','src','scripts'],cwd=root,check=True)
 subprocess.run(['git','diff','--check'],cwd=root,check=True)
 passed=re.search(r'(\d+) passed',tests.stdout)
-validation=dict(validation_date='2026-10-28',offline_full_pipeline='passed',
+validation=dict(validation_date=datetime.now(timezone.utc).date().isoformat(),offline_full_pipeline='passed',
     byte_identical_data_and_report_artifacts=len(files)-len(differences),differences=differences,
     tests_passed=int(passed[1]) if passed else 0,tests_exit_code=tests.returncode,
     python=platform.python_version(),platform=platform.platform(),git_diff_check='passed',compileall='passed',

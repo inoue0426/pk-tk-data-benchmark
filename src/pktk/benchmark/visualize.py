@@ -85,7 +85,7 @@ def figures(root,table,episodes,predictions,metrics,nonlinear):
         for model in ['linear','power']:
             g=good[(good.endpoint==endpoint)&(good.model==model)&(good.task!='interpolation')]
             ax.scatter(g.dose_ratio,g.absolute_log_error,s=18,alpha=.5,color=COLORS[model],label=model)
-        ax.axhline(np.log(2),c='gray',ls='--',lw=.8,label='twofold error');ax.set_xscale('log');ax.set_xlabel('Target / nearest support dose ratio (≥1)');ax.set_ylabel('Absolute log error');ax.set_title(endpoint.upper());ax.legend()
+        ax.axhline(np.log(2),c='gray',ls='--',lw=.8,label='twofold error');ax.set_xscale('log');ax.set_xlabel('Dose separation ratio (≥1; both directions)');ax.set_ylabel('Absolute log error');ax.set_title(endpoint.upper());ax.legend()
     fig.tight_layout();save(fig,'05_error_dose_ratio')
     for dimension,num in [('compound_name','06'),('study_id','07')]:
         fig,axes=plt.subplots(1,2,figsize=(12,6))
