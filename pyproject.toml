@@ -12,6 +12,7 @@ test = ["pytest>=8"]
 [project.scripts]
 pktk = "pktk.pipeline:main"
 pktk-expand = "pktk.expansion:main"
+pktk-molecular = "pktk.molecular:main"
 [tool.setuptools.packages.find]
 where = ["src"]
 [tool.pytest.ini_options]

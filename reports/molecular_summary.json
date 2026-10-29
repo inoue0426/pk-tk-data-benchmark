@@ -1,0 +1,89 @@
+{
+  "dataset_a": {
+    "unique_structured_compounds": 2713,
+    "unique_connectivity_groups": 2647,
+    "compounds_with_auc": 995,
+    "compounds_with_cmax": 994,
+    "compounds_with_both_auc_cmax": 355,
+    "compounds_with_clearance": 1182,
+    "compounds_with_volume": 427,
+    "compounds_with_half_life": 1250,
+    "collected_endpoint_records": 11592,
+    "eligible_endpoint_records": 6459,
+    "excluded_endpoint_records": 5133,
+    "known_source_publications": 627,
+    "independent_experimental_studies": null,
+    "original_protocol_verified_studies": 17,
+    "compounds_with_verified_comparable_doses": 19,
+    "dose_normalized_records": 24,
+    "explicit_dose_records": 3843,
+    "target_500_obtained": true,
+    "compounds_with_three_verified_comparable_doses": 17
+  },
+  "dataset_b": {
+    "validated_series": 59,
+    "compounds": 21,
+    "compounds_with_structures": 19,
+    "independent_studies": 19,
+    "compounds_two_comparable_doses": 21,
+    "compounds_three_comparable_doses": 19,
+    "auc_series": 42,
+    "cmax_series": 33,
+    "both_endpoint_series": 16,
+    "new_validated_series": 0,
+    "studies_with_reliable_original_dose_records": 19,
+    "compounds_with_auc": 15,
+    "compounds_with_cmax": 12,
+    "compounds_with_both_auc_cmax": 6
+  },
+  "source_coverage": [
+    {
+      "source": "chembl",
+      "collected_records": 10000,
+      "eligible_records": 4885,
+      "compounds": 2337,
+      "auc_compounds": 980,
+      "cmax_compounds": 984,
+      "source_publications": 610
+    },
+    {
+      "source": "pksmart",
+      "collected_records": 1369,
+      "eligible_records": 1369,
+      "compounds": 371,
+      "auc_compounds": 0,
+      "cmax_compounds": 0,
+      "source_publications": 0
+    },
+    {
+      "source": "strict_b",
+      "collected_records": 223,
+      "eligible_records": 205,
+      "compounds": 19,
+      "auc_compounds": 15,
+      "cmax_compounds": 10,
+      "source_publications": 17
+    }
+  ],
+  "exclusion_flags": {
+    "no_explicit_in_vivo_evidence_or_non_pk_context": 3091,
+    "ambiguous_route_or_matrix": 836,
+    "censored_or_interval_value": 695,
+    "endpoint_description_not_confirmed": 628,
+    "unsupported_or_conflicting_unit": 617,
+    "multicomponent_structure_unresolved": 601,
+    "missing_numeric_endpoint": 396,
+    "source_data_validity_flag": 107,
+    "species_mismatch_or_missing": 43,
+    "nonpositive_or_nonfinite_endpoint": 34,
+    "invalid_or_missing_structure": 25
+  },
+  "identity_conflict_identifiers": 0,
+  "unverified_dose_candidates": 11,
+  "limitations": [
+    "Source publications are not counts of independently verified experiments.",
+    "AUC/Cmax coverage includes differently defined and dose-normalized values; these are never pooled.",
+    "Source endpoint aggregates and original concentration/time observations remain in separate files.",
+    "All raw/derived data remain local; ChEMBL CC BY-SA and PKSmart CC BY obligations are preserved."
+  ]
+}

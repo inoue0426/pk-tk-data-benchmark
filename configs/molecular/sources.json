@@ -1,0 +1,18 @@
+{
+  "snapshot": "2026-10-29",
+  "chembl_release": "ChEMBL_37",
+  "chembl_url": "https://www.ebi.ac.uk/chembl/api/data/activity.json?standard_type__in=CL,AUC,Cmax,Vd,T1%2F2&target_organism=Rattus%20norvegicus&assay_type=A&order_by=activity_id&limit=1000",
+  "maximum_activity_records": 10000,
+  "chembl_license": "CC-BY-SA-3.0",
+  "scope": "Fixed first 10000 activity IDs from rat-target ADME records for five PK endpoint types; not a complete or random ChEMBL sample. Eligibility additionally requires explicit in vivo assay evidence and assay-organism agreement.",
+  "pksmart": {
+    "url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1186%2Fs13321-025-01066-5/MediaObjects/13321_2025_1066_MOESM2_ESM.xlsx",
+    "version": "figshare-30224986-v1",
+    "sha256": "3018e1202ec888bf9b0df1a08be4901b08d4d0be7098dc48c4293b1835ecab5b",
+    "file": "pksmart_supplement.xlsx",
+    "sheet": "Table S2",
+    "license": "CC-BY-4.0",
+    "metadata_url": "https://api.figshare.com/v2/articles/30224986",
+    "publisher_file_md5": "62dc6015c982f29b1b3ebc22f274f849"
+  }
+}
