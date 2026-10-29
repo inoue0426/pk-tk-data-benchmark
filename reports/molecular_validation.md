@@ -5,7 +5,7 @@ Full Dataset A offline collection → identity → harmonization → QC → feas
 Pytest exit code: 0.
 
 ```text
-..........................................                               [100%]
+.............................................                            [100%]
 =============================== warnings summary ===============================
 tests/test_cebs_reviewed.py: 9 warnings
 tests/test_expansion.py: 12 warnings
@@ -13,7 +13,7 @@ tests/test_expansion.py: 12 warnings
     warn(msg)
 
 -- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
-42 passed, 21 warnings in 8.53s
+45 passed, 21 warnings in 8.94s
 ```
 
 Hashes and limitations: molecular_validation.json. Cached replay verifies stored bytes, not future API availability.

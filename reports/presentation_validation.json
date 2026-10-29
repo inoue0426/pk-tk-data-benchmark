@@ -1,0 +1,9 @@
+{
+  "pdf_pages": 2,
+  "pdf_byte_identical_replay": true,
+  "pdf_sha256": "d212977275207082f0e1a90a2ac6da31f4591b1eb79692d002a0f1a8b8c76a34",
+  "source_figure": "results/figures/06_performance_by_compound_name.png",
+  "source_figure_sha256": "f5ab49ca07179c9929e4d5931dfe44d741d79c7b2a72e3c07664dc4ae3501380",
+  "visual_review": "Both page previews reviewed; counts and main table checked against endpoint rows and predictions.",
+  "scope": "No collection or new model development during finalization; existing analyses replayed offline."
+}
