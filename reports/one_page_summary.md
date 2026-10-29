@@ -1,5 +1,7 @@
 # One-page research summary
 
+This report concerns **Dataset B**. The separate 2026-10-29 [Dataset A molecular PK expansion](molecular_pk_expansion.md) reports broader structure/endpoint coverage; it does not increase validated cross-dose counts.
+
 **Question:** When can initial preclinical PK/TK measurements support dose extrapolation?
 
 **Data:** 59 comparable series, 21 compounds, 19 studies; 42 AUC series and 33 Cmax series. 513 dose-prediction episodes represent only 19 linked compound–study units overall. Species: hamster, mouse, rat. Matrices and dosing protocols remain separate.

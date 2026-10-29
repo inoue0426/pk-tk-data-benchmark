@@ -10,6 +10,14 @@ def table(rows,cols):
 
 def reports(root,x,good,metadata,manifest,pmeta,feasibility,candidates,conflicts):
     from pktk.molecular import dump
+    audit_spec=json.loads((root/'configs/molecular/description_audit.json').read_text())
+    expected={r['source_record_id']:r['expected_eligible_A'] for r in audit_spec['records']}
+    audit=x[x.source_record_id.isin(expected)].copy()
+    if len(audit)!=len(expected) or any(bool(r.eligible_A)!=expected[r.source_record_id] for _,r in audit.iterrows()):
+        raise ValueError('Reviewed source metadata decisions changed; audit before proceeding')
+    cols=['source_record_id','assay_id','publication_id','endpoint','dose_mg_kg','matrix','route','eligible_A','exclusion_reasons','description']
+    audit=audit[cols];audit['review_level']=audit_spec['review_level'];audit['license']='CC-BY-SA-3.0'
+    audit.to_csv(root/'reports/molecular_description_audit.csv',index=False)
     summary_b=json.loads((root/'reports/summary.json').read_text())
     auc=set(good[good.endpoint=='auc'].inchikey);cmax=set(good[good.endpoint=='cmax'].inchikey)
     strict=good[good.source=='strict_b']
@@ -59,7 +67,7 @@ def reports(root,x,good,metadata,manifest,pmeta,feasibility,candidates,conflicts
     manifests=manifest['downloads']+[dict(file='pksmart_supplement.xlsx',**pmeta)]
     out=root/'data/processed/molecular'
     dump(root/'reports/molecular_manifest.json',dict(downloads=manifests,
-      inputs={str(p.relative_to(root)):sha256(p) for p in [root/'configs/molecular/sources.json',root/'data/processed/high_confidence_endpoints.csv',root/'data/processed/crossdose_series_expanded.csv']},
+      inputs={str(p.relative_to(root)):sha256(p) for p in [root/'configs/molecular/sources.json',root/'configs/molecular/description_audit.json',root/'data/processed/high_confidence_endpoints.csv',root/'data/processed/crossdose_series_expanded.csv']},
       outputs={str(p.relative_to(root)):sha256(p) for p in sorted(out.iterdir()) if p.suffix in ['.csv','.json']},
       chembl_query_total=manifest['query_total_records'],chembl_collected=manifest['collected_records'],bounded_snapshot=manifest['truncated']))
     report=f'''# Dataset A molecular PK expansion — 2026-10-29
@@ -99,9 +107,11 @@ Flags overlap; count excluded rows from the summary rather than summing reasons.
 
 Dose-normalization has three explicit states: yes, no (reviewed B), and not_reported. Bodyweight-normalized CL/Vd is not labeled dose-normalized. A dose-normalized exposure never supplies a measured administered dose; no multiplication by a guessed dose is performed. Cmax nM conversions use the source structure molecular weight and are flagged. AUC definition, matrix and route remain distinct. Oral clearance retains an apparent-clearance warning; unspecified Vd/half-life phase is not relabeled Vss/terminal half-life.
 
+A 26-record source-metadata consistency review is preserved in [molecular_description_audit.csv](molecular_description_audit.csv), with expected eligibility decisions in the curation configuration. It identified mixed-route descriptions and effect-time AUC ambiguity; the resulting exclusions apply throughout the tranche. This is not an original-paper validation of all records. The audit metadata retains ChEMBL CC BY-SA 3.0 terms.
+
 ## Original-dose search and strict eligibility
 
-The metadata screen found **{len(candidates)} unverified endpoint-specific multi-dose candidates**, written to `dose_candidates_unverified.csv`. Matching publication/compound/species/sex/route/matrix is only a discovery lead: original protocol, formulation, regimen, sampling and AUC definitions still require review. These candidates contribute **zero new validated B series**. PKSmart's original 2013 compilation is cited by the paper, but per-record original study/dose mapping is absent from Table S2; it cannot establish dose series.
+The metadata screen found **{len(candidates)} unverified endpoint-specific multi-dose candidates**, written to `dose_candidates_unverified.csv`. Matching publication/compound/species/sex/route/matrix is only a discovery lead: original protocol, formulation, regimen, sampling and AUC definitions still require review. These candidates contribute **zero new validated B series**. Exact-DOI Europe PMC queries for the seven candidate publications found no PMC full text and reported no open-access status; see [access audit](molecular_candidate_access.json). This is not proof that no lawful copy exists elsewhere. Original protocols were not obtained, including conjugate/formulation and AUC-window ambiguities. PKSmart's original 2013 compilation is cited by the paper, but per-record original study/dose mapping is absent from Table S2; it cannot establish dose series.
 
 ## Compound-disjoint modeling feasibility
 

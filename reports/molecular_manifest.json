@@ -674,6 +674,7 @@
   ],
   "inputs": {
     "configs/molecular/sources.json": "eb3c1def7e67fbd9fa5623989289025388bde583d312d7ecac2be4a5e37c294a",
+    "configs/molecular/description_audit.json": "81d2d87ad79f6dbcedfd5e80fc7269b63bb21f941dd7826ef3175887323bfec1",
     "data/processed/high_confidence_endpoints.csv": "6b1fc074e508fdcc8406043ed9d05e07b08b4284d0033ac7a3a5e3baf9c5ce75",
     "data/processed/crossdose_series_expanded.csv": "1227318091cd2d436590147093c68c1d300518065e271fd04d24e9b30d60044c"
   },

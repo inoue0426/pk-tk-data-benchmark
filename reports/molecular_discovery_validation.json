@@ -1,0 +1,33 @@
+{
+  "ncats_pk_rows": 13455,
+  "ncats_species_counts": {
+    "Homo sapiens": 13455
+  },
+  "ncats_archive": {
+    "url": "https://drugs.ncats.io/downloads-public/frdb-v2024-12-30.zip",
+    "version": "FRDB-2024-12-30",
+    "retrieved_at": "2026-10-29T21:14:29.368934+00:00",
+    "sha256": "647b80d9cdac4a0517ce649570517dc1aff40545bdc84617ec9f1a56405f9c7a",
+    "bytes": 3437578,
+    "http_status": 200,
+    "etag": null,
+    "last_modified": null
+  },
+  "pksmart_publisher_license": {
+    "value": 52,
+    "name": "CC BY",
+    "url": "https://creativecommons.org/licenses/by/4.0/"
+  },
+  "pksmart_supplement_metadata": {
+    "url": "https://api.figshare.com/v2/articles/30224986",
+    "version": "discovery-2026-10-29",
+    "retrieved_at": "2026-10-29T21:14:18.577979+00:00",
+    "sha256": "3e45370067e1ecb33285ce8f294a637c2a27e7fd9679f9144b5ec99f7b1c06a9",
+    "bytes": 5988,
+    "http_status": 200,
+    "etag": null,
+    "last_modified": null
+  },
+  "candidate_publications": 7,
+  "original_full_protocols_obtained": 0
+}

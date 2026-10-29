@@ -27,7 +27,7 @@
     "id": "sample_size",
     "priority": "high",
     "status": "open",
-    "detail": "21 primary compounds across 19 source studies remain insufficient for meaningful compound-disjoint molecular ML. Related strata/publications require grouping."
+    "detail": "21 Dataset B compounds across 19 source studies remain insufficient for meaningful compound-disjoint cross-dose molecular ML. Dataset A coverage is reported separately in molecular_pk_expansion.md. Related strata/publications require grouping."
   },
   {
     "id": "pkdb",

@@ -1,5 +1,6 @@
 """Bounded, cached public molecular-PK source collection, separate from Dataset B."""
 import json
+from datetime import datetime,timezone
 from urllib.parse import urljoin, urlencode
 from pktk.collectors.http import Collector, sha256
 
@@ -7,8 +8,15 @@ BASE='https://www.ebi.ac.uk/chembl/api/data/'
 
 def collect(root,offline=False):
     cfg=json.loads((root/'configs/molecular/sources.json').read_text())
-    c=Collector(root,offline); manifest=[]
+    c=Collector(root,offline); manifest=[];live_checked=False
     def get(name,url,version):
+        nonlocal live_checked
+        if not offline and not live_checked and not (c.raw/name).exists() and name!='molecular_chembl_status.json':
+            day=datetime.now(timezone.utc).strftime('%Y-%m-%d')
+            check,_=c.fetch('molecular_release_check_'+day+'.json',BASE+'status.json','release-check-'+day)
+            if json.loads(check.read_text())['chembl_db_version']!=cfg['chembl_release']:
+                raise ValueError('Live ChEMBL release differs; never mix new pages with an old snapshot')
+            live_checked=True
         p,m=c.fetch(name,url,version)
         manifest.append(dict(file=name,**m))
         return json.loads(p.read_text())

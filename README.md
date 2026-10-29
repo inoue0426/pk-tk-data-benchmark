@@ -2,7 +2,9 @@
 
 A reproducible collection, identity-resolution and QC pipeline for dose–exposure research. The current expansion prioritizes independent publications and experimentally comparable dose series; it is **not yet a sufficiently diverse molecular ML benchmark**.
 
-Current verified subset: **59 series, 21 compounds, 19 source studies; 42 AUC-eligible, 33 Cmax-eligible, and 16 eligible for both**. All 112 composite candidates have a disposition, but 15 lack an obtained/reconciled full protocol.
+Dataset B — current verified cross-dose subset: **59 series, 21 compounds, 19 source studies; 42 AUC-eligible, 33 Cmax-eligible, and 16 eligible for both**. All 112 composite candidates have a disposition, but 15 lack an obtained/reconciled full protocol.
+
+Dataset A — molecular PK expansion: **2,713 unique structured compounds**, with 995 having AUC and 994 having Cmax records. This source-curated numerical dataset exceeds 500 structures but does **not** expand strict cross-dose eligibility. See [Dataset A report](reports/molecular_pk_expansion.md), [separate A/B counts](reports/molecular_summary.json), and [source decisions](reports/molecular_source_discovery.json).
 
 See the [verified final report](reports/final_report.md), [machine-readable counts](reports/summary.json), [CvTdb attrition investigation](reports/cvtdb_attrition.md), [source inventory](reports/data_inventory.md), [QC report](reports/qc_report.md), and [benchmark feasibility](reports/benchmark_feasibility.md).
 
@@ -110,3 +112,29 @@ PYTHONPATH=src python scripts/verify_reproducibility.py
 Use `--skip-analysis` only for a collection/QC-only run. Analysis uses `configs/analysis/benchmark.json`; configuration and input hashes are saved in `reports/research_manifest.json`. One-extreme and leave-one-dose-out tasks are separate. Opposite extrapolation directions and interpolation are separate. Metrics average within series then within linked compound-study units. Pooled models exclude every target-linked compound/study and match endpoint, species, route, matrix, AUC definition, units and dosing regimen. Unknown structures do not create artificial scaffolds.
 
 `reports/research_initial_snapshot.json` preserves the executed 57-series analysis before the targeted K04003B addition. Generated data and figures are intentionally untracked, including noncommercial-source derivatives; reproduce them locally. No remote publication or push is part of the workflow.
+
+## Dataset A collection and validation
+
+Run after the existing strict pipeline has produced its processed endpoints:
+
+```bash
+PYTHONPATH=src python -m pktk.molecular
+# Full cached A collection, structures, harmonization, QC and feasibility:
+PYTHONPATH=src python -m pktk.molecular --offline
+# Verify byte-identical A replay, unchanged B numerical outputs, and all tests:
+PYTHONPATH=src python scripts/verify_molecular_reproducibility.py
+```
+
+The first command downloads the fixed ChEMBL 37 rat ADME tranche (10,000 activity records plus original assay/publication metadata) and the licensed PKSmart publisher supplement. Configuration: `configs/molecular/sources.json`. Generated A tables: `data/processed/molecular/`. Raw source endpoints, aggregate endpoints and original concentration–time observations remain distinct. No prediction table is imported as measured animal PK.
+
+ChEMBL raw and derived data carry CC BY-SA 3.0; the PKSmart supplement carries CC BY 4.0. Raw/generated files remain untracked. A excludes unresolved structures, unsupported units, censored values and contradictory in vivo context; retained metadata gaps remain flagged. Whole-study cross-dose qualification still requires Dataset B's original-protocol review. No molecular model was trained and no B baselines are rerun by the A command.
+
+To reproduce the ancillary source audit (NCATS species counts, publisher license metadata, and open-access status of dose-candidate publications):
+
+```bash
+PYTHONPATH=src python scripts/discover_molecular_sources.py
+# Once its source caches exist:
+PYTHONPATH=src python scripts/discover_molecular_sources.py --offline
+```
+
+The 26-record source-description audit is an explicit curation checkpoint in `configs/molecular/description_audit.json`; it does not certify original protocols. The A collector refuses new downloads from a different live ChEMBL release rather than mixing release snapshots.

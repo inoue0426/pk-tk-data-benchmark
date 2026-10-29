@@ -38,6 +38,8 @@ def write_reports(root,table,episodes,predictions,metrics,paired,nonlinear,feasi
     findings.append('- Interpolation and extrapolation are different tasks; small interpolation errors cannot justify high-dose extrapolation. Mean relative error is asymmetric and can favor a different model than log-error metrics.')
     text=f'''# Scientific analysis: limited-observation preclinical dose extrapolation
 
+This report concerns **Dataset B**. The separate 2026-10-29 [Dataset A molecular PK expansion](molecular_pk_expansion.md) reports broader structure/endpoint coverage; it does not increase validated cross-dose counts.
+
 ## Executive summary
 
 Executed snapshot: **{s['primary_comparable_series']} validated multi-dose series, {s['primary_comparable_compound_identifiers']} compounds and {s['primary_independent_studies']} source studies**. Endpoint-specific evaluation uses **{len(table)} dose/endpoint observations across {len(nonlinear)} endpoint series**. These are aggregated group endpoints, not individual animals. The union contains **{feasibility['independence_components']} compound–study connected components**; that is the upper bound on independent resampling units in this collected cohort, not the number of predictions.
@@ -182,6 +184,8 @@ Prioritize independent compounds with ≥4 comparable doses, verified molecular 
 '''
     (root/'reports/scientific_analysis.md').write_text(text)
     summary=f'''# One-page research summary
+
+This report concerns **Dataset B**. The separate 2026-10-29 [Dataset A molecular PK expansion](molecular_pk_expansion.md) reports broader structure/endpoint coverage; it does not increase validated cross-dose counts.
 
 **Question:** When can initial preclinical PK/TK measurements support dose extrapolation?
 

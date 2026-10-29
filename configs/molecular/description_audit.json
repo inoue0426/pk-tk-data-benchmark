@@ -1,0 +1,109 @@
+{
+  "review_level": "source metadata consistency only; original papers not validated",
+  "records": [
+    {
+      "source_record_id": "chembl:59476",
+      "expected_eligible_A": true
+    },
+    {
+      "source_record_id": "chembl:388903",
+      "expected_eligible_A": true
+    },
+    {
+      "source_record_id": "chembl:439595",
+      "expected_eligible_A": false
+    },
+    {
+      "source_record_id": "chembl:439599",
+      "expected_eligible_A": false
+    },
+    {
+      "source_record_id": "chembl:545137",
+      "expected_eligible_A": true
+    },
+    {
+      "source_record_id": "chembl:548168",
+      "expected_eligible_A": true
+    },
+    {
+      "source_record_id": "chembl:600882",
+      "expected_eligible_A": true
+    },
+    {
+      "source_record_id": "chembl:616847",
+      "expected_eligible_A": true
+    },
+    {
+      "source_record_id": "chembl:689119",
+      "expected_eligible_A": true
+    },
+    {
+      "source_record_id": "chembl:917660",
+      "expected_eligible_A": true
+    },
+    {
+      "source_record_id": "chembl:935893",
+      "expected_eligible_A": true
+    },
+    {
+      "source_record_id": "chembl:1045879",
+      "expected_eligible_A": true
+    },
+    {
+      "source_record_id": "chembl:1113236",
+      "expected_eligible_A": true
+    },
+    {
+      "source_record_id": "chembl:1662825",
+      "expected_eligible_A": true
+    },
+    {
+      "source_record_id": "chembl:1664691",
+      "expected_eligible_A": true
+    },
+    {
+      "source_record_id": "chembl:1700524",
+      "expected_eligible_A": true
+    },
+    {
+      "source_record_id": "chembl:1717970",
+      "expected_eligible_A": true
+    },
+    {
+      "source_record_id": "chembl:1724043",
+      "expected_eligible_A": true
+    },
+    {
+      "source_record_id": "chembl:1740165",
+      "expected_eligible_A": true
+    },
+    {
+      "source_record_id": "chembl:1750767",
+      "expected_eligible_A": true
+    },
+    {
+      "source_record_id": "chembl:1774936",
+      "expected_eligible_A": true
+    },
+    {
+      "source_record_id": "chembl:1779315",
+      "expected_eligible_A": false
+    },
+    {
+      "source_record_id": "chembl:1923185",
+      "expected_eligible_A": true
+    },
+    {
+      "source_record_id": "chembl:1935406",
+      "expected_eligible_A": true
+    },
+    {
+      "source_record_id": "chembl:2006667",
+      "expected_eligible_A": true
+    },
+    {
+      "source_record_id": "chembl:2008948",
+      "expected_eligible_A": false
+    }
+  ]
+}

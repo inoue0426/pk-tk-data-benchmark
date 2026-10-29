@@ -71,9 +71,11 @@ Flags overlap; count excluded rows from the summary rather than summing reasons.
 
 Dose-normalization has three explicit states: yes, no (reviewed B), and not_reported. Bodyweight-normalized CL/Vd is not labeled dose-normalized. A dose-normalized exposure never supplies a measured administered dose; no multiplication by a guessed dose is performed. Cmax nM conversions use the source structure molecular weight and are flagged. AUC definition, matrix and route remain distinct. Oral clearance retains an apparent-clearance warning; unspecified Vd/half-life phase is not relabeled Vss/terminal half-life.
 
+A 26-record source-metadata consistency review is preserved in [molecular_description_audit.csv](molecular_description_audit.csv), with expected eligibility decisions in the curation configuration. It identified mixed-route descriptions and effect-time AUC ambiguity; the resulting exclusions apply throughout the tranche. This is not an original-paper validation of all records. The audit metadata retains ChEMBL CC BY-SA 3.0 terms.
+
 ## Original-dose search and strict eligibility
 
-The metadata screen found **11 unverified endpoint-specific multi-dose candidates**, written to `dose_candidates_unverified.csv`. Matching publication/compound/species/sex/route/matrix is only a discovery lead: original protocol, formulation, regimen, sampling and AUC definitions still require review. These candidates contribute **zero new validated B series**. PKSmart's original 2013 compilation is cited by the paper, but per-record original study/dose mapping is absent from Table S2; it cannot establish dose series.
+The metadata screen found **11 unverified endpoint-specific multi-dose candidates**, written to `dose_candidates_unverified.csv`. Matching publication/compound/species/sex/route/matrix is only a discovery lead: original protocol, formulation, regimen, sampling and AUC definitions still require review. These candidates contribute **zero new validated B series**. Exact-DOI Europe PMC queries for the seven candidate publications found no PMC full text and reported no open-access status; see [access audit](molecular_candidate_access.json). This is not proof that no lawful copy exists elsewhere. Original protocols were not obtained, including conjugate/formulation and AUC-window ambiguities. PKSmart's original 2013 compilation is cited by the paper, but per-record original study/dose mapping is absent from Table S2; it cannot establish dose series.
 
 ## Compound-disjoint modeling feasibility
 

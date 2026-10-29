@@ -1,0 +1,107 @@
+[
+  {
+    "publication": "doi:10.1016/j.bmcl.2003.08.055",
+    "source_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1016%2Fj.bmcl.2003.08.055%22&format=json&resultType=core",
+    "raw_sha256": "e03eb89e00d34d5a45d520f6613868ab7bc7cba7bc83760773327b7fac8f148b",
+    "results": [
+      {
+        "pmid": "14592493",
+        "pmcid": null,
+        "is_open_access": "N",
+        "in_pmc": "N",
+        "title": "2-arylaminothiazoles as high-affinity corticotropin-releasing factor 1 receptor (CRF1R) antagonists: synthesis, binding studies and behavioral efficacy."
+      }
+    ],
+    "decision": "Original protocol not obtained; no strict-series promotion"
+  },
+  {
+    "publication": "doi:10.1016/s0960-894x(01)00093-2",
+    "source_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1016%2Fs0960-894x%2801%2900093-2%22&format=json&resultType=core",
+    "raw_sha256": "e25a65280834cda6a2a9bb97d3b385da219a2919e7f217230a4aaa12c6fa215b",
+    "results": [
+      {
+        "pmid": "11294382",
+        "pmcid": null,
+        "is_open_access": "N",
+        "in_pmc": "N",
+        "title": "Synthesis and structure-activity relationships of 1-phenylpyrazoles as xanthine oxidase inhibitors."
+      }
+    ],
+    "decision": "Original protocol not obtained; no strict-series promotion"
+  },
+  {
+    "publication": "doi:10.1016/s0960-894x(02)00101-4",
+    "source_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1016%2Fs0960-894x%2802%2900101-4%22&format=json&resultType=core",
+    "raw_sha256": "77ebdc7eaab66e086cc992813e2cae7e8a4a052e447ff15687a21a51952399c2",
+    "results": [
+      {
+        "pmid": "11909708",
+        "pmcid": null,
+        "is_open_access": "N",
+        "in_pmc": "N",
+        "title": "The synthesis and characterization of BMS-204352 (MaxiPost) and related 3-fluorooxindoles as openers of maxi-K potassium channels."
+      }
+    ],
+    "decision": "Original protocol not obtained; no strict-series promotion"
+  },
+  {
+    "publication": "doi:10.1021/jm000410y",
+    "source_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1021%2Fjm000410y%22&format=json&resultType=core",
+    "raw_sha256": "eb33666cd00cfd5a2e3f433ed1a71137fee87470d6cdea319cf23127b0a2e109",
+    "results": [
+      {
+        "pmid": "11312926",
+        "pmcid": null,
+        "is_open_access": "N",
+        "in_pmc": "N",
+        "title": "Development of orally active nonpeptidic inhibitors of human neutrophil elastase."
+      }
+    ],
+    "decision": "Original protocol not obtained; no strict-series promotion"
+  },
+  {
+    "publication": "doi:10.1021/jm031072e",
+    "source_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1021%2Fjm031072e%22&format=json&resultType=core",
+    "raw_sha256": "da63aad4b5ceb3154adc3094dbc29769b0006be6841b8b6201515c638494e279",
+    "results": [
+      {
+        "pmid": "14971908",
+        "pmcid": null,
+        "is_open_access": "N",
+        "in_pmc": "N",
+        "title": "Synthesis, characterization, and preliminary in vivo tests of new poly(ethylene glycol) conjugates of the antitumor agent 10-amino-7-ethylcamptothecin."
+      }
+    ],
+    "decision": "Original protocol not obtained; no strict-series promotion"
+  },
+  {
+    "publication": "doi:10.1021/jm070708p",
+    "source_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1021%2Fjm070708p%22&format=json&resultType=core",
+    "raw_sha256": "d7fbca9015ac484e35360443d6932a7573c55022a5d59648434621633d336a22",
+    "results": [
+      {
+        "pmid": "17988109",
+        "pmcid": null,
+        "is_open_access": "N",
+        "in_pmc": "N",
+        "title": "Antibacterial oxazolidinones possessing a novel C-5 side chain. (5R)-trans-3-[3-Fluoro-4- (1-oxotetrahydrothiopyran-4-yl)phenyl]-2- oxooxazolidine-5-carboxylic acid amide (PF-00422602), a new lead compound."
+      }
+    ],
+    "decision": "Original protocol not obtained; no strict-series promotion"
+  },
+  {
+    "publication": "doi:10.1021/jm970498o",
+    "source_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1021%2Fjm970498o%22&format=json&resultType=core",
+    "raw_sha256": "73df9ece833773f6242f715a20b9d766735d65e604e6eabd09ad1f2804a3c845",
+    "results": [
+      {
+        "pmid": "9464367",
+        "pmcid": null,
+        "is_open_access": "N",
+        "in_pmc": "N",
+        "title": "2-substituted (2SR)-2-amino-2-((1SR,2SR)-2-carboxycycloprop-1-yl)glycines as potent and selective antagonists of group II metabotropic glutamate receptors. 2. Effects of aromatic substitution, pharmacological characterization, and bioavailability."
+      }
+    ],
+    "decision": "Original protocol not obtained; no strict-series promotion"
+  }
+]

@@ -1,5 +1,7 @@
 # Scientific analysis: limited-observation preclinical dose extrapolation
 
+This report concerns **Dataset B**. The separate 2026-10-29 [Dataset A molecular PK expansion](molecular_pk_expansion.md) reports broader structure/endpoint coverage; it does not increase validated cross-dose counts.
+
 ## Executive summary
 
 Executed snapshot: **59 validated multi-dose series, 21 compounds and 19 source studies**. Endpoint-specific evaluation uses **223 dose/endpoint observations across 75 endpoint series**. These are aggregated group endpoints, not individual animals. The union contains **19 compound–study connected components**; that is the upper bound on independent resampling units in this collected cohort, not the number of predictions.
