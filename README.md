@@ -8,13 +8,13 @@ Dataset A — molecular PK expansion: **2,713 unique structured compounds**, wit
 
 See the [verified final report](reports/final_report.md), [machine-readable counts](reports/summary.json), [CvTdb attrition investigation](reports/cvtdb_attrition.md), [source inventory](reports/data_inventory.md), [QC report](reports/qc_report.md), and [benchmark feasibility](reports/benchmark_feasibility.md).
 
-## Final research and interview materials
+## Research reports and figures
 
-Start with the [two-page research brief](reports/pk_tk_research_brief.pdf), [executive summary](reports/executive_summary.md), [final scientific report](reports/final_scientific_report.md), and [interview preparation](reports/merck_interview_brief.md). [Figure captions and audit](reports/figure_audit.md) explain which plots to present and their limits.
+The [two-page research brief](reports/pk_tk_research_brief.pdf) provides an overview of the dataset and empirical results. Detailed documentation is available in the [executive summary](reports/executive_summary.md), [final scientific report](reports/final_scientific_report.md), and [figure audit](reports/figure_audit.md), which records figure provenance, interpretation, and limitations.
 
 The primary two-support low-to-high comparison has only **11 independent AUC units and 12 Cmax units**. Linear / power-law log MAE is **0.525 / 0.583 for AUC**, and **0.601 / 0.529 for Cmax**. Paired component-bootstrap intervals include zero; power law has no established consistent advantage. The 513 episodes are correlated evaluations, not independent experiments. Dataset A coverage is not validated cross-dose coverage.
 
-With the existing local source caches and generated tables, finalize without network access or new model development:
+With existing local source caches and generated tables, verify the published summary outputs without network access or new model development:
 
 ```bash
 source .venv/bin/activate
@@ -54,7 +54,7 @@ python -m pktk.expansion --root . --offline
 pktk --root . --initial-only --offline
 ```
 
-An expansion replay requires the cached original pipeline outputs as inputs. `--reuse-identities` additionally reuses the processed identity registry and is convenient during report development; use the default raw-cache replay for validation. Raw and generated datasets are ignored by Git. Download manifests and aggregate reports are committed; nothing is pushed automatically.
+An expansion replay requires the cached original pipeline outputs as inputs. `--reuse-identities` additionally reuses the processed identity registry and is convenient during report development; use the default raw-cache replay for validation. Raw and generated datasets are ignored by Git. Download manifests and aggregate reports are committed; raw datasets remain excluded from version control.
 
 ## Data and eligibility
 
@@ -129,7 +129,7 @@ PYTHONPATH=src python scripts/verify_reproducibility.py
 
 Use `--skip-analysis` only for a collection/QC-only run. Analysis uses `configs/analysis/benchmark.json`; configuration and input hashes are saved in `reports/research_manifest.json`. One-extreme and leave-one-dose-out tasks are separate. Opposite extrapolation directions and interpolation are separate. Metrics average within series then within linked compound-study units. Pooled models exclude every target-linked compound/study and match endpoint, species, route, matrix, AUC definition, units and dosing regimen. Unknown structures do not create artificial scaffolds.
 
-`reports/research_initial_snapshot.json` preserves the executed 57-series analysis before the targeted K04003B addition. Generated data and figures are intentionally untracked, including noncommercial-source derivatives; reproduce them locally. No remote publication or push is part of the workflow.
+`reports/research_initial_snapshot.json` preserves the executed 57-series analysis before the targeted K04003B addition. Generated data and figures are intentionally untracked, including noncommercial-source derivatives; reproduce them locally. Generated scientific datasets are not published by the workflow.
 
 ## Dataset A collection and validation
 
