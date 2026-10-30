@@ -1,0 +1,16 @@
+{
+  "version": "molecular-pk-v1",
+  "seeds": [42, 137, 2026],
+  "splits": ["compound", "scaffold", "study", "scaffold_study"],
+  "fractions": {"train": 0.55, "validation": 0.15, "calibration": 0.15, "test": 0.15},
+  "minimum_partition_compounds": {"train": 50, "validation": 15, "calibration": 15, "test": 15},
+  "models": ["mean", "median", "dose_ridge", "ridge", "rf", "xgb", "mlp", "gcn", "gin", "gine"],
+  "target": "log10_positive_reported_endpoint",
+  "dose_input": "log10 administered mg/kg; required for every selected record; no exposure normalization",
+  "max_epochs": 100,
+  "patience": 15,
+  "batch_size": 64,
+  "threads": 2,
+  "conformal_alpha": 0.1,
+  "notes": "Prospectively fixed before outcome inspection. All endpoint protocols separate. Compound/scaffold-only splits are diagnostics with measured publication overlap; primary scientific generalization requires study exclusion. No source IDs as features. Unknown critical metadata excluded. Split allocation uses only grouping and counts, never targets. Train/validation/calibration/test remain separate."
+}

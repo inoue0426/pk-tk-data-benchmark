@@ -1,0 +1,64 @@
+{
+  "input_sha256": "c76af11eb758804d12b458f899685dffde52bd70de7b30c4b39b8a2ab9e1f020",
+  "config_sha256": "f176f6ca102ae2e317e9782e8969375ca84d1371c80cdbae650f78e8e1dbe449",
+  "rows_considered": 6459,
+  "records_eligible": 462,
+  "compounds": 422,
+  "tasks": [
+    {
+      "task": "rat_iv_plasma_clearance",
+      "endpoint": "clearance",
+      "species": "rat",
+      "route": "intravenous",
+      "matrix": "plasma",
+      "unit": "mL/min/kg",
+      "records": 174,
+      "original_records": 181,
+      "compounds": 171,
+      "families": 165,
+      "publications": 65
+    },
+    {
+      "task": "rat_oral_plasma_cmax",
+      "endpoint": "cmax",
+      "species": "rat",
+      "route": "oral",
+      "matrix": "plasma",
+      "unit": "ug/mL",
+      "records": 273,
+      "original_records": 281,
+      "compounds": 267,
+      "families": 263,
+      "publications": 51
+    }
+  ],
+  "eligible_split_runs": 21,
+  "missing_stereochemistry_rows": 163,
+  "exclusions": [
+    {
+      "endpoint": "auc",
+      "size": 1405,
+      "sum": 0
+    },
+    {
+      "endpoint": "clearance",
+      "size": 1571,
+      "sum": 181
+    },
+    {
+      "endpoint": "cmax",
+      "size": 1218,
+      "sum": 281
+    },
+    {
+      "endpoint": "half_life",
+      "size": 1522,
+      "sum": 0
+    },
+    {
+      "endpoint": "volume_distribution",
+      "size": 743,
+      "sum": 0
+    }
+  ]
+}
