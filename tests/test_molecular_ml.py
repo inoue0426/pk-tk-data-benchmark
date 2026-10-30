@@ -72,3 +72,38 @@ def test_heldout_exposure_cannot_change_graph_fit(tmp_path):
 def test_similarity_uses_training_only():
     fps=np.array([[1,0,1],[0,1,0],[1,0,1]],dtype=float)
     assert nearest_similarity(fps,np.array([0]),np.array([1,2])).tolist()==[0.,1.]
+
+
+def test_conflicting_protocol_cells_are_excluded_not_averaged():
+    decisions=pd.read_csv(OUT/'eligibility.csv').set_index('source_record_id')
+    # Original assay descriptions identify metabolizer phenotypes or formulation changes.
+    for record in ['chembl:613082','chembl:600877','chembl:264269','chembl:264273']:
+        assert not decisions.loc[record,'eligible_ml']
+    for record in ['chembl:161315','chembl:169938']:
+        assert decisions.loc[record,'reasons']=='conflicting_duplicate_endpoint_cell'
+    assert not decisions[decisions.eligible_ml].reasons.notna().any()
+
+
+def test_conformal_finite_sample_rank_and_no_calibration_leak():
+    from pktk.ml.analyze import quantile_radius,intervals
+    assert quantile_radius(np.arange(8),.1) is None
+    assert quantile_radius(np.arange(9),.1)==8
+    p=pd.DataFrame([dict(partition='calibration',split_group=str(i),family=str(i),prediction_log10=0.,y=float(i)) for i in range(9)]+[dict(partition='test',split_group='t',family='t',prediction_log10=0.,y=1.)])
+    before=intervals(p);p.loc[p.partition.eq('test'),'y']=10000
+    after=intervals(p)
+    assert before['radius_log10']==after['radius_log10']==8
+    assert before['group_coverage']==1 and after['group_coverage']==0
+
+
+def test_component_labels_do_not_depend_on_unrelated_row_indices():
+    d=pd.DataFrame(dict(family=['a','b','c'],connectivity_key=['a','b','c'],publication_id=['s1','s1','s2'],ml_scaffold=['x','y','z']))
+    a=connected_groups(d,'study').tolist()
+    d.index=[17,21,500]
+    assert a==connected_groups(d,'study').tolist()
+
+
+def test_molar_equivalent_analytes_not_assumed_parent_drug():
+    decisions=pd.read_csv(OUT/'eligibility.csv').set_index('source_record_id')
+    for record in ['chembl:927976','chembl:917660','chembl:934899']:
+        assert not decisions.loc[record,'eligible_ml']
+        assert 'original_unit_or_analyte_basis_ambiguous' in decisions.loc[record,'reasons']

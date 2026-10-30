@@ -47,7 +47,7 @@ def exclusion(row):
     if not doses or len(set(doses))!=1 or not np.isclose(float(doses[0]),dose):reasons.append('administered_mg_kg_not_independently_confirmed')
     if row.dose_normalized=='yes':reasons.append('dose_normalized_not_absolute_endpoint')
     desc=row.description.lower()
-    if re.search(r'unbound|uncharged|intrinsic|renal clearance|hepatic clearance|steady.state|infus|diabet|diseas|knock.?out|pretreat|co.?administ|repeated|multiple dos',desc):
+    if re.search(r'unbound|uncharged|intrinsic|renal clearance|hepatic clearance|steady.state|infus|diabet|diseas|knock.?out|pretreat|co.?administ|repeated|multiple dos|phenotype|metaboli[sz]er|solution form|suspension form',desc):
         reasons.append('special_analyte_regimen_or_organ_clearance')
     if row.endpoint=='cmax' and re.search(r'after\s+(?:1\s*h|60\s*min)',desc):
         reasons.append('fixed_time_concentration_ambiguity')
@@ -55,6 +55,9 @@ def exclusion(row):
         reasons.append('systemic_plasma_clearance_not_explicit')
     expected='mL/min/kg' if row.endpoint=='clearance' else 'ug/mL'
     if row.unit!=expected:reasons.append('incompatible_unit')
+    accepted={'clearance':{'L/hr.Kg','L/hrs.kg','l hr-1 kg-1','ml hr-1 kg-1','ml kg-1 min-1','ml min-1 kg-1','ml/min.Kg','ml/min.kg','ml/min/kg'},
+              'cmax':{'mg/L','nM','ng ml-1','ng/ml','pmol/ml','uM','ug ml-1'}}
+    if row.endpoint in accepted and row.original_unit.strip() not in accepted[row.endpoint]:reasons.append('original_unit_or_analyte_basis_ambiguous')
     return sorted(set(reasons))
 
 
@@ -72,7 +75,10 @@ def connected_groups(d,kind):
     for col in cols:
         for _,g in d.groupby(col):
             for i in g.index[1:]:union(g.index[0],i)
-    return pd.Series({i:str(root(i)) for i in d.index})
+    members={}
+    for i in d.index:members.setdefault(root(i),set()).add(str(d.loc[i,'family']))
+    labels={r:hashlib.sha256('|'.join(sorted(families)).encode()).hexdigest()[:20] for r,families in members.items()}
+    return pd.Series({i:labels[root(i)] for i in d.index})
 
 
 def allocate(d,kind,seed,config):
@@ -117,16 +123,22 @@ def build():
                                   task='rat_iv_plasma_clearance' if r.endpoint=='clearance' else 'rat_oral_plasma_cmax',
                                   label_kind='source_reported_PK_endpoint_not_individual_animal',log_dose=np.log10(float(r.dose_mg_kg)),y=np.log10(float(r.value)))
         selected.append(row)
-    pd.DataFrame(rows).to_csv(OUT/'eligibility.csv',index=False)
     d=pd.DataFrame(selected)
-    # Same full identity / publication / dose / endpoint: median in log space; retain every member ID.
+    # Collapse only concordant repeated cells; differing assays/protocol descriptions never pooled.
     dedup=[]
-    for _,g in d.groupby(['task','inchikey','publication_id','dose_mg_kg'],sort=True):
-        r=g.iloc[0].to_dict();r['y']=float(g.y.median());r['value']=10**r['y']
+    for _,g in d.groupby(['task','inchikey','publication_id','assay_id','description','dose_mg_kg','sex'],sort=True):
+        if not np.allclose(g.value.to_numpy(float),float(g.value.iloc[0]),rtol=1e-6,atol=0):
+            rejected=set(g.source_record_id)
+            for decision in rows:
+                if decision['source_record_id'] in rejected:
+                    decision['eligible_ml']=False;decision['reasons']='conflicting_duplicate_endpoint_cell'
+            continue
+        r=g.iloc[0].to_dict();r['y']=float(g.y.iloc[0]);r['value']=float(g.value.iloc[0])
         r['original_record_ids_json']=json.dumps(sorted(g.source_record_id));r['original_records']=len(g)
         r['within_cell_log_range']=float(g.y.max()-g.y.min())
         r['row_id']=hashlib.sha256('|'.join(sorted(g.source_record_id)).encode()).hexdigest()[:20]
         dedup.append(r)
+    pd.DataFrame(rows).to_csv(OUT/'eligibility.csv',index=False)
     d=pd.DataFrame(dedup).sort_values('row_id').reset_index(drop=True)
     d.to_csv(OUT/'tasks.csv',index=False)
     # Freeze all original A/B artifacts, numerical benchmark outputs and source manifests.
