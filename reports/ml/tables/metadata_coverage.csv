@@ -1,0 +1,6 @@
+endpoint,dataset_A_records,numeric_dose_field_records,known_matrix_records,known_route_records,publication_field_records,ML_original_records,ML_rows,ML_compounds
+auc,1405,1137,257,1405,1405,0,0,0
+clearance,1571,646,315,1547,878,173,172,169
+cmax,1218,988,541,1217,1218,265,265,259
+half_life,1522,1026,238,1510,1522,0,0,0
+volume_distribution,743,46,2,742,67,0,0,0

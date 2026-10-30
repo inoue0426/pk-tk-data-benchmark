@@ -1,0 +1,377 @@
+{
+  "dataset": {
+    "input_sha256": "c76af11eb758804d12b458f899685dffde52bd70de7b30c4b39b8a2ab9e1f020",
+    "config_sha256": "ed4ac4db96e7f34b117a7f6893fa26ff5115608f6a3632db474c4432c0688ca9",
+    "rows_considered": 6459,
+    "records_eligible": 438,
+    "compounds": 413,
+    "tasks": [
+      {
+        "task": "rat_iv_plasma_clearance",
+        "endpoint": "clearance",
+        "species": "rat",
+        "route": "intravenous",
+        "matrix": "plasma",
+        "unit": "mL/min/kg",
+        "records": 172,
+        "original_records": 173,
+        "compounds": 169,
+        "families": 163,
+        "publications": 64
+      },
+      {
+        "task": "rat_oral_plasma_cmax",
+        "endpoint": "cmax",
+        "species": "rat",
+        "route": "oral",
+        "matrix": "plasma",
+        "unit": "ug/mL",
+        "records": 265,
+        "original_records": 265,
+        "compounds": 259,
+        "families": 257,
+        "publications": 47
+      }
+    ],
+    "eligible_split_runs": 22,
+    "missing_stereochemistry_rows": 161,
+    "exclusions": [
+      {
+        "endpoint": "auc",
+        "size": 1405,
+        "sum": 0
+      },
+      {
+        "endpoint": "clearance",
+        "size": 1571,
+        "sum": 173
+      },
+      {
+        "endpoint": "cmax",
+        "size": 1218,
+        "sum": 265
+      },
+      {
+        "endpoint": "half_life",
+        "size": 1522,
+        "sum": 0
+      },
+      {
+        "endpoint": "volume_distribution",
+        "size": 743,
+        "sum": 0
+      }
+    ]
+  },
+  "completed_primary_runs": 190,
+  "completed_runs": 199,
+  "training_seconds": 117.12366454256698,
+  "first_event": "2026-10-30T14:41:42.898766+00:00",
+  "last_event": "2026-10-30T14:43:38.472901+00:00",
+  "primary_summary": [
+    {
+      "task": "rat_iv_plasma_clearance",
+      "split": "scaffold_study",
+      "model": "dose_ridge",
+      "mae_log10_mean": 0.33103174278400543,
+      "mae_log10_std": 0.04343567349261728,
+      "rmse_log10_mean": 0.4111092948307246,
+      "r2_log10_mean": -0.08464050731517703,
+      "mae_log10_count": 3
+    },
+    {
+      "task": "rat_iv_plasma_clearance",
+      "split": "scaffold_study",
+      "model": "gcn",
+      "mae_log10_mean": 0.33884223947635733,
+      "mae_log10_std": 0.03119065504902742,
+      "rmse_log10_mean": 0.409305471985906,
+      "r2_log10_mean": -0.07786518575661505,
+      "mae_log10_count": 3
+    },
+    {
+      "task": "rat_iv_plasma_clearance",
+      "split": "scaffold_study",
+      "model": "gin",
+      "mae_log10_mean": 0.3352123778779781,
+      "mae_log10_std": 0.03512723910187956,
+      "rmse_log10_mean": 0.41265496957852515,
+      "r2_log10_mean": -0.09802740107279291,
+      "mae_log10_count": 3
+    },
+    {
+      "task": "rat_iv_plasma_clearance",
+      "split": "scaffold_study",
+      "model": "gine",
+      "mae_log10_mean": 0.33658269430171384,
+      "mae_log10_std": 0.034883342604761745,
+      "rmse_log10_mean": 0.423573689897595,
+      "r2_log10_mean": -0.15929440345649493,
+      "mae_log10_count": 3
+    },
+    {
+      "task": "rat_iv_plasma_clearance",
+      "split": "scaffold_study",
+      "model": "mean",
+      "mae_log10_mean": 0.32643649789958484,
+      "mae_log10_std": 0.03265484579814401,
+      "rmse_log10_mean": 0.3981573390144932,
+      "r2_log10_mean": -0.02149658267314088,
+      "mae_log10_count": 3
+    },
+    {
+      "task": "rat_iv_plasma_clearance",
+      "split": "scaffold_study",
+      "model": "median",
+      "mae_log10_mean": 0.34888277359286896,
+      "mae_log10_std": 0.0599613783820238,
+      "rmse_log10_mean": 0.4387390527751447,
+      "r2_log10_mean": -0.23723002535214222,
+      "mae_log10_count": 3
+    },
+    {
+      "task": "rat_iv_plasma_clearance",
+      "split": "scaffold_study",
+      "model": "mlp",
+      "mae_log10_mean": 0.3314328039444954,
+      "mae_log10_std": 0.022096742085766768,
+      "rmse_log10_mean": 0.40171927669397783,
+      "r2_log10_mean": -0.043153772705405956,
+      "mae_log10_count": 3
+    },
+    {
+      "task": "rat_iv_plasma_clearance",
+      "split": "scaffold_study",
+      "model": "rf",
+      "mae_log10_mean": 0.403247978132158,
+      "mae_log10_std": 0.038956576947931115,
+      "rmse_log10_mean": 0.4871251553897103,
+      "r2_log10_mean": -0.5464196128576811,
+      "mae_log10_count": 3
+    },
+    {
+      "task": "rat_iv_plasma_clearance",
+      "split": "scaffold_study",
+      "model": "ridge",
+      "mae_log10_mean": 0.47397693799419455,
+      "mae_log10_std": 0.20391770686223135,
+      "rmse_log10_mean": 0.5647622113071629,
+      "r2_log10_mean": -1.6062110368433016,
+      "mae_log10_count": 3
+    },
+    {
+      "task": "rat_iv_plasma_clearance",
+      "split": "scaffold_study",
+      "model": "xgb",
+      "mae_log10_mean": 0.37020591094019467,
+      "mae_log10_std": 0.07986543353406068,
+      "rmse_log10_mean": 0.44245014595191545,
+      "r2_log10_mean": -0.2967194487021786,
+      "mae_log10_count": 3
+    },
+    {
+      "task": "rat_oral_plasma_cmax",
+      "split": "scaffold_study",
+      "model": "dose_ridge",
+      "mae_log10_mean": 0.8441088271672619,
+      "mae_log10_std": 0.2809855440094444,
+      "rmse_log10_mean": 1.0217905837869947,
+      "r2_log10_mean": -0.34771887126725803,
+      "mae_log10_count": 2
+    },
+    {
+      "task": "rat_oral_plasma_cmax",
+      "split": "scaffold_study",
+      "model": "gcn",
+      "mae_log10_mean": 0.8133029611322594,
+      "mae_log10_std": 0.2020360312139683,
+      "rmse_log10_mean": 0.9946210590666819,
+      "r2_log10_mean": -0.25252318276202423,
+      "mae_log10_count": 2
+    },
+    {
+      "task": "rat_oral_plasma_cmax",
+      "split": "scaffold_study",
+      "model": "gin",
+      "mae_log10_mean": 0.8331756566210364,
+      "mae_log10_std": 0.19660524441904711,
+      "rmse_log10_mean": 1.0116489119439926,
+      "r2_log10_mean": -0.29444800792277864,
+      "mae_log10_count": 2
+    },
+    {
+      "task": "rat_oral_plasma_cmax",
+      "split": "scaffold_study",
+      "model": "gine",
+      "mae_log10_mean": 0.857719065556002,
+      "mae_log10_std": 0.26332205694043953,
+      "rmse_log10_mean": 1.0400493150463659,
+      "r2_log10_mean": -0.3867610282432522,
+      "mae_log10_count": 2
+    },
+    {
+      "task": "rat_oral_plasma_cmax",
+      "split": "scaffold_study",
+      "model": "mean",
+      "mae_log10_mean": 0.9509093395076471,
+      "mae_log10_std": 0.2813787044235147,
+      "rmse_log10_mean": 1.1552326672494477,
+      "r2_log10_mean": -0.697036493499255,
+      "mae_log10_count": 2
+    },
+    {
+      "task": "rat_oral_plasma_cmax",
+      "split": "scaffold_study",
+      "model": "median",
+      "mae_log10_mean": 0.9406529645417505,
+      "mae_log10_std": 0.25766897855121745,
+      "rmse_log10_mean": 1.1507429639930424,
+      "r2_log10_mean": -0.6737915320736403,
+      "mae_log10_count": 2
+    },
+    {
+      "task": "rat_oral_plasma_cmax",
+      "split": "scaffold_study",
+      "model": "mlp",
+      "mae_log10_mean": 0.9312004950790025,
+      "mae_log10_std": 0.3077886195488125,
+      "rmse_log10_mean": 1.143138090899419,
+      "r2_log10_mean": -0.6700064277905268,
+      "mae_log10_count": 2
+    },
+    {
+      "task": "rat_oral_plasma_cmax",
+      "split": "scaffold_study",
+      "model": "rf",
+      "mae_log10_mean": 0.8307236640342428,
+      "mae_log10_std": 0.17901083349058952,
+      "rmse_log10_mean": 1.0205610161476268,
+      "r2_log10_mean": -0.3049656920770678,
+      "mae_log10_count": 2
+    },
+    {
+      "task": "rat_oral_plasma_cmax",
+      "split": "scaffold_study",
+      "model": "ridge",
+      "mae_log10_mean": 0.880037999077852,
+      "mae_log10_std": 0.2434589703520096,
+      "rmse_log10_mean": 1.0723597041398318,
+      "r2_log10_mean": -0.4620050366286911,
+      "mae_log10_count": 2
+    },
+    {
+      "task": "rat_oral_plasma_cmax",
+      "split": "scaffold_study",
+      "model": "xgb",
+      "mae_log10_mean": 0.8879768322080808,
+      "mae_log10_std": 0.22105745262033522,
+      "rmse_log10_mean": 1.090667655342551,
+      "r2_log10_mean": -0.4942675630974537,
+      "mae_log10_count": 2
+    }
+  ],
+  "primary_gine_comparisons": [
+    {
+      "task": "rat_iv_plasma_clearance",
+      "split": "scaffold_study",
+      "seed": 42,
+      "model": "gine",
+      "n_test_families": 23,
+      "n_dependency_groups": 14,
+      "delta_family_mae_log10": 0.009384552846956495,
+      "delta_component_mae_log10": 0.005896069076428552,
+      "ci_low": -0.02084623601699107,
+      "ci_high": 0.03214158250329458,
+      "interval_status": "exploratory_component_bootstrap_fixed_predictions"
+    },
+    {
+      "task": "rat_iv_plasma_clearance",
+      "split": "scaffold_study",
+      "seed": 137,
+      "model": "gine",
+      "n_test_families": 23,
+      "n_dependency_groups": 16,
+      "delta_family_mae_log10": -0.12026367087937684,
+      "delta_component_mae_log10": -0.14667542332138545,
+      "ci_low": -0.2672070750714414,
+      "ci_high": -0.032229322127725356,
+      "interval_status": "exploratory_component_bootstrap_fixed_predictions"
+    },
+    {
+      "task": "rat_iv_plasma_clearance",
+      "split": "scaffold_study",
+      "seed": 2026,
+      "model": "gine",
+      "n_test_families": 28,
+      "n_dependency_groups": 9,
+      "delta_family_mae_log10": 0.010009468117499972,
+      "delta_component_mae_log10": 0.005178141473989906,
+      "ci_low": -0.01246465939079167,
+      "ci_high": 0.021393820594902812,
+      "interval_status": "exploratory_component_bootstrap_fixed_predictions"
+    },
+    {
+      "task": "rat_oral_plasma_cmax",
+      "split": "scaffold_study",
+      "seed": 42,
+      "model": "gine",
+      "n_test_families": 28,
+      "n_dependency_groups": 11,
+      "delta_family_mae_log10": -0.06014335497102967,
+      "delta_component_mae_log10": -0.027562182251580192,
+      "ci_low": -0.1175521951871684,
+      "ci_high": 0.07266059085114454,
+      "interval_status": "exploratory_component_bootstrap_fixed_predictions"
+    },
+    {
+      "task": "rat_oral_plasma_cmax",
+      "split": "scaffold_study",
+      "seed": 137,
+      "model": "gine",
+      "n_test_families": 52,
+      "n_dependency_groups": 9,
+      "delta_family_mae_log10": -0.0003721783331380764,
+      "delta_component_mae_log10": -0.08345574480373887,
+      "ci_low": -0.1339922199643167,
+      "ci_high": -0.03060566757116595,
+      "interval_status": "exploratory_component_bootstrap_fixed_predictions"
+    }
+  ],
+  "ensembles": [
+    {
+      "task": "rat_iv_plasma_clearance",
+      "split": "scaffold_study",
+      "seed": 42,
+      "model": "gine",
+      "n_members": 3,
+      "n_test_families": 23,
+      "mae_log10": 0.29819155825514493,
+      "uncertainty_error_spearman": 0.30335968379446643
+    },
+    {
+      "task": "rat_iv_plasma_clearance",
+      "split": "scaffold_study",
+      "seed": 42,
+      "model": "xgb",
+      "n_members": 3,
+      "n_test_families": 23,
+      "mae_log10": 0.2949257452678985,
+      "uncertainty_error_spearman": -0.2116223530903543
+    }
+  ],
+  "original_artifacts_preserved": true,
+  "figures": [
+    "results/ml/figures/01_ml_coverage.pdf",
+    "results/ml/figures/02_models_rat_iv_plasma_clearance.pdf",
+    "results/ml/figures/02_models_rat_oral_plasma_cmax.pdf",
+    "results/ml/figures/03_generalization_rat_iv_plasma_clearance.pdf",
+    "results/ml/figures/03_generalization_rat_oral_plasma_cmax.pdf",
+    "results/ml/figures/04_predictions_rat_iv_plasma_clearance.pdf",
+    "results/ml/figures/04_predictions_rat_oral_plasma_cmax.pdf",
+    "results/ml/figures/05_similarity_rat_iv_plasma_clearance.pdf",
+    "results/ml/figures/05_similarity_rat_oral_plasma_cmax.pdf",
+    "results/ml/figures/06_learning_curve.pdf",
+    "results/ml/figures/07_uncertainty.pdf",
+    "results/ml/figures/08_error_distributions.pdf"
+  ]
+}

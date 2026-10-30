@@ -1,12 +1,42 @@
 # Public preclinical PK/TK cross-dose benchmark
 
-An independent public-data investigation of when initial preclinical PK measurements can predict exposure at unobserved doses. Collection, identity resolution, protocol review and empirical baseline evaluation are complete for this snapshot. Molecular or advanced ML models have not been trained or evaluated.
+An independent public-data investigation of when initial preclinical PK measurements can predict exposure at unobserved doses. Collection, identity resolution, protocol review and empirical baseline evaluation are complete for this snapshot. The original finalization snapshot did not train molecular ML; this dedicated experiment branch adds the separately audited molecular study described below.
 
 Dataset B — current verified cross-dose subset: **59 series, 21 compounds, 19 source studies; 42 AUC-eligible, 33 Cmax-eligible, and 16 eligible for both**. All 112 composite candidates have a disposition, but 15 lack an obtained/reconciled full protocol.
 
 Dataset A — molecular PK expansion: **2,713 unique structured compounds**, with 995 having AUC and 994 having Cmax records. This source-curated numerical dataset exceeds 500 structures but does **not** expand strict cross-dose eligibility. See [Dataset A report](reports/molecular_pk_expansion.md), [separate A/B counts](reports/molecular_summary.json), and [source decisions](reports/molecular_source_discovery.json).
 
 See the [verified final report](reports/final_report.md), [machine-readable counts](reports/summary.json), [CvTdb attrition investigation](reports/cvtdb_attrition.md), [source inventory](reports/data_inventory.md), [QC report](reports/qc_report.md), and [benchmark feasibility](reports/benchmark_feasibility.md).
+
+## Molecular ML experiment branch (2026-10-30)
+
+The `experiments/molecular-gnn-benchmark` branch adds **conditional molecular PK prediction** using molecular structure and known administered dose. It preserves the original Dataset A/B outputs and does not extend strict cross-dose validation.
+
+The conservative ML subset contains **413 distinct structured compounds / 438 original endpoint records**: 169 compounds for rat IV plasma clearance and 259 for rat oral plasma Cmax, with overlap. One exact duplicate is collapsed, yielding 437 task rows. AUC, volume and half-life are withheld because compatible definitions or critical metadata are insufficient. PKSmart rows are not forced into matrix/study-aware training. The source audit and superseded pilot corrections are documented explicitly.
+
+Executed methods: mean/median, dose-only Ridge, descriptors + Ridge, Morgan + Random Forest/XGBoost, descriptor/fingerprint MLP, GCN, GIN and GINE. There are 190 primary runs and nine focused follow-ups, using identical model partitions, validation-only tuning, and separate calibration/test sets. Compound-only and scaffold-only results have measured study overlap and are diagnostics; primary generalization evidence excludes publications. Two Cmax scaffold+study seeds are feasible. **No consistent GNN superiority or useful calibrated uncertainty under distribution shift was established.**
+
+Read the [final ML summary](reports/final_ml_research_summary.md), [eligibility audit](reports/ml_dataset_audit.md), [benchmark](reports/molecular_ml_benchmark.md), [GNN results](reports/gnn_experiments.md), [generalization](reports/generalization_analysis.md), [uncertainty](reports/uncertainty_analysis.md), and [experiment log](reports/experiment_log.md). Earlier final reports below remain the dated pre-ML snapshot.
+
+To reproduce using existing local Dataset A tables (no additional scientific data download):
+
+```bash
+source .venv/bin/activate
+python -m pip install -r requirements-ml-lock.txt
+PYTHONPATH=src python -m pktk.ml.data
+python scripts/run_molecular_ml.py --stage baselines
+python scripts/run_molecular_ml.py --stage graphs
+python scripts/run_molecular_ml.py --stage ablations
+python scripts/run_molecular_ml.py --stage ensembles
+PYTHONPATH=src python -m pktk.ml.analyze
+PYTHONPATH=src python scripts/verify_ml_results.py
+PYTHONPATH=src python scripts/verify_ml_reproducibility.py
+PYTHONPATH=src python -m pytest -q
+```
+
+For a compatible but not exact dependency resolution, install `.[ml,test]`. The launcher uses the installed PyTorch OpenMP runtime on macOS to load XGBoost; it does not install system packages. CPU execution uses two threads. Completed runs are resumed only when data/config/code hashes match. Exact split manifests, row-level exclusions, graphs, fingerprints, fitted preprocessing, model checkpoints and predictions are local under `data/processed/ml/` and `results/ml/`; source-derived summary reports retain ChEMBL CC BY-SA attribution/terms. These local datasets/checkpoints are excluded from Git.
+
+Reviewable PDF copies and aggregate CSV tables are committed under `reports/ml/figures/` and `reports/ml/tables/`, with ChEMBL CC BY-SA attribution. `results/ml/figures/` contains vector PDF and 300-dpi PNG coverage, model comparison, split sensitivity, predicted/observed, learning-curve, similarity, error-distribution and uncertainty plots. No A→B transfer, pretrained encoder, multitask model or genuine cross-source test is claimed. [Continuation instructions](reports/ml_continuation.md) describe supported replay and deferred work.
 
 ## Final research and interview materials
 

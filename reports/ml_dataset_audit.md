@@ -33,3 +33,20 @@ Compound-only and scaffold-only results are **diagnostics**: publication overlap
 Cross-source evaluation is unsupported: only ChEMBL passes these task gates. Do not weaken matrix or study requirements to add a second source. All models share exact split manifests. Descriptor imputation, scaling, target standardization, early stopping and hyperparameter selection use training/validation only; calibration is untouched until uncertainty analysis. No source identifiers are predictive features.
 
 Executed counts and partition decisions: [machine-readable audit](ml/audit.json), `data/processed/ml/split_audit.json`, `data/processed/ml/splits.csv`. Counts in the machine-readable audit supersede any pre-audit size estimates.
+
+## Executed final coverage
+
+| endpoint | dataset_A_records | numeric_dose_field_records | known_matrix_records | known_route_records | publication_field_records | ML_original_records | ML_rows | ML_compounds |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| auc | 1405 | 1137 | 257 | 1405 | 1405 | 0 | 0 | 0 |
+| clearance | 1571 | 646 | 315 | 1547 | 878 | 173 | 172 | 169 |
+| cmax | 1218 | 988 | 541 | 1217 | 1218 | 265 | 265 | 259 |
+| half_life | 1522 | 1026 | 238 | 1510 | 1522 | 0 | 0 | 0 |
+| volume_distribution | 743 | 46 | 2 | 742 | 67 | 0 | 0 | 0 |
+
+| task | endpoint | species | route | matrix | unit | records | original_records | compounds | families | publications |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| rat_iv_plasma_clearance | clearance | rat | intravenous | plasma | mL/min/kg | 172 | 173 | 169 | 163 | 64 |
+| rat_oral_plasma_cmax | cmax | rat | oral | plasma | ug/mL | 265 | 265 | 259 | 257 | 47 |
+
+Union: 413 full-InChIKey compounds; 438 eligible original records; 437 task rows. 161 rows contain unspecified stereocenters, preserved as reported and linked conservatively for splitting. Explicit method subtype (e.g. NCA versus compartment fitting) is not available for every source endpoint; these are reported PK labels, not independently reconstructed animal-level measurements. No assumptions about such missing method metadata are silently encoded.

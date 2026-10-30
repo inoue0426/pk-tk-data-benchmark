@@ -1,12 +1,12 @@
 {
-  "date": "2026-10-29T22:11:00.305296+00:00",
+  "date": "2026-10-30T14:43:32.686867+00:00",
   "dataset_a_byte_identical": 14,
   "dataset_a_artifacts": 14,
   "dataset_a_differences": [],
   "dataset_b_unchanged_artifacts": 44,
   "dataset_b_differences": [],
   "pytest_exit_code": 0,
-  "pytest_output": ".............................................                            [100%]\n=============================== warnings summary ===============================\ntests/test_cebs_reviewed.py: 9 warnings\ntests/test_expansion.py: 12 warnings\n  /Users/inouey2/code/pk-tk-data-benchmark/.venv/lib/python3.14/site-packages/openpyxl/worksheet/_reader.py:329: UserWarning: Unknown extension is not supported and will be removed\n    warn(msg)\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n45 passed, 21 warnings in 8.94s\n",
+  "pytest_output": "........................................................                 [100%]\n=============================== warnings summary ===============================\ntests/test_cebs_reviewed.py: 9 warnings\ntests/test_expansion.py: 12 warnings\n  /Users/inouey2/code/pk-tk-data-benchmark/.venv/lib/python3.14/site-packages/openpyxl/worksheet/_reader.py:329: UserWarning: Unknown extension is not supported and will be removed\n    warn(msg)\n\ntests/test_molecular_ml.py: 62 warnings\n  /Users/inouey2/code/pk-tk-data-benchmark/.venv/lib/python3.14/site-packages/torch_geometric/inspector.py:433: DeprecationWarning: Failing to pass a value to the 'type_params' parameter of 'typing._eval_type' is deprecated, as it leads to incorrect behaviour when calling typing._eval_type on a stringified annotation that references a PEP 695 type parameter. It will be disallowed in Python 3.15.\n    return typing._eval_type(value, _globals, None)  # type: ignore\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n56 passed, 83 warnings in 14.76s\n",
   "artifact_sha256": {
     "data/processed/molecular/compounds.csv": "50a59933937c6ab0eaba19a8680bb9e4f8fa61d3652921d208dab93ce1800297",
     "data/processed/molecular/dependency_components.csv": "4e9c195abae2fddf2f6839c3ad6271a67e11750d545bd0eefabba69b423767a0",

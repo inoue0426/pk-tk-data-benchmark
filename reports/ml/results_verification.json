@@ -1,0 +1,13 @@
+{
+  "primary_runs": 190,
+  "focused_followups": 9,
+  "total_runs_checked": 199,
+  "maximum_metric_difference": 2.2856161407958098e-12,
+  "all_selected_candidates_match_validation_minimum": true,
+  "all_split_memberships_verified": true,
+  "requested_split_cases": 24,
+  "withheld_split_cases": 2,
+  "source_count": 1,
+  "species_count": 1,
+  "scope": "All saved run scores and memberships checked; this is not a fresh refit of every model."
+}
